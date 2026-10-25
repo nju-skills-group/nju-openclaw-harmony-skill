@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "reviewed_records": 74,
+  "public_catalog_records": 83265,
+  "completed_prefixes": 36,
+  "verified_bundled_files": 75,
+  "verified_clawhub_candidate_files": 518,
+  "raw_pagination_rechecked": true,
+  "original_runtime_verified": false,
+  "harmony_runtime_verified": false
+}

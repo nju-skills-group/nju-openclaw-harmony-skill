@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "mode": "compressed-input replay without raw page cache",
+  "equal_outputs": [
+    {
+      "file": "reviewed-skills.json",
+      "sha256": "2c7db4eda9dff498760f79b65ee8072bb04e91fc9d42e7374bb59b17ccfd4ae6"
+    },
+    {
+      "file": "reviewed-skills.csv",
+      "sha256": "04f35ead2760173e1d4661901874dc9efedfc438ad547e2fcac5d2f52fc12a23"
+    },
+    {
+      "file": "clawhub-catalog.csv",
+      "sha256": "0a7d9d4de90b327dc5c0191f0f844b9ea0ef9d8ef90bba74f1ef40e36f07654b"
+    },
+    {
+      "file": "coverage.json",
+      "sha256": "828bb1ff263746212e5c9308c6260d1ae50e1cc4a378ede7b5d25e6bcdc53575"
+    },
+    {
+      "file": "classification.md",
+      "sha256": "a891271d694f66c4f5db6574bff7f0877f29e1b8b3a68a1e9b5796852a338946"
+    },
+    {
+      "file": "screening-summary.md",
+      "sha256": "abda5c64d9ca400ee63d7ac7645a04ff7b06a54074ebbd8527a11ccc53d4fac9"
+    }
+  ],
+  "dependency_note": "PyYAML plus Python standard library",
+  "skills_executed": false
+}

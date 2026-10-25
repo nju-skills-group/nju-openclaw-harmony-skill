@@ -1,0 +1,1059 @@
+{
+  "repository": "https://github.com/openclaw/openclaw",
+  "commit": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+  "tree": {
+    "sha": "c3fa29e0014ec3f7bfacc1745c899417a104c146",
+    "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/c3fa29e0014ec3f7bfacc1745c899417a104c146",
+    "tree": [
+      {
+        "path": "1password",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "57066eb1fad4f39a9327e8980e4403fdcbdc9026",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/57066eb1fad4f39a9327e8980e4403fdcbdc9026"
+      },
+      {
+        "path": "1password/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "04ae246d200001d6f7cba2be8cab252dc2ba8cc0",
+        "size": 6821,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/04ae246d200001d6f7cba2be8cab252dc2ba8cc0"
+      },
+      {
+        "path": "1password/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8d0b125e064c0b65c8d3eb18a0a7fe86c67e2eab",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/8d0b125e064c0b65c8d3eb18a0a7fe86c67e2eab"
+      },
+      {
+        "path": "1password/references/cli-examples.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c8da0972bcef0192a035c9a13364e6abd7a0d347",
+        "size": 720,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/c8da0972bcef0192a035c9a13364e6abd7a0d347"
+      },
+      {
+        "path": "1password/references/get-started.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e8e5e0cecedd8c6946eeb840323aadbbe1480178",
+        "size": 2039,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/e8e5e0cecedd8c6946eeb840323aadbbe1480178"
+      },
+      {
+        "path": "apple-notes",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e0cdd81b11da51403be36051d0dfacdb190ecff1",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/e0cdd81b11da51403be36051d0dfacdb190ecff1"
+      },
+      {
+        "path": "apple-notes/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "57740cad85399b3603568734207c1ad5b382d5d3",
+        "size": 1979,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/57740cad85399b3603568734207c1ad5b382d5d3"
+      },
+      {
+        "path": "apple-reminders",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "121f1ad66c4d07dd7184bea2b6d465d696e7c065",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/121f1ad66c4d07dd7184bea2b6d465d696e7c065"
+      },
+      {
+        "path": "apple-reminders/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ecb0220c22863c11a612f6c2d30b356536b140ce",
+        "size": 3039,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/ecb0220c22863c11a612f6c2d30b356536b140ce"
+      },
+      {
+        "path": "bear-notes",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "30f1c680f12e376c30c913eb09c672086599cdb5",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/30f1c680f12e376c30c913eb09c672086599cdb5"
+      },
+      {
+        "path": "bear-notes/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c1777041c26a7ca859e2e75b72350b72a2c06a4b",
+        "size": 2651,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/c1777041c26a7ca859e2e75b72350b72a2c06a4b"
+      },
+      {
+        "path": "blogwatcher",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "075556f2cea38c5df9f07c82819a6adbb1efbc53",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/075556f2cea38c5df9f07c82819a6adbb1efbc53"
+      },
+      {
+        "path": "blogwatcher/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6b7031b695774c95763c8affaa8ce08c13de2f39",
+        "size": 1417,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/6b7031b695774c95763c8affaa8ce08c13de2f39"
+      },
+      {
+        "path": "blucli",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b3457cdef809c1d67cc242d90633ce69928e5574",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/b3457cdef809c1d67cc242d90633ce69928e5574"
+      },
+      {
+        "path": "blucli/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2cdaadb86c03bf5a33691be75fd7bb9f2b174865",
+        "size": 1022,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/2cdaadb86c03bf5a33691be75fd7bb9f2b174865"
+      },
+      {
+        "path": "camsnap",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "140a5217662bb29c7344d4c2fc954e20dfc7628b",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/140a5217662bb29c7344d4c2fc954e20dfc7628b"
+      },
+      {
+        "path": "camsnap/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1284829fd2fcdb79e1993b7f2f8377a0094d7690",
+        "size": 1825,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/1284829fd2fcdb79e1993b7f2f8377a0094d7690"
+      },
+      {
+        "path": "clawhub",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1fa3219478877c4078e3a746bef6fb51f5159c71",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/1fa3219478877c4078e3a746bef6fb51f5159c71"
+      },
+      {
+        "path": "clawhub/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f0718143162f5f30389279b93cc296ee2bc4e07e",
+        "size": 2894,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/f0718143162f5f30389279b93cc296ee2bc4e07e"
+      },
+      {
+        "path": "coding-agent",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4c6f649a1dbf882f836800ef82fed08b8ddf69b0",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/4c6f649a1dbf882f836800ef82fed08b8ddf69b0"
+      },
+      {
+        "path": "coding-agent/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8df112ed8ff16265af587125d1df9f62f5b11bc7",
+        "size": 10606,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/8df112ed8ff16265af587125d1df9f62f5b11bc7"
+      },
+      {
+        "path": "control-ui",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5a306484429c74ef56b03f5eba71aff2f656faad",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/5a306484429c74ef56b03f5eba71aff2f656faad"
+      },
+      {
+        "path": "control-ui/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f0e0b4f5f5f08e8f6ad44515a213e5758e312a43",
+        "size": 7268,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/f0e0b4f5f5f08e8f6ad44515a213e5758e312a43"
+      },
+      {
+        "path": "control-ui/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5f98486921444163fa2e0f027c6f6f43bfc9a508",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/5f98486921444163fa2e0f027c6f6f43bfc9a508"
+      },
+      {
+        "path": "control-ui/references/dashboards.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d98cb618d21a0d1d05f4fdd62589c486bec7b6ae",
+        "size": 4921,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/d98cb618d21a0d1d05f4fdd62589c486bec7b6ae"
+      },
+      {
+        "path": "control-ui/references/hosting.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b71d4d886c5ff109b23c53c97d10434f5c521569",
+        "size": 4843,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/b71d4d886c5ff109b23c53c97d10434f5c521569"
+      },
+      {
+        "path": "create-claw",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ef37e269d4e2d667ac85ffe3f289d12d6e00740f",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/ef37e269d4e2d667ac85ffe3f289d12d6e00740f"
+      },
+      {
+        "path": "create-claw/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37a5817bf396721ea29dcd6948b611131ec22515",
+        "size": 3319,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/37a5817bf396721ea29dcd6948b611131ec22515"
+      },
+      {
+        "path": "create-claw/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2d0cb293bc11f1ff3a9430f03cd2f194842963a9",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/2d0cb293bc11f1ff3a9430f03cd2f194842963a9"
+      },
+      {
+        "path": "create-claw/references/draft-format.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9163c58f20b486e96b40914e5709449295f7bec8",
+        "size": 2248,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/9163c58f20b486e96b40914e5709449295f7bec8"
+      },
+      {
+        "path": "create-claw/scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "06500fa2678616003746e7dad1f4d1a5bb36461b",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/06500fa2678616003746e7dad1f4d1a5bb36461b"
+      },
+      {
+        "path": "create-claw/scripts/cli.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8c60faf4d6ee2066f592f105f35e9a7c4bd7fcf1",
+        "size": 472,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/8c60faf4d6ee2066f592f105f35e9a7c4bd7fcf1"
+      },
+      {
+        "path": "diagram-maker",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2e6f6de8eb973004ab86c5d480a60463c6bfe6f6",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/2e6f6de8eb973004ab86c5d480a60463c6bfe6f6"
+      },
+      {
+        "path": "diagram-maker/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "006329dece78763d72231f1829de8480983648a4",
+        "size": 2357,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/006329dece78763d72231f1829de8480983648a4"
+      },
+      {
+        "path": "diagram-maker/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1976c10eedff1f83b8a3e84036b0641c740141c6",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/1976c10eedff1f83b8a3e84036b0641c740141c6"
+      },
+      {
+        "path": "diagram-maker/references/excalidraw-patterns.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "91b4dd1c88f68f8b70751e86d7c4b5d407913a0c",
+        "size": 1394,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/91b4dd1c88f68f8b70751e86d7c4b5d407913a0c"
+      },
+      {
+        "path": "diagram-maker/references/svg-template.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c0ad6ea8a75bbf8e028d7aed21a745ad5fcc146",
+        "size": 1930,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/9c0ad6ea8a75bbf8e028d7aed21a745ad5fcc146"
+      },
+      {
+        "path": "eightctl",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "052cbabccd4a19795b354aface67ce71a3239e1c",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/052cbabccd4a19795b354aface67ce71a3239e1c"
+      },
+      {
+        "path": "eightctl/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "47a04e8ea93f4fffba5d83572bc637ed20c08121",
+        "size": 1047,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/47a04e8ea93f4fffba5d83572bc637ed20c08121"
+      },
+      {
+        "path": "gemini",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3cdd36f108746d487072b81564f496c942708ffa",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/3cdd36f108746d487072b81564f496c942708ffa"
+      },
+      {
+        "path": "gemini/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0051d4cb62faf617dc92cabd8ce4a3a3121781b0",
+        "size": 1129,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/0051d4cb62faf617dc92cabd8ce4a3a3121781b0"
+      },
+      {
+        "path": "gh-issues",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8bc368974f76370295c2e2cd2a282317fbe57c61",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/8bc368974f76370295c2e2cd2a282317fbe57c61"
+      },
+      {
+        "path": "gh-issues/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e5055ca9159f8e9fdc5ccca4487dbb01d45a0604",
+        "size": 6320,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/e5055ca9159f8e9fdc5ccca4487dbb01d45a0604"
+      },
+      {
+        "path": "gifgrep",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e2765d72e5eaeeeca3877fb8aaf3b7a3c977f757",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/e2765d72e5eaeeeca3877fb8aaf3b7a3c977f757"
+      },
+      {
+        "path": "gifgrep/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f0335b25474b1fe530b811ab6474f0705b6a77c8",
+        "size": 2610,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/f0335b25474b1fe530b811ab6474f0705b6a77c8"
+      },
+      {
+        "path": "github",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "76bb33f93f211776ede1c9bd4a0296a8a280b7af",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/76bb33f93f211776ede1c9bd4a0296a8a280b7af"
+      },
+      {
+        "path": "github/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f35640583f04e3330c66cb371512b514682f31a4",
+        "size": 5975,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/f35640583f04e3330c66cb371512b514682f31a4"
+      },
+      {
+        "path": "gog",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "028cf9bdb1a976254b06ff27daed63b56bcb3dde",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/028cf9bdb1a976254b06ff27daed63b56bcb3dde"
+      },
+      {
+        "path": "gog/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "49b445a53acd36f40e0ba57e00bee6e74c19d1a9",
+        "size": 6679,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/49b445a53acd36f40e0ba57e00bee6e74c19d1a9"
+      },
+      {
+        "path": "goplaces",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "23f2cb176fec5d980bec56da2ed04949ff5463bb",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/23f2cb176fec5d980bec56da2ed04949ff5463bb"
+      },
+      {
+        "path": "goplaces/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "366caab6aa764374c08afab57840d4e630b0a911",
+        "size": 1473,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/366caab6aa764374c08afab57840d4e630b0a911"
+      },
+      {
+        "path": "healthcheck",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bf4bfab0c2a5fc15a4b671b7dbad7d24132fa155",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/bf4bfab0c2a5fc15a4b671b7dbad7d24132fa155"
+      },
+      {
+        "path": "healthcheck/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "699d1a6aa35d266bc69e5716a032165b0c5dd037",
+        "size": 2909,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/699d1a6aa35d266bc69e5716a032165b0c5dd037"
+      },
+      {
+        "path": "himalaya",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "95bc9949d3e707dbe6430d4f7505fe218a293aaa",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/95bc9949d3e707dbe6430d4f7505fe218a293aaa"
+      },
+      {
+        "path": "himalaya/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eb3cf9b503770c79f52b207928b12f9de9247de9",
+        "size": 1703,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/eb3cf9b503770c79f52b207928b12f9de9247de9"
+      },
+      {
+        "path": "himalaya/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7fc6af440bf5ae7f2c5409191d27a87587d128ba",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/7fc6af440bf5ae7f2c5409191d27a87587d128ba"
+      },
+      {
+        "path": "himalaya/references/configuration.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "005a657d5294af48ca89edb95fed6d4fcd7dd2c6",
+        "size": 4084,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/005a657d5294af48ca89edb95fed6d4fcd7dd2c6"
+      },
+      {
+        "path": "himalaya/references/message-composition.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "076a627d256c68e934d3521c52d5573997fbe30c",
+        "size": 3801,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/076a627d256c68e934d3521c52d5573997fbe30c"
+      },
+      {
+        "path": "mcporter",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f8b951fadb4db6fd6f7b2cc287ca69e155ea4be4",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/f8b951fadb4db6fd6f7b2cc287ca69e155ea4be4"
+      },
+      {
+        "path": "mcporter/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "137aa85421fbc98112657e51169a3fb9ac7a8723",
+        "size": 1612,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/137aa85421fbc98112657e51169a3fb9ac7a8723"
+      },
+      {
+        "path": "meme-maker",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6208fe9d73bb5166512ce005acb78d971359db75",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/6208fe9d73bb5166512ce005acb78d971359db75"
+      },
+      {
+        "path": "meme-maker/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "71582843a7b4c0870c2d4711dbd422e82fd942b3",
+        "size": 2566,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/71582843a7b4c0870c2d4711dbd422e82fd942b3"
+      },
+      {
+        "path": "meme-maker/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "011c6ab7dc7219a8949624d2c56e1115d51de27c",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/011c6ab7dc7219a8949624d2c56e1115d51de27c"
+      },
+      {
+        "path": "meme-maker/references/templates.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fdb08bb6a2b043bc6e111cb94de94036b9fd48c3",
+        "size": 13128,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/fdb08bb6a2b043bc6e111cb94de94036b9fd48c3"
+      },
+      {
+        "path": "meme-maker/scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d4e9abf96c95f46cd28e8182b0b8e90e3bd0c12c",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/d4e9abf96c95f46cd28e8182b0b8e90e3bd0c12c"
+      },
+      {
+        "path": "meme-maker/scripts/meme.mjs",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "eb33081c598ad9b9b3b04b2d2c94735c234155a1",
+        "size": 13362,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/eb33081c598ad9b9b3b04b2d2c94735c234155a1"
+      },
+      {
+        "path": "model-usage",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e69bed138332666e0153a89e80007786a80711bb",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/e69bed138332666e0153a89e80007786a80711bb"
+      },
+      {
+        "path": "model-usage/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eca1c6dd6403c0cea5b2896eb2cb0f83280a2e79",
+        "size": 2550,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/eca1c6dd6403c0cea5b2896eb2cb0f83280a2e79"
+      },
+      {
+        "path": "model-usage/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bbbd149b66f5033f23c4d9fd06b128c9ae7a563d",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/bbbd149b66f5033f23c4d9fd06b128c9ae7a563d"
+      },
+      {
+        "path": "model-usage/references/codexbar-cli.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e418631b49af202f84fc772ed574ebd000d346c4",
+        "size": 1299,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/e418631b49af202f84fc772ed574ebd000d346c4"
+      },
+      {
+        "path": "model-usage/scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "489b3fa151025da30b04b6d52d4f6b80c4681c75",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/489b3fa151025da30b04b6d52d4f6b80c4681c75"
+      },
+      {
+        "path": "model-usage/scripts/model_usage.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ba6851735c9e3a7b0f7efa2ca9a18deddf895cb2",
+        "size": 11490,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/ba6851735c9e3a7b0f7efa2ca9a18deddf895cb2"
+      },
+      {
+        "path": "model-usage/scripts/test_model_usage.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad7497d8396131cf95972777d79d462540d9445a",
+        "size": 5218,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/ad7497d8396131cf95972777d79d462540d9445a"
+      },
+      {
+        "path": "nano-pdf",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b87114af7d36790a473497b4ede043a6ecedc09f",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/b87114af7d36790a473497b4ede043a6ecedc09f"
+      },
+      {
+        "path": "nano-pdf/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ed8a4d0ea335dfb4e78abb56602a8977698d0746",
+        "size": 954,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/ed8a4d0ea335dfb4e78abb56602a8977698d0746"
+      },
+      {
+        "path": "node-connect",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cae3525fe82c997c99676727535699a8003948e7",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/cae3525fe82c997c99676727535699a8003948e7"
+      },
+      {
+        "path": "node-connect/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "139b2584edc1ced0c8da9e89d0526c4220ceeb1c",
+        "size": 6740,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/139b2584edc1ced0c8da9e89d0526c4220ceeb1c"
+      },
+      {
+        "path": "node-inspect-debugger",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "94dffe02557318ae9b417f694c46faaa66c969cd",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/94dffe02557318ae9b417f694c46faaa66c969cd"
+      },
+      {
+        "path": "node-inspect-debugger/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "39238796ed0a4a1f253bf746dcbba11e8c7170d0",
+        "size": 3576,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/39238796ed0a4a1f253bf746dcbba11e8c7170d0"
+      },
+      {
+        "path": "notion",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d2e041c19097a66fa22c89991690aa69c7616895",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/d2e041c19097a66fa22c89991690aa69c7616895"
+      },
+      {
+        "path": "notion/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e4bf37af84b0097d9b075765c22b1304efee1595",
+        "size": 3867,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/e4bf37af84b0097d9b075765c22b1304efee1595"
+      },
+      {
+        "path": "obsidian",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "367656f4d5e05be9721750620ad9425071ad6546",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/367656f4d5e05be9721750620ad9425071ad6546"
+      },
+      {
+        "path": "obsidian/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8cd20acdad1e6ef8ad8f520f6608d1c8d507fbcd",
+        "size": 2942,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/8cd20acdad1e6ef8ad8f520f6608d1c8d507fbcd"
+      },
+      {
+        "path": "openai-whisper-api",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "dd1930099e242b348334840b2157b0433379403a",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/dd1930099e242b348334840b2157b0433379403a"
+      },
+      {
+        "path": "openai-whisper-api/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bed6c3b63efba7015a52c6d75a83f412409cb701",
+        "size": 2073,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/bed6c3b63efba7015a52c6d75a83f412409cb701"
+      },
+      {
+        "path": "openai-whisper-api/scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6c06a5da1d86ca3447ea581ee5a973af0ad8f6e4",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/6c06a5da1d86ca3447ea581ee5a973af0ad8f6e4"
+      },
+      {
+        "path": "openai-whisper-api/scripts/transcribe.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "03025b604b1ccca41dbaa495166f7844aa2f894b",
+        "size": 3214,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/03025b604b1ccca41dbaa495166f7844aa2f894b"
+      },
+      {
+        "path": "openai-whisper",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d638ee539f93ec0335c1c927118c01a6c58e4c13",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/d638ee539f93ec0335c1c927118c01a6c58e4c13"
+      },
+      {
+        "path": "openai-whisper/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "46a3a42242bbdf0ef2297ad0ddb078f49643cd0a",
+        "size": 914,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/46a3a42242bbdf0ef2297ad0ddb078f49643cd0a"
+      },
+      {
+        "path": "openhue",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e9e42f4e078c1113f864be631f78786cae5c899c",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/e9e42f4e078c1113f864be631f78786cae5c899c"
+      },
+      {
+        "path": "openhue/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28cc7f7dea66370416be4d7dcca6a97e01036dd1",
+        "size": 2435,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/28cc7f7dea66370416be4d7dcca6a97e01036dd1"
+      },
+      {
+        "path": "oracle",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4d2d42c844c9b9c0c3ffd290c644844955292b32",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/4d2d42c844c9b9c0c3ffd290c644844955292b32"
+      },
+      {
+        "path": "oracle/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "49838c29458b495bd2f92ab7ab204b175f491704",
+        "size": 4882,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/49838c29458b495bd2f92ab7ab204b175f491704"
+      },
+      {
+        "path": "ordercli",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "fc8a0c9a65b3f13955ccc111e9ecca643de0d06f",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/fc8a0c9a65b3f13955ccc111e9ecca643de0d06f"
+      },
+      {
+        "path": "ordercli/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8943906985ff438605aaf32c6eb18ad6c70b6daf",
+        "size": 2337,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/8943906985ff438605aaf32c6eb18ad6c70b6daf"
+      },
+      {
+        "path": "peekaboo",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "55e94ad95e42b0e309555443a7b82e0ea5852df7",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/55e94ad95e42b0e309555443a7b82e0ea5852df7"
+      },
+      {
+        "path": "peekaboo/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27a1377f566b126a98be97777b61d0c5dfcf794f",
+        "size": 4340,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/27a1377f566b126a98be97777b61d0c5dfcf794f"
+      },
+      {
+        "path": "pyproject.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b69da03be53b96b14799e0df97cf1238bb82db0b",
+        "size": 193,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/b69da03be53b96b14799e0df97cf1238bb82db0b"
+      },
+      {
+        "path": "python-debugpy",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a8adf6f511f1214aada1c04501fdfe899e7624b1",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/a8adf6f511f1214aada1c04501fdfe899e7624b1"
+      },
+      {
+        "path": "python-debugpy/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d02ff3a0b467799ac72f8df18c2aaabd5af9a03",
+        "size": 2530,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/8d02ff3a0b467799ac72f8df18c2aaabd5af9a03"
+      },
+      {
+        "path": "sag",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b33a159f1df7b5030b9315f89060729c30eab01f",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/b33a159f1df7b5030b9315f89060729c30eab01f"
+      },
+      {
+        "path": "sag/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "88b8604d880e46122698edc9be915cd3a6e6ee39",
+        "size": 2353,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/88b8604d880e46122698edc9be915cd3a6e6ee39"
+      },
+      {
+        "path": "sherpa-onnx-tts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "06db8031360a592182436b5873341516dd3754a7",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/06db8031360a592182436b5873341516dd3754a7"
+      },
+      {
+        "path": "sherpa-onnx-tts/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1edf042d1bf65ab48992c08af6d62d5dc2fa7759",
+        "size": 4033,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/1edf042d1bf65ab48992c08af6d62d5dc2fa7759"
+      },
+      {
+        "path": "sherpa-onnx-tts/bin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "73e6872e0ef98122a9a7b26b1732a1d39d86de98",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/73e6872e0ef98122a9a7b26b1732a1d39d86de98"
+      },
+      {
+        "path": "sherpa-onnx-tts/bin/sherpa-onnx-tts",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "1d7b29974e0342cb8931926ead731b354408a3de",
+        "size": 4811,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/1d7b29974e0342cb8931926ead731b354408a3de"
+      },
+      {
+        "path": "skill-creator",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "092ba55e2290bef5c06e6d47a83313839cc887a2",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/092ba55e2290bef5c06e6d47a83313839cc887a2"
+      },
+      {
+        "path": "skill-creator/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cc0d1d7abe5eeb9f91d1a308affe577d6b71ee54",
+        "size": 2301,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/cc0d1d7abe5eeb9f91d1a308affe577d6b71ee54"
+      },
+      {
+        "path": "skill-creator/license.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+      },
+      {
+        "path": "skill-creator/scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0264d8af02634aace5c5ab9d51fb643b88a008e0",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/0264d8af02634aace5c5ab9d51fb643b88a008e0"
+      },
+      {
+        "path": "skill-creator/scripts/package_skill.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a5442a463937680a5c9d14c245a451646ebc26f7",
+        "size": 4703,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/a5442a463937680a5c9d14c245a451646ebc26f7"
+      },
+      {
+        "path": "skill-creator/scripts/quick_validate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6b04c4d715fcd00f36f3b8013875aa3ec58d8da2",
+        "size": 5419,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/6b04c4d715fcd00f36f3b8013875aa3ec58d8da2"
+      },
+      {
+        "path": "skill-creator/scripts/test_package_skill.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "870fd8639044e9255c25b41fa44191f095444ea0",
+        "size": 7360,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/870fd8639044e9255c25b41fa44191f095444ea0"
+      },
+      {
+        "path": "skill-creator/scripts/test_quick_validate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1289745137110fc028456199fa14741c1c7dd1d9",
+        "size": 4533,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/1289745137110fc028456199fa14741c1c7dd1d9"
+      },
+      {
+        "path": "songsee",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ae82a18c699864aa2d4e1fb1f6c8e4990ac7970f",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/ae82a18c699864aa2d4e1fb1f6c8e4990ac7970f"
+      },
+      {
+        "path": "songsee/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e30a7a24a7e7f1df87e96996ddd4d25a52b8ff7d",
+        "size": 1316,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/e30a7a24a7e7f1df87e96996ddd4d25a52b8ff7d"
+      },
+      {
+        "path": "sonoscli",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ed79acd305716f550b190e9390edddffeb425ac6",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/ed79acd305716f550b190e9390edddffeb425ac6"
+      },
+      {
+        "path": "sonoscli/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4bb764056ae067643037f5384eefdf232b70bcd8",
+        "size": 2457,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/4bb764056ae067643037f5384eefdf232b70bcd8"
+      },
+      {
+        "path": "spike",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bab215c3320d1c06ed038578956a3eb005d22770",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/bab215c3320d1c06ed038578956a3eb005d22770"
+      },
+      {
+        "path": "spike/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "afff75f0d867df7d62cbf3d96fa821ca85263ef7",
+        "size": 1891,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/afff75f0d867df7d62cbf3d96fa821ca85263ef7"
+      },
+      {
+        "path": "spotify-player",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f7723b096950492779bd9b7d988de5e105f67acb",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/f7723b096950492779bd9b7d988de5e105f67acb"
+      },
+      {
+        "path": "spotify-player/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0c17b51e34d08369b861fd0c35f3c0b81966b508",
+        "size": 1688,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/0c17b51e34d08369b861fd0c35f3c0b81966b508"
+      },
+      {
+        "path": "summarize",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1fbc6f703b852072d57496300bd2a078309e9c7d",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/1fbc6f703b852072d57496300bd2a078309e9c7d"
+      },
+      {
+        "path": "summarize/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b6c08a9ddf21e1212a7e9c4cf118b0ba4b87bf92",
+        "size": 2125,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/b6c08a9ddf21e1212a7e9c4cf118b0ba4b87bf92"
+      },
+      {
+        "path": "things-mac",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ea0a77b94479eefccb0a7267676c65e5ba6adce0",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/ea0a77b94479eefccb0a7267676c65e5ba6adce0"
+      },
+      {
+        "path": "things-mac/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "586b6570758e470872948a177fb6969bfcf4b07c",
+        "size": 3390,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/586b6570758e470872948a177fb6969bfcf4b07c"
+      },
+      {
+        "path": "tmux",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "dd5ddfca6522c8d2038bb828f12fbbecbdc7c982",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/dd5ddfca6522c8d2038bb828f12fbbecbdc7c982"
+      },
+      {
+        "path": "tmux/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "854644bcaeb66e7eb8530f4e5e841882914d85b5",
+        "size": 2564,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/854644bcaeb66e7eb8530f4e5e841882914d85b5"
+      },
+      {
+        "path": "tmux/scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1804227bac84c29c0960ea7a3aee157052649c6e",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/1804227bac84c29c0960ea7a3aee157052649c6e"
+      },
+      {
+        "path": "tmux/scripts/find-sessions.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "57f664fe0717d0270ce39a09113df146d8e679eb",
+        "size": 2983,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/57f664fe0717d0270ce39a09113df146d8e679eb"
+      },
+      {
+        "path": "tmux/scripts/wait-for-text.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "05e754edf25459b256c86ddc1ca4cd6f457552b8",
+        "size": 2294,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/05e754edf25459b256c86ddc1ca4cd6f457552b8"
+      },
+      {
+        "path": "trello",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bee2e2aabb67f6cc0d547439c534a09be45915c0",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/bee2e2aabb67f6cc0d547439c534a09be45915c0"
+      },
+      {
+        "path": "trello/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e87e918c1af03f72ca2a185d1127bf1f83649591",
+        "size": 2956,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/e87e918c1af03f72ca2a185d1127bf1f83649591"
+      },
+      {
+        "path": "visualize",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "12a1cac2d2df615c9c3e3f318631671fc277cf87",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/12a1cac2d2df615c9c3e3f318631671fc277cf87"
+      },
+      {
+        "path": "visualize/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e14b09f97d5f1cd423dedcd5d535aceacc68db8c",
+        "size": 9412,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/e14b09f97d5f1cd423dedcd5d535aceacc68db8c"
+      },
+      {
+        "path": "weather",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "33963512084ee519d869525d07f13694c25d642c",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/33963512084ee519d869525d07f13694c25d642c"
+      },
+      {
+        "path": "weather/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e84bbea68bae7416d27eede03154b7acd29b3559",
+        "size": 2905,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/e84bbea68bae7416d27eede03154b7acd29b3559"
+      },
+      {
+        "path": "xurl",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0e7421815358e0d4571288b805bd5c429d5bec89",
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/trees/0e7421815358e0d4571288b805bd5c429d5bec89"
+      },
+      {
+        "path": "xurl/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "13aa9bdf2b16ea9a5c84c9c5618bc425d409f24a",
+        "size": 2702,
+        "url": "https://api.github.com/repos/openclaw/openclaw/git/blobs/13aa9bdf2b16ea9a5c84c9c5618bc425d409f24a"
+      }
+    ],
+    "truncated": false
+  }
+}
