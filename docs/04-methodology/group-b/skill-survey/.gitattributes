@@ -1,0 +1,4 @@
+# Generated text is written with deterministic LF for snapshot replay.
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf

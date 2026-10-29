@@ -1,0 +1,4533 @@
+{
+  "input_snapshot": {
+    "path": "tools/skill-survey/data/catalog-input.jsonl.gz",
+    "records": 83265,
+    "sha256": "8b82c67ab7c44aa7af82c5f486b19473a13475f1c71699336f4e56b0d02477fc"
+  },
+  "catalog_output": {
+    "path": "docs/04-methodology/group-b/skill-survey/clawhub-catalog.csv.gz",
+    "sha256": "49f4a7e533455264897eb76844ddab5d474e2272491099c35548f4de6405c66d"
+  },
+  "reviewed_records": 74,
+  "source_files": [
+    {
+      "source": "bundled",
+      "path": "1password/references/cli-examples.md",
+      "sha256": "7df8fb39623b7cd222766e33255d47c271f772ca53198f256f1270fd9054d20e"
+    },
+    {
+      "source": "bundled",
+      "path": "1password/references/get-started.md",
+      "sha256": "492c2c77f54f2071560f5e80c0b39255430ce1dd4688e27bdd42ba14ace495e2"
+    },
+    {
+      "source": "bundled",
+      "path": "1password/SKILL.md",
+      "sha256": "31721928c499579bad04ab1a61e14b22b6fd01c5dfa328aa911f9ea3e22ebfdf"
+    },
+    {
+      "source": "bundled",
+      "path": "apple-notes/SKILL.md",
+      "sha256": "d280e7ffffeb182172da7afad23528ef9f73ee4905ab88ebb124046aa6e6aed7"
+    },
+    {
+      "source": "bundled",
+      "path": "apple-reminders/SKILL.md",
+      "sha256": "08413d063e71c7ad7e4691e81a1063b455b816957ce7898576c2653542e8303d"
+    },
+    {
+      "source": "bundled",
+      "path": "bear-notes/SKILL.md",
+      "sha256": "10836e95358f59969972c161a38984e4f38695357aa56b51795743c85f55318d"
+    },
+    {
+      "source": "bundled",
+      "path": "blogwatcher/SKILL.md",
+      "sha256": "dc6b343e2c655215d15ddcc6e134d76d5b7973a6a1e5d59ee61fb9e0a902c670"
+    },
+    {
+      "source": "bundled",
+      "path": "blucli/SKILL.md",
+      "sha256": "977fde68700d0839357acdd3926cd19d646de5be3acbc3d0a1d71e00694bd619"
+    },
+    {
+      "source": "bundled",
+      "path": "camsnap/SKILL.md",
+      "sha256": "53a7e4cb6c1903d3c4022ee15943d38b7ac8b894dd96e1466935c5a043b37efc"
+    },
+    {
+      "source": "bundled",
+      "path": "clawhub/SKILL.md",
+      "sha256": "667007fa578dc292690ab7fbb9ddda80427fd6cb474ec6dc830edc670e3c41e1"
+    },
+    {
+      "source": "bundled",
+      "path": "coding-agent/SKILL.md",
+      "sha256": "cabfef83abacbecaf73081677a9fb1c718770594dfd729aafae93581dae2b242"
+    },
+    {
+      "source": "bundled",
+      "path": "control-ui/references/dashboards.md",
+      "sha256": "615ec9849acf53325a2552553951ff90fff71efdc1ca24d0128533a0835e07bf"
+    },
+    {
+      "source": "bundled",
+      "path": "control-ui/references/hosting.md",
+      "sha256": "e1a5045eb73101e2daeeeac489d25ee95399c35d6a499789b5fa38a607006fd6"
+    },
+    {
+      "source": "bundled",
+      "path": "control-ui/SKILL.md",
+      "sha256": "aa54d5df5f8097fd3d2afeb0901502772919b226075d78b7fd9e5b12c25e0aea"
+    },
+    {
+      "source": "bundled",
+      "path": "create-claw/references/draft-format.md",
+      "sha256": "ec9fa49531de9a9eb94b171f0277eb67d9157bb61231dac4a1c68a84837db651"
+    },
+    {
+      "source": "bundled",
+      "path": "create-claw/scripts/cli.mjs",
+      "sha256": "e5a3a39fafbcacdb3cc8cb1f9fa49a1dd7a50ae3e1e1bf545fdfaa2f9acd5175"
+    },
+    {
+      "source": "bundled",
+      "path": "create-claw/SKILL.md",
+      "sha256": "adc0c460a26016821fc1ea12f37ea2aec627510ae6781438235db4e904470b98"
+    },
+    {
+      "source": "bundled",
+      "path": "diagram-maker/references/excalidraw-patterns.md",
+      "sha256": "6fc8799815adc1ef0171f25f59431e7e60bfa072ad570a60c335383bd872bf56"
+    },
+    {
+      "source": "bundled",
+      "path": "diagram-maker/references/svg-template.md",
+      "sha256": "3a8b47dbaeb341377a4999ff227f088a3a7fe2bee7b1353929f11a1f30b20c71"
+    },
+    {
+      "source": "bundled",
+      "path": "diagram-maker/SKILL.md",
+      "sha256": "6195e03fcb04a1a68c4af72165e0c85efcd2719af79380d82e42996ea89ad74a"
+    },
+    {
+      "source": "bundled",
+      "path": "eightctl/SKILL.md",
+      "sha256": "3e46252f398017429c79101fe6049f81755882e35a8c6150803c4c8822205ba3"
+    },
+    {
+      "source": "bundled",
+      "path": "gemini/SKILL.md",
+      "sha256": "1aad57691db927cf26b489e15bab4eb909e390ebca361c128f98ab5bcf4bdf43"
+    },
+    {
+      "source": "bundled",
+      "path": "gh-issues/SKILL.md",
+      "sha256": "e7a64973e186211725e18a45d076803abc07915e348fd94691e7acaea367d54a"
+    },
+    {
+      "source": "bundled",
+      "path": "gifgrep/SKILL.md",
+      "sha256": "ac3981d030c96e79100328fb4cf84a317cecaef1c4e186d0acca21b9aef0dbe5"
+    },
+    {
+      "source": "bundled",
+      "path": "github/SKILL.md",
+      "sha256": "88a912c2ec7437cda4775994efb2f45d79fdd5823fe2394050c3ab93b525e6d8"
+    },
+    {
+      "source": "bundled",
+      "path": "gog/SKILL.md",
+      "sha256": "d54a8e52b1e00bb5d33b46915fd549f8b792ef3a383fe40e92b195d11d2d5255"
+    },
+    {
+      "source": "bundled",
+      "path": "goplaces/SKILL.md",
+      "sha256": "81139f4e645a6355e23d15f94ee6d6ef3bfce8eb4a5716dad298880e2b38e24b"
+    },
+    {
+      "source": "bundled",
+      "path": "healthcheck/SKILL.md",
+      "sha256": "b41044aeb25afe95daa5c8ef6f2d6b8d197f6a0b113b0888deaa4dd69e42b59b"
+    },
+    {
+      "source": "bundled",
+      "path": "himalaya/references/configuration.md",
+      "sha256": "a1838b3f370abef2c6c45226115158aee095623701a4ffb48ea633bce14ccf0f"
+    },
+    {
+      "source": "bundled",
+      "path": "himalaya/references/message-composition.md",
+      "sha256": "ba45ed7506280c20b652ccbad3042d7a6b3b261a68a25f33e189f940fc8fda36"
+    },
+    {
+      "source": "bundled",
+      "path": "himalaya/SKILL.md",
+      "sha256": "dde091b15e99a2ca63363f110f045c7c2347ec9cb3a88dc51b109d75cc2dcae2"
+    },
+    {
+      "source": "bundled",
+      "path": "mcporter/SKILL.md",
+      "sha256": "010ed9b265e58d45d1e95e6deac5e60b1e46e6ebab00fc3fe30429a1048e236e"
+    },
+    {
+      "source": "bundled",
+      "path": "meme-maker/references/templates.json",
+      "sha256": "414847dc28da8556bdd9a3ddf350f3d859d4668ecc237c1889b289d42d2879b8"
+    },
+    {
+      "source": "bundled",
+      "path": "meme-maker/scripts/meme.mjs",
+      "sha256": "6211a37d19d90498b01fc31302506af0c0021e9949038054e1f7c34e71c4e1fd"
+    },
+    {
+      "source": "bundled",
+      "path": "meme-maker/SKILL.md",
+      "sha256": "682db7cba34a3d3ca791f7cccaee9488810c731d6622d8886a9bcca77c59d2f3"
+    },
+    {
+      "source": "bundled",
+      "path": "model-usage/references/codexbar-cli.md",
+      "sha256": "58e57a7bf1359ed32b1fe80c7285e75f88127e82db6b0dbab2ec4dda6ffaca42"
+    },
+    {
+      "source": "bundled",
+      "path": "model-usage/scripts/model_usage.py",
+      "sha256": "cd13c65d9d10faaff20bdf40d5f45f6d26a29dacc3e13d8a1e481a3a8a0f4874"
+    },
+    {
+      "source": "bundled",
+      "path": "model-usage/scripts/test_model_usage.py",
+      "sha256": "1bc6fceb436d836532e6901edb6eb473a68a16eda25f45f94322d99beea4a3b2"
+    },
+    {
+      "source": "bundled",
+      "path": "model-usage/SKILL.md",
+      "sha256": "f4e40f006365acc5f519a55f4efacb6c722788026792e498fcf46dc1a0f0c1d1"
+    },
+    {
+      "source": "bundled",
+      "path": "nano-pdf/SKILL.md",
+      "sha256": "d8ab6db7572b0df862820dd3481c14ae306173a1dbcad7f07f9e48ada8efbe91"
+    },
+    {
+      "source": "bundled",
+      "path": "node-connect/SKILL.md",
+      "sha256": "40f47cc3c6922049acb5b9a6871572a1f0d4c5b01eb7abfa9f36d0b933fe91ba"
+    },
+    {
+      "source": "bundled",
+      "path": "node-inspect-debugger/SKILL.md",
+      "sha256": "50d2f6828eaf4bbf7ccbaec5af928f9af978e93b7c679b0f3c8afe2a80ab7d52"
+    },
+    {
+      "source": "bundled",
+      "path": "notion/SKILL.md",
+      "sha256": "d45e2c1270d58c7878c13467ab27780530de2af89fb8b307c662b5d4859dc555"
+    },
+    {
+      "source": "bundled",
+      "path": "obsidian/SKILL.md",
+      "sha256": "d4ed3ce53146bd6538c47f81da2382fc790598ec1400d34b7d1f73a8839053b4"
+    },
+    {
+      "source": "bundled",
+      "path": "openai-whisper/SKILL.md",
+      "sha256": "802e31d7310316fc25a5ec4fbe29308a0897c039cd2ae897f59fc25128ab4644"
+    },
+    {
+      "source": "bundled",
+      "path": "openai-whisper-api/scripts/transcribe.sh",
+      "sha256": "7840f2628e2e5d878434419592a8cfc5fbfcf2f560cc1511085387e38e429c78"
+    },
+    {
+      "source": "bundled",
+      "path": "openai-whisper-api/SKILL.md",
+      "sha256": "afff70c706a9bae250b046b741e9930340ca87cc1689a82d4415dd4d6b45bfa1"
+    },
+    {
+      "source": "bundled",
+      "path": "openhue/SKILL.md",
+      "sha256": "2ab6c80280e9d7f19fa0fdadf8f37f096e30f52012edaaceb2175f513249494c"
+    },
+    {
+      "source": "bundled",
+      "path": "oracle/SKILL.md",
+      "sha256": "b150b967b1326bec594bf24f8bddf10aeb78b49a64c91091dcdf5fdad35402c1"
+    },
+    {
+      "source": "bundled",
+      "path": "ordercli/SKILL.md",
+      "sha256": "890a7c2b4bbcec79c894ac9a4b76c11f734fa01b76b258a77e6429230b95a3c8"
+    },
+    {
+      "source": "bundled",
+      "path": "peekaboo/SKILL.md",
+      "sha256": "4369238bd780adc502acc48eef83a41d1a5fb8e6369b6cd258e11779043bfcb4"
+    },
+    {
+      "source": "bundled",
+      "path": "pyproject.toml",
+      "sha256": "a87491ef1dd0865c37ee2c10fa57b0af6025119bcc638630236f3001d1b2f5c6"
+    },
+    {
+      "source": "bundled",
+      "path": "python-debugpy/SKILL.md",
+      "sha256": "dd4600a228fcdce153e4e318c2b8644e6f7f3964826958e89b5bae90db4877d3"
+    },
+    {
+      "source": "bundled",
+      "path": "sag/SKILL.md",
+      "sha256": "d8efa1bea9d9b441eb289a6f64826b5ded51837a30a66103bb91223f3bb2cc7f"
+    },
+    {
+      "source": "bundled",
+      "path": "sherpa-onnx-tts/bin/sherpa-onnx-tts",
+      "sha256": "542d46f42f5ff8d22ed71f58ca052e4e525a337d90bd25664a6237b6da56fd2a"
+    },
+    {
+      "source": "bundled",
+      "path": "sherpa-onnx-tts/SKILL.md",
+      "sha256": "f3a4d30d0e7e14e76dcb5245e197e3dcf490e3f9e8298466e86e4f33847f532d"
+    },
+    {
+      "source": "bundled",
+      "path": "skill-creator/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "source": "bundled",
+      "path": "skill-creator/scripts/package_skill.py",
+      "sha256": "fa2f7ba4915464221cd71c7048e6eb71a920cf94c793332b4172d2ac353dd65a"
+    },
+    {
+      "source": "bundled",
+      "path": "skill-creator/scripts/quick_validate.py",
+      "sha256": "580ccffbd9d4370bc35bca22c551da0353424e248d7499e8cd578eaec67dfd75"
+    },
+    {
+      "source": "bundled",
+      "path": "skill-creator/scripts/test_package_skill.py",
+      "sha256": "9d47d5a26c47cbe70b788a39141e453a54626ed391ee12952eef6ffb5b73a3f7"
+    },
+    {
+      "source": "bundled",
+      "path": "skill-creator/scripts/test_quick_validate.py",
+      "sha256": "349258a18c0130f0bf11dd60d361abffa493e426355bc14df4d1d3fc09a46f8a"
+    },
+    {
+      "source": "bundled",
+      "path": "skill-creator/SKILL.md",
+      "sha256": "7da0631cb21fbd87630b5dbeb48010f66776c28e396c276235f5d245903fa6ed"
+    },
+    {
+      "source": "bundled",
+      "path": "songsee/SKILL.md",
+      "sha256": "d72b37088b7a09d781183ab0ff38adcda0e3596db79d902c117b57dda73a432a"
+    },
+    {
+      "source": "bundled",
+      "path": "sonoscli/SKILL.md",
+      "sha256": "d048a8c8eb9ebbb1e6000baca132f581c7d74bebf81df18f81b11410e466f6e8"
+    },
+    {
+      "source": "bundled",
+      "path": "spike/SKILL.md",
+      "sha256": "1258cde2d0e5326706536aeeef06d5366fd65e7e1c174c66130b2ac53a4344d1"
+    },
+    {
+      "source": "bundled",
+      "path": "spotify-player/SKILL.md",
+      "sha256": "00f506401fa1126278b36412c3b352f288d19449e338d1f54fb843ebab634fba"
+    },
+    {
+      "source": "bundled",
+      "path": "summarize/SKILL.md",
+      "sha256": "b6d9be0ff47e646280a0ff40203823d7ca36913ab1bea25575b2de4afb3cc0df"
+    },
+    {
+      "source": "bundled",
+      "path": "things-mac/SKILL.md",
+      "sha256": "917110e26bc6a630d614acf47d05e84da5f81fb88c0d263f5987962dca2a05c2"
+    },
+    {
+      "source": "bundled",
+      "path": "tmux/scripts/find-sessions.sh",
+      "sha256": "8df6ac8e5824b0fa4d791235bd944ce86b0d12dcbf98af7abeb6d6de50e96823"
+    },
+    {
+      "source": "bundled",
+      "path": "tmux/scripts/wait-for-text.sh",
+      "sha256": "b7efb785d3f2a4f1194e2ae18d7191135ad5a2fff4f08e6a4c7ad8412f3a7309"
+    },
+    {
+      "source": "bundled",
+      "path": "tmux/SKILL.md",
+      "sha256": "8aeaa6f3dfe06d58e09721778b8c9e654bcbd47590f26f442c4dc87c9349c572"
+    },
+    {
+      "source": "bundled",
+      "path": "trello/SKILL.md",
+      "sha256": "dc524f73bd87b8089d061187bb26add41101ee82e288a1597a2d7b89fd934222"
+    },
+    {
+      "source": "bundled",
+      "path": "visualize/SKILL.md",
+      "sha256": "94259bbb4d06ab0927d540780c2ef095c6bfe17cbb7248ce485c82656290338a"
+    },
+    {
+      "source": "bundled",
+      "path": "weather/SKILL.md",
+      "sha256": "62ab4821aa873949d1c1091836be1659a42b32caadce4bd145f5505a1ceaeec1"
+    },
+    {
+      "source": "bundled",
+      "path": "xurl/SKILL.md",
+      "sha256": "0e5e736c382f0943e2c4ab974b593fe5b0b0a6ff7471f56f7ef9db69c19025f6"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "aircraft06",
+      "slug": "academic-paper-writing-style",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "cf44335ff427b91246ac9d9a44662ce6844f59310cdf25a1e4884fa55bd91a0f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "aircraft06",
+      "slug": "academic-paper-writing-style",
+      "version": "1.0.0",
+      "path": "references/expression_examples.md",
+      "sha256": "954d93b8c91cdf5c6f0032abc307594d1a0f4487380d3bf7524da933046dc742"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "aircraft06",
+      "slug": "academic-paper-writing-style",
+      "version": "1.0.0",
+      "path": "references/journal_formats.md",
+      "sha256": "6a876b248d0c1796755800e09baf5a2faf4faa37a90612b5410b526f8bf98495"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "aircraft06",
+      "slug": "academic-paper-writing-style",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "75574408e658c7d2bbc1759c0d2995bd1ff688d4d927e206efb9cd7260f6d6b6"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "SKILL.md",
+      "sha256": "9e9a8f3a0403af88b1a03b375f4fb9c23ef0b0aff95dac9fb6016e4ffee13671"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-projects/README.md",
+      "sha256": "78e6cd4d9dcad47c0d6465e15176aeaf5959717a38b263ed2d2e72f502fa5a73"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/outlook/README.md",
+      "sha256": "6d351f0f737818046a82fc8e05a9b94bdd8936739d048dccf3083205ecb5824f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/youtube-analytics/README.md",
+      "sha256": "558d79802105c1d09b3e196ddd8ab5d68c2a1717d199003ad7ef42051afbd8d7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/fastmail/README.md",
+      "sha256": "b4dea302cfd65553924ed4ec8fc9a9d77f1945443e1903fa88079d40d2717bbc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/buffer/README.md",
+      "sha256": "dee652d81906a27252e490cb6bff8b41d58f2688189e1ce1e9e0bf1f7c91f6ec"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/README.md",
+      "sha256": "9d0531a04118154d01fe1961f2d0b1d42d1363928fa83d6d0e9bec049da16bd4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-search.json",
+      "sha256": "475c7c1ecbed921b8d7b66f798e00a90bf849a2effd43f26aa7f06ee6b58b699"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-fetch.json",
+      "sha256": "63f571a0e1b591a222b5f2cd4bc7333fb295e5ea4d74f2a189d54b0fc4b6cb4c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-create-database.json",
+      "sha256": "953ad2cd0e6237c039e524e466fd8b13396455ce4146bfac4b437ac08e24069c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-get-comments.json",
+      "sha256": "d25bc3ec722b2a04c7c5f4ca5c76697b8e4fbc511540d194b19d38455aa03c47"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-update-page.json",
+      "sha256": "a80e8aebc4b21ebd20bfe53e55f555fe51b7cfff08eabee5c737a5a652c374d2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-get-teams.json",
+      "sha256": "81ffe78a86e5daa09292e28d7a3d4f00c9da1e48bff2885c5bd14b106cad2e5b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-move-pages.json",
+      "sha256": "f64fc15e98b5e6357ebabac0aa0598500a3285ffb290dd42e2d0cebea312e24c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-get-users.json",
+      "sha256": "58b9108d8b93f9be806c5208cd54f357ed949922bd74a7cf173eabe63b4de71e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-duplicate-page.json",
+      "sha256": "c4b093ab2de048217b27dbb01b98847f7bb9b5562360ad37d6ef5391ed0f4e2b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-create-comment.json",
+      "sha256": "87dc06351d6d3d958743b2dfb8bb6901a01ffccb25942dc2baecea249cbe76a7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-create-pages.json",
+      "sha256": "2cbe4dc25c3968e3406fdf86eb51b29866df0df00b5fc46c4722ec7e5184ca89"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion-mcp/schemas/notion-update-data-source.json",
+      "sha256": "2e78677d55242fcd5ae2bf8bf7bd6f2b481e9971e45ef9565c0860c487aa03ea"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/stripe/triggers.md",
+      "sha256": "b29b637756108edfdaf3ce6d26f40411da6d548db577f381e1640164c09b7e2f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/stripe/README.md",
+      "sha256": "de76f74edc607dd6c7d894a091c1146933eaa89392b329d8b2c0c6438baca6f5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/twilio/README.md",
+      "sha256": "412eb5e7681cf5227a501e9ce0ea4f7e93008ae9ef2f680e17c5be8f4a5ae8e2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/linkedin/README.md",
+      "sha256": "b6327a2dedd296383d9c5c495599c43c00d8a998352d6402842cd6893fbb7703"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-contacts/README.md",
+      "sha256": "b05b9fc6c8f917dba14af1948a732a01ed52a62cc03ca07ea74a44998f86c2aa"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/resend/README.md",
+      "sha256": "604c5119a1467f0d9d38c14e4149d3546143344c6a7629c0e511796a8bb67547"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/snapchat/README.md",
+      "sha256": "959add70cf0cd33f96d3a5a9042ac738939f5853d4372c9bb00c00d9f19965a1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/apify/README.md",
+      "sha256": "e88939e5a92dca680dd59a38fa31386ea92163bcd0e1767f6f8e45264e9acac0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-search-console/README.md",
+      "sha256": "ee8a89bfcec51e0544779b05ad81c0f9b118b44b450186dc0fd9f6f7ee2d6e27"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoom-admin/README.md",
+      "sha256": "5def5f309e8994b6fc85a7419328f9aa7d484e63bbd623f563a2ebea2a4cf9b6"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/coda/README.md",
+      "sha256": "09d15fd918f1d97de5dfb08c98fa1423cf9bfb6ced9d57ea4839b5cbf352dc81"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/one-note/README.md",
+      "sha256": "3ceb56bf72fecdbc63c2f5e859841c668aa065b13b385756c35033b6d7f70783"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/asana/README.md",
+      "sha256": "105d6926e7e9e218a584fed36d62695722098ea66a6e0645320e30f6a766613a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/highlevel-pit/README.md",
+      "sha256": "23acceee5a212c86419d5d299488e840e99b221dbca167a41d49f884f96f5db9"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/brevo/README.md",
+      "sha256": "f1ee701e0a427036852727d0791404815652cedb3d221829b800fd3e7d468b4d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/microsoft-excel/README.md",
+      "sha256": "a64f865df088965ee320c43da056b5006225b3303f6745d018fba4c56d7eb5ac"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/front/README.md",
+      "sha256": "a213d95144e5a2255394afc36b863ebc26b211e81c5cd9389f1a96c0d5c1285c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/vercel-ai-gateway/README.md",
+      "sha256": "27b16523ba08a8ad6eb760ffdb4ba31c499f23dd9602ec297554747136f1584d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sentry/README.md",
+      "sha256": "aa802cff26659a12f4d9e09db83042207d9ba49ed175f0bd61bf8608599251c8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/companycam/README.md",
+      "sha256": "2efd58e65590e855cb507a3c1186059d31d093eb3a8db8bb578ec3a58642dd9f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-analytics-data/README.md",
+      "sha256": "2b4f7ebb09b229e6d21ddc93f5579e4e42ad7abe1a8a61b90a244e418ce69c5b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/calendly/triggers.md",
+      "sha256": "ab37ed1f7c577baca0d14ef0196770cf1559bf8a47ca6e44e396d409ccfa3020"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/calendly/README.md",
+      "sha256": "4c5a1e566b97ed3ec87047f5cd1fd871e894e094b0ea82ce838bee9bd28c6e57"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/beehiiv/README.md",
+      "sha256": "9ab7d570152144807d76184ba3953b6c03ce32179784402a7695c5b7c4106343"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/tavily/README.md",
+      "sha256": "ac887fb47193e47c8bb841f98f4ee89d3cd6bdf4d31050b93868e766b4a71527"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/constant-contact/README.md",
+      "sha256": "2338ff5a93390c6298b13156e90d26dcba32a9984e024c5514b55bc7f12cc3be"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/clockify/README.md",
+      "sha256": "5bc3de13e3be40c9265b2ccb1f6e54a0feeff6153377fce67f1419a027639b25"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-bigquery/README.md",
+      "sha256": "33f7b14523da856a48942c54faacead3677276f789a432ac1be238f34ab6888e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/trello/README.md",
+      "sha256": "3ef11e93e1168787322ac050e65c9e445da2ff09b3b53b72ad841f9c6c8d558b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/clio/README.md",
+      "sha256": "a9b62f5823f7dbffd0bbb514a482182d64d5457b509cdd6f7e4def11fccf34fc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-slides/README.md",
+      "sha256": "341373314fc69e7bd598288f0db4de0402c1b590c6dbc1339284e05b0cb32e77"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/twenty/README.md",
+      "sha256": "5a7417f998d58396bf5eb104acf11de037660fee9b3c9eb9bcbcf83e1b7cb37f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/posthog/README.md",
+      "sha256": "851a25728eeb6370e5b1e321c16acf92b33d1d66d76cb74253adfe316d298800"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/slack/triggers.md",
+      "sha256": "059d59aa30cdeb6bc6b05a194f3b5aad9a288f6f8844a60197356b75991801a2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/slack/README.md",
+      "sha256": "a16894143dab7c279f053601f6424065974b429222d5abd90e5ccb66e6041ffe"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/mailgun/README.md",
+      "sha256": "deb68fcb32168a0ed79ccdf8af424346f9a0950b1faa193e87b3101356128e14"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/salesforce/README.md",
+      "sha256": "890f23dcd131c4ed8319e1d618cd1346df90f257b2fbcbc54c0d122cfcd863e4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-play/README.md",
+      "sha256": "cc7b2d64cef54c3756f5e07d67b1e5cee6847b57ca768d3099cb833b0ffcc1e8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-recruit/README.md",
+      "sha256": "6b651092d8a0ea89b5c73abf1ccd24d247b90f6a3947ac473b2dc289faf0d56c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-people/README.md",
+      "sha256": "ac369b57c76115553cebb8f466507067d070cf56e4f1308b2cc681f9385aeda3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/dropbox/README.md",
+      "sha256": "769464e3a351dc1691876a0c3bc708c791b8dc30c6c581f42244e7229c6749e1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/wati/README.md",
+      "sha256": "b1ffda8e9598c2064ab3b0a4892ab209cddb4bef7e1b7094e57caa47c187e3fc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoom/README.md",
+      "sha256": "50be3654d34441044e72a8cc246f717a8f4307f606eac519230dea28d0971010"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/ticktick/README.md",
+      "sha256": "26dfe71373c43fadcaba0a5760fc78fbb4fdf86d0166e9e201645cbdd3e2b76f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sharepoint/README.md",
+      "sha256": "845ae0eeceae79f56cb7ef8fc59ca6faadc7e16c95ab2952686ab970d4e38184"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/confluence/README.md",
+      "sha256": "826452bceca6bcdcfbb6d637afdb4e247b7d661a81baebc0d0895ae597d624b3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/fathom/README.md",
+      "sha256": "7f72f052b0e9c6bd24bafdfca00659208473fe111531638e219133d62404d2c6"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/telegram/README.md",
+      "sha256": "79633eaaeeee85871841e03822b16bf3f80decc5f94eff47aef51234d42ee841"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-mail/README.md",
+      "sha256": "a9e505781c6e0b1de858b15e9d2dd6d016fc979d4d3a3f9437622c19e3ef7360"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/manus/README.md",
+      "sha256": "67422ba97af6d85640f1ae028aa439c33bf62ebdc88f121bf578efb7e01b73d3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/lemlist/README.md",
+      "sha256": "91bd417090d92d31ba628f54d7fca6951ea0755713adbdc01bbe6b92d7bb8ad7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/make/README.md",
+      "sha256": "aa96dce878563f4fdc673eaa4734e68ebb86c60b9187879b62583045612de338"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-drive/README.md",
+      "sha256": "c65ce52bd550fec026090b52c64401ce643d439c718f8d15f1ad9ccce6a2cc1f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/instantly/README.md",
+      "sha256": "189fbf41437309657c404216570f4f089c7577eda2baa670ae8be53af557b311"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/jotform/README.md",
+      "sha256": "92d35dd5f41beebf64fa0bdc251b02730221d63d02dbd2f63659243c1b87240e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-sheets/README.md",
+      "sha256": "f94e58b93e5105418c1e0c8dc31055cdd644439ab7b13b01c5c3155258367cc3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/apollo/README.md",
+      "sha256": "919b7363d0f10e2d9645de486a02e593f3107e0c7926a032844bf34a82c46286"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/dropbox-business/README.md",
+      "sha256": "d210cfc2322f9b5d529e18eb4fb3ef5dc4354a7a87f217688e231e030fe6fa59"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/eventbrite/README.md",
+      "sha256": "c5629e788bc632cd9b8af1683313060035cc57fd16e9c24c4b669221f11afecd"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/basecamp/README.md",
+      "sha256": "23ecad7edd7ca8edb744afa695596f87662d814cedf16bb9270ade8e8f5d955d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-bookings/README.md",
+      "sha256": "db5650120ed9fb8dae3255919d1d975a861f61bfc0bd3ec961c5f9c438caca4d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/figma/README.md",
+      "sha256": "4b47b6f819f1aae7a1c18881c283e0b778ab445733a1dc135adbee8d19bc73a6"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/github/triggers.md",
+      "sha256": "12f715e1afe93128b40dce70fae93ee6fa15f127e8b47526b8f22cbda1cf6996"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/github/README.md",
+      "sha256": "ec0c15ced89b08ed9aa9521a6cc48faf893120118feee70cc71b28e90006ad8e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/jira/README.md",
+      "sha256": "f05477a03c12f19fe9238856fdd3812d3a1d455b3e20f264b5fa0ddd9849e1e2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/README.md",
+      "sha256": "a662eef5acbc86657eda41c2d12598bbb8a7a89d92810982fbb97fe6260f5aac"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/move_calendar_event.json",
+      "sha256": "0eec682e5f45a85c68e77a138b3c1b4209f60b4c9985937b3ad5ce4e19f5f084"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/timebox_a_task_to_calendar.json",
+      "sha256": "cce9e74bec9232ac98f8d5a3299e6b0c14cc8e0ce08c584d7ac939324a3448ef"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/edit_subtask_title.json",
+      "sha256": "0ec19a4e4d767f38e84bbfb249f58bd0a2d1f3f38aafe6925b2f93cad32156bb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/append_task_notes.json",
+      "sha256": "d65b0cbcd08d486a9803dbb66f000a8853a8fb868d37a1951b1a6650b7143e84"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/edit_task_title.json",
+      "sha256": "c3fe350049c6e28901ed801d6aa65993831f627e3508ebe73cbeb6161c13c41d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/accept_meeting_invite.json",
+      "sha256": "1e46edf862606d80aca1cdb9094e0fb4635ba693dc4195b938634b5ffd199e76"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/create_follow_up_task_from_email.json",
+      "sha256": "d16479b20192fb5b5e4be00d96aa2d6cf2d303223a517c3c9882884cdf160544"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/toggle_auto_import_events.json",
+      "sha256": "81c34a366783f235e02590a36b8e919de1961e1c9f4dc2f6b28d0836f543e80c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/delete_email_thread.json",
+      "sha256": "57d5b64de11e68c4eea06805601a7654ee4c0a1090d7651b2e4c93c14ff875bf"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/delete_calendar_event.json",
+      "sha256": "3472d46d000a911292d657be5c064ea29ad54cc8ed54ce341b08fb9d3140c90a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/reorder_tasks.json",
+      "sha256": "68385784165063504b6db62c0c0dd93a9236aa9f3eda810591aa3c3c2fc8ebf3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/update_calendar_preferences.json",
+      "sha256": "92921dbee333c21e52d276de62fa9c67a41272bf94bc82110cfd94d258e2cc4a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/mark_subtask_as_incomplete.json",
+      "sha256": "1af5b1406ec362333307adfe962aaa0ec799b8a07239e9486909623186e5b474"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/delete_task.json",
+      "sha256": "b864a2b7193ef0d480571c2183b70a8485e51a79427e46d5424f7061342b8558"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/delete_all_incomplete_recurring_task_instances.json",
+      "sha256": "b713c29ffee8d3ed770222178a4436f13cc1a5fe9a4e766b05349d9c74eb9128"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/unarchive_task.json",
+      "sha256": "6395669a9617d9fdc17db2aa765fe44de253ba638488991f4f38162bb0579b5e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/decline_meeting_invite.json",
+      "sha256": "a9a82c421867a28e421d61df8ee5448e35e1b36ccd831ae8ac0bb3fa0ae3a55b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/import_task_from_calendar_event.json",
+      "sha256": "0bbd97e7aff8c5e3e51de792664633ee5ba9781748e9f311be56fceb00437a4d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/create_channel.json",
+      "sha256": "f420c87121073e823bbf390067bee1f9c0166d19234c1845e783f3e7c1cd918e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/start_task_timer.json",
+      "sha256": "87dd6869fd43051b9abeed132a6caa37982359ca43e6e668f8ce95841c93aac5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/search_tasks.json",
+      "sha256": "1d51b4ba6bd46888b695746761675a1138d4a8519634dbf360d2e400516fb6ca"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/edit_task_time_estimate.json",
+      "sha256": "0739cb42f0ca362387e86aabaa45492dcc6985d41f4f11fcb24653d6b4a158fc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/create_calendar_event.json",
+      "sha256": "9a9c46639bdd627e38211f33a6632b1540678ed912e9567f4448c27e801bf01c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/set_calendar_event_allow_task_projections.json",
+      "sha256": "c519a4bd98ab36aee4ad238bffd3f2ae9c0a49bed401d8ecaedcd377cddeec09"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/move_task_from_backlog.json",
+      "sha256": "f23342a9c620eea6633c4f183e10226eda95c3b859a0f94b44447cdcc6b95eeb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/restore_task.json",
+      "sha256": "c0585bd60426cd84b5802e96a0e7496534cf624b80168b161e89a0524a000bd0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/get_backlog_tasks.json",
+      "sha256": "ed29eb9799d473d5b3b0d6c813af1faa57a743ca4cadf0f6fb59b2354391f273"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/create_task.json",
+      "sha256": "1d99ff7139ec2d44a5acf8048831ae6736abc638b3c09e5edab7e3e22cfb7fc4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/mark_task_as_incomplete.json",
+      "sha256": "eb0210a84ca686591367dfb967cbd977b6ccb27302ce97a3cfe78ec51e725630"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/mark_subtask_as_completed.json",
+      "sha256": "32343fafdefc1e6959cdc425a9e336984a5705f9aa8e15e3fec65f7a405a4b95"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/update_all_incomplete_recurring_task_instances.json",
+      "sha256": "fddd5ea2b9260760c96a0456bb94845f1505417bbc91fc428762bae631bd4728"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/mark_task_as_completed.json",
+      "sha256": "0e0a796493e19d08c1a4e8f1c40b59a934458eb5603d056892cad76b2f87b109"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/get_archived_tasks.json",
+      "sha256": "91090b79d048d0582b66e3adec29b2af59d7b656d4ab739e4779aa75bb991e0b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/stop_task_timer.json",
+      "sha256": "00e53f62329874c7849d0fdfead70f041882efc95aba184b61c4442a281f909b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/edit_task_recurrence_rule.json",
+      "sha256": "c4114bdf3fd41557ad86b96c22a54b72e6b3c5e8db1f7f21cf63648ec663111b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/move_task_to_day.json",
+      "sha256": "fbe514ed263d346f46a36ee6193545fb25322e5cc4846c71d5589f15c16a939a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/reposition_task_in_backlog.json",
+      "sha256": "f26a68c2bbdb894102b94250efa8a7c144918d07f2d95722c1efcbc34fbef008"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/log_user_feedback.json",
+      "sha256": "f737ad9ac91aecddbdea89188438e78c805637d74a54bc3ef9aa1a3a800a8ddd"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/add_subtasks_to_task.json",
+      "sha256": "504af113fe5ba60f602f48452c6e521fbdf8221eefa01280f703360f0c136339"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/create_braindump_task.json",
+      "sha256": "812cc1d03893f837899ef4914d0f1b8bd9c0968cecd91d785a122b4250056d11"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/set_shutdown_time.json",
+      "sha256": "070085d612a910c86d7ee0d88cf05e24c99271b9bf1a7c7d88137a6f64f6b493"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/create_weekly_objective.json",
+      "sha256": "5c9acb5f67a4d031dc7871355192106993a9e0f4c2b1e93a53c8d0ad7d6ceda1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/mark_email_thread_as_read.json",
+      "sha256": "c56081372fd4c4ae91ab9cf225dcad5cdbd2a122479283fa54e34b62aa96b869"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/get_task_time_estimate.json",
+      "sha256": "570f7b00227bc61cb23aa32c2fde10656448914dea5d9b68cc7c9f629bed0e15"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/align_task_with_objective.json",
+      "sha256": "5720aa60cfba36c7df4d250b0d5dfe826bba3ac2458356ec1e3903f339070209"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/change_backlog_folder.json",
+      "sha256": "6daffdd34a25803d59ced9b3de08eaf951731c6c9fa73ac22b7dea61450af0e4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/add_task_to_channel.json",
+      "sha256": "1c21dd0cb6a006c812993f495cd5f2367052a37a70ce477cef962b6ff99a26f0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/update_import_event_filters.json",
+      "sha256": "84a18ece2a9b25b1ca357e322afadfcb1a42be801604b2e064b7f3786257ebaa"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/list_email_threads.json",
+      "sha256": "97ad1cdad1af7ac18ad053e4db0580b2f789fd1fb6d7461929322829dc803cd3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/schedule_next_call.json",
+      "sha256": "f8ff5ea5118327e4284f998b3dbf56782df063deaac9e6f7519dae10cde76b7a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sunsama-mcp/schemas/move_task_to_backlog.json",
+      "sha256": "9175b2b6773e05b4c9054afe4f5647f1b606b7eeadb363697da8c5aff230a28d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-bigin/README.md",
+      "sha256": "7d0a126a7fb945d65b2129a5863783caf875ee91d2300b87ca532ac574bc64d1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/firebase/README.md",
+      "sha256": "d8808d84e1e7109a6cb67f6f111fcea7419471308011a34e7191f82bd1f47849"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-classroom/README.md",
+      "sha256": "bf84a8f5014585f490dc4184619ffe70611cdc8c1c073b8f2fbd73875f54852d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/quo/README.md",
+      "sha256": "b316503d868ad2600f6ca839a892f8a8d3b6321b472c159ab8e95aceabb11601"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/todoist/README.md",
+      "sha256": "d654153d01dbddb6021e07801de22e3769e3a4e42a26ae3ab6792b025e664be4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/tally/README.md",
+      "sha256": "f5411f46ed23d20c93baf66d301079e2d17bf20184816d94c357e3ff198dc2c1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/linkedin-community-management/README.md",
+      "sha256": "bd35ad33548b8a6f5c77cac277c3da2a1f8196f4bf0ff36c164166ab39b26c57"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/airtable/README.md",
+      "sha256": "1068751896e4b643b11b3d57e0352890fddc9a4c8bf1c51116d9fc89df3d8aef"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-calendar/README.md",
+      "sha256": "61a084f49e3b072eb56bdf5ba5532037a594d69a7ac6a4220b26a07a3856a17f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/netlify/README.md",
+      "sha256": "f084f4a13ae58c0e575ab62865a37c3c0d64cdb3a400b0510942b3f7af2987ad"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/fireflies/README.md",
+      "sha256": "db2f9da6a375c590af4ac4645a9baa13a8f9c55fcf453540eb4a7b53d8eeee9a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/hubspot/triggers.md",
+      "sha256": "982f472f32966b5b0d9b929b19c973e8d3097c317e1d32ff307acafb7f9cd4b5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/hubspot/README.md",
+      "sha256": "1f3d03d39b7f6dae73c36ffb56dc432cf9133c8046f262747fa3e27260627274"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-calendar/README.md",
+      "sha256": "15badb5ad139f52e0450cf6f0f46c94d237a186c02a4a78c4cd45a25b8cce5a8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-crm/README.md",
+      "sha256": "5c70c240dee83315e200db736a2dc655c54a772bc3ba9eb1ef60b5b36142417f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/jobber/README.md",
+      "sha256": "d5c5a50b525de244c9e8a316c05c72f7963126a7a7e4b68309592aaa0d21ad8d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/supabase/README.md",
+      "sha256": "e8aa6b3d4219d83afab6fb29dc0a5120555546c2d73343299254c6ff7edeb967"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/time/triggers.md",
+      "sha256": "7ed286a1297e2a0c4444d8eb3f9dd299f07bb1d6563f1d07bb17f365197b40ab"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/elevenlabs/README.md",
+      "sha256": "38229e3b0ac19a949e4b76a3924a242e7c8d2ab31306aef315c6475f019f4853"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion/triggers.md",
+      "sha256": "c2f2f499bc699ec02162808d565bac441d874ae9d7c29d9e1e5a8b8f1f3f669a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/notion/README.md",
+      "sha256": "9941c5ac77c49fc2e7855e500752ce0b2ba2f39c48f7dc191805c1f03010581a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/keap/README.md",
+      "sha256": "8950946c7cdddc7899ebac41fcd6bb9e935dad3c4ed4a03c1966aa780f5acd48"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-business-profile/README.md",
+      "sha256": "c839ef4f5f6c53e0fd484bf3bc858d2b053c16e738c5844b83755d3f72ee7e9e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/youtube/README.md",
+      "sha256": "2e16b5e438542a90b673d86242679cf7a704a7c2d71164c818c358166e248a94"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/gumroad/README.md",
+      "sha256": "ccf89fe6d418766295af5f7e9499931d5301aebe3389a4247bd63036206734a7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/motion/README.md",
+      "sha256": "9d0005e9a42029ad59627355af48b0596f0f524f71e04d2151a7d54d77b6a72b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/podio/README.md",
+      "sha256": "ac119a3712b741b5297a67db29b0158c833500d4ac2d703e328e4c67467cfa2d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/one-drive/README.md",
+      "sha256": "fef5c5d32b3eaa69acc0c6fd824dc29e274129ab426bdb512a5735d3c3f20631"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/toggl-track/README.md",
+      "sha256": "cdef5475f326f08bf271dd7b84e01d605716b64081cc7c569e1e4b52e8b625c5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/mailchimp/README.md",
+      "sha256": "923c716f63f4e9345971c02f6b1cd9bf9996d469d771cb6e04f81d57be07d0ab"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/grafana/README.md",
+      "sha256": "43271e2267f8e7a541c26061c83af84cc5b886ea5dea7d911bd909eedf77f96b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/quickbooks/README.md",
+      "sha256": "7cef12023ae8ee6d691378b51d3ade2e0d984800c2933064d0187ba63ed6eae7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/clickup/README.md",
+      "sha256": "af3f5fa16d905b30448237d1447249ac43b0af8dd747be654543517d98b301ad"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/pdf-co/README.md",
+      "sha256": "fbae40b8eb131931643a16d0ba977f9cc9a67fadc4c79272e647313e3763ab58"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/typeform/README.md",
+      "sha256": "710062868e9ee90365f3befa632f87f64e9c5a15d79cdf4a1a1140b12bad2a3a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-workspace-admin/README.md",
+      "sha256": "be8296f5f4d62eb667fa0ea6502dff8e56d2e002ee4f13aae16c9d0ac222eb4c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/kit/README.md",
+      "sha256": "ddb05b1e5b8a6a58e06b55869cb2eb3ed5558cc91376085d337e16dfa185f2f7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/active-campaign/README.md",
+      "sha256": "726527ad67384d7ff81a49e8c6c0d41f3038579cf7b58ff753f6cb70cd6374d0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-tasks/README.md",
+      "sha256": "df8eefad308b56afa3e79ce61032a3aa8bfad7154306699f267d1af25e2d1ef5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/reducto/README.md",
+      "sha256": "3b961b241ab268ba8e1539f88405f2c29d44e9b41cd2cb44e052c98a62ae7a80"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/systeme/README.md",
+      "sha256": "6e8ed20f3c3dbec45e20481d0deeef10de7a5b08c956df4806f2b32022822014"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-merchant/README.md",
+      "sha256": "c77684225cc0fde3c63787ce1b44b9f0ec9321a4dc79bc311deb024ba4b7ec4f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/vimeo/README.md",
+      "sha256": "f1a6469cf04a1037817d9885b1d196dae34ea458c7f584127e72b53a8a73b9e8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/acuity-scheduling/README.md",
+      "sha256": "0f30e3b90aec34308f52959dac3bc1cc7e615f8a821462072ebce32edf68d150"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/exa/README.md",
+      "sha256": "bebca90c1ae4a26a9f3d87a008d286dd8c3ca0e5351b470998d57501adadbab3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/callrail/README.md",
+      "sha256": "59001bc4162cdb3f639a71c018c9606e8043629a221e56596e1e7ceba6b72344"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/cognito-forms/README.md",
+      "sha256": "1e42e1c0d974a60d908c31f8f96a3c0913d56ba6f36901f4b210af1799b26a5a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/linear/triggers.md",
+      "sha256": "d3a4446d0d79b6a8b5ba7f54c25fa3e31dae85021210f5905da3c5e29b612db1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/linear/README.md",
+      "sha256": "dd740e320b3d7b1413085c6fcaba72bed54223f7be9ee93b49fe8437999d8b19"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-forms/README.md",
+      "sha256": "c8b10682b2f2afc24c739f80c31343151fe2f538c2a5dddd105469d9a121c47d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/pipedrive/README.md",
+      "sha256": "aae35644ada701c3ff708f736d1cf52fc7c695460b530ea31dce0a6356f4ba69"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/microsoft-to-do/README.md",
+      "sha256": "99069659e3c5b93435baca80cf1078657a71e37813f80f3def60ccdf92732532"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/wrike/README.md",
+      "sha256": "964c269c93b6494a88ce264119c0c2d8a9037d0adb0f1ecaa3ab43a704db02f2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/klaviyo/README.md",
+      "sha256": "46c4f83976f910658214e0ec1ad77659692b09e6063c044733cd4d355558dca4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/memelord/README.md",
+      "sha256": "b6595ebe5bbfeab59d1d35c68278ac3ee0b28c4b8068a36bf66d3b5d2e92161e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/xero/README.md",
+      "sha256": "98375a719fec9ed2c8a0b6fe148a71ae865fdd7e7da706cbd48d1172f0c00515"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-ads/README.md",
+      "sha256": "50df02baac4de2dfda052f64a36ffbb83b6260103bb092a523d19b3ce10711ac"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/firecrawl/README.md",
+      "sha256": "ae68afe1b2430fa9af9af742bebf0fdc68cf01734de6524e5c612119aa28f3e2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/getresponse/README.md",
+      "sha256": "0ba314ad1cda2c0722539e245e239c9e515eb2f97444665452d5d4d61d4df503"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/sendgrid/README.md",
+      "sha256": "03e37f8caeca2caf6b98bacca1428a005e3b9af89d985347dc20462c6ffba900"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/facebook-page/README.md",
+      "sha256": "185f27620433df1e7111229479edd353dcf52bc223e87903a5aefd3cb174f32d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/unbounce/README.md",
+      "sha256": "3d331b57060c49af4e943ce280771477c2a7dc8ecad3338bfdd4fce6ddcf74b6"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/whatsapp-business/README.md",
+      "sha256": "3f7efda2b60e80560f0580c33bf5d4dfa93abb56bb656967dd97f01e0523370d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/wordpress/README.md",
+      "sha256": "e0893fbd6ba5d77578a7703d4cfdceb520aeec98ef241f8939ade6bbe5c11e90"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/squarespace/README.md",
+      "sha256": "e87c16c56ce08a972b7c44de665eeb3e98946ad854bb5835336cc9da99d8b05c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-inventory/README.md",
+      "sha256": "6e064066a3d69302f8adecd2a5e378cdd131480f360d2868e3abdc7c390a2903"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/mailerlite/README.md",
+      "sha256": "1588fa9699be061ab93a5f62310afed942f5ff766f65303171f61f0d1662c1bb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/kibana/README.md",
+      "sha256": "4ac1e8aec0827aea7378e9ea71dfa5d1f77ddece299814c42824815bbddfb585"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/manychat/README.md",
+      "sha256": "52a57ed7eec052f8061a8572d49dc0361bdaa55eaae749c7700aef250a119740"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-apps-script/README.md",
+      "sha256": "86e64a62dbc39fae986b01ff4f1bc7c21c172cb5936cd424d618a6f6bef9e4b9"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-tag-manager/README.md",
+      "sha256": "effa59c4e081da44bb2b6c2c5a7efdf9762b5c7c3180cf6bc8de03436250412f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/granola-mcp/README.md",
+      "sha256": "c4498937c3ba6c28c4fead56a6e5f022ee15a2e9b912d0796ac2611d66345760"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/granola-mcp/schemas/get_meeting_transcript.json",
+      "sha256": "2f61585f558351cb313b3026fbd45ad82f6f5b90c6d464c2dc63ffda3e547847"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/granola-mcp/schemas/get_meetings.json",
+      "sha256": "a70b5e8d148e13298426541085f6341b6a1677ecad5b1076827bb0da6f4661a4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/granola-mcp/schemas/list_meetings.json",
+      "sha256": "0725d6e2cab47bf2e63bbea9c2db8bff413af3c478440d6a6318a0fbe716ef61"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/granola-mcp/schemas/query_granola_meetings.json",
+      "sha256": "a63c83a2c223a6c86e8cd1e3405957057989808378e56e88a494324ddea5e4f0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/kaggle/README.md",
+      "sha256": "da8e10718aa44a8c3cb31dc352fafa70abccd4da43ad59f9537af06a8039ca81"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/clickfunnels/README.md",
+      "sha256": "35af184f6271fbbc311ad5d48e595afc7162d7f77eaad0a645b9901d90fc8e66"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/vercel/README.md",
+      "sha256": "e6f03f939a5c1417d826efa9b74582342e45b9962aba86739c112a7914a1408e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-meet/README.md",
+      "sha256": "ef3d618c72a2e89841e7c7960db37e7e1a839af0330c88fb22c3ae502d3663dd"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/zoho-books/README.md",
+      "sha256": "6d798c4c714c3eed8a1f5c8a3ca8856de2e27e58e28f53025b2fb9a91a77d6d4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/box/README.md",
+      "sha256": "0498a61c25875f0936be9ff6281a08a831b2272647736346aa524b1e8b2710d5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/clicksend/README.md",
+      "sha256": "29781fd4025f6ea172e48b83ecccc61291329c1914decbba05e8371bb8ec34ac"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-mail/triggers.md",
+      "sha256": "b2323e488e7fc8e49362121a80492fd8c6ef6da4b58b6403cbb96cf9fd574e78"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-mail/README.md",
+      "sha256": "78c0b0989a415b697664de86e98cb0031791c01d2a610b5b94ed26c476a9ee1f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/woocommerce/README.md",
+      "sha256": "2967c960fe12bfcfa4eb16b7b7bc0416b72f5ca1860523a482d65645e72c2072"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/youtube-reporting/README.md",
+      "sha256": "eb0d7d52175d0cfc3525650a1b79fbeff393fd8031b4f5c58bc15587b1b51269"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/fal-ai/README.md",
+      "sha256": "e98b1999ebbc549e8a4729e1a543c3018b67e4f1dd49b2853c7a51f8bd1e440e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-analytics-admin/README.md",
+      "sha256": "7d586ef267fce0e7903c4074fca46ab105c03bd2ced9e1e0aaf7216895a69aff"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/monday/README.md",
+      "sha256": "32b6c0477d6523d47de61233d51a95341d995cad7a668ab17190a42c98ae15fc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/baserow/README.md",
+      "sha256": "ce25b170e7b0a3970df0d7ee122d06daddda8a8101bad1a5d51c4b648ae16383"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/signnow/README.md",
+      "sha256": "8ca42cd19eb80da685449de22dcff151abef86ef1a9e8dd09d96aabe46177f15"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/google-docs/README.md",
+      "sha256": "f819241d343767a30285b5526e54ccca251420a5ffa3f583b5feaa3d9a9bd497"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/chargebee/README.md",
+      "sha256": "39db729497db3f3c981257764151356157e8e63b55bc03c35167c9e1ca428a25"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/brave-search/README.md",
+      "sha256": "692cb7fedc7b02aafc3a75b63c407c20b88faba4df7bb123e5967cecdcae0b31"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/microsoft-teams/README.md",
+      "sha256": "b9389e9186c2bf94c3ca5883b0cc05a083848e072a3b8eae8290bd7f55b45eaa"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/squareup/README.md",
+      "sha256": "74b3cf984b89d947c30b600d9e36b4e5ecbf98535739c0f189b8b4841702894a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/attio/README.md",
+      "sha256": "bff8655a2e7ec5692e86d6fd5d0633b3db41e517bb7004de5db1918ff7ef340a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "references/cal-com/README.md",
+      "sha256": "7067963512d951fdd772f6f9b1276d1089f373363cc3736d86830309af38dfd4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "byungkyu",
+      "slug": "api-gateway",
+      "version": "1.2.29",
+      "path": "skill-card.md",
+      "sha256": "c7948469af0a1e3dea3c12c256b46ef6c0ebe2cf41887bbe15f4aa5b00f79c6e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "clawdiri-ai",
+      "slug": "davinci-first-principles",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "b972afd762a9a8557738d36f088e3d44cf612e8ddea3a3a8fb87793aa3bfdac3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "clawdiri-ai",
+      "slug": "davinci-first-principles",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "8a15b776ab77aaeaf8046469e9586663e5db827caec929a13f42aa0087b87e9d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "SKILL-v2.3-backup.md",
+      "sha256": "44bc35db30b536f8254906b8d2f65d366d046a372e801fbd542b30529de892e2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "SKILL-v3-draft.md",
+      "sha256": "5a61dae55820c670d23de61500aa48956b7a1b20c3f01cdc7e596b51fd854c03"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "SKILL.md",
+      "sha256": "571521d9f6f38b3ec9f073d7bdec47170a35e9c78556954ac7f0f860ab12873b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "assets/AGENTS.md",
+      "sha256": "f771f02d7ca86961c32afa1d62a2a39dbf7bd4994d2f2a59371818dad752edd1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "assets/HEARTBEAT.md",
+      "sha256": "0412eed7f74c4171a46389d2084ce453612af5ebd5f5cd53b1b37ef44182c277"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "assets/MEMORY.md",
+      "sha256": "44153b7be3fb08d12f7cb4d8488b07fe9829b677f2103a5b372d83b64a96dbe7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "assets/ONBOARDING.md",
+      "sha256": "3227d5131537f1942c039c991aaa120d20b600001d94b6cfd92c6c54b545ca25"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "assets/SOUL.md",
+      "sha256": "25bfe585259fa09e70e843964bfa159a2ddb02bbaced14ba4c7ce845e8f61a7b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "assets/TOOLS.md",
+      "sha256": "8801752bfd4e0efe0f05b04785766e32d61218d4571afe36d0833539e6ea94ba"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "assets/USER.md",
+      "sha256": "2d9649f7975bc332d343cf2a2b0809cb5c361ac0002e1e42e6030b09b3f2b261"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "references/onboarding-flow.md",
+      "sha256": "d6ca324a7819a10183b13965abeefe91de5f854f46288c4b8216fe3d246168e1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "references/security-patterns.md",
+      "sha256": "0e2024a6e11d48add2ce5c820e79cf048dc656a8e0458ff7acf4419881a0ab63"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "scripts/security-audit.sh",
+      "sha256": "68c2669f4c11d3a7a930b8fee07029b51dcf98902841e46e286c0772fc9ca429"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "halthelobster",
+      "slug": "proactive-agent",
+      "version": "3.1.0",
+      "path": "skill-card.md",
+      "sha256": "add90e604f470ec24170a9f307756e046a35cc8d04bbfb97a2555fc9bc00adac"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "iahmadzain",
+      "slug": "home-assistant",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "dc73a1a85ace02acd7d126db90a4e85975a05b396298170e036eb55df7a9ab2f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "iahmadzain",
+      "slug": "home-assistant",
+      "version": "1.0.0",
+      "path": "references/api.md",
+      "sha256": "662a52be9014dbf13f5f9e41b6619f76c04711adfc39e951a82446101e709327"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "iahmadzain",
+      "slug": "home-assistant",
+      "version": "1.0.0",
+      "path": "scripts/ha.sh",
+      "sha256": "ce9de035fe7a6caf7ad7591debee8d991e5ad1994cb1d165cc515bf5bb926cbf"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "iahmadzain",
+      "slug": "home-assistant",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "715a63fa5a45f96805bfae8651014899b705dbd2ec78927096b35aa9319422b2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "ivangdavila",
+      "slug": "excel-xlsx",
+      "version": "1.0.2",
+      "path": "SKILL.md",
+      "sha256": "52421d9fba8fdb64124416c450849434f3639e7b95249ce10fecd209aa90f038"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "ivangdavila",
+      "slug": "excel-xlsx",
+      "version": "1.0.2",
+      "path": "skill-card.md",
+      "sha256": "1ca3fbe81c9663f3b852a7a011e5e884d3f4f9b4ba198792cb4fe2a368eb1118"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "ivangdavila",
+      "slug": "word-docx",
+      "version": "1.0.2",
+      "path": "SKILL.md",
+      "sha256": "c766da489810acf03290283780ba9d3be798678d689255ace34477caeb6d7541"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "ivangdavila",
+      "slug": "word-docx",
+      "version": "1.0.2",
+      "path": "skill-card.md",
+      "sha256": "ee543d852ff1ee291171a5c768b546451e93558e990dc0ae9e9ac1189da54364"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "jacky1n7",
+      "slug": "openclaw-tavily-search",
+      "version": "0.2.1",
+      "path": "SKILL.md",
+      "sha256": "d3f1761279ee53cd6d11d5b009d368f7f4c2f97dbc0405a2931aa4e6e6952cef"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "jacky1n7",
+      "slug": "openclaw-tavily-search",
+      "version": "0.2.1",
+      "path": "scripts/tavily_search.py",
+      "sha256": "f026cee5fbce2a3a2575f64ffe86f0769a6f2377b252516488f64aa1f4390f4c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "jacky1n7",
+      "slug": "openclaw-tavily-search",
+      "version": "0.2.1",
+      "path": "skill-card.md",
+      "sha256": "d84e4cb3cd1b0b6b4d1fa81de755c65ec14f6b57a37ac66d5af6f6d7430ddbda"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "CHANGELOG.md",
+      "sha256": "b3333cc6a226a260e98577b71978a9339d65e67995ecd2368f4aed3f3716ba9b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "CONTRIBUTING.md",
+      "sha256": "4e087781c7b95fe84e062f97f2ca410271ca7b4a5cc2d630807358fcee422d65"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "HERMES-SETUP.md",
+      "sha256": "d532fb2d4c1a7396c90bda9fe9acaea9733874249364c2c69b1550a375bbb1b7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "README.md",
+      "sha256": "798a83c8a955b9a4cc36c8782d42a8467a85d83f462f085ae04b4126dfb077a2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "SECURITY.md",
+      "sha256": "5604add3cbc03d7b6b96e64c08bad05c814b3acfcc9b72a496ca37d83269eef2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "SKILL.md",
+      "sha256": "828ba003017bb1da046b709398b363d0a5409093bb2617d151e82ceced1d6790"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/README_PYPI.md",
+      "sha256": "4f7b57dddfeff2d1e3fe8d3f7ee465315215b03f1b140af681580efb8c279ea7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/adapters/host-executor.ts",
+      "sha256": "e3f320ba302feacc9d36f0dd12e4a02dd2fb77e6e749cab2284e73e2fbf2998e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/adapters/host-task-bridge.ts",
+      "sha256": "7c2cca654335fb3fe0789b51cf67027804cdecb91ca3b55156eaf4bece62b323"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/agent-client.d.ts",
+      "sha256": "647662c0641d912a76002a38d41f1b244814da3d2168bf30703c1f1074bd3b7e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/agent-client.ts",
+      "sha256": "cafcecbd588fba5d794f9f783b73ab953ad32d3fb9c5d53082aacc0b36d9e1a0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/backoff.ts",
+      "sha256": "f6d46e56d4b7a8b7ff709c01822b92b5e1a2d93afe879f7ab059975963f005c0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/hermes-integration.d.ts",
+      "sha256": "6d511945dda6f2b594114de478af08e31fa01ac5964200afba6abfbb36f6d69d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/hermes-integration.ts",
+      "sha256": "087af94b928c41856132deb87d3292982a7d701c1e4cf7cc69af5ff507fecd55"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/hub_client.py",
+      "sha256": "b895237acdcadadb6f3ab47ad6263a8d1fd67b7dd4d67be3878814600236fb08"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/package.json",
+      "sha256": "76e80e1958ec9bd0e674ea06ff6164cca75bdd6c3f0647f47ba1c7b033f3b613"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/pyproject.toml",
+      "sha256": "339ddb22b64941fe892aa603fefbb123da933fa108b563f3669f3b36f7aee6a1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/runtime.ts",
+      "sha256": "cdf34be4246a3e45305a23a27fb7dabea30725f3787a7fbe6b9d2c5e43233a61"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/types.ts",
+      "sha256": "ad4654af47836e9a6e79a44ca8ee56944055f8c469fe723627b96111269e6fb3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/workbuddy-integration.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "client-sdk/workbuddy-integration.ts",
+      "sha256": "08ff5c568363045c7e054e97a08a7c429ebb5c7ddf1b7c33fda24820d918ab6d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "demo/index.html",
+      "sha256": "a8627c6616acca8ee99f30798e5a28d002b574560c7d7cecb414bf5923f4ae03"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "deploy/docker-compose.yml",
+      "sha256": "b7b90fde27643dbbeb4c89162ace34cdbbb23f4fd696830be93ee8de64b022dc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "deploy/grafana/dashboard.json",
+      "sha256": "bb2ed166bdc8724412cae12c28acf9b5e8ea5a9307e68d56a92a8257a01c1090"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "deploy/grafana/provisioning/dashboards/dashboards.yml",
+      "sha256": "517be70d7c9f042c395a112778cafee03f53461a97b49234b974e98a7c59caae"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "deploy/grafana/provisioning/datasources/prometheus.yml",
+      "sha256": "58cd43de8dd719fce35a4360b07bbbae9236fcecd044b89d9bbee4f3272f7052"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "deploy/prometheus.yml",
+      "sha256": "2f27cb46ece9cbb5f061df19e36e54ac9f7f162cebbff9c56f00fba2eb1a487b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/API_REFERENCE.md",
+      "sha256": "7fc6fba0a5f1533aa8f21b90ab0d1ae24019a85fc4701840fb976a26900c59c5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/HOST_INTEGRATION.md",
+      "sha256": "a936b8626d2d5c17574ecdba207f83dda2da4c318a983cc2234947c8cdbaeaf5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/README_EN.md",
+      "sha256": "7da590a18d0f236af8e526670e715d5bc06d7c4afb41b20ef02443f804402605"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/adr/0001-sse-reliable-delivery.md",
+      "sha256": "3181037289d5afa514036b690288a87707c23d3fb77f8860eed488f88a69e4a8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/adr/0002-activation-state-persistence.md",
+      "sha256": "cf656c36e9c9099287411c5a78eb0b6a1310643a07290d2f4cd67b1e7a223984"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/advanced-orchestration-guide.md",
+      "sha256": "e4b02d67498657ef81e46d3e3e03999c4adfb744a69cecb6de6c152e028ab33d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/design/ach-autonomous-loop-hitl-auth.md",
+      "sha256": "b30a025a356257f42590c9a042016958216f2fc9bd2cf8babf8b18488fe21482"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/hub-db-split-three-layer-protection.md",
+      "sha256": "4ba5648a3fc604e428b5cc8727abb6fcd3c21a25eaf6690e35fd6e59137db9f5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "docs/index.md",
+      "sha256": "a74e7e5d154508d4cff1fe908cddea4532d66ac53092ee619194b27d7719b06a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "glama.json",
+      "sha256": "0c7c7ccdd41ad6d040a18c1d860759ffddc5c03792970c4f982b03bc5982ecde"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "package-lock.json",
+      "sha256": "e4e81941c02708d78e83cf92082f3da98a79cda0d29736a6939a2934706489d3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "package.json",
+      "sha256": "1c577c7d609eaf6ed2c75fb55cf414c7b9ed7cdc14fb92b7716ce9745b50336e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/check_db_consistency.sh",
+      "sha256": "0287b4a7bb6f370e78daa8de8e92308555637ab0c30dab94639e16e76345610c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/cron_db_watchdog.sh",
+      "sha256": "87d6fbb4f297a0483dfd5b9e3345f7469a5de2e9c1a0bda7ef9a1f480a33f527"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/hub_task_runner.py",
+      "sha256": "feaacba5e1973a424c5ec36b38ff0f546af3680f7073b47b84516b4598a02fbe"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/hub_watcher.py",
+      "sha256": "5569707b9fdb3a8aaea3645555d89e2cff9ce2f72dd1b1d1752befe1ad4325bb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/install.sh",
+      "sha256": "52879b1680a6f3b884c1e5a5421969a57e62f10b52fff18ada1e8bb18e1b83be"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/migrate_evolution_db.py",
+      "sha256": "0749ae47dc6b413e94ff63d160dfe2d2510d74507497bd4fefd17c4fa02d836d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/migrate_from_agent.js",
+      "sha256": "aff5cd1168a2ad598bd70615761561dc669df7763aa036d22b7700684d59e549"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/redact_leaked_credentials.py",
+      "sha256": "da553c6dd5f81c96c8855278e135677d15b8377b2adfd937235cce0b380f8e92"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/rotate_token.py",
+      "sha256": "760f303849015ffd523296c58f020ac8935a87044ef0b6b149f9d78cc8ecc954"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/scan_leaked_credentials.py",
+      "sha256": "172d11798b94976bf3df1b12d0c70b779c034b785dffc2f0b38c25a5a9e6be7f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/start_hub_server.sh",
+      "sha256": "c3dfe214f972078ba5775aec443e38cb891520e5567eca762fac38909e605bc2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/test-e2e.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/test-e2e.js",
+      "sha256": "a410ad8e1e41153773c2379130bd6dc9422f44a86d04b9d664150319e2eed369"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/test-e2e.sh",
+      "sha256": "945e248e6266e31dbdab21229cf5e37e04e93188dbf4cf9aca4e47e5c5d15160"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/test-e2e.ts",
+      "sha256": "bf219802a1739d3a143e6c978b9fb478e593a1fae9145ee0901922f6215d2d82"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "scripts/wb_task_trigger.py",
+      "sha256": "788f1ae80678ae4f23138abfa557d637e8e9ba49982c196a6e4416e4f9727957"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/authorization.ts",
+      "sha256": "c6fa8dd9ecea3a2403f0a179c3ff7bdd81dc860d47876e2c1444227a2aab4804"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/backup.ts",
+      "sha256": "e5e4fb5ba1f1ece3ffff8d00cfba2a96f1d0b21ef925b4ce4d930cbc647b5c67"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/db.d.ts",
+      "sha256": "5f02e768874c5cd086e0b04e03e08da4c5b568defd7a004ceaf77b0b74b9ef46"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/db.ts",
+      "sha256": "c56d65d2c9b698ff2bae91b8656e87caeeedd35433a7518ee0b0b1750a61c059"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/dedup.d.ts",
+      "sha256": "019343702d07d2e10b19f146280c0deb2ef2e432db9627cb1dd7963e02371a53"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/dedup.ts",
+      "sha256": "fd18b3a4af7a1a30b32ff9580ea1976c05da49c145331881ea3bcb07e034fd11"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/errors.d.ts",
+      "sha256": "a404f03bb34a90532f00d38d15d72dfd2da6c33142c524d3302cbbaa5b6d3757"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/errors.ts",
+      "sha256": "33ecc2ad3b42f5bfa7580ceb88a285b1a05991b78139ea36f4322f803a5c7b75"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/evolution.d.ts",
+      "sha256": "00ec7169a143145387e4391e9f75156a2268d007e642e63177ae619099d8a15b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/evolution.ts",
+      "sha256": "b5cc1a9c47e2e96f4217cacca68d67e9b2a6b4bf5dd2f455ef3a1a2aec0a47f5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/identity.d.ts",
+      "sha256": "cdb009b9b56d74068051466d975666864ee918cba466a598916867df2b470582"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/identity.ts",
+      "sha256": "deb1ffa3adafbe7947b1c0516da574a37d8fdd5c54d76a9746c255aa2dc44f43"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/logger.d.ts",
+      "sha256": "40e2431d20081252d89c01dd167d7c5794d62011400286bd90842774d0f6cd8f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/logger.ts",
+      "sha256": "5a62fe20b7e9f7bd807a95eda467cc8212748629e4af9cf0c6537379874f7361"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/memory.d.ts",
+      "sha256": "fa31900f4cfb87d5d6021a1f93e9440a6946d1d204472d0f4177127fdd4473cb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/memory.ts",
+      "sha256": "ea843cdcfe35f88469995a8b85d02c3b885a9e9126cff4b6c7bd6bfb26e1f86b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/metrics.d.ts",
+      "sha256": "7f38302162b3a614a7197bfc37486cf54232809a57617656833f1f3e1422821c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/metrics.ts",
+      "sha256": "e746313f285845c093dc2a7750aaa9ae97609c7b8b255350d4b3de1d2149807d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/orchestrator.d.ts",
+      "sha256": "6df261866cb5d20a8f9a99e8c4dd7947b8e3ef7cfb19af36bbf139178b547e44"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/orchestrator.ts",
+      "sha256": "ade37cb116399249696cd181ef8335b94586bf4584a9f08bf31f647b4bb215a4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/ratelimit.ts",
+      "sha256": "e74144c123544c8d2fa750e1b4cf236c85730000928c69cf759dce568dfcb42a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/repo/event-log.d.ts",
+      "sha256": "5b7b3fa2ad3476a5d880457e4a5330d7be6953137c479c057033b0f2eab295d2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/repo/event-log.ts",
+      "sha256": "fb85c781cc04d47204232448d893e4a8a6d89456fd202e35a24f000e6238924f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/repo/interfaces.d.ts",
+      "sha256": "c3a93696bd44c433029e11b3120afb6c0c161b4106de8ac714d6f3fdb1900bbc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/repo/interfaces.ts",
+      "sha256": "4a1f2e7d211899ebffc5fc9e7739b28b873fd9ff9fbde6e64093f2f8011495d6"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/repo/sqlite-impl.d.ts",
+      "sha256": "769ffd73f5b04fe5e9db6b7cc7d000086d07e8a67aeb5f84598a973e067d3b95"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/repo/sqlite-impl.ts",
+      "sha256": "7ba217285f54911bd9a956028e21dcfac41db38b3e590009eeaa3418cf00c981"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/repo/types.d.ts",
+      "sha256": "e2acc90e8c45d850b0f15b64f7e7afc44f7e00e40bfb2bb5901c570bd39fd1dd"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/repo/types.ts",
+      "sha256": "d8cd139f048cdd31f23db68371128a72959018b9459523eb85870422078db0d9"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/security.d.ts",
+      "sha256": "d6957c0fe5d12684d09cfe7a5434588dde827f4ec0dca05facff8ec19d2826e3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/security.ts",
+      "sha256": "c79b8a5d3d6f12c8fc72c3fc9d1bf6dcf0542814f4b5b6797033836bfd204f90"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/server.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/server.ts",
+      "sha256": "3c027b0d3bf0fe686e60b05c6b0122c10751bda157b81e630e54f37457de1856"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/sse.d.ts",
+      "sha256": "52ce6c0e2a9a18043d5e8aafd0a39df4cd60287de8c8f0e55c13e442de3187da"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/sse.ts",
+      "sha256": "b9a91c32c8ecaa6106b41e4037e3588db0a9b5dadc4fc8947c026a3f204d31bb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/state-machine.ts",
+      "sha256": "f8fc32e70ef84aba0747160a03cf7754d359a4054eb7bc744c0b76a7b8f25de7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/stdio.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/stdio.ts",
+      "sha256": "77d47c0d73733c6a0ce796a0eb144377820ddab4020ef09aa682082488c3b51e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tokenizer.d.ts",
+      "sha256": "515dc2a798c55727553c86e70eb6da470ab93efc6608e6e4f1da22363539f550"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tokenizer.ts",
+      "sha256": "35ad1cb99f1c3422835d8c6a40843da9a95d06e529febb8632150c590b8c41b0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/authorization.ts",
+      "sha256": "dea88e2fc17e8d964174c5ff713ec6424d3298837a0a1d7e7d80bcd718844c8b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/consumed.d.ts",
+      "sha256": "cc162e430d30a5f4dd2848e5e2ba9f61676ec715d03a1b20d01d89397b00c95b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/consumed.ts",
+      "sha256": "1b87314e77652077e9b0668d5ac22d29478d7ade9e00fb95978ce32d201fd897"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/evolution.d.ts",
+      "sha256": "f20512b6a357949a88cb424efc4fb20bed33a6dee5e92ebe8fc940968b0f1afb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/evolution.ts",
+      "sha256": "20f31a46b9e2170682b9d3b6b2a6093fa8227fa431fec69ed5ccb06bc986d388"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/file.d.ts",
+      "sha256": "12462c18ca7af40531982f8f3d0dfed4f38f2a0b665a88a99710c021f400710b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/file.ts",
+      "sha256": "09c51c173ad9cb12d59f8bb6ab39e0fdd27d74df89fa48c048524613db6e372a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/identity.d.ts",
+      "sha256": "7bd2251b3e835f4bf6eae1393077747326aed12e31262777a2e67a392bd0ca59"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/identity.ts",
+      "sha256": "9684c65d07c77d39c2385675e8d3f06084a4d1a5e350819c269ce8177c83faea"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/memory.d.ts",
+      "sha256": "135ec1009fd74629fc8dda0514ebb7c335e87d5716c5ae5ff24b4aa616fc6a48"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/memory.ts",
+      "sha256": "4c1a9232c5778ee0bec2bf83493688732b4af1a32adda7d483468f23df511337"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/message.d.ts",
+      "sha256": "bfa0fa51c4684c130b8f165258a0380f7834db90db64ae90882a094a78022a4c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/message.ts",
+      "sha256": "9d83923c16862b5a9a33194fb516b447528ce976f51b938e822a6c829a396f69"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/orchestrator.d.ts",
+      "sha256": "e3803b3d1bc18334b896e5365367d57c10fc1bba12a9a26477f1f820171d8241"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/orchestrator.ts",
+      "sha256": "c0c2b6f34eaed143f5c06733a2d5d6b592ac421ff9e87f988363e422a791c940"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/security.d.ts",
+      "sha256": "c5cbd7bb7276019002f9cc81adc83a5dbace16d8cdbd97f6b781fbf627fe756d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools/security.ts",
+      "sha256": "270155c1e04e35347ff05bc7f429bf1088178d5c2017ef28793e151ea91d3406"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools.d.ts",
+      "sha256": "d58f465511fa6e322dd740318844432a50a8f18e186411342244eea31bbe1c2d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/tools.ts",
+      "sha256": "fd96073d975d8b9e61f49e74177e628b9badb3593209e011113d20adec265dc1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/types.d.ts",
+      "sha256": "9377f86c0df1e060d3a9106f39baf4f398dab2b401f2fbccf803822757963106"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/types.ts",
+      "sha256": "ae03fb4bcb75b6891a4f24396fcaba74cefab40af7e9581f98a8cf55ee826966"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/utils.d.ts",
+      "sha256": "4ccd41140cf25dedcfafcd5bb405f08ec7dcc2c8ac27b86efbf86399de88bc9a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/utils.ts",
+      "sha256": "563afe670d0924c5b47eed9d661eeaf1fb0712c1db9f8641b099dc828932fe70"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/version.ts",
+      "sha256": "6475a6bf89487ddd4cc962ab6d5b46003aa2f65870b24d2180ee57e6045d3180"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "src/web/server.ts",
+      "sha256": "92b460f41e6e7880e5cf99f9f9580d493c4ec34a92805c74cdad8306d9852ca8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/_tmp_5556.ts",
+      "sha256": "c8882972eea7c3c13e39a101847a2c8a5fe5ba351c15e47d9e5e49c582aaf4c5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/fixtures/db.ts",
+      "sha256": "b169717d6ba5bb6839aa26a8ed97d31d721117b18c9afc58c0ac078cc108844b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/integration/activation-authz.test.ts",
+      "sha256": "b64fdcb4108438a20743473fe0b285747bace23c0992b7a15bac24cc080e4b49"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/integration/idor.test.ts",
+      "sha256": "5140d4a783d1e96251f44768e173512974a6513da17d09da1e8269f5f2905eb8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/integration/stdio-node-version.test.ts",
+      "sha256": "508a30aa09a7cfcabc23388414bd5f0740530bb0d8b697ec9607879e2ae18ef5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/security_utils.py",
+      "sha256": "4e6c47bcfce2494536f7c110d6a412eb46373e42cbefa6687e22ded82d7d8bd8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-day3.py",
+      "sha256": "721258db9023ce2ddd7351b5a4c779a0668ff66a1181a5309f9f30772481abfa"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase2-day1.py",
+      "sha256": "c3a9157d8c98b3ecfecc0eda08bfc7bed95d8a672463961c5b33cf5bf00e4205"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase2-day2.py",
+      "sha256": "9a70c7861b4730c516d78501e18f2d1b330490d960cf3adda2378fc661920eb4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase2-day3.py",
+      "sha256": "51ae2fdbc7963eddf5a0a70469d826e573e9c16a65f480551ba301770498b5f3"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase2-day4.py",
+      "sha256": "98ab5e8900851283b392ff95c863abe45182c417cc1b6ed621af5a26e43b1ceb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase2-day5.py",
+      "sha256": "2582f4c8912284181d671890ef60ca67e8ac3179b2d5d005717fbed975308141"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase2-gogo.py",
+      "sha256": "e9b31461c98b802de8620ab86277b2ca35a067c8b70f1ae6f7a436dc1edba8a7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase3-day3.py",
+      "sha256": "ab7e691be66faa595888e7419f3f376d52a8b40cd66cdd9034f511541db1d674"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase3-day4.py",
+      "sha256": "5a0536959f28c8886657ad6f67f2c8e4cbef9c4e352548a9b2db6cfc59d34682"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase3-day5.py",
+      "sha256": "9073fd7d21ce0614eb26201b42105b0f9098a1537037609c5a6575e0dc913bc5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase4-day1.py",
+      "sha256": "69aa85d962b590dd9e57eeb04901d4d6596e4658af6b10ad2bb6345e8bd87ed5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase4b-day1.py",
+      "sha256": "647dae4741a4a5ff2e8f57000e0fdfdc9842a86c47786dc598fc555fb350bf1c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase4b-day2.py",
+      "sha256": "fcde7eaeebc12d825e6c48587e95e85730f9cfe95facf849634f694ea4dfa85d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase4b-day3.py",
+      "sha256": "56f20c32c29e0c92e413804ee0c43c37d90ccad283a1dde850bbfe34e931fcef"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase4b-day4.py",
+      "sha256": "6acebeb30fd06f0418a0a640e008ccbc1f258d0765637684f3b1c516910e5d1c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase4b-day5.py",
+      "sha256": "f044d25f430860784f7ce960762b8d875a3d153e098df67ba156060f015793cf"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase5a-day1.py",
+      "sha256": "f9e42c4ae60a3e6e89d25d5f9f5843000ce66bb7ef53167b57cf6001e0bc9ea5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase5a-day2.py",
+      "sha256": "2724aa45a9cad1b54de7d5633328c26cc7406c5aaabe24ccc9095338c470b063"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase5a-day3.py",
+      "sha256": "1093fb66429db3e1d01c9b8fba235c7b15203a24eab102a053ebbe3cd36bb6eb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase5b-day1.py",
+      "sha256": "02a9aac2b0cf303f604caa8b476cbcd05cf1ea055099052344b80dd250e0952b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-phase5b-day2.py",
+      "sha256": "8f23a1b2812538623326f20cd6eeb8bad32dadeec74f2e4217110b926f039570"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-week2-day1.py",
+      "sha256": "be92276e670e139541e098d9fe220b23bcc9b49c8823e47d5ce96967c2a16dfd"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-week2-day2.py",
+      "sha256": "5bd417886a1e0fa5dbd9abaf85324ef36f6bc5d92195405b1bd10ba8ecf2e7ce"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-week3-day1.py",
+      "sha256": "162148c42104f28072f2b1d750e18d8df0bc0f182921a4765d42ad1ced7f5ff7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-week3-day2.py",
+      "sha256": "54663b5b0f0734bdc46575f1a8453e3d75136a0151fb5a95238eee04b2c77ce9"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/test-week4-day1.py",
+      "sha256": "cbeded999735343f43584b5be93aeb4ea47767253212adffcdbd19c419dd45b1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/activation-persistence.test.ts",
+      "sha256": "0eb832458b175de022693fe6f983ef925cc8434cbb999d61ee551fb9251f35ae"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/agent-client-auth.test.ts",
+      "sha256": "4685a717f3a5daadf5e4f918bd1f70191192be5c503ca529ea2ed1dd9aac37d5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/audit-log-cap.test.ts",
+      "sha256": "69f8143dc965e2e310e9c28ca215be5a6baf300ae0303dd44aaf0f584ba7cc9c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/audit-worm.test.ts",
+      "sha256": "b4c8ed02da961aa4ee7f93e66d1c5f4ed0844a141edbfb844f4fb7c9f806ce86"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/auth-token-leak.test.ts",
+      "sha256": "113229864ff380c13310fed085280047f37f2a7e213766237567714710412955"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/authorization.test.ts",
+      "sha256": "6b498d8c1b88e1b1cc19b9ccfa320f2ba4860939cf42a188f3af79dbaa3a3802"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/db.test.ts",
+      "sha256": "baed62f0e64257b545e6f8f6ce7f36d0e3c065e5cf77f1ea41d2ee4b2d917edb"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/db_undef_independent_qa.test.ts",
+      "sha256": "3416451c4f648a3c9c4f7537664212709330b39a86b23af17c7d8d5e1a085304"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/dedup.test.ts",
+      "sha256": "ba5fb60243f8cd4ad59fcf440a757fd9dd5cf16b025c5fd8a9c0d5e812f7033c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/evolution.test.ts",
+      "sha256": "99b9ba6e3cd67c88e44d7afd3a750151f0e74fd89fa38440cfa8308395733236"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/fts-memory-key.test.ts",
+      "sha256": "8a9365f51a745a93035f3fcfd07450f16ba8325e43e21da34ee11544a97bad20"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/identity.test.ts",
+      "sha256": "293a6fd839569c2af46226c65ef9d4988f4e1d5f71aa25390199ca09416314b9"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/metrics.test.ts",
+      "sha256": "49c0023812f64c41810c38e75bb86dc841238f050862c5c9b2249e65b554f40b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/online-status.test.ts",
+      "sha256": "104536416964b3235d614ebfb86215afe8fd8bd5f3c3af9bbd8b4764150c775c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/orchestrator-tools.test.ts",
+      "sha256": "ce8013622b9fd41c3213f5ee1342830a91c6061c1aa7a4a2de2b710b5c30da58"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/resolve-agent-id.test.ts",
+      "sha256": "025fa9bec1e2d4b679bcfb5bc012c11a6de4ef86839da5a35bd3dc9ab141962b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/runtime.test.ts",
+      "sha256": "6ad409cd23a370b81422178d3407d096774c7fd97511ec2f53367ce99ec31563"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/security-hardening.test.ts",
+      "sha256": "17c88020b88a3f12482e513e59d24e4e4d36b6231d7a785fce102bd4925ee8c5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/security.test.ts",
+      "sha256": "4d59163ec58c5ff1f8cfb9a8ce48b358358a71777083851b2812c2ac1779f594"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/sse-replay.test.ts",
+      "sha256": "3f5b67836a2b837a49ad5e5656b5e7300363559de3b0e7eec51360af40f1bf74"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/sse.test.ts",
+      "sha256": "d4b49d0021519648337156a6d3b9662ffcb40dc30cbd165232d74344752073a2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tests/unit/utils.test.ts",
+      "sha256": "8390d8f1f776d49065ae4e9a4be19482f277f19a1b6174e185ed4f3c86b2defd"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "tsconfig.json",
+      "sha256": "a3decd94b39ac79a2ff12a0ffbe54a2981ba8185299a62fc97cc3ca5850ce5f8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "vitest.config.ts",
+      "sha256": "679a524b028c83f92fe0bff04783cf26bb3ebf3aa7133c77e884dfadd5d964f1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/dist/index.html",
+      "sha256": "90bcd9dee4d4f935f7848934b2b5d7bd7e1832076633b1360d05ec944b298001"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/index.html",
+      "sha256": "b32a8539c4a68d8244319d07a1305035c8ca254c843ff3b088332d8ed395aca0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/package.json",
+      "sha256": "0662d12c4a534651102b693e826c917ae217f6b4ebf2fe74c29245402f8f9865"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/postcss.config.js",
+      "sha256": "e32657baf631d7c5f4dc67b4b2ee0ec8e7d5b3c41860e09cddce7c0377cd80bc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/App.tsx",
+      "sha256": "8b3efc36a6d077bdfc4ede88f99a7c086a39631bcf0a51d8a60ef52053fd51c1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/api.ts",
+      "sha256": "181657f871c62b86a76845dbdf65495ae2d988621a5a70d7d008c0c118a44dec"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/AgentList.tsx",
+      "sha256": "48d8927c1ba34f3030d53afee2b7c619634343c0cd298f592d2bd03d615a7a30"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/AuditStream.tsx",
+      "sha256": "4e6083d30edc03dd71379f1e3227f6c9c30dfc5dc8fb908d9b7cdb5f5e06d6f0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/AuthQueue.tsx",
+      "sha256": "47248d3ff198985f9cb0dd45c34223facb1960e614b2cdbd62f104ca49b63e84"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/Dashboard.tsx",
+      "sha256": "304be3dadeaf060ed70c4246e26a83483a7e927af0f3034508501cb85a4f3b7c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/HealthPanel.tsx",
+      "sha256": "f561010ef917ad601384ef8bd7bfb8097b6fc83b4b0382dccf5cf16f44869439"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/Layout.tsx",
+      "sha256": "7e9e23f92b86879a4a09c396bcda7fd3038b8586d59681009e6274530e5853af"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/LoginGuard.tsx",
+      "sha256": "9e86326fd61ebcb962701ac2faaeaf97d3e4d242debce40f4a046c5afd5c6fcc"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/PipelineStatus.tsx",
+      "sha256": "1b334d1b6ca388f36fe1135a27843341e21ecca10e26ae7af225fa0d33105a0d"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/components/ThroughputChart.tsx",
+      "sha256": "e907238f99ec0fc5015365ef7d90aea91eb82c0992bcdf476f0939a94d05ad87"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/index.css",
+      "sha256": "91cecc76a7cc00bc51669ba88affdfc1695a7690f4fbcf7f99e4d6fc06938352"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/src/main.tsx",
+      "sha256": "2ed12a1457cd60b31c0f44f3ea59b8bbc2ddd4a49add3165228d093878fb7c24"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/tailwind.config.js",
+      "sha256": "0590c7c554f8f1242bcca6d3dcef55c0c67a336b246f9c40af36333c8e861885"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "web/vite.config.ts",
+      "sha256": "1444799b96a7b9915be66f58eeb10168f410b2335fff12d515368d01bb40e8ed"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "liuboacean",
+      "slug": "agent-comm-hub",
+      "version": "3.0.25",
+      "path": "skill-card.md",
+      "sha256": "79f27566584f31e2feefc171080e8f2fc07604dcd9ce296abc482f6b6c1e0461"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "maximeprades",
+      "slug": "auto-updater",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "4142916e146caa90d41cd274bdea6263da1738d8ecc81777b7fc19c6bd8ef9f4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "maximeprades",
+      "slug": "auto-updater",
+      "version": "1.0.0",
+      "path": "references/agent-guide.md",
+      "sha256": "006191441b38b44f839f0c78513c85cc40e6d8a37dae9cfeab242efc4a3acc4c"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "maximeprades",
+      "slug": "auto-updater",
+      "version": "1.0.0",
+      "path": "references/summary-examples.md",
+      "sha256": "9f0c386e2fee1fe5c723eef7fcb523f2294463b2456e2f615e38f2df41975d48"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "maximeprades",
+      "slug": "auto-updater",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "7fb91f1f9c9d20e80ff0fafe5100acb26b6ce4798ca9783f4dc94bdbe8e308cf"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "oswalpalash",
+      "slug": "ontology",
+      "version": "1.0.4",
+      "path": "references/queries.md",
+      "sha256": "d941f37997b3ef86df20a39e5fece37b4ead522bb7e55b1c066d69ced001e397"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "oswalpalash",
+      "slug": "ontology",
+      "version": "1.0.4",
+      "path": "references/schema.md",
+      "sha256": "e6e16a377e412a1e41fccf15b1678fb2686ace614a278b0de5a33a71dfa5ae11"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "oswalpalash",
+      "slug": "ontology",
+      "version": "1.0.4",
+      "path": "scripts/ontology.py",
+      "sha256": "25e10809ab4f809f2fd3b475989a882e6fcdd9127655ec40fccf44d10f0c0491"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "oswalpalash",
+      "slug": "ontology",
+      "version": "1.0.4",
+      "path": "SKILL.md",
+      "sha256": "669830c58a0caa4b977229a79e3723c09e5c2fdd74da84007f125891aa0c7488"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "oswalpalash",
+      "slug": "ontology",
+      "version": "1.0.4",
+      "path": "skill-card.md",
+      "sha256": "bd5d391ffe331df532fd77814b6cb3de68d83bcef0165391c85e732b531cc577"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "package.json",
+      "sha256": "b51256a6254ab3465e61eeb5ed5535ed809c981ed04815b852e8eddb75dbd371"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "reference/evaluation.md",
+      "sha256": "6d0b58e7b086e42693abc9d7e921d7d3379e7e1e6edd61395f1586d074fe150f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "reference/mcp_best_practices.md",
+      "sha256": "80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "reference/node_mcp_server.md",
+      "sha256": "b6521f4810d509440a5885f463f9e16b16632145a59f90db74858b57fb0780d4"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "reference/python_mcp_server.md",
+      "sha256": "4fda54a3e825517fb6451acd1da2bc538a617f5fbe28c50767a88bb5e54e9fd0"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "scripts/connections.py",
+      "sha256": "9403668a2041568772082a8b334122c1f88daf0541fb393af4522d0094a47a6e"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "scripts/evaluation.py",
+      "sha256": "49ed1d17cdce5da101b210197740713f49b935c29d4f339542a14b132658e6f7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "scripts/example_evaluation.xml",
+      "sha256": "9272b348ddcc4b06ba562367ccd0770e018158c0068ac5116d5e34aaeff8777a"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "scripts/requirements.txt",
+      "sha256": "d5d7558b2368ecea9dfeed7d1fbc71ee9e0750bebd1282faa527d528a344c3c7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "SKILL.md",
+      "sha256": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "paudyyin",
+      "slug": "mcp-builder",
+      "version": "1.1.0",
+      "path": "skill-card.md",
+      "sha256": "da785c49a7269cec28f0dee513c78dc8e616b17f7d64754b32d6ed80f1447e74"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "evals/evals.json",
+      "sha256": "f026239ff2fe42266bc5d6e02925ff18b1d1c88df934e3557e362a4e390250ad"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "examples/data-analysis.md",
+      "sha256": "4bbbe91e91ec11df33993b2fa659f850a71e08a68dc24559222b6fb878e4f9fd"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "examples/paper-writing.md",
+      "sha256": "cefa8cf8d59ce11236a0885f3a7a790a3c3a244bd93804536902f3b10fa12b2f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "examples/problem-solving.md",
+      "sha256": "f6bac536404a26212245cfec956343b32f7d446db9b8549831a135d104e0d0fd"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "examples/research-design.md",
+      "sha256": "97af4936b56d12c2b03465f259694da1df5c04220ab955873c62dfa8c8abb648"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "README.md",
+      "sha256": "3bbb1b6748460ac738926e2638776f04bbf0985fed87cc336094f5afb0478007"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "README_SKILL_STATUS.md",
+      "sha256": "d94653fa3591adb1a914c3b4d02a45b004f2acbaae6b3c9f919c494d248ab690"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "skill.json",
+      "sha256": "b15a9bdb380a2f74dc088bba47104c90d112a552fa42633317e5e16ac2a3d881"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "SKILL.md",
+      "sha256": "61b6f2219b52b76b9266f9c435b2a355228ba4a86753e96c88e12c51f05f01aa"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "tests/test-report.md",
+      "sha256": "abc2bd54865a9654db429ee95d691c3b3b5bf94b9c887877a9a2c314d7d99f0f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "tests/test-suite.md",
+      "sha256": "63ced4371148ebd4a3ca36554d3fe7be67e551ca86cad67c6b8068e5710782b5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "perpetualhui",
+      "slug": "adaptive-socratic-questioning",
+      "version": "1.1.0",
+      "path": "skill-card.md",
+      "sha256": "0bc6f93e35922ac56d2d906ff1412090dbaae9f30cbb479d74780b621898a0fa"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "seanford",
+      "slug": "coding-agent",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "50b3adbe723747db40c77fef1f086b627c28ab09c2e70df696fb7293cf79e031"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "seanford",
+      "slug": "coding-agent",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "ee405af4e7d81c8b08247205288b312ce86dd551e857588d54d9e69b48459dc2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "apple-notes",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "493fde9a5e8df83739552821dc7902e086b1d6cca68b5f90ddf4b4a3488f37b6"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "apple-notes",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "a6f874bde3bcdf654be2c3fd5d34b6ebc01d7c0a50973a717f138ffe8cf67090"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "mcporter",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "475253164a0cca240679819497abd35bcd708162ab0f399990468d94d55a6d15"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "mcporter",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "2160633fa853a2b56e4e98551f884d820eca6e0fdd3d8109f7322ea3756843ab"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "nano-banana-pro",
+      "version": "1.0.1",
+      "path": "SKILL.md",
+      "sha256": "4ea88f4b0e9577e22fb68111fb2efcacb3f5c034dee3f8f6f8aeabaa96a7988b"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "nano-banana-pro",
+      "version": "1.0.1",
+      "path": "scripts/generate_image.py",
+      "sha256": "8ecca97db200cab923716173fed18e48ce7e291b1726c4e6ed79fa88302023e8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "nano-banana-pro",
+      "version": "1.0.1",
+      "path": "skill-card.md",
+      "sha256": "8e724ebfbbb3bded620d0f7bcbbda1382c5fc815620e26d35946502841a7cae9"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "nano-pdf",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "4a19c3916062a0b2a303f929be2e11bc89ed8531b47fa565d7936a363f34d4ac"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "nano-pdf",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "fa01545214a5004b332babbbd6a14b35a4705e5326d3e839c68b735eb9d9cab1"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "notion",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "1002bcb8230ff496b65c2cb030737ed561c8c85fa1f823bed9192550e282a6fa"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "notion",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "8804aaa39cbb5fdf56daa9d64cf15f38952fc8e3315d63725a66daa1746818d8"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "openai-whisper",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "f9fadf134b6de49d55ffae904b2c75f5b7035f37ffa96394b19de648bdef9e0f"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "openai-whisper",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "e03eee96b876bbbb3452fc6c1c287a4eed013b3feaaebcf6d867175ec18b89f2"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "openhue",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "1ef85a78007c604eaff827692b83f6c5d2a40ccac8929b5c387db2ffbc6997ac"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "openhue",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "3b176c40532fd07d7dc9a7761626d7f8b94ee705f7c5a9879bd14abb090469cf"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "peekaboo",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "7a87a01399f99780e872b16f3df999d0e684a3b8dbc189cd20b9cc4230762ed5"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "peekaboo",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "3a9c5c8198a333e9dfc52fc8f3c39eeadfc363dc7ab15f030685785d11354968"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "sonoscli",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "0b9cf84b375cd2269aa7c295a776129c3c630b916ea66f9fd0b49feb76ba7499"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "sonoscli",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "9cb1b7e281822a20a2199f593a0e4a79c004cff9cd6b3b867cfbbe45535c80a7"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "things-mac",
+      "version": "1.0.0",
+      "path": "SKILL.md",
+      "sha256": "c5cd40a9d8180fc220d7fd0f0372612ac00f92174677bdb0c47e3fd2f0bd9307"
+    },
+    {
+      "source": "ClawHub",
+      "owner": "steipete",
+      "slug": "things-mac",
+      "version": "1.0.0",
+      "path": "skill-card.md",
+      "sha256": "d166376695628d6c2c5e28f7886da1e48b328d726072a4ba3ecc1bd58033d95c"
+    }
+  ]
+}

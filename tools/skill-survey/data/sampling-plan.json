@@ -1,0 +1,194 @@
+[
+  {
+    "owner": "perpetualhui",
+    "slug": "adaptive-socratic-questioning",
+    "version": "1.1.0",
+    "stratum": "描述与推理",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 1335
+  },
+  {
+    "owner": "aircraft06",
+    "slug": "academic-paper-writing-style",
+    "version": "1.0.0",
+    "stratum": "描述与推理",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 1066
+  },
+  {
+    "owner": "clawdiri-ai",
+    "slug": "davinci-first-principles",
+    "version": "1.0.0",
+    "stratum": "描述与推理",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 887
+  },
+  {
+    "owner": "steipete",
+    "slug": "notion",
+    "version": "1.0.0",
+    "stratum": "HTTP 与云服务",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 104828
+  },
+  {
+    "owner": "byungkyu",
+    "slug": "api-gateway",
+    "version": "1.2.29",
+    "stratum": "HTTP 与云服务",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 87878
+  },
+  {
+    "owner": "jacky1n7",
+    "slug": "openclaw-tavily-search",
+    "version": "0.2.1",
+    "stratum": "HTTP 与云服务",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 109272
+  },
+  {
+    "owner": "oswalpalash",
+    "slug": "ontology",
+    "version": "1.0.4",
+    "stratum": "文件与结构化数据",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 200743
+  },
+  {
+    "owner": "ivangdavila",
+    "slug": "word-docx",
+    "version": "1.0.2",
+    "stratum": "文件与结构化数据",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 95590
+  },
+  {
+    "owner": "ivangdavila",
+    "slug": "excel-xlsx",
+    "version": "1.0.2",
+    "stratum": "文件与结构化数据",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 83367
+  },
+  {
+    "owner": "steipete",
+    "slug": "peekaboo",
+    "version": "1.0.0",
+    "stratum": "桌面应用与平台",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 32014
+  },
+  {
+    "owner": "steipete",
+    "slug": "apple-notes",
+    "version": "1.0.0",
+    "stratum": "桌面应用与平台",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 38397
+  },
+  {
+    "owner": "steipete",
+    "slug": "things-mac",
+    "version": "1.0.0",
+    "stratum": "桌面应用与平台",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 17075
+  },
+  {
+    "owner": "steipete",
+    "slug": "openai-whisper",
+    "version": "1.0.0",
+    "stratum": "音视频与模型运行时",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 89756
+  },
+  {
+    "owner": "steipete",
+    "slug": "nano-banana-pro",
+    "version": "1.0.1",
+    "stratum": "音视频与模型运行时",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 107910
+  },
+  {
+    "owner": "steipete",
+    "slug": "nano-pdf",
+    "version": "1.0.0",
+    "stratum": "音视频与模型运行时",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 123097
+  },
+  {
+    "owner": "seanford",
+    "slug": "coding-agent",
+    "version": "1.0.0",
+    "stratum": "宿主调度与代理",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 808
+  },
+  {
+    "owner": "maximeprades",
+    "slug": "auto-updater",
+    "version": "1.0.0",
+    "stratum": "宿主调度与代理",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 100853
+  },
+  {
+    "owner": "halthelobster",
+    "slug": "proactive-agent",
+    "version": "3.1.0",
+    "stratum": "宿主调度与代理",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 178238
+  },
+  {
+    "owner": "steipete",
+    "slug": "mcporter",
+    "version": "1.0.0",
+    "stratum": "MCP 与工具协议",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 71228
+  },
+  {
+    "owner": "paudyyin",
+    "slug": "mcp-builder",
+    "version": "1.1.0",
+    "stratum": "MCP 与工具协议",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 1459
+  },
+  {
+    "owner": "liuboacean",
+    "slug": "agent-comm-hub",
+    "version": "3.0.25",
+    "stratum": "MCP 与工具协议",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 4377
+  },
+  {
+    "owner": "iahmadzain",
+    "slug": "home-assistant",
+    "version": "1.0.0",
+    "stratum": "设备与局域网",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 24081
+  },
+  {
+    "owner": "steipete",
+    "slug": "sonoscli",
+    "version": "1.0.0",
+    "stratum": "设备与局域网",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 90350
+  },
+  {
+    "owner": "steipete",
+    "slug": "openhue",
+    "version": "1.0.0",
+    "stratum": "设备与局域网",
+    "selection_reason": "覆盖此依赖形态的可识别实例；非随机抽样，不用于总体比例估计",
+    "downloads_observed": 14453
+  }
+]

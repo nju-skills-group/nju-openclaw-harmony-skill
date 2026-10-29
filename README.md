@@ -58,6 +58,10 @@ git clone https://github.com/Shishi-w/openclaw-harmony-skill.git
 cd openclaw-harmony-skill
 ```
 
+## 普查成果
+
+- [乙组 Skill 普查 v1：内置全量、生态代表样本与公开目录初筛](docs/04-methodology/group-b/skill-survey/README.md)
+
 ## 五、协作与沟通
 
 - **代码与文档**：全部沉淀在本仓库（GitHub）。
