@@ -1,0 +1,10 @@
+检索成功，来源也已核验（HTTP 200，页面正文包含 timeout 的说明）。
+
+根据官方文档原文，`urllib.request.urlopen()` 有一个可选的 `timeout` 参数，单位为秒，用于限制连接尝试这类阻塞操作的时长。如果不指定 `timeout`，就会使用全局默认的超时设置；该参数只对 HTTP、HTTPS 和 FTP 连接有效。如果服务器在设定的秒数内没有响应，就会抛出属于 `OSError` 子类的 `TimeoutError`。另外，`install_opener` 等函数的说明中也提到，该 `timeout` 参数的作用与 `urlopen()` 相同，它可以传入请求对象或字符串，并具有相同的返回值与异常行为。
+
+来源链接：https://docs.python.org/3/library/urllib.request.html（Python 3.15.2 文档，标题为 “urllib.request — Extensible library for opening URLs”）
+
+实验结果：
+- 搜索结果数量：3 条，均来自 docs.python.org
+- 脚本真实退出码：`SCRIPT_EXITCODE=0`
+- 整个过程中只执行了一次搜索，web_fetch 也只在这次调用中读取了来源一次。

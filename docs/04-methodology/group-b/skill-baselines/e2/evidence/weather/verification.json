@@ -1,0 +1,15 @@
+{
+  "source_matches_survey": true,
+  "target_skill_read": true,
+  "actual_web_fetch_call": true,
+  "http_status": 200,
+  "response_not_truncated": true,
+  "requested_answer_fields_match_response": true,
+  "model_not_rerouted": true,
+  "scope": "one current-weather query; no guarantee of weather accuracy/freshness or future availability",
+  "fallback_json_received": true,
+  "fallback_curl_exit": 0,
+  "injected_timeout_curl_exit": 28,
+  "error_attempt_count": 1,
+  "error_reported_without_weather": true
+}

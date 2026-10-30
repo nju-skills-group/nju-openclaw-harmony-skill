@@ -1,0 +1,1 @@
+这是 E2 weather Skill 的备用路径实验。本次配置有意禁用了 web_fetch，以测试原 Skill 允许的 curl 备用路径。先读取 skills/weather/SKILL.md，再使用 curl.exe --fail --silent --show-error --max-time 20 "https://wttr.in/Shanghai?format=j2" 查询上海天气。保留实际退出码与错误信息。如果主域名失败，按 Skill 说明最多尝试一次 wttr.is 的相同路径。不要更换其他网站，不要关闭 TLS 校验，不要安装依赖。若均失败，明确说没有取得天气结果，并解释失败发生在哪层；不要复用任何历史天气答案。只读取本工作区文件。

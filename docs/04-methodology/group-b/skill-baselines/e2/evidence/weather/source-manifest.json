@@ -1,0 +1,9 @@
+{
+  "skill": "weather",
+  "repository": "https://github.com/openclaw/openclaw",
+  "commit": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+  "file": "skills/weather/SKILL.md",
+  "git_blob_sha1": "e84bbea68bae7416d27eede03154b7acd29b3559",
+  "sha256": "62ab4821aa873949d1c1091836be1659a42b32caadce4bd145f5505a1ceaeec1",
+  "matches_survey": true
+}

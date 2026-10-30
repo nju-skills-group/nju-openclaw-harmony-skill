@@ -1,0 +1,25 @@
+{
+  "case": "invalid",
+  "level": "script subprocess; not OpenClaw skill invocation",
+  "startedUtc": "2026-10-29T16:53:17.163212+00:00",
+  "command": [
+    "<USER_HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "<TAVILY_RUN_ROOT>\\source\\scripts\\tavily_search.py",
+    "--query",
+    "Python official documentation urllib request",
+    "--max-results",
+    "3",
+    "--include-domain",
+    "docs.python.org",
+    "--search-depth",
+    "basic",
+    "--format",
+    "brave",
+    "--timeout",
+    "20"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "tavily-search: Tavily authentication failed; check TAVILY_API_KEY\n",
+  "credential": "invalid synthetic token"
+}

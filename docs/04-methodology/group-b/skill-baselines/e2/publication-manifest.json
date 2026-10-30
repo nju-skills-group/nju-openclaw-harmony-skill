@@ -1,0 +1,275 @@
+{
+  "baseCommit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+  "hashNormalization": "CRLF to LF for publication hashes; upstream original source byte hashes separately verified.",
+  "redaction": "Public copies replace personal filesystem prefixes with named placeholders. Upstream Skill bytes unchanged. Manifest excludes itself.",
+  "files": [
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/.gitattributes",
+      "sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/migration/invalid-answer.json",
+      "sha256": "9bdb072b02846039520b53f9a27bf6ce1ccc22cad599099940b207ef0f35939e"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/migration/invalid-receipt.json",
+      "sha256": "cb8a700f0af24348b1d7a10d8d473c91f143e32e389c52e71b26704a13bf3c66"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/migration/invalid-trace.json",
+      "sha256": "0fbece38432165b30cd60511c911df5d55bf63a37ed58494a84e7eee8084bde5"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/migration/normal-answer.json",
+      "sha256": "9ad5d778624e311f5eaa1662878f9c39e19ade4dc062e3d5cdafb071114284ef"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/migration/normal-receipt.json",
+      "sha256": "5813214118574705cbd62d7c462c5bd0c9be2e2a68444bf0ea2df10917a3ba80"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/migration/normal-trace.json",
+      "sha256": "d4b902d974f2f71c876ab4daf7cf93340c16911f010c5554f4363435ecb25420"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/migration/validation.json",
+      "sha256": "14b4b7972178d9ef51f513cf45021449488535c41a01492253c26d11a87a127f"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/invalid-answer.txt",
+      "sha256": "33df0ae7f00cc2e8087fccd8a8e8223838f373d9b23377d16d0d79f7dde0acc1"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/invalid-receipt.json",
+      "sha256": "7af5be0ea6cbbf93151b53ce95adf2dc0b9a43277a9ee7675b4cb475fc8a289a"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/invalid-trace.json",
+      "sha256": "09dad6a042ff1a726b1d235fa9e1705e1e633f8f66ee70c68eb97e070c2686ec"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/normal-answer.txt",
+      "sha256": "2ffb7a596eb75c8bf9ef18cc6cced43910ddde676a88897959b486b5f478a4d3"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/normal-clean-answer.txt",
+      "sha256": "fe5f2303cfdac89be433bcbfe48d2ffb29862f80d7c204f889ae6e81958a618a"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/normal-clean-receipt.json",
+      "sha256": "a04d125142808aacd999ce23c303fc20cae4a91dd04516f9021f554bae2292fb"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/normal-clean-trace.json",
+      "sha256": "8207a73fc181c70e60565fe6af19d388d512e782ca649d6bd9c4019fe9654dfe"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/normal-receipt.json",
+      "sha256": "7fee9365dd69915647af0f1d818e09ca6d4e9e23a0f6165d74093ed0debea717"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/normal-trace.json",
+      "sha256": "e022fcbf14ba9e468996be789d952422ebf16ebe83c67b6972da06fe9d3fb800"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/offline-boundaries.json",
+      "sha256": "4fbcd19034841d7207638f394fc8ccf919e3fba91372e582c6b5335bfb8284ff"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/request-contract.json",
+      "sha256": "d66e65b0aa1bdf7b7699a62204053bdc11755cd7223818a31a5a06d6286fc097"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/script-invalid.json",
+      "sha256": "e22afccd55c6719868ab5afa4c791ccf00f0ce9f684cfca43b9ce590950fe2f3"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/script-missing.json",
+      "sha256": "3876afdfc6bb802fb086693213a70e1b13c24a685b8809c50b176489d931d161"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/script-valid.json",
+      "sha256": "e31389cc89e03ebbaa572912dd2715cb3ce55db3958fb9dc85a927c78dce59cc"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/search-response.json",
+      "sha256": "4dcec605a33c6e6a535ccc25095f1a255d43a3c234600b3e00d2136cd19e06c1"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/source-manifest.json",
+      "sha256": "b145d93b3d164a695da45a4183630b359f3dc6ed8b9d8275995a6a0e498ea979"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/source-page-metadata.json",
+      "sha256": "f71a91c933f40a9ca0dd1cbc1ca2dc966ee8065eb188a283ab76e9ca6d5a6dd4"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/tavily/verification.json",
+      "sha256": "3e414587b9bbe05f40b8db13bc1d08f4074002135cfa60d8b9498e81c41d3878"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/environment.json",
+      "sha256": "7fd8096cb83e676dde2ff8a8fa96866deeabd80069ac037a02609ad423e07526"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/error-answer.txt",
+      "sha256": "da2bedb74b18fa73caad890c10d141c739038d042d0d9cb4b7bdca452c1050a5"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/error-receipt.json",
+      "sha256": "8d4ed0158be030cece6bd950a30007973a5806743d0d58546811fc65fb974909"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/error-trace.json",
+      "sha256": "c47cb65d5b199a24818710a04dddaaec23842bec826fbd82634e38b667e111c0"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/fallback-answer.txt",
+      "sha256": "799ead8c248942d01ad9845615d7e0da636c691ac3e18fb7ed2eea8ad3537677"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/fallback-receipt.json",
+      "sha256": "b81728752499fad0a254526273aeac1cb7ecbfcd87a520bdc6c1bbb8f08d096e"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/fallback-trace.json",
+      "sha256": "94eebd122878b9bf56080de49923d11bfb3aa4dbc548f44bc2943482c2e01498"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/http-response-metadata.json",
+      "sha256": "899b05e014e0368a1949921f8c8d300e13a24d5d2eca81d8a64b4e6a9d491a67"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/normal-answer.txt",
+      "sha256": "73f33877436d999adb7e37c87c96b173c8c07b9f32f575576b77c0d351153bce"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/normal-receipt.json",
+      "sha256": "4112a65073ee7ab2ad8d18162c7faed74cbc967d901757bdbf1209decb2e15a1"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/normal-trace.json",
+      "sha256": "fb301989f78763efe1607f7d02c30781d5601dda3d5912bde26f0aa5c30d6585"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/source-manifest.json",
+      "sha256": "6599ce77403a3883e53bf48167a2b6eb4965369d664fdc6fc7b998c2d8a116cc"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/verification.json",
+      "sha256": "f6886f33a54470892356829e7d75683103f3939a10751e04a3db0341be29efae"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/evidence/weather/weather-response.json",
+      "sha256": "b1b9bf0d886867ae0f89fd97effd1f33b8ea9efffeaf2a15bbd7f2fef072e2ae"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/handoff.md",
+      "sha256": "a2f9821c1583fb4595d5668a717068f853c7ffffd6e883ea4dfd4499cb2f1851"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/migration-validation.md",
+      "sha256": "2a9a23786651e52a0d35f4187be4a54955a6f9b84a1ea4fd12be9225b0dc1340"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/README.md",
+      "sha256": "dcec1b1e2a80684f7b938634d037780a88e51da24d0af482e8a747524903672e"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/tavily-baseline.md",
+      "sha256": "c0a1b2c503c60192b91e901db9af34f2fc82c4616e155f5634b592bd704c336d"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/tavily-issues.md",
+      "sha256": "9b5f07c24a14c6b7f8c517461910bf774361b96c65230c4469c39df86aadae99"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/weather-baseline.md",
+      "sha256": "9a103cd506eceb67907666e93f831a917efa684b798be5cb59242cddb2f39718"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-baselines/e2/weather-issues.md",
+      "sha256": "d2b6965c42b3766455b24a29449ebcb9fef0c7d10b63069d24d127e61bf47a95"
+    },
+    {
+      "path": "docs/04-methodology/group-b/skill-survey/README.md",
+      "sha256": "daf939243c4b85c22a1345fb1cf581ad108cb721b4c784109c7b019cc431496e"
+    },
+    {
+      "path": "tools/skill-baseline/e2/.gitattributes",
+      "sha256": "f2cb89695d3c27635f2c7d7f79325fc8a289cb0a0089c5552902b72c5c4ce517"
+    },
+    {
+      "path": "tools/skill-baseline/e2/.gitignore",
+      "sha256": "5870c13527c22d68223d781bc1cf231d1fbf07ce05326ae5cce3efea5b06ac66"
+    },
+    {
+      "path": "tools/skill-baseline/e2/prompts/tavily-invalid-prompt.txt",
+      "sha256": "b32f9d526ecc45ad0e7d59062bf0c224ec7d99ce60cd13e7a98ab2cfc00e093f"
+    },
+    {
+      "path": "tools/skill-baseline/e2/prompts/tavily-normal-clean-prompt.txt",
+      "sha256": "a7e936c05076df2da2e8cee782a05cb009747aa693d6603dda8d1fdffefd630c"
+    },
+    {
+      "path": "tools/skill-baseline/e2/prompts/tavily-normal-prompt.txt",
+      "sha256": "0b3f4220b8a7e5d261b10f33a3be0999a25a1ce880ac51c87ccd4c5d58a07092"
+    },
+    {
+      "path": "tools/skill-baseline/e2/prompts/weather-error-prompt.txt",
+      "sha256": "84d00506b2ec09196bb72f5b997654369c7a192a3d66f10afe7fdaad1dd84f80"
+    },
+    {
+      "path": "tools/skill-baseline/e2/prompts/weather-fallback-prompt.txt",
+      "sha256": "cf6425b3a7c826acd2633556b8b7ebad5f28cd7b811f5dbdae49d64e5f690ac6"
+    },
+    {
+      "path": "tools/skill-baseline/e2/prompts/weather-normal-prompt.txt",
+      "sha256": "b8a3b17df07b373902103024c1bd5f0b10e4d36bab81248e16714714491823b3"
+    },
+    {
+      "path": "tools/skill-baseline/e2/README.md",
+      "sha256": "7beb9d1f6849eea75678ac9f6f1779338b7233a410f1e4c01ea7072a5afbc2e8"
+    },
+    {
+      "path": "tools/skill-baseline/e2/scripts/export-run.cjs",
+      "sha256": "64ff6fab6b414976e1e1a76a0ae8c10cdcb685e704f7c93cf7cb23a472d3f4eb"
+    },
+    {
+      "path": "tools/skill-baseline/e2/scripts/run-case.ps1",
+      "sha256": "084b7100edc915f08dbfc1b9c61be660269972e165abffaf55241f6b1cd3bb29"
+    },
+    {
+      "path": "tools/skill-baseline/e2/scripts/test-boundaries.py",
+      "sha256": "db1f5846797a76347db8d21b80bb8cc7fc7f39a72ae64317bf0ec85f2c973e7f"
+    },
+    {
+      "path": "tools/skill-baseline/e2/scripts/verify-evidence.py",
+      "sha256": "0fbf4487f182a798793b57e9e08eb7c736bb2dd85a4140a7a466e4b5e1af3a46"
+    },
+    {
+      "path": "tools/skill-baseline/e2/source/tavily/release.json",
+      "sha256": "b581e92e8be32294e0a629928f51467861b9b38d895276e47e2ac86ffef8dab0"
+    },
+    {
+      "path": "tools/skill-baseline/e2/source/tavily/scripts/tavily_search.py",
+      "sha256": "f026cee5fbce2a3a2575f64ffe86f0769a6f2377b252516488f64aa1f4390f4c"
+    },
+    {
+      "path": "tools/skill-baseline/e2/source/tavily/skill-card.md",
+      "sha256": "d84e4cb3cd1b0b6b4d1fa81de755c65ec14f6b57a37ac66d5af6f6d7430ddbda"
+    },
+    {
+      "path": "tools/skill-baseline/e2/source/tavily/SKILL.md",
+      "sha256": "d3f1761279ee53cd6d11d5b009d368f7f4c2f97dbc0405a2931aa4e6e6952cef"
+    },
+    {
+      "path": "tools/skill-baseline/e2/source/weather/LICENSE",
+      "sha256": "9efd316ecf1c4c60f6fd5d26433142fff2b6794d7d328e9bc6179b29bf9c82a4"
+    },
+    {
+      "path": "tools/skill-baseline/e2/source/weather/SKILL.md",
+      "sha256": "62ab4821aa873949d1c1091836be1659a42b32caadce4bd145f5505a1ceaeec1"
+    }
+  ]
+}

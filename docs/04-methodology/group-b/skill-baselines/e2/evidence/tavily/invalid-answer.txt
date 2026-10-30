@@ -1,0 +1,15 @@
+已按实验要求执行一次，认证失败，已停止。
+
+- 脚本：`skills/tavily-search/scripts/tavily_search.py`（未做任何修改）
+- 参数：`--query "Python official documentation urllib request" --max-results 3 --search-depth basic --format brave --timeout 20`
+- 真实退出码：**1**
+- stdout：空
+- stderr（原样保留）：
+
+```
+tavily-search: Tavily authentication failed; check TAVILY_API_KEY
+```
+
+这正是预期中的无效凭据异常路径：脚本返回非零状态，并在 stderr 输出认证失败诊断信息。
+
+未做凭据检查或打印、未重试、未改用其他工具/账号/渠道，也未补造任何搜索结果。
