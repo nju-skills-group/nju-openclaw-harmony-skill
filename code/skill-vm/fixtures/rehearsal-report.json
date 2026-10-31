@@ -1,0 +1,56 @@
+{
+  "batch": "c-2b-batch05",
+  "purpose": "验证三条故障分支可起跑、预算可观察；不判定用例",
+  "generated_utc": "2026-10-31T07:09:04Z",
+  "python": "3.8.10",
+  "curl": "/usr/bin/curl",
+  "jq": null,
+  "t_timeout_frozen": {
+    "S04-03a": 10.0,
+    "S05-02": 30.0,
+    "S08-03": 20.0
+  },
+  "rows": [
+    {
+      "id": "S04-03a",
+      "status": "PASS(演练)",
+      "detail": "curl 退出码 28（28=CURLE_OPERATION_TIMEDOUT），耗时 10.03s（T_timeout=10s，容差 +5s）；stderr='curl: (28) Operation timed out after 10019 milliseconds with 0 bytes received'",
+      "t_timeout_s": 10.0,
+      "cmd": "curl --fail --silent --show-error --max-time 10 http://127.0.0.1:<port>/v1/current",
+      "exit_code": 28,
+      "elapsed_s": 10.03,
+      "bounded_failure": true,
+      "fixture_sha256": "75f9e0515fcaf8e541928e60c24b40674f8c269a3e1ed0ce514860b9d93f4d0e"
+    },
+    {
+      "id": "S05-02",
+      "status": "PASS(演练)",
+      "detail": "HTTP 401、耗时 0.01s；401 与“空看板”可区分；响应体不含哨兵令牌（leaked=False）；解析器=python json（本机无 jq，见备注）；本机 jq=无（与 OpenClaw missing 一致）",
+      "t_timeout_s": 30.0,
+      "cmd": "curl -s -o body -w '%{http_code}' 'http://127.0.0.1:<port>/1/members/me/boards?key=***&token=***'",
+      "http_status": "401",
+      "elapsed_s": 0.01,
+      "token_leaked": false,
+      "parse_ok": true,
+      "parse_err": "",
+      "jq_present": false,
+      "fixture_sha256": "87436c11535b750f5e489425eff8f06cd97ce7c70da2a65625af123a8a50abfe"
+    },
+    {
+      "id": "S08-03",
+      "status": "PASS(演练)",
+      "detail": "stdin 写入 initialize 后进程退出码 7、耗时 0.011s、无超时；EOF 早于预算（T_timeout=20s）；孤儿进程='无'；首行='fixture S08-03: server exited at startup'",
+      "t_timeout_s": 20.0,
+      "exit_code": 7,
+      "elapsed_s": 0.011,
+      "timed_out": false,
+      "orphan_procs": "",
+      "fixture_sha256": "a456c2dd8f8ead02101d14a19d5e026e4fe0f10d3b9bd801a8431537e1d9478c"
+    }
+  ],
+  "not_evidence_of": [
+    "OpenClaw 的 Skill 调用行为",
+    "鸿蒙侧任何行为",
+    "27 个用例的通过/失败"
+  ]
+}

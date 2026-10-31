@@ -3,7 +3,7 @@
 > 最终成果 **C-2**。版本 **v1.0（2026-10-31，C-2B 侧定稿，待 C-2A 共同签署）**。
 > 本报告只写**已有证据支持**的结论；凡未做的都标"未测/阻断"并写明缺什么。**全文不提供任何单一"覆盖率百分比"**，原因见 8.3。
 >
-> 附件：[C-2A 方法协议](c-2a-method-v1.md) · [27 个基础用例](c-2a-cases-v1.md) · [记录模板](c-2a-record-template.md) · [样本清单](c-2a-samples-v1.json) · [预注册参数](c-2b-preregistration-v1.md) · [批次 01：工具链最小验证](c-2b-toolchain-batch01.md) · [批次 02：样本溯源与原平台环境](c-2b-batch02-baseline-and-provenance.md) · [批次 03：L1 的 SkCC 路径](c-2b-toolchain-batch03.md) · [批次 04：静态机制与夹具自检](c-2b-batch04-static-and-fixtures.md) · [未完成项台账](c-2b-open-items-v1.md) · 脚本 [`code/skill-vm/`](../../../../code/skill-vm/README.md)（含 [`fixtures/`](../../../../code/skill-vm/fixtures/README.md)）
+> 附件：[C-2A 方法协议](c-2a-method-v1.md) · [27 个基础用例](c-2a-cases-v1.md) · [记录模板](c-2a-record-template.md) · [样本清单](c-2a-samples-v1.json) · [预注册参数](c-2b-preregistration-v1.md) · [批次 01：工具链最小验证](c-2b-toolchain-batch01.md) · [批次 02：样本溯源与原平台环境](c-2b-batch02-baseline-and-provenance.md) · [批次 03：L1 的 SkCC 路径](c-2b-toolchain-batch03.md) · [批次 04：静态机制与夹具自检](c-2b-batch04-static-and-fixtures.md) · [批次 05：故障分支演练](c-2b-batch05-rehearsal.md) · [未完成项台账](c-2b-open-items-v1.md) · 脚本 [`code/skill-vm/`](../../../../code/skill-vm/README.md)（含 [`fixtures/`](../../../../code/skill-vm/fixtures/README.md)）
 
 ## 0. 文档信息
 
@@ -14,7 +14,8 @@
 | 版本 | v1.0 |
 | 定稿日期 | 2026-10-31（Asia/Shanghai, UTC+08:00） |
 | 定稿条件 | 四类评价内容的**状态全部有据**；无法判定的记为未测/阻断并写明解除条件；不复用他人未核验结论 |
-| 未满足的定稿条件 | C-2A 对 P1/P7/P8 的签署（影响 3 个单元格，见 8.4），以及 C-2 成果协调人指定 |
+| C-2A 协同状态 | 预注册参数（P1/P2/P6）于 2026-10-31 **口头签署**，书面记录待补，参数值未变；P7、P8 属具体裁决，**未**在口头确认中逐项给出 |
+| 未满足的定稿条件 | P7（S02 状态）、P8（S04-02 夹具口径）待书面裁决；C-2 成果协调人待指定 |
 | 变更规则 | 定稿后**只追加**：新证据进 v1.1，不静默改 v1.0 的数值；历史批次记录保持原样 |
 
 ## 1. 摘要
@@ -24,7 +25,7 @@
 3. **工具链验证：SkCC 通过 5/9、部分通过 4/9**（唯一能产出适配产物的工具，目标为四种 agent 宿主，均非鸿蒙）；**SkVM 阻断 9/9**（六种 adapter 无鸿蒙，且 `profile` 需对活模型实测）；**SkillSmith 阻断**（Python 3.11+ 与 provider 均无）。
 4. **原平台基线未测 9/9**：OpenClaw `2026.10.9` 环境已建成、九个样本均能加载（`skills check` 58/23/35），但**无模型凭证**，一条用例都没跑。
 5. **目标运行阻断 9/9**：无 ArkTS 入口工程、无真机，且契约 E7（非预置应用能否上架开放 Skill）未决。
-6. **六类故障注入夹具已成型并自检**（5 个可机检、1 个参数夹具、2 个需鸿蒙测试应用），逐文件哈希见 `fixtures/manifest.json`；但**尚未绑定任何用例**，因为超时与重试预算（P1）还没签署。
+6. **六类故障注入夹具已成型并自检**（5 个可机检、1 个参数夹具、2 个需鸿蒙测试应用），逐文件哈希见 `fixtures/manifest.json`；P1 口头签署后已对三条故障分支做**演练**（S04-03a 10.03s 退出码 28、S05-02 401 于 0.01s、S08-03 退出码 7 于 0.011s），证明预算下"有界失败"可达，但**仍不产生任何用例判定**。
 
 **一句话结论**：C-2 v1 能回答"这条路线在哪些环节成立、哪些环节缺什么"，**不能回答"九个 Skill 在鸿蒙上的可移植率是多少"**——后者需要原平台与目标端各至少一条真实运行记录，而这两端都还没开始。
 
@@ -228,7 +229,7 @@ S04–S09 的"版本"是 OpenClaw 提交号，不是语义版本；引用时必�
 | 调用质量 | **N/A** | 无调用记录；且强制指定 Skill 的测试不测召回 |
 | 性能 | **待交接** | 甲组冷 3 / 热 10 原始值未收到；未知不记 0 |
 
-故障注入夹具：**5 个可机检 + 1 个参数夹具**（S04-03a/b、S05-01/02、S08-03、S06-03），自检全通过；**2 个阻断**（S09-02/03 需鸿蒙测试应用）。夹具就绪不等于用例就绪：预算是 P1，尚未签署。
+故障注入夹具：**5 个可机检 + 1 个参数夹具**（S04-03a/b、S05-01/02、S08-03、S06-03），自检全通过；**2 个阻断**（S09-02/03 需鸿蒙测试应用）。P1 口头签署后已完成 [批次 05 演练](c-2b-batch05-rehearsal.md)：三条故障分支均在预算内得到有界失败（10.03s / 0.01s / 0.011s），机读记录在 `fixtures/rehearsal-report.json`。演练**不是用例判定**——参考客户端不是 OpenClaw 也不是 ArkTS。
 
 ### 8.3 为什么不给一个"覆盖率数字"
 
@@ -242,7 +243,7 @@ S04–S09 的"版本"是 OpenClaw 提交号，不是语义版本；引用时必�
 | 单元格 | 当前 | 若 C-2A 裁决不同 | 编号 |
 | --- | --- | --- | --- |
 | S02 工具链 | 通过 | 部分通过（"注入源文没有的内容"算关键检查项失败） | P7 |
-| 全部超时类用例 | 无判定 | P1 签署预算后，S04-03a、S05-02、S08-03 三条故障分支可立即起跑（夹具已就绪） | P1 |
+| 全部超时类用例 | 无判定（P1 已口头签署、书面待补） | 预算已可用；三条故障分支已演练，真实端一到位即可出判定 | P1 |
 | S04-02 | 未测 | 若冻结"不存在城市"的响应口径，可当日补夹具并执行 | P8 |
 
 ### 8.5 本报告**可以**与**不可以**宣告的结论
@@ -280,7 +281,7 @@ S04–S09 的"版本"是 OpenClaw 提交号，不是语义版本；引用时必�
 
 | 需要的输入 | 谁 | 解除后本报告哪一行会变 |
 | --- | --- | --- |
-| P1 超时/重试预算签署；P7、P8 裁决 | C-2A（陈逸庚） | 8.4 三格；工具链 5/9 或 4/9 |
+| P1 预算的书面记录；P7、P8 裁决 | C-2A（陈逸庚） | P1 已口头签署（书面待补）；P7 决定工具链 5/9 或 4/9；P8 决定 S04-02 能否执行 |
 | 可用的模型 provider 与限额 | 组内决定 | 原平台基线 9 行：未测 → 实测；SkVM/SkillSmith：阻断 → 可试；27 例的模型类断言 |
 | ArkTS 最小入口 + 真机 + 小艺平台路径，并回答 E7 | 甲组 | 目标运行 9 行：阻断 → 实测；性能一行 |
 | OpenClaw 同输入轨迹、`source-manifest` 口径确认、移植工程 | 乙组 | 两端逐例对照；完整本机覆盖 |
@@ -298,13 +299,15 @@ S04–S09 的"版本"是 OpenClaw 提交号，不是语义版本；引用时必�
 | SkVM 阻断、SkCC 四目标、SkillSmith | [批次 01](c-2b-toolchain-batch01.md) | [`skvm-batch01.sh`](../../../../code/skill-vm/skvm-batch01.sh)、[`skcc-batch02.sh`](../../../../code/skill-vm/skcc-batch02.sh) |
 | L1 的 SkCC 与结构缺陷 | [批次 03](c-2b-toolchain-batch03.md) | [`skcc-batch03.sh`](../../../../code/skill-vm/skcc-batch03.sh) |
 | 静态障碍、夹具、SkVM 的 L1 补跑 | [批次 04](c-2b-batch04-static-and-fixtures.md) | [`fixtures/selfcheck.py`](../../../../code/skill-vm/fixtures/selfcheck.py)、[`skvm-batch04.sh`](../../../../code/skill-vm/skvm-batch04.sh) |
+| 三条故障分支的演练（不判定） | [批次 05](c-2b-batch05-rehearsal.md) | [`fixtures/rehearsal.py`](../../../../code/skill-vm/fixtures/rehearsal.py)、[`rehearsal-report.json`](../../../../code/skill-vm/fixtures/rehearsal-report.json) |
 | 夹具哈希登记 | [`fixtures/manifest.json`](../../../../code/skill-vm/fixtures/manifest.json) | `python3 selfcheck.py --write-manifest` 可重算 |
-| 原始日志（未入库，按哈希核对） | 批次 01 §7、02 §7、03 §1、04 §7 | 每份日志均记大小与 SHA-256 |
+| 原始日志（未入库，按哈希核对） | 批次 01 §7、02 §7、03 §1、04 §7、05 §5 | 每份日志均记大小与 SHA-256 |
 
 三条自查命令（约 40 秒，无需网络与凭证）：
 
 ```bash
 python3 code/skill-vm/fixtures/selfcheck.py     # 夹具行为与登记一致
+python3 code/skill-vm/fixtures/rehearsal.py     # 三条故障分支可起跑、可测（约 12s）
 WORK=$HOME/c2b bash code/skill-vm/openclaw-baseline.sh   # 原平台加载状态
 WORK=$HOME/c2b bash code/skill-vm/skvm-batch04.sh        # SkVM 仍阻断在同一处
 ```
@@ -314,4 +317,4 @@ WORK=$HOME/c2b bash code/skill-vm/skvm-batch04.sh        # SkVM 仍阻断在同�
 1. C-2 v1 的交付物是**方法 + 两列实证（静态、工具链）+ 一列环境（原平台加载）+ 一套夹具**，其余两列（原平台用例、目标运行）明确为未测/阻断。
 2. **技术结论稳定且可复核**：语义层可表达、绑定层必须另做；三个候选工具都不以鸿蒙为目标。这条不依赖任何未签署事项。
 3. **覆盖率结论不具备**：27 个用例 0 执行，两端都是 0，任何数字都会误导。
-4. 请求 C-2A 做三件事：签 P1、裁 P7、冻 P8；请求组内定 provider；请求甲组给入口与 E7 答案。这三件到位后，本报告的 §8.1 与 §8.2 可在 v1.1 中一次性补实，而不需要重写方法。
+4. 请求 C-2A 做两件事：裁 P7、冻 P8，并补 P1 的书面记录；请求组内定 provider；请求甲组给入口与 E7 答案。这些到位后，本报告的 §8.1 与 §8.2 可在 v1.1 中一次性补实，而不需要重写方法。
