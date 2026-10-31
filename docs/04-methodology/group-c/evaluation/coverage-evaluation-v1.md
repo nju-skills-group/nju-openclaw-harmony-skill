@@ -1,115 +1,317 @@
 # SkillVM 覆盖率评估报告 v1.0
 
-> 最终成果 C-2；状态：**方法、工具链验证（批次 01/03/04）、样本溯源与原平台环境核验（批次 02）、静态障碍判定与故障注入夹具自检（批次 04）已有交付；27 个用例执行、目标运行、原平台基线仍无结论**。参考工作包 C-2A（样本/评价方法）、C-2B（工具链实测/结果）可先分工推进，但必须共同将方法、结果与限制整合到**同一份报告**，再申请整体验收。中间 PR 合并不代表 C-2 完成。
+> 最终成果 **C-2**。版本 **v1.0（2026-10-31，C-2B 侧定稿，待 C-2A 共同签署）**。
+> 本报告只写**已有证据支持**的结论；凡未做的都标"未测/阻断"并写明缺什么。**全文不提供任何单一"覆盖率百分比"**，原因见 8.3。
 >
-> 附件：[C-2A 方法协议](c-2a-method-v1.md) · [27 个基础用例](c-2a-cases-v1.md) · [记录模板](c-2a-record-template.md) · [样本清单](c-2a-samples-v1.json) · [C-2B 预注册参数](c-2b-preregistration-v1.md) · [C-2B 工具链验证批次 01](c-2b-toolchain-batch01.md) · [C-2B 批次 02：样本溯源与原平台环境核验](c-2b-batch02-baseline-and-provenance.md) · [C-2B 批次 03：L1 的 SkCC 路径](c-2b-toolchain-batch03.md) · [C-2B 批次 04：静态机制核对与夹具自检](c-2b-batch04-static-and-fixtures.md) · [未完成项台账](c-2b-open-items-v1.md)
+> 附件：[C-2A 方法协议](c-2a-method-v1.md) · [27 个基础用例](c-2a-cases-v1.md) · [记录模板](c-2a-record-template.md) · [样本清单](c-2a-samples-v1.json) · [预注册参数](c-2b-preregistration-v1.md) · [批次 01：工具链最小验证](c-2b-toolchain-batch01.md) · [批次 02：样本溯源与原平台环境](c-2b-batch02-baseline-and-provenance.md) · [批次 03：L1 的 SkCC 路径](c-2b-toolchain-batch03.md) · [批次 04：静态机制与夹具自检](c-2b-batch04-static-and-fixtures.md) · [未完成项台账](c-2b-open-items-v1.md) · 脚本 [`code/skill-vm/`](../../../../code/skill-vm/README.md)（含 [`fixtures/`](../../../../code/skill-vm/fixtures/README.md)）
 
-## 1. 目标与范围
+## 0. 文档信息
 
-用乙组的 L1/L2/L3 代表性 Skill 逐级评价 SkillVM 路线的承载能力。定位是**评估与原型验证**，不从零开发完整 VM；抽样不能外推为全生态可移植率。
-
-## 2. 样本及版本
-
-来源：乙组 [普查 PR #13](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/13)，提交 `126d80d5507293af800e7fafe538a772b16e4f21`。以下是乙组 handoff 中的**候选**，并非丙组已经验证的结果。具体纳入/替换样本需在 PR 中说明。
-
-| 分类 | 样本 | 原始来源/版本确认 | 静态障碍 | 工具链实验 | 原平台调用 | 鸿蒙调用 |
-| --- | --- | --- | --- | --- | --- | --- |
-| L1 | adaptive-socratic-questioning | ClawHub `perpetualhui@1.1.0`；原包 12 文件全部取得并校验 | 无外部依赖（纯提示 + 固定 JSON 契约） | 通过（批次 03：SkCC validate + claude 产物） | 未测（已装入 managed 目录并可见；无模型凭证） | 未测 |
-| L1 | academic-paper-writing-style | ClawHub `aircraft06@1.0.0`；原包 4 文件全部取得并校验 | 多文件 `references/` 按需加载；无输出契约 | 通过（批次 03；产物含虚构步骤名，见 P7） | 未测（已装入并可见） | 未测 |
-| L1 | davinci-first-principles | ClawHub `clawdiri-ai@1.0.0`；原包 2 文件全部取得并校验 | 命令式触发（`/firstprinciples`）；无输出契约 | 通过（批次 03：claude + 四目标） | 未测（已装入并可见） | 未测 |
-| L2 | weather | 固定提交 `d79ab619…`；完整包 1 文件核对通过 | 外部 HTTP + JSON 解析（`web_fetch`/curl → wttr.in） | 通过（SkCC 四目标均产出；SkVM 阻断） | 未测（已加载、可见；无模型凭证） | 未测 |
-| L2 | trello | 固定提交；完整包 1 文件核对通过 | `curl` + `jq` 管道；需看板凭据（`TRELLO_API_KEY`/`TRELLO_TOKEN`） | 部分通过（SkCC validate 通过，未编译） | 未测（缺 `jq` 与账号令牌） | 未测 |
-| L2 | meme-maker | 固定提交；完整包 3 文件核对通过 | Node 运行时执行 `scripts/meme.mjs`（PNG 需浏览器，Imgflip 分支需账号） | 部分通过（SkCC validate 通过，未编译） | 未测（已加载、可见） | 未测 |
-| L3 | tmux | 固定提交；完整包 3 文件核对通过 | PTY / shell | 通过（SkCC validate + claude 目标编译；SkVM 阻断） | 未测（已加载、可见） | 未测 |
-| L3 | mcporter | 固定提交；完整包 1 文件核对通过 | MCP 协议 / 进程 | 部分通过（SkCC validate 通过，未编译） | 未测（缺 `mcporter` CLI） | 未测 |
-| L3 | peekaboo | 固定提交；完整包 1 文件核对通过 | 平台 UI / 权限 | 部分通过（SkCC validate 通过，未编译） | 未测（平台判定 `os: darwin` 不兼容） | 未测 |
-
-九个样本的**原包均已取得并逐文件校验**（S01–S03 走 ClawHub release inventory 的 `sha256`；S04–S09 由 git tree 的 blob `sha1`、乙组 `source-manifest.json` 的 `sha256`、OpenClaw 运行时包三方交叉一致），因此样本清单中"仅核对 SKILL.md"的限制已解除。取得方式、逐文件哈希与失败中止规则见 [C-2B 批次 02](c-2b-batch02-baseline-and-provenance.md) 第 2、3 节。"静态障碍"一列的判定依据在 [C-2B 批次 04 第 2 节](c-2b-batch04-static-and-fixtures.md)：逐样本引 `metadata.openclaw` 的 `requires`/`install`/`os` 与正文命令，不从论文或印象推断。原平台一列右括号内的说明来自批次 02 的 OpenClaw 2026.10.9 加载核验（第 4 节）：它证明"平台能否加载"，不证明"用例能跑通"。上表"工具链实验"一列的判定依据：S04–S09 见 [C-2B 批次 01](c-2b-toolchain-batch01.md)，S01–S03 见 [C-2B 批次 03](c-2b-toolchain-batch03.md)，状态定义见 [C-2B 预注册第 6 节](c-2b-preregistration-v1.md)。
-
-## 3. 评价方法（静态维度已执行，运行维度待执行）
-
-- **机制可表达性**：来源文本/依赖是否可用 IR 或编译/适配步骤描述？依据是什么？（九个样本已按 [批次 04 第 2 节](c-2b-batch04-static-and-fixtures.md) 逐条给出结论与原文依据）
-- **工具链验证**：是否真实使用 SkVM 等工具处理输入；保留版本、命令、目标 harness、输出和失败原因。
-- **原平台基线**：由乙组提供 OpenClaw 同输入运行记录；静态分析不能替代。
-- **目标运行**：由甲组确认目标契约，按实际鸿蒙调用验证；不能以生成 ArkTS 文本替代运行成功。
-- **覆盖率口径**：每次统计说明样本集合、分母、成功层级和不满足的门槛；允许“未知/未测”，不把 L3 视为永久不可移植。
-- **性能数据**：注明甲组数据来源、设备/系统、计时边界、重复次数、统计量；无数据时保持“未测”。
-
-## 4. 工具链最小验证记录
-
-执行日期 2026-10-31，执行位置 WSL2 Ubuntu 20.04（SkVM 无 win32 构建）。完整记录、命令原文与日志哈希见 [C-2B 工具链验证批次 01](c-2b-toolchain-batch01.md)，可复现脚本见 [`code/skill-vm/`](../../../../code/skill-vm/README.md)。
-
-| 项目 | 当前值 |
+| 项目 | 值 |
 | --- | --- |
-| 工具/提交版本 | SkVM `@ipads-skvm/skvm@0.1.5`（源码 `632cefe`）；SkCC `nexa-skill 0.1.0`（源码 `59faa3a`）；SkillSmith `AetherHeart-AI/Aeloon@e5afaa1` |
-| 运行环境与模型配置（不得包含密钥） | WSL2 Ubuntu 20.04；Node v20.19.1；rustc 1.99.1；未配置任何 LLM provider（无密钥） |
-| 测试 Skill 与固定来源 | S04–S09，OpenClaw `d79ab619…`，六个 SKILL.md 哈希与样本清单一致 |
-| 命令和输入 | SkVM：`aot-compile --pass=1/--pass=bind-env --dry-run`；SkCC：`validate`、`build --claude/--codex/--gemini/--kimi/--all` |
-| 真实输出或错误 | SkVM `Missing profiles … Run 'skvm profile' first.`（退出码 1）；SkCC 四目标 `Build completed successfully` 并产出可哈希产物；SkillSmith 未运行（需 Python 3.11+ 与密钥） |
-| 可复现附件/脚本 | [`code/skill-vm/`](../../../../code/skill-vm/README.md) 四个脚本；原始日志三份（哈希见批次记录第 7 节） |
-| 对鸿蒙移植的意义与局限 | 三工具的目标集合均无鸿蒙（SkVM 适配器 6 个全为 agent/CLI；SkCC emitter 4 个；SkillSmith 产物为 Python 模块）。可编译 ≠ 可在鸿蒙运行；适配层不能替代鸿蒙绑定层 |
+| 成果编号 | C-2（丙组） |
+| 工作包 | C-2A 样本与评价方法（陈逸庚）· C-2B 评估实验与结果（王子贤） |
+| 版本 | v1.0 |
+| 定稿日期 | 2026-10-31（Asia/Shanghai, UTC+08:00） |
+| 定稿条件 | 四类评价内容的**状态全部有据**；无法判定的记为未测/阻断并写明解除条件；不复用他人未核验结论 |
+| 未满足的定稿条件 | C-2A 对 P1/P7/P8 的签署（影响 3 个单元格，见 8.4），以及 C-2 成果协调人指定 |
+| 变更规则 | 定稿后**只追加**：新证据进 v1.1，不静默改 v1.0 的数值；历史批次记录保持原样 |
 
-| 工具 | 本批状态 | 依据（可核对） |
+## 1. 摘要
+
+1. **九个样本的原包全部取得并逐文件校验**（S01–S03 按 ClawHub release inventory 的 `sha256`；S04–S09 由 git tree blob `sha1`、乙组 `source-manifest.json` 的 `sha256`、OpenClaw 运行时包三方交叉一致）。样本层的"拿不到原包"问题已消除。
+2. **静态验证通过 9/9（适配分析级）**：依赖、权限、外部资源、输出契约与机制可表达性逐样本有原文依据。结论是**语义层可表达、绑定层必须另做**，没有任何样本因"文本无法解析"而不可表达。
+3. **工具链验证：SkCC 通过 5/9、部分通过 4/9**（唯一能产出适配产物的工具，目标为四种 agent 宿主，均非鸿蒙）；**SkVM 阻断 9/9**（六种 adapter 无鸿蒙，且 `profile` 需对活模型实测）；**SkillSmith 阻断**（Python 3.11+ 与 provider 均无）。
+4. **原平台基线未测 9/9**：OpenClaw `2026.10.9` 环境已建成、九个样本均能加载（`skills check` 58/23/35），但**无模型凭证**，一条用例都没跑。
+5. **目标运行阻断 9/9**：无 ArkTS 入口工程、无真机，且契约 E7（非预置应用能否上架开放 Skill）未决。
+6. **六类故障注入夹具已成型并自检**（5 个可机检、1 个参数夹具、2 个需鸿蒙测试应用），逐文件哈希见 `fixtures/manifest.json`；但**尚未绑定任何用例**，因为超时与重试预算（P1）还没签署。
+
+**一句话结论**：C-2 v1 能回答"这条路线在哪些环节成立、哪些环节缺什么"，**不能回答"九个 Skill 在鸿蒙上的可移植率是多少"**——后者需要原平台与目标端各至少一条真实运行记录，而这两端都还没开始。
+
+## 2. 范围、样本集与不变量
+
+| 项目 | 取值 | 说明 |
 | --- | --- | --- |
-| SkVM | 阻断 | `Invalid adapter: harmonyos. Valid: bare-agent, openclaw, opencode, hermes, jiuwenclaw, pi`；所有 pass 在缺 TCP profile 时中止 |
-| SkCC | 通过（限四个非鸿蒙目标） | 6/6 validate 通过；四目标产物哈希已记录；manifest `source_hash` 与源文件哈希一致 |
-| SkillSmith | 阻断 | 编译器为 agent 插件 `/skill_compiler`，需 `provider: LLMProvider`；仓库要求 Python 3.11+，环境为 3.8.10 |
+| 固定分母 | N=9（N_L1 = N_L2 = N_L3 = 3） | 逐级各 3 个，保持不变；失败或换样本必须另立新集合，不用分母调整提高覆盖率 |
+| 抽样方式 | 目的性抽样（`purposeful; not population estimation`） | 覆盖不同障碍类型，**不**用于估计生态总体可移植率 |
+| 来源 | 乙组普查 `126d80d5507293af800e7fafe538a772b16e4f21` | 九个候选由乙组 handoff 提供，丙组负责取得与核验 |
+| 用例 | 27 个基础用例（每样本 3 个），每路径重复 3 次 | 见 [C-2A 用例](c-2a-cases-v1.md)；子场景执行前补编号（S04-03a/b） |
+| 规模上限 | 74 个精查样本、83,265 条初筛记录**都不是**本次分母 | 只用九样本 |
 
-批次 03/04 的补测不在上表重复列：L1 的 SkCC 见 [批次 03](c-2b-toolchain-batch03.md)；L1 的 SkVM 见 [批次 04](c-2b-batch04-static-and-fixtures.md)（结论同为阻断）。
+样本清单（`SKILL.md` 哈希前 16 位，全长度见 [样本清单](c-2a-samples-v1.json)）：
 
-本批发现的两处工具侧质量问题已记入批次记录第 4.4 节：SkCC 产物丢失行内代码标识（S04 反引号 78 → 36，`web_fetch` 7 → 6，出现 `Use  first`、`summarize , , and the` 等空洞；S07 亦复现，丢失两条 `scripts/` 辅助脚本说明），以及源 frontmatter 的 `metadata.openclaw.install` 依赖声明未进入产物、仅退化为关键词权限告警。因此"工具链通过"只表示工具完成了声明的转换，不表示产物可用于移植交付。
+| ID | 等级 | 样本 | 版本 | `SKILL.md` SHA-256（前 16） | 原包 |
+| --- | --- | --- | --- | --- | --- |
+| S01 | L1 | adaptive-socratic-questioning | `1.1.0` | `61b6f2219b52b76b` | 12 文件 / 65,164 B |
+| S02 | L1 | academic-paper-writing-style | `1.0.0` | `cf44335ff427b912` | 4 文件 / 24,817 B |
+| S03 | L1 | davinci-first-principles | `1.0.0` | `b972afd762a9a855` | 2 文件 / 7,207 B |
+| S04 | L2 | weather | `d79ab619…` | `62ab4821aa873949` | 1 文件 |
+| S05 | L2 | trello | `d79ab619…` | `dc524f73bd87b808` | 1 文件 |
+| S06 | L2 | meme-maker | `d79ab619…` | `682db7cba34a3d3c` | 3 文件 |
+| S07 | L3 | tmux | `d79ab619…` | `8aeaa6f3dfe06d58` | 3 文件 |
+| S08 | L3 | mcporter | `d79ab619…` | `010ed9b265e58d45` | 1 文件 |
+| S09 | L3 | peekaboo | `d79ab619…` | `4369238bd780adc5` | 1 文件 |
 
-## 5. 覆盖结果与限制
+S04–S09 的"版本"是 OpenClaw 提交号，不是语义版本；引用时必须同时给提交与路径，不能只说"最新版"。
 
-固定分母 N=9（各等级 N_L=3）。**本节不提供单一"覆盖率数字"**：目标运行尚未开展，任何百分比都会被误读为可移植率。
+## 3. 评价方法与状态定义
 
-| 指标 | 当前值 | 说明 |
+四类内容（[C-2A 方法 §4](c-2a-method-v1.md)）：**静态验证**（原报告的"机制可表达性"）、**工具链验证**、**原平台基线**、**目标运行**。它们是并列的证据类别，**不相加、不算总分**。
+
+五种状态与判定纪律：
+
+| 状态 | 判据 | 本报告中的典型用法 |
 | --- | --- | --- |
-| 工具链处理覆盖（SkCC） | 通过 5/9，部分通过 4/9，未测 0/9 | 通过 = S01/S02/S03（批次 03，claude 目标，S03 另含四目标）、S04（四目标）、S07（claude）；部分通过 = S05/S06/S08/S09（仅 validate）。范围限于非鸿蒙目标。S02 含"注入源文没有内容"的缺陷，待 [预注册 P7](c-2b-preregistration-v1.md) 裁决，若判失败则为通过 4/9、部分通过 5/9 |
-| 工具链处理覆盖（SkVM） | 阻断 9/9，未测 0/9 | 九个样本都在 `Missing profiles: anthropic/claude-sonnet-4.6--openclaw` 处中止，不产出适配物；S01–S03 由 [批次 04](c-2b-batch04-static-and-fixtures.md) 补跑，结论相同。阻断是三层叠加：无 provider 路由、无凭证、`profile` 需对活模型实测 |
-| 故障注入夹具就绪 | 5 个可机检 + 1 个参数夹具；2 个需设备 | S04-03a/b、S05-01/02、S08-03 自检通过；S06-03 为参数夹具；S09-02/03 需鸿蒙测试应用。S04-02 的响应口径未冻结（P8）。文件哈希见 [`fixtures/manifest.json`](../../../../code/skill-vm/fixtures/manifest.json) |
-| 完整本机覆盖 | 未测（0 个样本具备证据，不等于 0 个可移植） | 缺原平台对照、鸿蒙入口与权限映射 |
-| HarmonyOS 真正可执行数量 | 未测 | 无设备与 ArkTS 入口；构建成功/文本生成均不计 |
-| 原平台环境就绪 | 已就绪（OpenClaw 2026.10.9，九样本均可加载；`skills check` 58/23/35） | 环境不再缺；见 [批次 02](c-2b-batch02-baseline-and-provenance.md) 第 4 节 |
-| 原平台对照与行为一致性 | 未测 | 阻塞点已缩小为"无模型凭证"，不再是"无环境" |
-| 甲组性能数据 | 待交接 | 未收到 |
-| 执行进度 | 0/9 有运行记录 | 27 个基础用例全部未执行，超时与重试参数见 [预注册](c-2b-preregistration-v1.md) |
+| 通过 | 该类门槛全部有证据满足 | 静态 9/9；SkCC 对 5 个样本 |
+| 部分通过 | 门槛部分满足，缺项已列明 | SkCC 对 4 个样本（仅 validate，未编译） |
+| 失败 | 已尝试但未满足门槛 | SkVM 对 `--adapter=harmonyos`（`Invalid adapter`） |
+| 未测 | 未开展，且不缺前置条件 | 原平台基线（仅差模型凭证，见 6.4 脚注） |
+| 阻断 | 缺明确前置条件无法开展 | 目标运行 9/9；SkVM 9/9；SkillSmith |
 
-已发现的障碍与失败原因（按主因分类，允许一项多标签）：
+判定纪律（继承 [预注册 §1、§3](c-2b-preregistration-v1.md)）：
 
-- **目标能力/协议**：三条工具链路的目标都是 agent 宿主（SkVM 的 6 个 adapter、SkCC 的 4 个 emitter、SkillSmith 的 Python 模块），没有系统级 Skill 注册形态。这是移植工作必须在工具链之外另做绑定层的直接原因。
-- **工具链**：SkVM 无 win32 构建；其 `profile` 子命令是"对模型实测原语能力"，因此即便配了密钥也要先跑原语电池才能进 pass，阻断成本比"缺一个 key"更高；SkCC 的 npm 包不含二进制，必须自建 Rust 工具链；三者文档与实现存在漂移（SkCC README 的 `--target` 参数不存在；SkVM 的 CLI 只接受 6 个 adapter，源码 registry 却注册了 8 个；OpenClaw `2026.10.9` 的 `engines.node` 为 `>=24.22.1`，与甲组手册"Node ≥ 22"不一致）。
-- **源样本**：九个样本原包均可取得并已校验，不再是障碍。此前"S01–S03 不可得"的记录是我方用错 API 端点（`/api/skills/…` → 404）所致，已更正；正确的 `/api/v1/skills/…` 端点取自乙组脚本。
-- **原平台**：环境已建成，`openclaw skills check` 显示 55 个技能中 20 个可用；但默认模型无凭证（`Missing auth: openai`），且本地模型路线因 github 不可达（`ollama` 运行时无法下载）未建立。因此原平台用例基线仍为未测。
-- **目标环境**：无鸿蒙设备、无 ArkTS 入口，且契约 E7（非预置应用能否上架开放 Skill）未决——目标运行的阻塞不止"缺设备"。
+- 参数未冻结的用例**不得出判定**；本报告因此不给出任何用例级"通过/失败"，只给"已执行/未执行"。
+- 3 次独立运行全部满足才算该例通过；重试必须留痕，不能用"最后一次成功"覆盖前面失败。
+- 故障注入的正常分支与故障分支分别计数。
+- **编译成功、生成代码、页面加载都不等于运行成功**；工具链或环境证据不得上移为覆盖率结论。
 
-对 C-1 与 C-3 的可追溯输入：三工具"目标宿主"清单与接口形态（SkVM `AgentAdapter` 四成员、SkCC `TargetPlatform` 枚举与 emitter 注册 API、SkillSmith 的 `artifact_boundary`/`run_boundary_artifact`）应作为对比表与 IR 目标绑定章节的实证依据，而不是按论文声称推断。
+## 4. 静态验证：九个样本的机制可表达性（通过 9/9，适配分析级）
 
-## 6. 跨组依赖
+| 样本 | 依赖 / 外部资源（原文依据） | 输出契约 | 机制可表达性 |
+| --- | --- | --- | --- |
+| S01 | 无（`metadata.openclaw` 只有 emoji/homepage，无 `requires`/`install`，12 个文件全为 Markdown） | 固定 JSON：`followup_questions[]`/`reasoning_path`/`misconception_flags[]`/`teacher_guidance` | 高：字段可机检；但 `evals.json` 的 5 条 `expected_output` 是自然语言，内容不可机检 |
+| S02 | 无脚本；`references/` 两个文件按需加载（8,353 B / 4,479 B） | 无（散文规范，37 个标题但无编号步骤） | 中低：结构可拆，无 step 可对齐、无契约可断言 |
+| S03 | 无脚本；`## Trigger` 为 `/firstprinciples <topic>`，5 个固定 Phase | 无（各阶段产出为自由文本） | 中：Phase 可表达为有序 step，阶段完成度无客观断言 |
+| S04 | `web_fetch` 首选、`curl` 备用（`install`: brew curl）；目标 `https://wttr.in/…?format=j1\|j2` | 隐含：天气 JSON → 转述 | 中：请求/解析可表达，`web_fetch` 与 `curl` 在鸿蒙侧无同形物 |
+| S05 | `requires: {bins:["curl","jq"], env:["TRELLO_API_KEY","TRELLO_TOKEN"]}`；6 条 `curl \| jq` 管道 | 隐含：看板/列表/卡片 JSON → 转述 | 中：REST 可表达，`jq` 管道与 env 注入需替代实现 |
+| S06 | `requires: {bins:["node"]}`；`scripts/meme.mjs`；PNG 需浏览器，`--service imgflip` 需账号 | 文件产物（`.svg`/`.png`） | 中：脚本逻辑可重写，"执行 `.mjs`"无直接等价物 |
+| S07 | `os: ["darwin","linux"]`、`requires: {bins:["tmux"]}`；两个 bash 辅助脚本 | 隐含：终端文本 | 低：会话/伪终端是宿主能力 |
+| S08 | `requires: {bins:["mcporter"]}`；`mcporter call --stdio "bun run ./server.ts"` | JSON-RPC 消息 | 低：需协议栈与子进程管理 |
+| S09 | `os: ["darwin"]`、`requires: {bins:["peekaboo"]}`；要求前台交互授权 | 隐含：截图/坐标/点击结果 | 低：依赖 macOS 辅助功能授权 |
 
-- 乙组：普查、L3 问题清单；后续逐个交付已移植 Skill 与原平台基线。S01–S03 原包已由丙组按 ClawHub v1 API 自行取得并逐文件校验，不再需要乙组提供；仍需乙组确认 `source-manifest.json` 的 `sha256` 记录（丙组已用它完成交叉校验）并在移植记录中沿用同一哈希口径。
-- 甲组：鸿蒙调用入口、运行环境和性能结果。目标运行另需明确回答契约 E7（非预置应用能否上架开放 Skill），否则即使有设备也只能得到"App 内部入口"证据。
-- 组内：原平台基线与 SkVM/SkillSmith 的解除都收敛到同一个决策——是否配置可用的模型 provider 与限额。
-- 丙组：将有依据的技术结论反馈乙组，更新障碍分类和本报告。
+结论与限定：
 
-## 7. 本轮新增材料与下一步
+1. **九个样本的障碍全部落在运行时能力侧**（网络、进程、协议、UI、凭据），没有一个是"文本无法表达"。
+2. 因此本报告把"可移植性"拆成两层：**语义层**（提示/步骤/契约，可被 IR 或编译器描述）与**绑定层**（权限、进程、协议、UI，必须在目标端另写）。第 5、7 节的结果分别对应这两层。
+3. **限定**：本列是"适配分析级"，不是 C-3 的 IR 字段映射（C-3 未定稿）；权限与副作用按原包声明登记，未逐例对 27 个用例做映射。若 C-2A 认为必须含 IR 字段，整列降为"部分通过 9/9"，其余三列不受影响。
 
-| 材料 | 状态 | 说明 |
+## 5. 工具链验证
+
+环境：WSL2 Ubuntu 20.04（SkVM 无 win32 构建）；Node `v20.19.1` / `v24.22.1`；`rustc 1.99.1`；Python `3.8.10`。**未配置任何 LLM provider，未保存任何密钥。**
+
+### 5.1 SkCC（`nexa-skill 0.1.0`，源码 `59faa3a`）：通过 5/9、部分通过 4/9
+
+| 样本 | validate | 编译目标 | 判定 | 产物 |
+| --- | --- | --- | --- | --- |
+| S01 | 通过 | `--claude` | 通过 | `SKILL.md` `b65ab464…`；manifest `source_hash` = 源哈希 |
+| S02 | 通过 | `--claude` | 通过（P7 待裁决） | `96cc5d8b…`；manifest `version` 写 `0.1.0`（源文无 version） |
+| S03 | 通过 | `--claude` + `--all`（四目标） | 通过 | `41648cc2…`（claude）；四目标均产出 |
+| S04 | 通过 | 四目标 | 通过 | 见批次 01 §4 |
+| S07 | 通过 | `--claude` | 通过 | 见批次 01 §4 |
+| S05 / S06 / S08 / S09 | 通过 | 未编译 | 部分通过 | 仅 validate |
+
+四类产物缺陷（逐条可核对，批次 01 §4.4、批次 03 §3）：
+
+1. **行内代码丢失**：S04 反引号 78 → 36，`web_fetch` 7 → 6，出现 `Use  first`、`summarize , , and the` 等空洞。
+2. **Markdown 结构被压平**：S01/S02/S03 的 `#` 标题 25/38/11 → 1，`- ` 列表项 55/62/33 → 0，并列检查项变成连续文本。
+3. **注入源文没有的内容**：S02 产物第一步为 `Follow the skill instructions`；S03 的 codex 产物出现 `## Context Gathering` 三行通用段落。
+4. **缺省被渲染成真值**：S02/S03 源文无 `version`，产物写 `0.1.0`。
+
+因此"通过"仅表示**工具完成了声明的转换**，不表示产物可直接用于移植。
+
+### 5.2 SkVM（`@ipads-skvm/skvm@0.1.5`，源码 `632cefe`）：阻断 9/9
+
+| 观察 | 原文 |
+| --- | --- |
+| 目标集合 | `Invalid adapter: harmonyos. Valid: bare-agent, openclaw, opencode, hermes, jiuwenclaw, pi` |
+| 九个样本的阻断点 | `Missing profiles: anthropic/claude-sonnet-4.6--openclaw` / `Run 'skvm profile' first.`（退出码 1） |
+| 配置状态 | `skvm config doctor`：`~/.skvm/skvm.config.json not found`、`Providers · not configured` |
+| 门槛本质 | `skvm profile - Profile a model's primitive capabilities`，默认 `--instances=3` 且**必须对活模型实测** |
+
+结论：SkVM 的阻断是**三层叠加**（无 provider 路由 + 无凭证 + profile 需实测），不是"缺一个 key"。即使配了模型，它的产物目标是六种 agent 宿主，**没有鸿蒙**；"给密钥就能跑通、跑通就能上鸿蒙"两步都不成立。
+
+### 5.3 SkillSmith（`AetherHeart-AI/Aeloon@e5afaa1`）：阻断
+
+编译入口是 agent 插件 `/skill_compiler`，需要注入 `provider: LLMProvider`；仓库要求 Python 3.11+，本机为 3.8.10。产物形态为 Python 模块，同样不是鸿蒙。
+
+### 5.4 工具链一列的净结论
+
+| 工具 | 本批状态 | 目标集合是否含鸿蒙 | 能否产出可交付适配物 |
+| --- | --- | --- | --- |
+| SkCC | 通过 5/9、部分 4/9 | 否（claude/codex/gemini/kimi） | 否（4 类缺陷） |
+| SkVM | 阻断 9/9 | 否（6 种 agent 宿主） | 否（未产出） |
+| SkillSmith | 阻断 | 否（Python 模块） | 否 |
+
+即：**三个工具都只在"语义中间层"这一侧有用，鸿蒙绑定层没有现成工具**。这条结论不依赖任何未签署参数。
+
+## 6. 原平台基线
+
+### 6.1 环境（已就绪）
+
+| 项目 | 实际值 |
+| --- | --- |
+| 版本 | `OpenClaw 2026.10.9 (8b18b55)` |
+| 运行时 | Node `v24.22.1`、npm `11.19.1`（`engines` 要求 `>=24.22.1 <25 \|\| >=26.12.1`，Node 20/22 会被拒装） |
+| 规模 | `skills check`（装入 L1 之前）：Total 55 / eligible 20 / model-visible 20 / command-visible 19 / missing requirements 35；装入 L1 三样本后 Total 58 / eligible 23 / missing 35 |
+
+版本漂移已记为发现：甲组手册写"Node ≥ 22"，实际包要求 `>=24.22.1`；按手册装 Node 22 会在安装阶段失败。
+
+### 6.2 九个样本的加载状态（已证明"能加载"）
+
+| 样本 | 状态 |
+| --- | --- |
+| S01 / S02 / S03 | 装入 managed 目录后 `openclaw-managed`，eligible + visible，无缺失项 |
+| S04 weather / S06 meme-maker / S07 tmux | eligible、visible |
+| S05 trello | 缺 `jq` 与 `TRELLO_API_KEY`/`TRELLO_TOKEN` |
+| S08 mcporter | 缺 `mcporter` 可执行文件 |
+| S09 peekaboo | `platformIncompatible: true`（`os: darwin`） |
+
+同时核对：运行时包内九个 `SKILL.md` 的哈希与样本清单一致（S04 `62ab4821…`、S05 `dc524f73…`、S06 `682db7cb…`、S07 `8aeaa6f3…`、S08 `010ed9b2…`、S09 `4369238b…`；S01–S03 见第 2 节表）。
+
+### 6.3 为什么一条用例都没跑
+
+- 默认模型无凭证：`Missing auth: openai`；
+- 本地模型路线未建立：`ollama.com` 安装脚本 307 重定向到 github release，而 github 在本机不可达（HTTP 000）；
+- 因此 27 个用例的原平台端**全部 0 执行**。
+
+### 6.4 状态
+
+**原平台基线 = 未测 9/9。** 已证明的是"平台能加载并识别需求"，未证明的是"用例能跑通"。
+
+> 口径说明：按 [方法 §4](c-2a-method-v1.md)"缺明确前置条件而无法开展"可记**阻断**（缺模型凭证）。本报告记**未测**，因为环境与加载都已就绪、缺的只是一项可采购的凭证，且没有任何执行尝试；若 C-2A 要求按定义记阻断，本列整列改判，矩阵结构不变。
+
+## 7. 目标运行
+
+### 7.1 缺的是三件，不是一件
+
+| 缺口 | 现状（可核对） | 影响 |
 | --- | --- | --- |
-| [C-2A 方法协议](c-2a-method-v1.md) 等四份 | 已提交 | 评价口径、27 用例、记录模板、样本清单 |
-| [C-2B 预注册参数](c-2b-preregistration-v1.md) | 待 C-2A 确认 | 27 例 T_timeout、重试上限、计时容差、工具链判定判据 |
-| [C-2B 工具链验证批次 01](c-2b-toolchain-batch01.md) | 已完成本批 | SkVM 阻断 / SkCC 四目标通过 / SkillSmith 阻断 |
-| [C-2B 批次 02](c-2b-batch02-baseline-and-provenance.md) | 已完成本批 | S01–S09 原包与逐文件清单、OpenClaw 2026.10.9 环境与加载状态 |
-| [C-2B 批次 03](c-2b-toolchain-batch03.md) | 已完成本批 | L1 三个样本的 SkCC 补测；SkCC 未测由 3/9 降为 0/9 |
-| [C-2B 批次 04](c-2b-batch04-static-and-fixtures.md) | 已完成本批 | 九个样本的静态障碍判定（§2 六格待填清零）；六类故障注入夹具成型并自检；SkVM 的 L1 补跑（未测 3/9 → 阻断 9/9） |
-| [`code/skill-vm/fixtures/`](../../../../code/skill-vm/fixtures/README.md) | 已提交 | 夹具自检脚本 + 5 个夹具件；哈希登记在 `manifest.json`。位置待 P5 |
-| [`code/skill-vm/`](../../../../code/skill-vm/README.md) | 已提交 | 工具链脚本六份 + 产物质量核对一份；本批新增样本取得、包校验、原平台核验、L1 补测、L1 的 SkVM 补跑五份脚本 |
+| ArkTS 入口工程 | 本机无 DevEco/SDK：`hdc`、`ohpm`、`hvigorw` 均不存在；仓库内无最小工程 | 无法声明入口、无法构建 HAP |
+| 真机 | 无设备 | 甲组手册明确"模拟器运行不替代系统调用" |
+| 契约 E7 | 非预置应用能否上架开放 Skill，契约自标未决 | 即使有设备，最多得到"App 内部入口"证据，不能计入"系统 Skill 调用" |
 
-下一步（按依赖顺序）：
+### 7.2 状态
 
-1. C-2A 确认预注册参数，否则超时类断言无判定效力；同时确认是否把样本清单的 `full_package_reverification` 改为完成（依据见批次 02 第 5 节），裁决 P7（虚构内容是否算关键检查项失败，直接决定 S02 的状态），并冻结 P8（S04-02「不存在城市」的夹具响应口径，见批次 04 第 6 节）；
-2. 组内决定是否配置 LLM provider：这一项同时解除"原平台用例基线"与"SkVM/SkillSmith 实测"；若决定不配，须在报告中把三者统一写成"未测/阻断"并说明原因。注意 SkVM 即使有了密钥还要先跑 `profile` 原语电池；
-3. 甲组提供 ArkTS 最小调用入口并回答 E7 后，按 [记录模板](c-2a-record-template.md)第 5 节开展目标运行；仍缺原平台对照时不得宣称行为一致；
-4. 夹具已可执行但**未与任何用例绑定**：P1 冻结后，S04-03a/S05-02/S08-03 等故障分支可直接用 [`fixtures/`](../../../../code/skill-vm/fixtures/README.md) 起跑；S09-02/S09-03 仍需鸿蒙测试应用。
+**目标运行 = 阻断 9/9。** 27 个基础用例（L1 9 / L2 9 / L3 9）**全部 0 执行**；两个端（原平台、鸿蒙）都没有运行记录，因此**不具备任何逐例对照**。
 
-全部未完成项（含等谁、卡在哪、解除动作）汇总在 [C-2B 未完成项台账](c-2b-open-items-v1.md)，本报告不再逐条重复。
+按 [方法 §4](c-2a-method-v1.md)，构建成功、应用启动、直接调用业务函数都不等于系统 Skill 调用；本报告不把"SkCC 生成了 ArkTS 风格产物"计入此列（SkCC 的实际目标也不是 ArkTS，见 5.1）。
+
+## 8. 覆盖矩阵与指标
+
+### 8.1 四类 × 九样本
+
+| 样本 | 静态验证 | 工具链验证 | 原平台基线 | 目标运行 |
+| --- | --- | --- | --- | --- |
+| S01 | 通过 | 通过（SkCC claude） | 未测 | 阻断 |
+| S02 | 通过 | 通过（P7 待裁决） | 未测 | 阻断 |
+| S03 | 通过 | 通过（SkCC claude + 四目标） | 未测 | 阻断 |
+| S04 | 通过 | 通过（SkCC 四目标） | 未测 | 阻断 |
+| S05 | 通过 | 部分通过（仅 validate） | 未测 | 阻断 |
+| S06 | 通过 | 部分通过（仅 validate） | 未测 | 阻断 |
+| S07 | 通过 | 通过（SkCC claude） | 未测 | 阻断 |
+| S08 | 通过 | 部分通过（仅 validate） | 未测 | 阻断 |
+| S09 | 通过 | 部分通过（仅 validate） | 未测 | 阻断 |
+
+注：本表"工具链验证"取 SkCC 路径（唯一产出适配物的工具）。SkVM 单独统计为**阻断 9/9**，不混入上表，避免"一个工具失败就抹掉另一个工具的部分成果"。
+
+### 8.2 指标（按 [方法 §6](c-2a-method-v1.md)）
+
+| 指标 | 当前值 | 计算与说明 |
+| --- | --- | --- |
+| 工具链处理覆盖 | **5/9 = 56%** | 通过的唯一 Skill 数 / 9；范围限"离线编译为 Claude 格式"，4 个仅 validate。S02 若被判失败则为 4/9 |
+| 完整本机覆盖 | **实测覆盖未知**（已有通过证据 0/9） | 门槛：目标运行通过 + 原平台对照 + 全部主要分支；两项都未开展。**不可解释为真实可移植率 0** |
+| 执行进度 | **0/9** | 有实际运行记录的样本数；blocked/untested 单列 |
+| 已测通过率（静态） | 9/9 = 100% | 分母 = 通过+部分+失败；限定"适配分析级" |
+| 已测通过率（工具链） | 5/9 = 56% | 同上；P7 裁决后可能为 4/9 = 44% |
+| 已测通过率（原平台/目标） | **N/A** | 分母为 0 |
+| 用例覆盖与通过（两端） | **0/27 执行、0/27 通过、逐次 0/0** | 两端分别统计，当前均为 0 |
+| 调用质量 | **N/A** | 无调用记录；且强制指定 Skill 的测试不测召回 |
+| 性能 | **待交接** | 甲组冷 3 / 热 10 原始值未收到；未知不记 0 |
+
+故障注入夹具：**5 个可机检 + 1 个参数夹具**（S04-03a/b、S05-01/02、S08-03、S06-03），自检全通过；**2 个阻断**（S09-02/03 需鸿蒙测试应用）。夹具就绪不等于用例就绪：预算是 P1，尚未签署。
+
+### 8.3 为什么不给一个"覆盖率数字"
+
+1. 四类内容是并列证据，不是可加权维度；任何"总分"都是自造权重。
+2. 目标运行 0/9、原平台 0/9：此时任何百分比都只反映"工具链跑过多少样本"，与被测 Skill 在鸿蒙上能否工作无关。
+3. 样本是目的性抽取的 9 个，**不能外推为生态可移植率**；给出数字必然被误读。
+4. 分母规则要求五种状态之和等于 N；只要有一列是未测/阻断，单一数字就必须隐藏这一列——这正是 [方法 §6](c-2a-method-v1.md) 禁止的写法。
+
+### 8.4 会被签署影响的三个单元格（当前取值 → 可能取值）
+
+| 单元格 | 当前 | 若 C-2A 裁决不同 | 编号 |
+| --- | --- | --- | --- |
+| S02 工具链 | 通过 | 部分通过（"注入源文没有的内容"算关键检查项失败） | P7 |
+| 全部超时类用例 | 无判定 | 仍无判定的唯一原因是预算未签；签署后 S04-03a、S05-02、S08-03 可立即起跑 | P1 |
+| S04-02 | 未测 | 若冻结"不存在城市"的响应口径，可当日补夹具并执行 | P8 |
+
+### 8.5 本报告**可以**与**不可以**宣告的结论
+
+可以：
+
+- 三个候选工具的目标集合都不含鸿蒙；语义中间层有工具、绑定层没有。
+- 九样本的静态障碍全部有原文依据；S01–S03 依赖为零。
+- OpenClaw `2026.10.9` 能加载全部九个样本；trello/mcporter/peekaboo 的缺失项已具体化到 `jq`/令牌、`mcporter` 二进制、`darwin` 门控。
+- 工具链产物存在四类可复现的质量缺陷，不能直接交付。
+
+不可以（本报告明确拒绝这些读法）：
+
+- "九个 Skill 均不可移植"——未测不等于失败。
+- "SkCC 通过 5/9，所以 5/9 可上鸿蒙"——目标集合里没有鸿蒙。
+- "夹具自检通过，所以用例通过"——夹具只证明它如约失败。
+- "环境已就绪，所以基线成立"——加载 ≠ 用例执行。
+- 任何把本报告数字与生态总体比例联系起来的解读。
+
+## 9. 威胁与效度
+
+| 类型 | 威胁 | 处理 |
+| --- | --- | --- |
+| 内部效度 | 单执行人，无独立复核 | 全部结论附命令、日志哈希与文件路径，供第二人复现；人工评分类结论本报告一条都没有 |
+| 内部效度 | 模型未固定（P2 未定） | 未做任何模型相关判定；工具链实验固定了 provider/model 字符串但未实际调用 |
+| 构念效度 | "编译成功"易被当作"可运行" | 全文区分工具链/目标运行两列，且 5.4 明示目标集合无鸿蒙 |
+| 构念效度 | 夹具可机检易被当作"用例已覆盖" | 夹具单独成节，注明"未绑定用例"；预算未签不出判定 |
+| 外部效度 | 9 个目的性样本 | 抽样方式与分母在 §2 明写；不做总体推断 |
+| 外部效度 | 环境为 WSL2，非目标平台 | SkVM 无 win32 构建，属工具事实；目标平台证据一律不带入 |
+| 数据效度 | 文档与实现漂移（SkCC `--target`、SkVM adapter 数、OpenClaw engines） | 一律以实际运行输出为准，漂移本身记为发现 |
+
+## 10. 未完成项与所需输入
+
+逐项编号、负责人与解除动作见 [未完成项台账](c-2b-open-items-v1.md)（O-01～O-20）。关键四项：
+
+| 需要的输入 | 谁 | 解除后本报告哪一行会变 |
+| --- | --- | --- |
+| P1 超时/重试预算签署；P7、P8 裁决 | C-2A（陈逸庚） | 8.4 三格；工具链 5/9 或 4/9 |
+| 可用的模型 provider 与限额 | 组内决定 | 原平台基线 9 行：未测 → 实测；SkVM/SkillSmith：阻断 → 可试；27 例的模型类断言 |
+| ArkTS 最小入口 + 真机 + 小艺平台路径，并回答 E7 | 甲组 | 目标运行 9 行：阻断 → 实测；性能一行 |
+| OpenClaw 同输入轨迹、`source-manifest` 口径确认、移植工程 | 乙组 | 两端逐例对照；完整本机覆盖 |
+
+**v1.1 的触发条件**（满足任一即追加，不改 v1.0）：任一用例出现首条真实运行记录；或 P7/P8 裁决；或甲组给出入口与 E7 结论。
+
+**现实出口建议**：若两周内上述四项均无进展，建议经 C-2A 同意把 v1.0 作为最终版本交付，把"原平台基线/目标运行"明确写为未测/阻断并保留本报告的解除条件表——即本文件当前形态。C-2 缺的是三方输入，不是工作量。
+
+## 11. 证据索引
+
+| 证据 | 位置 | 核对方式 |
+| --- | --- | --- |
+| 样本取得与逐文件哈希 | [批次 02 §2–§3](c-2b-batch02-baseline-and-provenance.md) | [`fetch-samples-clawhub.py`](../../../../code/skill-vm/fetch-samples-clawhub.py)、[`verify-sample-package.py`](../../../../code/skill-vm/verify-sample-package.py) |
+| OpenClaw 环境与加载状态 | [批次 02 §4](c-2b-batch02-baseline-and-provenance.md) | [`openclaw-baseline.sh`](../../../../code/skill-vm/openclaw-baseline.sh)（不配模型即可跑） |
+| SkVM 阻断、SkCC 四目标、SkillSmith | [批次 01](c-2b-toolchain-batch01.md) | [`skvm-batch01.sh`](../../../../code/skill-vm/skvm-batch01.sh)、[`skcc-batch02.sh`](../../../../code/skill-vm/skcc-batch02.sh) |
+| L1 的 SkCC 与结构缺陷 | [批次 03](c-2b-toolchain-batch03.md) | [`skcc-batch03.sh`](../../../../code/skill-vm/skcc-batch03.sh) |
+| 静态障碍、夹具、SkVM 的 L1 补跑 | [批次 04](c-2b-batch04-static-and-fixtures.md) | [`fixtures/selfcheck.py`](../../../../code/skill-vm/fixtures/selfcheck.py)、[`skvm-batch04.sh`](../../../../code/skill-vm/skvm-batch04.sh) |
+| 夹具哈希登记 | [`fixtures/manifest.json`](../../../../code/skill-vm/fixtures/manifest.json) | `python3 selfcheck.py --write-manifest` 可重算 |
+| 原始日志（未入库，按哈希核对） | 批次 01 §7、02 §7、03 §1、04 §7 | 每份日志均记大小与 SHA-256 |
+
+三条自查命令（约 40 秒，无需网络与凭证）：
+
+```bash
+python3 code/skill-vm/fixtures/selfcheck.py     # 夹具行为与登记一致
+WORK=$HOME/c2b bash code/skill-vm/openclaw-baseline.sh   # 原平台加载状态
+WORK=$HOME/c2b bash code/skill-vm/skvm-batch04.sh        # SkVM 仍阻断在同一处
+```
+
+## 12. 结论
+
+1. C-2 v1 的交付物是**方法 + 两列实证（静态、工具链）+ 一列环境（原平台加载）+ 一套夹具**，其余两列（原平台用例、目标运行）明确为未测/阻断。
+2. **技术结论稳定且可复核**：语义层可表达、绑定层必须另做；三个候选工具都不以鸿蒙为目标。这条不依赖任何未签署事项。
+3. **覆盖率结论不具备**：27 个用例 0 执行，两端都是 0，任何数字都会误导。
+4. 请求 C-2A 做三件事：签 P1、裁 P7、冻 P8；请求组内定 provider；请求甲组给入口与 E7 答案。这三件到位后，本报告的 §8.1 与 §8.2 可在 v1.1 中一次性补实，而不需要重写方法。
