@@ -1,0 +1,3 @@
+# 脚本在 WSL/Linux 下直接执行，checkout 时不得转成 CRLF
+*.sh text eol=lf
+*.py text eol=lf
