@@ -1,3 +1,6 @@
 # 脚本在 WSL/Linux 下直接执行，checkout 时不得转成 CRLF
 *.sh text eol=lf
 *.py text eol=lf
+
+# 夹具的 sha256 登记在 fixtures/manifest.json：若 checkout 转成 CRLF，哈希就会变
+code/skill-vm/fixtures/* text eol=lf
