@@ -1,0 +1,3 @@
+{"op": "create", "entity": {"id": "proj_e3", "type": "Project", "properties": {"name": "Harmony Skill Port", "status": "active"}, "created": "2026-10-30T14:15:52.548255+00:00", "updated": "2026-10-30T14:15:52.548255+00:00"}, "timestamp": "2026-10-30T14:15:52.548255+00:00"}
+{"op": "create", "entity": {"id": "task_e3", "type": "Task", "properties": {"title": "Baseline ontology test", "status": "open"}, "created": "2026-10-30T14:15:52.905391+00:00", "updated": "2026-10-30T14:15:52.905391+00:00"}, "timestamp": "2026-10-30T14:15:52.905391+00:00"}
+{"op": "relate", "from": "proj_e3", "rel": "has_task", "to": "task_e3", "properties": {}, "timestamp": "2026-10-30T14:15:53.350319+00:00"}
