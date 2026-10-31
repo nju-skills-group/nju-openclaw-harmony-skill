@@ -17,10 +17,10 @@
 | L1 | adaptive-socratic-questioning | 乙组 handoff，待复核 | 待填 | 未测（原包未取得） | 未测 | 未测 |
 | L1 | academic-paper-writing-style | 乙组 handoff，待复核 | 待填 | 未测（原包未取得） | 未测 | 未测 |
 | L1 | davinci-first-principles | 乙组 handoff，待复核 | 待填 | 未测（原包未取得） | 未测 | 未测 |
-| L2 | weather | SKILL.md 哈希已核对 | 待填 | 部分通过（SkCC 四目标；SkVM 阻断） | 未测 | 未测 |
+| L2 | weather | SKILL.md 哈希已核对 | 待填 | 通过（SkCC 四目标均产出；SkVM 阻断） | 未测 | 未测 |
 | L2 | trello | SKILL.md 哈希已核对 | 待填 | 部分通过（SkCC validate 通过，未编译） | 未测 | 未测 |
 | L2 | meme-maker | SKILL.md 哈希已核对 | 待填 | 部分通过（SkCC validate 通过，未编译） | 未测 | 未测 |
-| L3 | tmux | SKILL.md 哈希已核对 | PTY / shell | 部分通过（SkCC validate + claude 目标编译通过） | 未测 | 未测 |
+| L3 | tmux | SKILL.md 哈希已核对 | PTY / shell | 通过（SkCC validate + claude 目标编译；SkVM 阻断） | 未测 | 未测 |
 | L3 | mcporter | SKILL.md 哈希已核对 | MCP 协议 / 进程 | 部分通过（SkCC validate 通过，未编译） | 未测 | 未测 |
 | L3 | peekaboo | SKILL.md 哈希已核对 | 平台 UI / 权限 | 部分通过（SkCC validate 通过，未编译） | 未测 | 未测 |
 
@@ -55,7 +55,7 @@ S04–S09 的 `SKILL.md` 已按固定提交 `d79ab6195d8d0566b285008bcc30c01a6ce
 | SkCC | 通过（限四个非鸿蒙目标） | 6/6 validate 通过；四目标产物哈希已记录；manifest `source_hash` 与源文件哈希一致 |
 | SkillSmith | 阻断 | 编译器为 agent 插件 `/skill_compiler`，需 `provider: LLMProvider`；仓库要求 Python 3.11+，环境为 3.8.10 |
 
-本批发现的两处工具侧质量问题已记入批次记录第 4.4 节：SkCC 产物丢失行内代码标识（S04 反引号 78 → 36，`web_fetch` 7 → 6，出现 `Use  first`、`summarize , , and the` 等空洞），以及源 frontmatter 的 `metadata.openclaw.install` 依赖声明未进入产物、仅退化为关键词权限告警。
+本批发现的两处工具侧质量问题已记入批次记录第 4.4 节：SkCC 产物丢失行内代码标识（S04 反引号 78 → 36，`web_fetch` 7 → 6，出现 `Use  first`、`summarize , , and the` 等空洞；S07 亦复现，丢失两条 `scripts/` 辅助脚本说明），以及源 frontmatter 的 `metadata.openclaw.install` 依赖声明未进入产物、仅退化为关键词权限告警。因此"工具链通过"只表示工具完成了声明的转换，不表示产物可用于移植交付。
 
 ## 5. 覆盖结果与限制
 

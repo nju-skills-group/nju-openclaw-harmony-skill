@@ -141,6 +141,8 @@ For short answers, summarize , , and the
 WARN nexa_skill_core: [nsc::security::permission_warning] Keyword 'curl' in step 1 may require Network permission
 ```
 
+同一样本族的第二例（S07 tmux，带 `scripts/` 的 L3）：源文件第 84–85 行以行内代码给出的两个辅助脚本说明（`scripts/find-sessions.sh`、`scripts/wait-for-text.sh`）在 `--claude` 产物中消失，只有代码块里的 `scripts/wait-for-text.sh -t shared:0.0 …` 调用被保留，`scripts/` 引用由 3 处降为 2 处。即"有哪些辅助脚本"这类结构化说明最先被丢掉，而这恰好是移植者判断"需要实现哪些脚本"的依据。
+
 也就是说 SkCC 把依赖/权限降级为**关键词启发式提示**，没有把结构化依赖声明带到目标产物里。这一点对鸿蒙尤其关键：`skillProfiles.permissions` 需要确定的权限项，而关键词命中无法区分"只是文档里提到 curl"与"运行时要发起网络请求"。
 
 ### 4.5 判定
