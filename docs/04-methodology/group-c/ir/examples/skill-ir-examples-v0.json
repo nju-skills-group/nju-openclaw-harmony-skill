@@ -1,0 +1,1816 @@
+{
+  "format": "skill-ir-v0-candidate-member-b",
+  "status": "draft-not-schema-frozen",
+  "created": "2026-10-31",
+  "samples": [
+    {
+      "id": "bundled:mcporter/http-tools",
+      "source": {
+        "record_id": "bundled:mcporter",
+        "registry_slug": null,
+        "frontmatter_name": "mcporter",
+        "version": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+        "skill_md_sha256": "010ed9b265e58d45d1e95e6deac5e60b1e46e6ebab00fc3fe30429a1048e236e",
+        "url": "https://github.com/openclaw/openclaw/blob/d79ab6195d8d0566b285008bcc30c01a6ce368e2/skills/mcporter/SKILL.md",
+        "license_record": "MIT（仓库 LICENSE）",
+        "resource_inventory": []
+      },
+      "scope": {
+        "mode": "subset",
+        "parent_record": "bundled:mcporter",
+        "included": [
+          "远程 HTTP MCP 工具发现与调用候选"
+        ],
+        "excluded": [
+          "stdio 子进程",
+          "daemon",
+          "codegen",
+          "配置管理",
+          "完整 OAuth 生命周期"
+        ],
+        "execution_location": "harmony-client-and-remote-mcp-server",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "远程 HTTP MCP 工具发现与调用候选",
+        "negative_trigger": [
+          "stdio 子进程",
+          "daemon",
+          "codegen",
+          "配置管理",
+          "完整 OAuth 生命周期"
+        ],
+        "operations": [
+          {
+            "operation": "discoverTools",
+            "parameters": [
+              {
+                "semantic_name": "serverRef",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA",
+              "ERR_AUTH"
+            ]
+          },
+          {
+            "operation": "callTool",
+            "parameters": [
+              {
+                "semantic_name": "serverRef",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "toolName",
+                "target_arg": "arg2",
+                "argv_index": 1,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "arguments",
+                "target_arg": "arg3",
+                "argv_index": 2,
+                "encoding": "json-string-proposed",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA",
+              "ERR_AUTH"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "host-service",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": [
+            "mcporter"
+          ],
+          "bins_any": null,
+          "env_all": null,
+          "config_all": null,
+          "primary_env": null,
+          "os": null,
+          "metadata_namespace": "openclaw"
+        },
+        "semantic_requirements": [
+          {
+            "capability": "protocol.mcp-http",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "credentials.secure-store",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "tool.schema",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "protocol.mcp-http",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "credentials.secure-store",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "tool.schema",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "network-read",
+        "credential-use",
+        "remote-tool-effects"
+      ],
+      "authorization": {
+        "credential_references": [],
+        "policy": "绑定已授权 MCP 服务；工具自身副作用按 schema 和用户授权处理；不开放任意端点",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L3",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "实际 MCP 传输、工具 schema、认证与超时适配器未实现",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-mcporter-http",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-mcporter-http/scripts/McpSkill.ets",
+          "scriptPath": "scripts/McpSkill.ets",
+          "class": "McpSkill",
+          "functions": [
+            "discoverTools",
+            "callTool"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [
+          "ohos.permission.INTERNET"
+        ],
+        "permissions_note": "列举是候选；profile 调用方权限独立，待 E5",
+        "business_execution_location": "harmony-client-and-remote-mcp-server",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "协议版本与传输协商",
+          "schema 发现",
+          "超时",
+          "认证过期",
+          "远端错误传播",
+          "stdio 独立列未测"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#bundled:mcporter",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "已核对固定版 SKILL.md；未运行"
+      }
+    },
+    {
+      "id": "bundled:meme-maker/local-svg",
+      "source": {
+        "record_id": "bundled:meme-maker",
+        "registry_slug": null,
+        "frontmatter_name": "meme-maker",
+        "version": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+        "skill_md_sha256": "682db7cba34a3d3ca791f7cccaee9488810c731d6622d8886a9bcca77c59d2f3",
+        "url": "https://github.com/openclaw/openclaw/blob/d79ab6195d8d0566b285008bcc30c01a6ce368e2/skills/meme-maker/SKILL.md",
+        "license_record": "MIT（仓库 LICENSE）",
+        "resource_inventory": []
+      },
+      "scope": {
+        "mode": "subset",
+        "parent_record": "bundled:meme-maker",
+        "included": [
+          "模板检索",
+          "本地 SVG 生成",
+          "按需模板下载与缓存"
+        ],
+        "excluded": [
+          "PNG/Playwright/Chromium",
+          "Imgflip 托管",
+          "refresh",
+          "suggest 排名"
+        ],
+        "execution_location": "harmony-local-intended",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "模板检索；本地 SVG 生成；按需模板下载与缓存",
+        "negative_trigger": [
+          "PNG/Playwright/Chromium",
+          "Imgflip 托管",
+          "refresh",
+          "suggest 排名"
+        ],
+        "operations": [
+          {
+            "operation": "searchTemplates",
+            "parameters": [
+              {
+                "semantic_name": "query",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA"
+            ]
+          },
+          {
+            "operation": "renderSvg",
+            "parameters": [
+              {
+                "semantic_name": "templateId",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "texts",
+                "target_arg": "arg2",
+                "argv_index": 1,
+                "encoding": "json-string-proposed",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "function-adapter",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": [
+            "node"
+          ],
+          "bins_any": null,
+          "env_all": null,
+          "config_all": null,
+          "primary_env": null,
+          "os": null,
+          "metadata_namespace": "openclaw"
+        },
+        "semantic_requirements": [
+          {
+            "capability": "node",
+            "branch": "all",
+            "basis": "frontmatter"
+          },
+          {
+            "capability": "template-download-and-cache",
+            "branch": "local-svg/local-png",
+            "basis": "source-body"
+          },
+          {
+            "capability": "Playwright/Chromium",
+            "branch": "local-png",
+            "basis": "source-body"
+          },
+          {
+            "capability": "IMGFLIP_USER/IMGFLIP_PASS or supplied credentials",
+            "branch": "imgflip",
+            "basis": "source-body"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "network.template-download",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "file.sandbox",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "resource.templates",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "network-read",
+        "file-write"
+      ],
+      "authorization": {
+        "credential_references": [],
+        "policy": "受限沙箱输出与 URI 授权；素材来源需审查",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L2",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "文件/URI 授权、模板下载与缓存适配器未测",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-meme-local-svg",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-meme-local-svg/scripts/MemeSkill.ets",
+          "scriptPath": "scripts/MemeSkill.ets",
+          "class": "MemeSkill",
+          "functions": [
+            "searchTemplates",
+            "renderSvg"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [
+          "ohos.permission.INTERNET"
+        ],
+        "permissions_note": "列举是候选；profile 调用方权限独立，待 E5",
+        "business_execution_location": "harmony-local-intended",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "模板命中与实际 SVG",
+          "模板未知",
+          "文本数量/长度",
+          "XML 转义",
+          "下载失败",
+          "缓存命中",
+          "文件不可写与 URI 可读"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#bundled:meme-maker",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "已核对固定版 SKILL.md；未运行"
+      }
+    },
+    {
+      "id": "bundled:peekaboo/remote-macos",
+      "source": {
+        "record_id": "bundled:peekaboo",
+        "registry_slug": null,
+        "frontmatter_name": "peekaboo",
+        "version": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+        "skill_md_sha256": "4369238bd780adc502acc48eef83a41d1a5fb8e6369b6cd258e11779043bfcb4",
+        "url": "https://github.com/openclaw/openclaw/blob/d79ab6195d8d0566b285008bcc30c01a6ce368e2/skills/peekaboo/SKILL.md",
+        "license_record": "MIT（仓库 LICENSE）",
+        "resource_inventory": []
+      },
+      "scope": {
+        "mode": "remote-host",
+        "parent_record": "bundled:peekaboo",
+        "included": [
+          "远程 macOS 感知、动作与动作后验证的候选路线，操作未穷举"
+        ],
+        "excluded": [
+          "鸿蒙本机 UI 自动化保证"
+        ],
+        "execution_location": "remote-macos",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "远程 macOS 感知、动作与动作后验证的候选路线，操作未穷举",
+        "negative_trigger": [
+          "鸿蒙本机 UI 自动化保证"
+        ],
+        "operations": [
+          {
+            "operation": "inspectUi",
+            "parameters": [
+              {
+                "semantic_name": "targetApp",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL"
+            ]
+          },
+          {
+            "operation": "performAction",
+            "parameters": [
+              {
+                "semantic_name": "targetApp",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "action",
+                "target_arg": "arg2",
+                "argv_index": 1,
+                "encoding": "json-string-proposed",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "host-service",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": [
+            "peekaboo"
+          ],
+          "bins_any": null,
+          "env_all": null,
+          "config_all": null,
+          "primary_env": null,
+          "os": [
+            "darwin"
+          ],
+          "metadata_namespace": "openclaw"
+        },
+        "semantic_requirements": [
+          {
+            "capability": "host.remote-macos",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "ui.capture",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "ui.input",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "ui.postcondition",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "host.remote-macos",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "ui.capture",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "ui.input",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "ui.postcondition",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "screen-read",
+        "remote-ui-write",
+        "network-io"
+      ],
+      "authorization": {
+        "credential_references": [],
+        "policy": "宿主、会话或应用范围授权；写入动作另需确认",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L3",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "鸿蒙 UI 感知/定位/输入能力与远程 macOS 服务未提供",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-peekaboo-remote",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-peekaboo-remote/scripts/PeekabooSkill.ets",
+          "scriptPath": "scripts/PeekabooSkill.ets",
+          "class": "PeekabooSkill",
+          "functions": [
+            "inspectUi",
+            "performAction"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [
+          "ohos.permission.INTERNET"
+        ],
+        "permissions_note": "列举是候选；profile 调用方权限独立，待 E5",
+        "business_execution_location": "remote-macos",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "正确设备/应用/窗口",
+          "截图授权",
+          "敏感动作确认",
+          "动作后验证",
+          "远程失联"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#bundled:peekaboo",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "已核对固定版 SKILL.md；未运行"
+      }
+    },
+    {
+      "id": "bundled:tmux/remote-linux",
+      "source": {
+        "record_id": "bundled:tmux",
+        "registry_slug": null,
+        "frontmatter_name": "tmux",
+        "version": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+        "skill_md_sha256": "8aeaa6f3dfe06d58e09721778b8c9e654bcbd47590f26f442c4dc87c9349c572",
+        "url": "https://github.com/openclaw/openclaw/blob/d79ab6195d8d0566b285008bcc30c01a6ce368e2/skills/tmux/SKILL.md",
+        "license_record": "MIT（仓库 LICENSE）",
+        "resource_inventory": []
+      },
+      "scope": {
+        "mode": "remote-host",
+        "parent_record": "bundled:tmux",
+        "included": [
+          "远程 Linux 既有会话控制的候选路线，操作未穷举"
+        ],
+        "excluded": [
+          "鸿蒙本机 PTY 实现保证"
+        ],
+        "execution_location": "remote-linux",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "远程 Linux 既有会话控制的候选路线，操作未穷举",
+        "negative_trigger": [
+          "鸿蒙本机 PTY 实现保证"
+        ],
+        "operations": [
+          {
+            "operation": "capturePane",
+            "parameters": [
+              {
+                "semantic_name": "target",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA"
+            ]
+          },
+          {
+            "operation": "sendInput",
+            "parameters": [
+              {
+                "semantic_name": "target",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "text",
+                "target_arg": "arg2",
+                "argv_index": 1,
+                "encoding": "string",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "host-service",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": [
+            "tmux"
+          ],
+          "bins_any": null,
+          "env_all": null,
+          "config_all": null,
+          "primary_env": null,
+          "os": [
+            "darwin",
+            "linux"
+          ],
+          "metadata_namespace": "openclaw"
+        },
+        "semantic_requirements": [
+          {
+            "capability": "host.remote-linux",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "terminal.pty",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "session.persistent",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "host.remote-linux",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "terminal.pty",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "session.persistent",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "network-read",
+        "remote-process-input",
+        "network-io"
+      ],
+      "authorization": {
+        "credential_references": [],
+        "policy": "宿主、会话或应用范围授权；写入动作另需确认",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L3",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "PTY、shell、持久会话与远程服务未提供",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-tmux-remote",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-tmux-remote/scripts/TmuxSkill.ets",
+          "scriptPath": "scripts/TmuxSkill.ets",
+          "class": "TmuxSkill",
+          "functions": [
+            "capturePane",
+            "sendInput"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [
+          "ohos.permission.INTERNET"
+        ],
+        "permissions_note": "列举是候选；profile 调用方权限独立，待 E5",
+        "business_execution_location": "remote-linux",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "目标窗格授权",
+          "屏幕捕获",
+          "nonce 完成标记",
+          "断线重连",
+          "取消/超时",
+          "远程比例和网络延迟"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#bundled:tmux",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "已核对固定版 SKILL.md；未运行"
+      }
+    },
+    {
+      "id": "bundled:trello/read-only",
+      "source": {
+        "record_id": "bundled:trello",
+        "registry_slug": null,
+        "frontmatter_name": "trello",
+        "version": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+        "skill_md_sha256": "dc524f73bd87b8089d061187bb26add41101ee82e288a1597a2d7b89fd934222",
+        "url": "https://github.com/openclaw/openclaw/blob/d79ab6195d8d0566b285008bcc30c01a6ce368e2/skills/trello/SKILL.md",
+        "license_record": "MIT（仓库 LICENSE）",
+        "resource_inventory": []
+      },
+      "scope": {
+        "mode": "subset",
+        "parent_record": "bundled:trello",
+        "included": [
+          "授权测试看板、列表、卡片查询"
+        ],
+        "excluded": [
+          "创建卡片",
+          "移动卡片",
+          "评论",
+          "归档",
+          "其他写入"
+        ],
+        "execution_location": "harmony-local-intended",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "授权测试看板、列表、卡片查询",
+        "negative_trigger": [
+          "创建卡片",
+          "移动卡片",
+          "评论",
+          "归档",
+          "其他写入"
+        ],
+        "operations": [
+          {
+            "operation": "listBoards",
+            "parameters": [],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA",
+              "ERR_AUTH"
+            ]
+          },
+          {
+            "operation": "listLists",
+            "parameters": [
+              {
+                "semantic_name": "boardId",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA",
+              "ERR_AUTH"
+            ]
+          },
+          {
+            "operation": "listCards",
+            "parameters": [
+              {
+                "semantic_name": "listId",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA",
+              "ERR_AUTH"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "function-adapter",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": [
+            "curl",
+            "jq"
+          ],
+          "bins_any": null,
+          "env_all": [
+            "TRELLO_API_KEY",
+            "TRELLO_TOKEN"
+          ],
+          "config_all": null,
+          "primary_env": null,
+          "os": null,
+          "metadata_namespace": "openclaw"
+        },
+        "semantic_requirements": [
+          {
+            "capability": "network.http-json",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "credentials.secure-store",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "network.http-json",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "credentials.secure-store",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "network-read",
+        "credential-use"
+      ],
+      "authorization": {
+        "credential_references": [
+          "TRELLO_API_KEY",
+          "TRELLO_TOKEN"
+        ],
+        "policy": "仅已授权测试看板只读",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L2",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "实际账号、分页与鉴权/限流错误未测",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-trello-read-only",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-trello-read-only/scripts/TrelloSkill.ets",
+          "scriptPath": "scripts/TrelloSkill.ets",
+          "class": "TrelloSkill",
+          "functions": [
+            "listBoards",
+            "listLists",
+            "listCards"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [
+          "ohos.permission.INTERNET"
+        ],
+        "permissions_note": "列举是候选；profile 调用方权限独立，待 E5",
+        "business_execution_location": "harmony-local-intended",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "已授权测试看板读取",
+          "分页和结束条件",
+          "401/403",
+          "限流",
+          "错误 JSON"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#bundled:trello",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "已核对固定版 SKILL.md；未运行"
+      }
+    },
+    {
+      "id": "bundled:weather/current-summary",
+      "source": {
+        "record_id": "bundled:weather",
+        "registry_slug": null,
+        "frontmatter_name": "weather",
+        "version": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+        "skill_md_sha256": "62ab4821aa873949d1c1091836be1659a42b32caadce4bd145f5505a1ceaeec1",
+        "url": "https://github.com/openclaw/openclaw/blob/d79ab6195d8d0566b285008bcc30c01a6ce368e2/skills/weather/SKILL.md",
+        "license_record": "MIT（仓库 LICENSE）",
+        "resource_inventory": []
+      },
+      "scope": {
+        "mode": "subset",
+        "parent_record": "bundled:weather",
+        "included": [
+          "城市当前天气摘要"
+        ],
+        "excluded": [
+          "完整预报",
+          "历史气候",
+          "专业天气告警"
+        ],
+        "execution_location": "harmony-local-intended",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "城市当前天气摘要",
+        "negative_trigger": [
+          "完整预报",
+          "历史气候",
+          "专业天气告警"
+        ],
+        "operations": [
+          {
+            "operation": "getCurrentWeather",
+            "parameters": [
+              {
+                "semantic_name": "location",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "success.data: location, condition, temperatureC, windKmph；failed: errCode/errMsg",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL",
+              "ERR_TIMEOUT",
+              "ERR_RESPONSE_SCHEMA"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "function-adapter",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": null,
+          "bins_any": null,
+          "env_all": null,
+          "config_all": null,
+          "primary_env": null,
+          "os": null,
+          "metadata_namespace": "openclaw"
+        },
+        "semantic_requirements": [
+          {
+            "capability": "web_fetch",
+            "branch": "preferred",
+            "basis": "source-body"
+          },
+          {
+            "capability": "curl",
+            "branch": "fallback-when-web-fetch-unavailable",
+            "basis": "source-body"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "network.http-json",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "network-read"
+      ],
+      "authorization": {
+        "credential_references": [],
+        "policy": "按用户提供输入和源边界执行",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L2",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "HTTP、天气结构与原平台等价性未测",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-weather-current",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-weather-current/scripts/WeatherSkill.ets",
+          "scriptPath": "scripts/WeatherSkill.ets",
+          "class": "WeatherSkill",
+          "functions": [
+            "getCurrentWeather"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [
+          "ohos.permission.INTERNET"
+        ],
+        "permissions_note": "列举是候选；profile 调用方权限独立，待 E5",
+        "business_execution_location": "harmony-local-intended",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "真实天气请求与字段解析",
+          "空城市",
+          "城市无效",
+          "20 秒超时",
+          "字段缺失"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#bundled:weather",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "已核对固定版 SKILL.md；未运行"
+      }
+    },
+    {
+      "id": "clawhub:aircraft06/academic-paper-writing-style",
+      "source": {
+        "record_id": "clawhub:aircraft06/academic-paper-writing-style",
+        "registry_slug": "academic-paper-writing-style",
+        "frontmatter_name": "academic-paper-writing-style",
+        "version": "1.0.0",
+        "skill_md_sha256": "cf44335ff427b91246ac9d9a44662ce6844f59310cdf25a1e4884fa55bd91a0f",
+        "url": "https://clawhub.ai/aircraft06/skills/academic-paper-writing-style",
+        "license_record": "MIT-0",
+        "resource_inventory": [
+          {
+            "path": "SKILL.md",
+            "sha256": "cf44335ff427b91246ac9d9a44662ce6844f59310cdf25a1e4884fa55bd91a0f"
+          },
+          {
+            "path": "references/expression_examples.md",
+            "sha256": "954d93b8c91cdf5c6f0032abc307594d1a0f4487380d3bf7524da933046dc742"
+          },
+          {
+            "path": "references/journal_formats.md",
+            "sha256": "6a876b248d0c1796755800e09baf5a2faf4faa37a90612b5410b526f8bf98495"
+          },
+          {
+            "path": "skill-card.md",
+            "sha256": "75574408e658c7d2bbc1759c0d2995bd1ff688d4d927e206efb9cd7260f6d6b6"
+          }
+        ]
+      },
+      "scope": {
+        "mode": "full",
+        "parent_record": null,
+        "included": [
+          "静态写作风格与参考资料；reviseAbstract 仅入口示范，完整操作待补"
+        ],
+        "excluded": [],
+        "execution_location": "harmony-local-intended",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "静态写作风格与参考资料；reviseAbstract 仅入口示范，完整操作待补",
+        "negative_trigger": [
+          "超出源 Skill 业务边界"
+        ],
+        "operations": [
+          {
+            "operation": "reviseAbstract",
+            "parameters": [
+              {
+                "semantic_name": "text",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "language",
+                "target_arg": "arg2",
+                "argv_index": 1,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "constraints",
+                "target_arg": "arg3",
+                "argv_index": 2,
+                "encoding": "json-string-proposed",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "prompt-guided",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": null,
+          "bins_any": null,
+          "env_all": null,
+          "config_all": null,
+          "primary_env": null,
+          "os": null,
+          "metadata_namespace": null
+        },
+        "semantic_requirements": [
+          {
+            "capability": "prompt.executor",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "resource.reader",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "prompt.executor",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "resource.reader",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "model-inference"
+      ],
+      "authorization": {
+        "credential_references": [],
+        "policy": "按用户提供输入和源边界执行",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L1",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "完整写作操作清单、资源加载与模型执行器待复核",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-academic-paper-writing-style",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-academic-paper-writing-style/scripts/WritingSkill.ets",
+          "scriptPath": "scripts/WritingSkill.ets",
+          "class": "WritingSkill",
+          "functions": [
+            "reviseAbstract"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [],
+        "permissions_note": "模型执行器若走网络需追加权限，待确认",
+        "business_execution_location": "harmony-local-intended",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "用户摘要修改与理由",
+          "不添加虚构实验",
+          "当前期刊规范另核对",
+          "参考文件缺失"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#clawhub:aircraft06/academic-paper-writing-style",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "使用乙组固定普查记录；未重新下载全部原文"
+      }
+    },
+    {
+      "id": "clawhub:clawdiri-ai/davinci-first-principles",
+      "source": {
+        "record_id": "clawhub:clawdiri-ai/davinci-first-principles",
+        "registry_slug": "davinci-first-principles",
+        "frontmatter_name": "first-principles",
+        "version": "1.0.0",
+        "skill_md_sha256": "b972afd762a9a8557738d36f088e3d44cf612e8ddea3a3a8fb87793aa3bfdac3",
+        "url": "https://clawhub.ai/clawdiri-ai/skills/davinci-first-principles",
+        "license_record": "MIT-0",
+        "resource_inventory": [
+          {
+            "path": "SKILL.md",
+            "sha256": "b972afd762a9a8557738d36f088e3d44cf612e8ddea3a3a8fb87793aa3bfdac3"
+          },
+          {
+            "path": "skill-card.md",
+            "sha256": "8a15b776ab77aaeaf8046469e9586663e5db827caec929a13f42aa0087b87e9d"
+          }
+        ]
+      },
+      "scope": {
+        "mode": "full",
+        "parent_record": null,
+        "included": [
+          "五阶段分析与假设检验"
+        ],
+        "excluded": [],
+        "execution_location": "harmony-local-intended",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "五阶段分析与假设检验",
+        "negative_trigger": [
+          "超出源 Skill 业务边界"
+        ],
+        "operations": [
+          {
+            "operation": "analyzeAssumption",
+            "parameters": [
+              {
+                "semantic_name": "topic",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "evidence",
+                "target_arg": "arg2",
+                "argv_index": 1,
+                "encoding": "json-string-proposed",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "constraints",
+                "target_arg": "arg3",
+                "argv_index": 2,
+                "encoding": "json-string-proposed",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "prompt-guided",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": null,
+          "bins_any": null,
+          "env_all": null,
+          "config_all": null,
+          "primary_env": null,
+          "os": null,
+          "metadata_namespace": null
+        },
+        "semantic_requirements": [
+          {
+            "capability": "prompt.executor",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "prompt.executor",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "model-inference"
+      ],
+      "authorization": {
+        "credential_references": [],
+        "policy": "按用户提供输入和源边界执行",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L1",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "源五阶段精确结构与目标模型执行器待复核",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-davinci-first-principles",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-davinci-first-principles/scripts/PrinciplesSkill.ets",
+          "scriptPath": "scripts/PrinciplesSkill.ets",
+          "class": "PrinciplesSkill",
+          "functions": [
+            "analyzeAssumption"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [],
+        "permissions_note": "模型执行器若走网络需追加权限，待确认",
+        "business_execution_location": "harmony-local-intended",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "非高风险产品假设",
+          "五阶段完整性",
+          "证据不足标未知",
+          "示例不当事实"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#clawhub:clawdiri-ai/davinci-first-principles",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "使用乙组固定普查记录；未重新下载全部原文"
+      }
+    },
+    {
+      "id": "clawhub:perpetualhui/adaptive-socratic-questioning",
+      "source": {
+        "record_id": "clawhub:perpetualhui/adaptive-socratic-questioning",
+        "registry_slug": "adaptive-socratic-questioning",
+        "frontmatter_name": "adaptive-socratic-questioning",
+        "version": "1.1.0",
+        "skill_md_sha256": "61b6f2219b52b76b9266f9c435b2a355228ba4a86753e96c88e12c51f05f01aa",
+        "url": "https://clawhub.ai/perpetualhui/skills/adaptive-socratic-questioning",
+        "license_record": "MIT-0",
+        "resource_inventory": [
+          {
+            "path": "evals/evals.json",
+            "sha256": "f026239ff2fe42266bc5d6e02925ff18b1d1c88df934e3557e362a4e390250ad"
+          },
+          {
+            "path": "examples/data-analysis.md",
+            "sha256": "4bbbe91e91ec11df33993b2fa659f850a71e08a68dc24559222b6fb878e4f9fd"
+          },
+          {
+            "path": "examples/paper-writing.md",
+            "sha256": "cefa8cf8d59ce11236a0885f3a7a790a3c3a244bd93804536902f3b10fa12b2f"
+          },
+          {
+            "path": "examples/problem-solving.md",
+            "sha256": "f6bac536404a26212245cfec956343b32f7d446db9b8549831a135d104e0d0fd"
+          },
+          {
+            "path": "examples/research-design.md",
+            "sha256": "97af4936b56d12c2b03465f259694da1df5c04220ab955873c62dfa8c8abb648"
+          },
+          {
+            "path": "README.md",
+            "sha256": "3bbb1b6748460ac738926e2638776f04bbf0985fed87cc336094f5afb0478007"
+          },
+          {
+            "path": "README_SKILL_STATUS.md",
+            "sha256": "d94653fa3591adb1a914c3b4d02a45b004f2acbaae6b3c9f919c494d248ab690"
+          },
+          {
+            "path": "skill.json",
+            "sha256": "b15a9bdb380a2f74dc088bba47104c90d112a552fa42633317e5e16ac2a3d881"
+          },
+          {
+            "path": "SKILL.md",
+            "sha256": "61b6f2219b52b76b9266f9c435b2a355228ba4a86753e96c88e12c51f05f01aa"
+          },
+          {
+            "path": "tests/test-report.md",
+            "sha256": "abc2bd54865a9654db429ee95d691c3b3b5bf94b9c887877a9a2c314d7d99f0f"
+          },
+          {
+            "path": "tests/test-suite.md",
+            "sha256": "63ced4371148ebd4a3ca36554d3fe7be67e551ca86cad67c6b8068e5710782b5"
+          },
+          {
+            "path": "skill-card.md",
+            "sha256": "0bc6f93e35922ac56d2d906ff1412090dbaae9f30cbb479d74780b621898a0fa"
+          }
+        ]
+      },
+      "scope": {
+        "mode": "full",
+        "parent_record": null,
+        "included": [
+          "追问链、静态指引与源 JSON 输出约定（完整操作待源文复核）"
+        ],
+        "excluded": [],
+        "execution_location": "harmony-local-intended",
+        "implementation_status": "not-implemented"
+      },
+      "task": {
+        "trigger": "追问链、静态指引与源 JSON 输出约定（完整操作待源文复核）",
+        "negative_trigger": [
+          "超出源 Skill 业务边界"
+        ],
+        "operations": [
+          {
+            "operation": "generateQuestions",
+            "parameters": [
+              {
+                "semantic_name": "concept",
+                "target_arg": "arg1",
+                "argv_index": 0,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "studentAnswer",
+                "target_arg": "arg2",
+                "argv_index": 1,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "learningGoal",
+                "target_arg": "arg3",
+                "argv_index": 2,
+                "encoding": "string",
+                "required": "pending-contract"
+              },
+              {
+                "semantic_name": "context",
+                "target_arg": "arg4",
+                "argv_index": 3,
+                "encoding": "json-string-proposed",
+                "required": "pending-contract"
+              }
+            ],
+            "output_contract": "精确 Schema 待固定原文/适配器契约复核；见文档 §4",
+            "errors": [
+              "ERR_INVALID_PARAMS",
+              "ERR_DEPENDENCY",
+              "ERR_INTERNAL"
+            ]
+          }
+        ]
+      },
+      "invocation": {
+        "mode": "prompt-guided",
+        "status": "proposed"
+      },
+      "dependencies": {
+        "source_declared": {
+          "bins_all": null,
+          "bins_any": null,
+          "env_all": null,
+          "config_all": null,
+          "primary_env": null,
+          "os": null,
+          "metadata_namespace": "openclaw"
+        },
+        "semantic_requirements": [
+          {
+            "capability": "prompt.executor",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "resource.reader",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          },
+          {
+            "capability": "conversation.context",
+            "branch": "selected-scope",
+            "basis": "design-requirement"
+          }
+        ],
+        "target_replacements": [
+          {
+            "capability": "prompt.executor",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "resource.reader",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          },
+          {
+            "capability": "conversation.context",
+            "provider": "unimplemented",
+            "status": "pending-verification"
+          }
+        ]
+      },
+      "effects": [
+        "model-inference"
+      ],
+      "authorization": {
+        "credential_references": [],
+        "policy": "按用户提供输入和源边界执行",
+        "status": "proposed"
+      },
+      "assessment": {
+        "portability": "L1",
+        "classification_status": "静态候选；未做鸿蒙运行验证",
+        "original_runtime_status": "未运行",
+        "harmony_runtime_status": "未运行"
+      },
+      "gaps": [
+        {
+          "kind": "target-capability-or-evidence",
+          "capability": "L1 模型执行器、源指令和精确输出 Schema 待甲乙组确认",
+          "impact": "selected-scope",
+          "resolution_evidence": "甲组契约、真实输入输出、日志及 A/B 复核"
+        }
+      ],
+      "binding": {
+        "target": "HarmonyOS-app-skill",
+        "status": "pending-verification",
+        "registration": {
+          "name": "nju-adaptive-socratic-questioning",
+          "version": "0.1.0",
+          "abilityName": "EntryAbility",
+          "visibility": "system",
+          "permissions": [],
+          "srcEntries": null,
+          "srcEntries_resolution": "Q1: pending-verification"
+        },
+        "entry": {
+          "module_file": "skills/nju-adaptive-socratic-questioning/scripts/SocraticSkill.ets",
+          "scriptPath": "scripts/SocraticSkill.ets",
+          "class": "SocraticSkill",
+          "functions": [
+            "generateQuestions"
+          ],
+          "first_parameter": "scriptManager.ArkTSScriptInfo"
+        },
+        "app_permissions": [],
+        "permissions_note": "模型执行器若走网络需追加权限，待确认",
+        "business_execution_location": "harmony-local-intended",
+        "verification_label": "待验证"
+      },
+      "test_plan": {
+        "cases": [
+          "正常回答生成追问链与 JSON",
+          "缺学生回答先澄清",
+          "事实问题不误触发",
+          "多轮上下文保留"
+        ],
+        "execution_status": "未运行"
+      },
+      "evidence": {
+        "kind": "static-analysis-and-design",
+        "research_commit": "a924ddea1d78c89d42cce8acdf5badc8b7d3ac02",
+        "survey_record": "reviewed-skills.json#clawhub:perpetualhui/adaptive-socratic-questioning",
+        "target_logs": [],
+        "reviewers": [],
+        "source_review": "使用乙组固定普查记录；未重新下载全部原文"
+      }
+    }
+  ]
+}
