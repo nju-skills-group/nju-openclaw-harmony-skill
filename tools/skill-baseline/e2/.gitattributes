@@ -1,0 +1,4 @@
+* text eol=lf
+source/** -text
+scripts/** text eol=lf
+prompts/** text eol=lf

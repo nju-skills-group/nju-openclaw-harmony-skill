@@ -1,0 +1,27 @@
+{
+  "owner": "jacky1n7",
+  "slug": "openclaw-tavily-search",
+  "version": "0.2.1",
+  "license": "MIT-0",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "size": 3220,
+      "sha256": "d3f1761279ee53cd6d11d5b009d368f7f4c2f97dbc0405a2931aa4e6e6952cef",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "scripts/tavily_search.py",
+      "size": 9233,
+      "sha256": "f026cee5fbce2a3a2575f64ffe86f0769a6f2377b252516488f64aa1f4390f4c",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "skill-card.md",
+      "size": 1907,
+      "sha256": "d84e4cb3cd1b0b6b4d1fa81de755c65ec14f6b57a37ac66d5af6f6d7430ddbda",
+      "contentType": "text/markdown"
+    }
+  ],
+  "provenance": "Selected fields from ClawHub version metadata; published file hashes verified before execution."
+}

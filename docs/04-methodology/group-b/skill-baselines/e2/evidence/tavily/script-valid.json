@@ -1,0 +1,25 @@
+{
+  "case": "valid",
+  "level": "script subprocess; not OpenClaw skill invocation",
+  "startedUtc": "2026-10-29T16:53:48.499755+00:00",
+  "command": [
+    "<USER_HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "<TAVILY_RUN_ROOT>\\source\\scripts\\tavily_search.py",
+    "--query",
+    "Python official documentation urllib request",
+    "--max-results",
+    "3",
+    "--include-domain",
+    "docs.python.org",
+    "--search-depth",
+    "basic",
+    "--format",
+    "brave",
+    "--timeout",
+    "20"
+  ],
+  "exitCode": 0,
+  "stdout": "{\"query\": \"Python official documentation urllib request\", \"results\": [{\"title\": \"HOWTO Fetch Internet Resources Using The urllib Package — Python 3.15.2 documentation\", \"url\": \"https://docs.python.org/3/howto/urllib2.html\", \"snippet\": \"## Introduction¶\\n\\nurllib.request is a Python module for fetching URLs (Uniform Resource Locators). It offers a very simple interface, in the form of the urlopen function. This is capable of fetching URLs using a variety of different protocols. It also offers a slightly more complex interface for handling common situations - like basic authentication, cookies, proxies and so on. These are provided by objects called handlers and openers. [...] urllib.request supports fetching URLs for many “URL schemes” (identified by the string before the `\\\":\\\"` in URL - for example `\\\"ftp\\\"` is the URL scheme of `\\\"ftp://python.org/\\\"`) using their associated network protocols (e.g. FTP, HTTP). This tutorial focuses on the most common case, HTTP. [...] HTTP is based on requests and responses - the client makes requests and servers send responses. urllib.request mirrors this with a `Request` object which represents the HTTP request you are making. In its simplest form you create a Request object that specifies the URL you want to fetch. Calling `urlopen` with this Request object returns a response object for the URL requested. This response is a file-like object, which means you can for example call `.read()` on the response:\", \"score\": 0.854509}, {\"title\": \"urllib.request — Extensible library for opening URLs — Python 3.15.2 documentation\", \"url\": \"https://docs.python.org/3/library/urllib.request.html\", \"snippet\": \"The `urllib.request` module defines the following functions:\\n\\nurllib.request.urlopen(url, data=None, [timeout, ]\\\\, context=None)¶\\n:   Open url, which can be either a string containing a valid, properly encoded URL, or a `Request` object.\\n\\n    data must be an object specifying additional data to be sent to the server, or `None` if no such data is needed. See `Request` for details.\\n\\n    urllib.request module uses HTTP/1.1 and includes `Connection:close` header in its HTTP requests. [...] Request.type¶\\n:   The URI scheme.\\n\\nRequest.host¶\\n:   The URI authority, typically a host, but may also contain a port separated by a colon.\\n\\nRequest.origin\\\\_req\\\\_host¶\\n:   The original host for the request, without port.\\n\\nRequest.selector¶\\n:   The URI path. If the `Request` uses a proxy, then selector will be the full URL that is passed to the proxy.\\n\\nRequest.data¶\\n:   The entity body for the request, or `None` if not specified. [...] ### Navigation\\n\\n index\\n modules |\\n next |\\n previous |\\n Python »\\n 3.15.2 documentation »\\n The Python standard library »\\n Internet Protocols and Support »\\n `urllib.request` — Extensible library for opening URLs\\n |\\n |\\n\\n# `urllib.request` — Extensible library for opening URLs¶\\n\\nSource code: Lib/urllib/request.py\\n\\nThe `urllib.request` module defines functions and classes which help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more.\", \"score\": 0.852752}, {\"title\": \"urllib — URL handling modules — Python 3.15.2 documentation\", \"url\": \"https://docs.python.org/3/library/urllib.html\", \"snippet\": \"`urllib.request` for opening and reading URLs\\n `urllib.error` containing the exceptions raised by `urllib.request`\\n `urllib.parse` for parsing URLs\\n `urllib.robotparser` for parsing `robots.txt` files\\n\\n#### Previous topic\\n\\n`wsgiref` — WSGI Utilities and Reference Implementation\\n\\n#### Next topic\\n\\n`urllib.request` — Extensible library for opening URLs\\n\\n### This page\\n\\n Report a bug\\n Improve this page\\n Show source\\n\\n### Navigation [...] ### Navigation\\n\\n index\\n modules |\\n next |\\n previous |\\n Python »\\n 3.15.2 documentation »\\n The Python standard library »\\n Internet Protocols and Support »\\n `urllib` — URL handling modules\\n |\\n |\\n\\n# `urllib` — URL handling modules¶\\n\\nSource code: Lib/urllib/\\n\\n`urllib` is a package that collects several modules for working with URLs: [...] ### Navigation\\n\\n index\\n modules |\\n next |\\n previous |\\n Python »\\n 3.15.2 documentation »\\n The Python standard library »\\n Internet Protocols and Support »\\n `urllib` — URL handling modules\\n |\\n |\", \"score\": 0.80735475}]}\n",
+  "stderr": "",
+  "credential": "local credential redacted"
+}

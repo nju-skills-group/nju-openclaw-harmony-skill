@@ -1,0 +1,23 @@
+{
+  "url": "https://docs.python.org/3/library/urllib.request.html",
+  "finalUrl": "https://docs.python.org/3/library/urllib.request.html",
+  "contentType": "text/html",
+  "status": 200,
+  "title": "\n<<<EXTERNAL_UNTRUSTED_CONTENT id=\"f9b79d6336ac600e\">>>\nSource: Web Fetch\n---\nurllib.request — Extensible library for opening URLs — Python 3.15.2 documentation\n<<<END_EXTERNAL_UNTRUSTED_CONTENT id=\"f9b79d6336ac600e\">>>",
+  "extractMode": "text",
+  "extractor": "readability",
+  "externalContent": {
+    "untrusted": true,
+    "source": "web_fetch",
+    "wrapped": true
+  },
+  "truncated": true,
+  "length": 19781,
+  "rawLength": 50097,
+  "spill": {
+    "path": "<USER_HOME>\\AppData\\Local\\Temp\\openclaw-web-fetch-d2a2c73d6fc447dd.log",
+    "chars": 50097
+  },
+  "fetchedAt": "2026-10-29T17:00:10.797Z",
+  "tookMs": 2503
+}
