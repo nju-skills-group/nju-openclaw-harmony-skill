@@ -74,7 +74,7 @@ S04–S09 的 `SKILL.md` 已按固定提交 `d79ab6195d8d0566b285008bcc30c01a6ce
 已发现的障碍与失败原因（按主因分类，允许一项多标签）：
 
 - **目标能力/协议**：三条工具链路的目标都是 agent 宿主（SkVM 的 6 个 adapter、SkCC 的 4 个 emitter、SkillSmith 的 Python 模块），没有系统级 Skill 注册形态。这是移植工作必须在工具链之外另做绑定层的直接原因。
-- **工具链**：SkVM 无 win32 构建，且编译各 pass 均依赖 LLM provider；SkCC 的 npm 包不含二进制，必须自建 Rust 工具链；三者文档与实现存在漂移（SkCC README 的 `--target`、SkVM 帮助只列 6 个 adapter 而源码注册 8 个）。
+- **工具链**：SkVM 无 win32 构建，且编译各 pass 均依赖 LLM provider；SkCC 的 npm 包不含二进制，必须自建 Rust 工具链；三者文档与实现存在漂移（SkCC README 的 `--target` 参数不存在；SkVM 的 CLI 只接受 6 个 adapter，源码 registry 却注册了 8 个）。
 - **源样本问题**：S01–S03 的 ClawHub 原包在本环境无稳定下载入口，无法校验即不进入实验；这正是样本清单把 `full_package_reverification` 标为 pending 的原因。
 - **测试环境**：无 OpenClaw 运行环境、无鸿蒙设备，故原平台基线与目标运行均记为未测而非失败。
 

@@ -57,7 +57,7 @@ Invalid adapter: harmonyos. Valid: bare-agent, openclaw, opencode, hermes, jiuwe
 
 `skvm config doctor` 亦只列出 openclaw / opencode / hermes / jiuwenclaw / pi 五个外部 harness（bare-agent 为内置）。**集合中没有鸿蒙、没有 ArkTS、没有任何"系统 Skill"形态的目标。**
 
-另发现一处版本内不一致：源码 `src/adapters/registry.ts` 的 `ALL_ADAPTERS` 含 8 项（多出 `claude-code`、`codex`），而 CLI 报错与 `--help` 只列 6 项。引用时以实测报错为准，并把它记为工具侧的文档/校验漂移。
+另发现一处版本内不一致：源码 `src/adapters/registry.ts` 的 `ALL_ADAPTERS` 含 8 项（多出 `claude-code`、`codex`），但 CLI 实际只接受 6 项——对这两个名字分别探测，均返回 `Invalid adapter: claude-code. Valid: …` / `Invalid adapter: codex. Valid: …`。`--help` 列出的也是这 6 项。引用时以 CLI 实测为准，并把该漂移记为工具侧文档/校验问题，而不是"SkVM 已支持 Codex/Claude Code 适配器"。
 
 ### 3.3 编译尝试
 
