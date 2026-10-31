@@ -196,7 +196,7 @@ WARN nexa_skill_core: [nsc::security::permission_warning] Keyword 'curl' in step
 | SkillSmith 任何编译产物 | Python 3.11+ 与密钥均缺 | 同 C-2B 后续批次 |
 | 四个目标产物的"能否驱动真实 agent 完成任务" | 无对应 agent 宿主与配额 | 甲/乙组环境 |
 | 目标运行（鸿蒙） | 无设备与 ArkTS 入口 | 甲组 |
-| 原平台基线 | 无 OpenClaw 运行环境 | 乙组 |
+| 原平台基线 | 本批时无 OpenClaw 运行环境 | 已由 [批次 02](c-2b-batch02-baseline-and-provenance.md) 建成环境并核验加载状态；用例执行仍缺模型凭证 |
 | Windows 原生 SkVM | 官方无 win32 构建 | 需向作者确认或用 WSL（本批做法） |
 
-本批**不**改变 C-2 报告第 5 节任何"鸿蒙可执行"结论：工具链验证通过 ≠ 目标运行通过。
+本批**不**改变 C-2 报告第 5 节任何"鸿蒙可执行"结论：工具链验证通过 ≠ 目标运行通过。"原平台基线"一行在批次 02 中已部分解除，但"能加载技能"仍不等于"基线已建立"。
