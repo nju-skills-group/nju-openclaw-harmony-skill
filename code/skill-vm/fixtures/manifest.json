@@ -1,0 +1,121 @@
+{
+  "batch": "c-2b-batch04",
+  "generated_utc": "2026-10-31T06:49:10Z",
+  "python": "3.8.10",
+  "git_head": "432901353fbfdda714f547252bdf05ec3f4853e9",
+  "purpose": "预注册 §5 的夹具哈希登记；只证明夹具行为，不构成任何用例判定",
+  "selfcheck_sha256": "eccbe906813ad56071be0cafd39063afed2c39278447b370be909cdf99211180",
+  "fixtures": [
+    {
+      "id": "S04-03a",
+      "kind": "service",
+      "file": "s04-timeout-service.py",
+      "frozen": "固定延迟 30s；T_timeout=10s；容差 +5s",
+      "path": "code/skill-vm/fixtures/s04-timeout-service.py",
+      "sha256": "75f9e0515fcaf8e541928e60c24b40674f8c269a3e1ed0ce514860b9d93f4d0e",
+      "selfcheck": {
+        "first_byte_delay_s": 29.4,
+        "health_latency_s": 0.003,
+        "payload_has_temperature": true
+      }
+    },
+    {
+      "id": "S04-03b",
+      "kind": "data",
+      "file": "s04-missing-temperature.json",
+      "frozen": "固定 JSON，缺 temperature 字段；HTTP 200",
+      "path": "code/skill-vm/fixtures/s04-missing-temperature.json",
+      "sha256": "c4b60c50e0e450bf2ce5dbf5cde1b65625186300a4b6935ad44cf6b847e30547",
+      "selfcheck": {
+        "temperature_absent": true,
+        "silent_default_to_zero": true
+      }
+    },
+    {
+      "id": "S05-01",
+      "kind": "service",
+      "file": "s05-trello-paged.py",
+      "frozen": "L1=Todo/L2=Doing/L3=Done；两页返回，每页 2 条",
+      "path": "code/skill-vm/fixtures/s05-trello-paged.py",
+      "sha256": "6ce8fcba74807762feed79912ed5548625d2e66f14c58c532139b2defda64598",
+      "selfcheck": {
+        "lists": [
+          "Todo",
+          "Doing",
+          "Done"
+        ],
+        "page_sizes": [
+          2,
+          2,
+          0
+        ],
+        "unique_cards": 4
+      }
+    },
+    {
+      "id": "S05-02",
+      "kind": "service",
+      "file": "s05-unauthorized.py",
+      "frozen": "固定 401；日志中不含 token",
+      "path": "code/skill-vm/fixtures/s05-unauthorized.py",
+      "sha256": "87436c11535b750f5e489425eff8f06cd97ce7c70da2a65625af123a8a50abfe",
+      "selfcheck": {
+        "status": 401,
+        "token_leaked_in_fixture_log": false,
+        "redacted": true
+      }
+    },
+    {
+      "id": "S06-03",
+      "kind": "argv",
+      "file": null,
+      "frozen": "模板 ID __missing_template__",
+      "path": null,
+      "sha256": null,
+      "selfcheck": {
+        "argv": [
+          "render",
+          "__missing_template__",
+          "--text",
+          "before",
+          "--text",
+          "after",
+          "--out",
+          "<tmp>/c2b-s06-03.svg"
+        ]
+      }
+    },
+    {
+      "id": "S08-03",
+      "kind": "process",
+      "file": "s08-stdio-exit.sh",
+      "frozen": "服务进程启动后立即退出",
+      "path": "code/skill-vm/fixtures/s08-stdio-exit.sh",
+      "sha256": "a456c2dd8f8ead02101d14a19d5e026e4fe0f10d3b9bd801a8431537e1d9478c",
+      "selfcheck": {
+        "exit_code": 7,
+        "elapsed_s": 0.005,
+        "stderr_empty": true
+      }
+    }
+  ],
+  "status": {
+    "S04-03a": "PASS",
+    "S04-03b": "PASS",
+    "S05-01": "PASS",
+    "S05-02": "PASS",
+    "S06-03": "REGISTERED",
+    "S08-03": "PASS"
+  },
+  "uncovered": [
+    {
+      "id": "S09-02",
+      "why": "需鸿蒙测试应用（隐藏“保存”按钮）与设备，无法在本机成型"
+    },
+    {
+      "id": "S09-03",
+      "why": "需鸿蒙测试应用与运行时权限撤销，无法在本机成型"
+    }
+  ],
+  "location_is_provisional": "P5 未定：若改放研究仓库附件，整目录迁移并更新本文件哈希"
+}

@@ -1,0 +1,10 @@
+{
+  "_fixture": "S04-03b",
+  "_frozen": "固定 JSON，缺 temperature 字段；HTTP 200",
+  "_assertion": "明确报“缺字段”或约定错误码；禁止以 0 或默认值填充",
+  "city": "Shanghai",
+  "observed_at": "2026-10-31T14:00:00+08:00",
+  "description": "light rain",
+  "humidity": 78,
+  "wind_kph": 12
+}

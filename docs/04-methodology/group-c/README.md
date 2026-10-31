@@ -13,7 +13,7 @@
 | 最终成果 | 唯一成果入口 | 当前状态 | 已合并内容 / 验收证据 | 下一步/依赖 |
 | --- | --- | --- | --- | --- |
 | **C-1** 技术机制对比表 | [SkVM / SkCC / SkillSmith 机制比较](research/mechanism-comparison.md) | 未完成；框架待认领 | 待 PR/证据 | 共同完成对比表并经审查；向乙组反馈结论 |
-| **C-2** 《SkillVM 覆盖率评估报告 v1.0》 | [统一评估报告](evaluation/coverage-evaluation-v1.md) | 未完成；C-2A 方法、C-2B 工具链批次 01/03、样本溯源与原平台环境核验（批次 02）已交付，目标运行与原平台用例基线未测 | [C-2A 方法协议](evaluation/c-2a-method-v1.md) 及三份附件、[C-2B 预注册](evaluation/c-2b-preregistration-v1.md)、[C-2B 批次 01](evaluation/c-2b-toolchain-batch01.md)、[C-2B 批次 02](evaluation/c-2b-batch02-baseline-and-provenance.md)、[C-2B 批次 03](evaluation/c-2b-toolchain-batch03.md)、[`code/skill-vm/`](../../../code/skill-vm/README.md) | 预注册待 C-2A 确认；基线待模型凭证与甲组运行证据 |
+| **C-2** 《SkillVM 覆盖率评估报告 v1.0》 | [统一评估报告](evaluation/coverage-evaluation-v1.md) | 未完成；C-2A 方法、C-2B 工具链批次 01/03/04、样本溯源与原平台环境核验（批次 02）、静态障碍判定与故障注入夹具自检（批次 04）已交付，27 个用例执行、目标运行与原平台用例基线未测 | [C-2A 方法协议](evaluation/c-2a-method-v1.md) 及三份附件、[C-2B 预注册](evaluation/c-2b-preregistration-v1.md)、[C-2B 批次 01](evaluation/c-2b-toolchain-batch01.md)、[C-2B 批次 02](evaluation/c-2b-batch02-baseline-and-provenance.md)、[C-2B 批次 03](evaluation/c-2b-toolchain-batch03.md)、[C-2B 批次 04](evaluation/c-2b-batch04-static-and-fixtures.md)、[未完成项台账](evaluation/c-2b-open-items-v1.md)、[`code/skill-vm/`](../../../code/skill-vm/README.md) | 预注册 P1/P7/P8 待 C-2A 确认；基线待模型凭证与甲组运行证据；逐项依赖见台账 |
 | **C-3** SkillIR 规范草案 | [统一 SkillIR 草案](ir/skill-ir-v0.md) | 未完成；框架待认领 | 待 PR/证据 | 核定语义、目标绑定及代表示例 |
 | **C-4** 开源仓库与首批 5 个 Skill | [【发布仓库】openclaw-skills-for-harmony](https://github.com/nju-skills-group/openclaw-skills-for-harmony) | **尚未验收**；创建基线时仓库空白 | 待发布仓库 PR/调用证据 | C-4A 骨架/导入工具可先做；C-4B 等乙组 Skill 与甲组目标环境 |
 
