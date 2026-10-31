@@ -133,7 +133,7 @@ Use  first when the tool is available. Request JSON because wttr.in
 For short answers, summarize , , and the
 ```
 
-源文件对应的是 ``Use `web_fetch` first…`` 与 ``summarize `current_condition[0]`, `nearest_area[0]`, and the``。即**行内代码标识（工具名、JSON 字段名）在产物中被剥离**，而正文其余部分保留。这说明该 emitter 把反引号内容当作可绑定占位符处理，无绑定时直接丢空——对"工具名/字段名必须保真"的移植场景是实质缺陷，不能只看 `Build completed successfully`。
+源文件对应的是 ``Use `web_fetch` first…`` 与 ``summarize `current_condition[0]`, `nearest_area[0]`, and the``。即**行内代码标识（工具名、JSON 字段名）在产物中被剥离**，而正文其余部分保留。具体机制未读 emitter 实现验证，从现象推断可能是把反引号内容当作可绑定占位符、无绑定时丢空；无论机制如何，对"工具名/字段名必须保真"的移植场景都是实质缺陷，不能只看 `Build completed successfully`。
 
 另一处：源 frontmatter 的 `metadata.openclaw.install`（`brew` 安装 `curl`，`bins: ["curl"]`）在所有产物中都消失，取而代之的是一行静态告警：
 
