@@ -27,6 +27,7 @@ $WORK/
 | [`skvm-batch01.sh`](skvm-batch01.sh) | SkVM：适配器枚举、6 样本 dry-run、bind-env 实跑、`config doctor` | Linux/WSL2（无 win32 构建）+ Node ≥ 18 + `npm i -g @ipads-skvm/skvm` |
 | [`skcc-batch02.sh`](skcc-batch02.sh) | SkCC：CLI 目标集合、6 样本 validate、四目标编译、产物哈希 | Rust 工具链 + `cargo install --path nexa-skill-cli` |
 | [`skcc-verify-loss.sh`](skcc-verify-loss.sh) | 核对产物是否丢失行内代码标识与依赖声明 | 先跑 `skcc-batch02.sh` |
+| [`skcc-batch03.sh`](skcc-batch03.sh) | L1（S01–S03）单样本 validate + claude 构建 + S03 四目标，并输出结构丢失统计 | `fetch-samples-clawhub.py` 已取包、`nexa-skill` 已安装 |
 | [`fetch-samples-clawhub.py`](fetch-samples-clawhub.py) | 按 ClawHub v1 API 取 S01–S03 原包，逐文件比对 release inventory 的 `sha256` | Python 3 + 网络 |
 | [`verify-sample-package.py`](verify-sample-package.py) | 本地技能目录 vs git tree blob `sha1` vs 乙组 `source-manifest.json`，三方交叉校验 | 乙组两份数据文件 |
 | [`openclaw-baseline.sh`](openclaw-baseline.sh) | 原平台核验：OpenClaw 版本、`skills check` 汇总、六个样本的可见性与缺失项、内容哈希 | Node ≥ 24.22.1；不配模型也能跑 |
