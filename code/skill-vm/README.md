@@ -14,10 +14,11 @@ $WORK/
   skills/<name>/SKILL.md      # 固定样本，取自 c-2a-samples-v1.json 的 S04-S09
   Skill-Compiler/             # SkCC 源码检出（cargo install --path nexa-skill-cli）
   out/<target>/               # SkCC 产物
+  oc/                         # OpenClaw 技能加载状态快照（批次 02）
   logs/                       # 每次运行的原始日志（含时间戳）
 ```
 
-固定样本来源：`https://github.com/openclaw/openclaw` 提交 `d79ab6195d8d0566b285008bcc30c01a6ce368e2` 下的 `skills/<name>/`。取文件后先核对 `c-2a-samples-v1.json` 里的 `skill_md_sha256`，不一致就不要继续。
+固定样本来源：`https://github.com/openclaw/openclaw` 提交 `d79ab6195d8d0566b285008bcc30c01a6ce368e2` 下的 `skills/<name>/`。取文件后先核对 `c-2a-samples-v1.json` 里的 `skill_md_sha256`，不一致就不要继续。S01–S03 为 ClawHub 样本，用 `fetch-samples-clawhub.py` 按 release inventory 取，不要手工下载。
 
 ## 脚本
 
@@ -26,9 +27,13 @@ $WORK/
 | [`skvm-batch01.sh`](skvm-batch01.sh) | SkVM：适配器枚举、6 样本 dry-run、bind-env 实跑、`config doctor` | Linux/WSL2（无 win32 构建）+ Node ≥ 18 + `npm i -g @ipads-skvm/skvm` |
 | [`skcc-batch02.sh`](skcc-batch02.sh) | SkCC：CLI 目标集合、6 样本 validate、四目标编译、产物哈希 | Rust 工具链 + `cargo install --path nexa-skill-cli` |
 | [`skcc-verify-loss.sh`](skcc-verify-loss.sh) | 核对产物是否丢失行内代码标识与依赖声明 | 先跑 `skcc-batch02.sh` |
+| [`fetch-samples-clawhub.py`](fetch-samples-clawhub.py) | 按 ClawHub v1 API 取 S01–S03 原包，逐文件比对 release inventory 的 `sha256` | Python 3 + 网络 |
+| [`verify-sample-package.py`](verify-sample-package.py) | 本地技能目录 vs git tree blob `sha1` vs 乙组 `source-manifest.json`，三方交叉校验 | 乙组两份数据文件 |
+| [`openclaw-baseline.sh`](openclaw-baseline.sh) | 原平台核验：OpenClaw 版本、`skills check` 汇总、六个样本的可见性与缺失项、内容哈希 | Node ≥ 24.22.1；不配模型也能跑 |
 
 ## 运行注意
 
 - SkVM 在 Windows 原生安装会报 `unsupported platform win32-x64`；脚本里的 Node 路径示例为 WSL 内安装位置，按本机实际改 `PATH`。
 - SkCC 的 npm 包 `nexa-skill-compiler` 只是壳，未构建 Rust CLI 时会报 `'nexa-skill.exe' is not recognized`。
-- 两个脚本都会 `tee` 出带时间戳的日志；引用证据时优先引用日志里的原文与哈希，而不是转述。
+- OpenClaw `2026.10.9` 的 `engines.node` 是 `>=24.22.1 <25 || >=26.12.1`，Node 20/22 会在安装阶段被拒；`openclaw-baseline.sh` 不调用模型，缺的只是 `OPENCLAW_INSTALL=1` 时的安装动作。
+- 三个 `.sh` 脚本都会 `tee` 出带时间戳的日志；引用证据时优先引用日志里的原文与哈希，而不是转述。
