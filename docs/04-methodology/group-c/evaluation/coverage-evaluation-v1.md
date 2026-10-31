@@ -14,9 +14,9 @@
 
 | 分类 | 样本 | 原始来源/版本确认 | 静态障碍 | 工具链实验 | 原平台调用 | 鸿蒙调用 |
 | --- | --- | --- | --- | --- | --- | --- |
-| L1 | adaptive-socratic-questioning | ClawHub `perpetualhui@1.1.0`；原包 12 文件全部取得并校验 | 待填（evals/tests/examples 已可用） | 未测（批次 01 未纳入 L1） | 未测（加载状态未核验） | 未测 |
-| L1 | academic-paper-writing-style | ClawHub `aircraft06@1.0.0`；原包 4 文件全部取得并校验 | 待填 | 未测（同上） | 未测 | 未测 |
-| L1 | davinci-first-principles | ClawHub `clawdiri-ai@1.0.0`；原包 2 文件全部取得并校验 | 待填 | 未测（同上） | 未测 | 未测 |
+| L1 | adaptive-socratic-questioning | ClawHub `perpetualhui@1.1.0`；原包 12 文件全部取得并校验 | 待填（evals/tests/examples 已可用） | 通过（批次 03：SkCC validate + claude 产物） | 未测（加载状态未核验） | 未测 |
+| L1 | academic-paper-writing-style | ClawHub `aircraft06@1.0.0`；原包 4 文件全部取得并校验 | 待填 | 通过（批次 03；产物含虚构步骤名，见 P7） | 未测 | 未测 |
+| L1 | davinci-first-principles | ClawHub `clawdiri-ai@1.0.0`；原包 2 文件全部取得并校验 | 待填 | 通过（批次 03：claude + 四目标） | 未测 | 未测 |
 | L2 | weather | 固定提交 `d79ab619…`；完整包 1 文件核对通过 | 待填 | 通过（SkCC 四目标均产出；SkVM 阻断） | 未测（已加载、可见；无模型凭证） | 未测 |
 | L2 | trello | 固定提交；完整包 1 文件核对通过 | 待填 | 部分通过（SkCC validate 通过，未编译） | 未测（缺 `jq` 与账号令牌） | 未测 |
 | L2 | meme-maker | 固定提交；完整包 3 文件核对通过 | 待填 | 部分通过（SkCC validate 通过，未编译） | 未测（已加载、可见） | 未测 |
@@ -24,7 +24,7 @@
 | L3 | mcporter | 固定提交；完整包 1 文件核对通过 | MCP 协议 / 进程 | 部分通过（SkCC validate 通过，未编译） | 未测（缺 `mcporter` CLI） | 未测 |
 | L3 | peekaboo | 固定提交；完整包 1 文件核对通过 | 平台 UI / 权限 | 部分通过（SkCC validate 通过，未编译） | 未测（平台判定 `os: darwin` 不兼容） | 未测 |
 
-九个样本的**原包均已取得并逐文件校验**（S01–S03 走 ClawHub release inventory 的 `sha256`；S04–S09 由 git tree 的 blob `sha1`、乙组 `source-manifest.json` 的 `sha256`、OpenClaw 运行时包三方交叉一致），因此样本清单中"仅核对 SKILL.md"的限制已解除。取得方式、逐文件哈希与失败中止规则见 [C-2B 批次 02](c-2b-batch02-baseline-and-provenance.md) 第 2、3 节。原平台一列右括号内的说明来自同一批次的 OpenClaw 2026.10.9 加载核验（第 4 节）：它证明"平台能否加载"，不证明"用例能跑通"。上表"工具链实验"一列的判定依据见 [C-2B 批次 01](c-2b-toolchain-batch01.md)，状态定义见 [C-2B 预注册第 6 节](c-2b-preregistration-v1.md)。
+九个样本的**原包均已取得并逐文件校验**（S01–S03 走 ClawHub release inventory 的 `sha256`；S04–S09 由 git tree 的 blob `sha1`、乙组 `source-manifest.json` 的 `sha256`、OpenClaw 运行时包三方交叉一致），因此样本清单中"仅核对 SKILL.md"的限制已解除。取得方式、逐文件哈希与失败中止规则见 [C-2B 批次 02](c-2b-batch02-baseline-and-provenance.md) 第 2、3 节。原平台一列右括号内的说明来自同一批次的 OpenClaw 2026.10.9 加载核验（第 4 节）：它证明"平台能否加载"，不证明"用例能跑通"。上表"工具链实验"一列的判定依据：S04–S09 见 [C-2B 批次 01](c-2b-toolchain-batch01.md)，S01–S03 见 [C-2B 批次 03](c-2b-toolchain-batch03.md)，状态定义见 [C-2B 预注册第 6 节](c-2b-preregistration-v1.md)。
 
 ## 3. 评价方法（待执行）
 
@@ -63,8 +63,8 @@
 
 | 指标 | 当前值 | 说明 |
 | --- | --- | --- |
-| 工具链处理覆盖（SkCC） | 通过 2/9，部分通过 4/9，未测 3/9 | 通过 = S04（四目标）、S07（claude 目标）；部分通过 = S05/S06/S08/S09（仅 validate）；未测 = S01–S03（原包已取得，但批次 01 未处理 L1）。范围限于非鸿蒙目标 |
-| 工具链处理覆盖（SkVM） | 阻断 6/9，未测 3/9 | S04–S09 均在缺 TCP profile 处中止；不产出适配物 |
+| 工具链处理覆盖（SkCC） | 通过 5/9，部分通过 4/9，未测 0/9 | 通过 = S01/S02/S03（批次 03，claude 目标，S03 另含四目标）、S04（四目标）、S07（claude）；部分通过 = S05/S06/S08/S09（仅 validate）。范围限于非鸿蒙目标。S02 含"注入源文没有内容"的缺陷，待 [预注册 P7](c-2b-preregistration-v1.md) 裁决，若判失败则为通过 4/9、部分通过 5/9 |
+| 工具链处理覆盖（SkVM） | 阻断 6/9，未测 3/9 | S04–S09 均在缺 TCP profile 处中止；不产出适配物；S01–S03 未补跑 |
 | 完整本机覆盖 | 未测（0 个样本具备证据，不等于 0 个可移植） | 缺原平台对照、鸿蒙入口与权限映射 |
 | HarmonyOS 真正可执行数量 | 未测 | 无设备与 ArkTS 入口；构建成功/文本生成均不计 |
 | 原平台环境就绪 | 已就绪（OpenClaw 2026.10.9，六样本加载状态已核验） | 环境不再缺；见 [批次 02](c-2b-batch02-baseline-and-provenance.md) 第 4 节 |
@@ -97,11 +97,11 @@
 | [C-2B 预注册参数](c-2b-preregistration-v1.md) | 待 C-2A 确认 | 27 例 T_timeout、重试上限、计时容差、工具链判定判据 |
 | [C-2B 工具链验证批次 01](c-2b-toolchain-batch01.md) | 已完成本批 | SkVM 阻断 / SkCC 四目标通过 / SkillSmith 阻断 |
 | [C-2B 批次 02](c-2b-batch02-baseline-and-provenance.md) | 已完成本批 | S01–S09 原包与逐文件清单、OpenClaw 2026.10.9 环境与加载状态 |
-| [`code/skill-vm/`](../../../../code/skill-vm/README.md) | 已提交 | 三份工具链脚本 + 一份产物质量核对脚本；本批新增样本取得、包校验、原平台核验三份脚本 |
+| [C-2B 批次 03](c-2b-toolchain-batch03.md) | 已完成本批 | L1 三个样本的 SkCC 补测；SkCC 未测由 3/9 降为 0/9 |
+| [`code/skill-vm/`](../../../../code/skill-vm/README.md) | 已提交 | 工具链脚本四份 + 产物质量核对一份；本批新增样本取得、包校验、原平台核验、L1 补测四份脚本 |
 
 下一步（按依赖顺序）：
 
-1. C-2A 确认预注册参数，否则超时类断言无判定效力；同时确认是否把样本清单的 `full_package_reverification` 改为完成（依据见批次 02 第 5 节）；
+1. C-2A 确认预注册参数，否则超时类断言无判定效力；同时确认是否把样本清单的 `full_package_reverification` 改为完成（依据见批次 02 第 5 节），并裁决 P7（虚构内容是否算关键检查项失败，直接决定 S02 的状态）；
 2. 组内决定是否配置 LLM provider：这一项同时解除"原平台用例基线"与"SkVM/SkillSmith 实测"；若决定不配，须在报告中把三者统一写成"未测/阻断"并说明原因；
-3. 用批次 01 的 SkCC 流程补 S01–S03（原包已可用），把工具链处理的未测 3/9 消掉；
-4. 甲组提供 ArkTS 最小调用入口并回答 E7 后，按 [记录模板](c-2a-record-template.md)第 5 节开展目标运行；仍缺原平台对照时不得宣称行为一致。
+3. 甲组提供 ArkTS 最小调用入口并回答 E7 后，按 [记录模板](c-2a-record-template.md)第 5 节开展目标运行；仍缺原平台对照时不得宣称行为一致。
