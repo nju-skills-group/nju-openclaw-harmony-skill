@@ -81,7 +81,7 @@ S01 的包内清单（此前完全不可见）：`SKILL.md`、`README.md`、`REA
 
 ### 4.2 技能加载状态
 
-`openclaw skills check`：Total 55 / eligible 20 / model-visible 20 / command-visible 19 / missing requirements 35。
+`openclaw skills check`（装入 L1 之前）：Total 55 / eligible 20 / model-visible 20 / command-visible 19 / missing requirements 35。
 
 | 样本 | eligible | modelVisible | 缺失项（机器判定） | 平台不兼容 |
 | --- | --- | --- | --- | --- |
@@ -93,6 +93,16 @@ S01 的包内清单（此前完全不可见）：`SKILL.md`、`README.md`、`REA
 | S09 peekaboo | 否 | 否 | bin `peekaboo`；os 仅 `darwin` | **是** |
 
 价值：L3 的三个"环境缺口"从纸面判断变成平台自己给出的判定——`peekaboo` 在 Linux 上被标 `platformIncompatible: true`（os 门控），`mcporter` 缺 CLI，`trello` 除了 jq 还要账号令牌。这三条可以直接写进 C-1 的障碍分类，并作为 S08/S09"原平台基线即便有模型也不可执行"的依据（与设备无关，是平台能力缺口）。
+
+三个 L1 样本不在随包 `skills/` 里，按 managed 目录方式装入（`~/.openclaw/skills/<name>/`，即批次 02 §2 取得的原包原文）：
+
+| 样本 | 装入后 `source` | eligible | modelVisible | 缺失项 |
+| --- | --- | --- | --- | --- |
+| S01 adaptive-socratic-questioning | `openclaw-managed` | 是 | 是 | 无 |
+| S02 academic-paper-writing-style | `openclaw-managed` | 是 | 是 | 无 |
+| S03 first-principles | `openclaw-managed` | 是 | 是 | 无 |
+
+装入后汇总由 `Total 55 / eligible 20` 变为 `Total 58 / eligible 23 / missing 35`。即**九个样本都能被原平台加载并对模型可见**；L3 的缺口是实现依赖（CLI、账号、平台），不是"平台看不到这个 Skill"。
 
 ### 4.3 为什么仍不能跑用例
 
@@ -120,17 +130,17 @@ S01 的包内清单（此前完全不可见）：`SKILL.md`、`README.md`、`REA
 | --- | --- | --- | --- |
 | S01–S03 原包 | 未取得，不进入实验 | 已取得，逐文件校验通过 | §2 |
 | 完整包复核 | pending，仅 SKILL.md | S01–S09 全部逐文件核对通过（10 + 18 个文件） | §2、§3 |
-| 原平台环境 | 无 | 已建成并核验（版本 + 加载状态） | §4.1–4.2 |
+| 原平台环境 | 无 | 已建成并核验（OpenClaw 2026.10.9，九样本均可加载；`skills check` 58/23/35） | §4.1–4.2 |
 | 原平台基线（用例执行） | 未测（无环境） | **未测**（无模型凭证） | §4.3 |
 | 目标运行 | 未测（无设备） | **未测**（无设备、无入口、E7 未决） | §4.4 |
 | 工具链（SkVM/SkCC/SkillSmith） | 阻断 / 通过 / 阻断 | 本批不变；L1 的 SkCC 补测见 [批次 03](c-2b-toolchain-batch03.md) | 批次 01 |
 
-明确不做的两处升级：**不把"环境建成"写成"基线通过"**（基线要求用例执行与原版表现记录）；**不把"包已取得"写成"S01–S03 已过工具链"**（SkCC 批次 01 未处理 L1，L1 的工具链状态仍是未测）。
+明确不做的两处升级：**不把"环境建成"写成"基线通过"**（基线要求用例执行与原版表现记录）；**不把"包已取得"写成"S01–S03 已过工具链"**（那条在 [批次 03](c-2b-toolchain-batch03.md) 另记，判据与缺陷同在）。
 
 ## 6. 给 C-2A 的三条回填建议（字段修改权在 C-2A）
 
 1. `c-2a-samples-v1.json` 中 S01–S09 的 `full_package_reverification` 可由 `pending` 改 `done`；`hash_scope` 由 `"SKILL.md only"` 改为 `"release inventory (all files)"`，依据为本文件 §2、§3。
-2. 建议在记录模板第 4 节开头固定记录"原平台环境就绪"（版本、node、`skills check` 摘要、六样本可见性），再记用例结果——这样"环境坏了"与"技能失败"不会混为一谈。
+2. 建议在记录模板第 4 节开头固定记录"原平台环境就绪"（版本、node、`skills check` 摘要、九样本可见性），再记用例结果——这样"环境坏了"与"技能失败"不会混为一谈。
 3. 本批只追加本文件，未改 [预注册](c-2b-preregistration-v1.md) §4 的 27 例超时表；P1（参数确认）仍待 C-2A 签署。
 
 ## 7. 复现方式与附件
@@ -152,9 +162,13 @@ S01 的包内清单（此前完全不可见）：`SKILL.md`、`README.md`、`REA
 | `oc-info-mcporter.json` | 1165 | `c3143014b81dcd32c7c79055a4516054df5ef26b02950f1561b266e413bf2f83` |
 | `oc-info-peekaboo.json` | 1016 | `e405cb2feb6376e9b66d5943427bb9255baef65ad4d72a3eef9a43b8f7f78661` |
 | `oc-models-status.txt` | 716 | `b428c0b1825a843a682e3324ed8710b1ee70cd836900b188d17b3f52ed106771` |
+| `oc-skills-check-l1.json`（装入 L1 后） | 15297 | `0b745f8ef00adce31b65760e53cae100a4d7098478ccbd3a1842ad0576e43a13` |
+| `oc-info-adaptive-socratic-questioning.json` | 1520 | `22029427dda73f94d0b8ce0b58e12e490efb147e2e171020133caff2a2cc8f68` |
+| `oc-info-academic-paper-writing-style.json` | 1303 | `9b3dbc381f42d5cd3c3205be271e9a4a2dbc988783af0d439db09c46028bc876` |
+| `oc-info-first-principles.json` | 1433 | `969fde4978d2b882cfc87e6b71083c87d9f623d10924bb2a3dbb991915a33032` |
 | `install-openclaw.log`（Windows 侧） | 496 | `1ad1d11eedab6f266273e71348c1643f51856b2add3439dd4b87a8b42f051875` |
 
-`openclaw-baseline.sh` 重跑可复现 §4 的全部结论（版本、55/20/35、六个样本的 visible/missing、哈希 `[OK]`）；`oc-*.json` 的哈希稳定，`oc-models-status.txt` 含时间无关的配置摘要。
+`openclaw-baseline.sh` 重跑可复现 §4 的全部结论（版本、55/20/35、六个样本的 visible/missing、哈希 `[OK]`）；`oc-*.json` 的哈希稳定，`oc-models-status.txt` 含时间无关的配置摘要。L1 的三份 `oc-info-*.json` 与 `oc-skills-check-l1.json` 由"装入 managed 目录后再查"得到，`openclaw-baseline.sh` 未覆盖这一步（它假设样本已在技能目录内）。
 
 ## 8. 本批未测与限制
 

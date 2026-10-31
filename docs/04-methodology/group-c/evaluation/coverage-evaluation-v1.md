@@ -14,9 +14,9 @@
 
 | 分类 | 样本 | 原始来源/版本确认 | 静态障碍 | 工具链实验 | 原平台调用 | 鸿蒙调用 |
 | --- | --- | --- | --- | --- | --- | --- |
-| L1 | adaptive-socratic-questioning | ClawHub `perpetualhui@1.1.0`；原包 12 文件全部取得并校验 | 待填（evals/tests/examples 已可用） | 通过（批次 03：SkCC validate + claude 产物） | 未测（加载状态未核验） | 未测 |
-| L1 | academic-paper-writing-style | ClawHub `aircraft06@1.0.0`；原包 4 文件全部取得并校验 | 待填 | 通过（批次 03；产物含虚构步骤名，见 P7） | 未测 | 未测 |
-| L1 | davinci-first-principles | ClawHub `clawdiri-ai@1.0.0`；原包 2 文件全部取得并校验 | 待填 | 通过（批次 03：claude + 四目标） | 未测 | 未测 |
+| L1 | adaptive-socratic-questioning | ClawHub `perpetualhui@1.1.0`；原包 12 文件全部取得并校验 | 待填（evals/tests/examples 已可用） | 通过（批次 03：SkCC validate + claude 产物） | 未测（已装入 managed 目录并可见；无模型凭证） | 未测 |
+| L1 | academic-paper-writing-style | ClawHub `aircraft06@1.0.0`；原包 4 文件全部取得并校验 | 待填 | 通过（批次 03；产物含虚构步骤名，见 P7） | 未测（已装入并可见） | 未测 |
+| L1 | davinci-first-principles | ClawHub `clawdiri-ai@1.0.0`；原包 2 文件全部取得并校验 | 待填 | 通过（批次 03：claude + 四目标） | 未测（已装入并可见） | 未测 |
 | L2 | weather | 固定提交 `d79ab619…`；完整包 1 文件核对通过 | 待填 | 通过（SkCC 四目标均产出；SkVM 阻断） | 未测（已加载、可见；无模型凭证） | 未测 |
 | L2 | trello | 固定提交；完整包 1 文件核对通过 | 待填 | 部分通过（SkCC validate 通过，未编译） | 未测（缺 `jq` 与账号令牌） | 未测 |
 | L2 | meme-maker | 固定提交；完整包 3 文件核对通过 | 待填 | 部分通过（SkCC validate 通过，未编译） | 未测（已加载、可见） | 未测 |
@@ -67,7 +67,7 @@
 | 工具链处理覆盖（SkVM） | 阻断 6/9，未测 3/9 | S04–S09 均在缺 TCP profile 处中止；不产出适配物；S01–S03 未补跑 |
 | 完整本机覆盖 | 未测（0 个样本具备证据，不等于 0 个可移植） | 缺原平台对照、鸿蒙入口与权限映射 |
 | HarmonyOS 真正可执行数量 | 未测 | 无设备与 ArkTS 入口；构建成功/文本生成均不计 |
-| 原平台环境就绪 | 已就绪（OpenClaw 2026.10.9，六样本加载状态已核验） | 环境不再缺；见 [批次 02](c-2b-batch02-baseline-and-provenance.md) 第 4 节 |
+| 原平台环境就绪 | 已就绪（OpenClaw 2026.10.9，九样本均可加载；`skills check` 58/23/35） | 环境不再缺；见 [批次 02](c-2b-batch02-baseline-and-provenance.md) 第 4 节 |
 | 原平台对照与行为一致性 | 未测 | 阻塞点已缩小为"无模型凭证"，不再是"无环境" |
 | 甲组性能数据 | 待交接 | 未收到 |
 | 执行进度 | 0/9 有运行记录 | 27 个基础用例全部未执行，超时与重试参数见 [预注册](c-2b-preregistration-v1.md) |
