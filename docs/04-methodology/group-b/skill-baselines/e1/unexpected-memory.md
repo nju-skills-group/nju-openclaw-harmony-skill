@@ -1,0 +1,1 @@
+[2026-10-30] Skill: adaptive-socratic-questioning - Student analyzes short video learning claim. Level: undergraduate. Goal: analyze argument. Student view: "Short videos must improve learning efficiency because shorter content means all students learn better."

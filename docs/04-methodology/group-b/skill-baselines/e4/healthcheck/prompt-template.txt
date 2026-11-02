@@ -1,0 +1,7 @@
+Run a restricted healthcheck baseline in this independent session. I authorize these read-only checks now.
+Actually read {skill_file} through the file-reading tool. Then execute each exact command separately and retain its output and exit status:
+openclaw security audit --deep
+openclaw gateway status --deep
+openclaw doctor --lint
+Continue after findings: doctor --lint can exit 1. No ordinary doctor, fixes, migrations, installs, configuration changes, chmod, restarts, cron, external messages, credential-file reads or additional OS checks. Never print secrets. Context: WSL Ubuntu 24.04, personal local workstation; provisional Balanced assessment, other facts unknown.
+Use actual tools. Discover only required read/execution interfaces. Shell commands are not JavaScript. Do not repeatedly retry failed checks. Retrieve background task output if needed. Report actual findings and gaps in Chinese with evidence. A warning is not execution failure; locate any exact blocking step. Do not simulate results.

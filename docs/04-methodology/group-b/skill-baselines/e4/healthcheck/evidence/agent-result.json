@@ -1,0 +1,45 @@
+{
+  "runId": "1f597f6b-7bf9-40d7-a942-e783a7c471e9",
+  "status": "ok",
+  "summary": "completed",
+  "result": {
+    "payloads": [
+      {
+        "text": "All three checks complete. Here's the report.\n\n---\n\n## 健康检查基线报告\n\n**执行环境**：WSL2 Ubuntu 24.04，个人本地工作站。已按授权读取 healthcheck 技能并在本独立会话中实际运行了三个只读检查，未做任何安装/改配置/重启等写操作。暂按 **Balanced（均衡）** 姿态评估，其余上下文未知。\n\n### 实际执行的检查与结果\n\n**1. `openclaw security audit --deep`** — 退出码 0（3 警告 / 1 信息）\n\n- ⚠️ `gateway.trusted_proxies_missing`：网关只绑定 loopback，但 `trustedProxies` 为空。若日后经反代暴露 Control UI，本地客户端检查可能被伪造。当前 loopback 场景影响低。\n- ⚠️ `plugins.installs_unpinned_npm_specs`：插件索引里 `deepseek`（`@openclaw/deepseek-provider`）未锁定精确版本，供应链稳定性略降。\n- ⚠️ `gateway.probe_failed`：深度探测报 `missing scope: operator.read` —— 本次会话无 operator 读权限，故审计的深层项未能完成（属权限缺口，非执行失败）。\n- ℹ️ 攻击面：groups open=0 / allowlist=0；`tools.elevated` 开启、browser control 开启、webhooks/internal hooks 关闭。受信模型为「单操作者个人助手」。\n\n**2. `openclaw gateway status --deep`** — 退出码 0\n\n- 服务：systemd 用户服务（已启用），进程运行中（pid 1449）；CLI 与 Gateway 版本均为 2026.10.2。\n- 绑定：`127.0.0.1:18789`（loopback-only），Dashboard `http://127.0.0.1:18789/`，仅本地客户端可连。\n- 连接性探测 ok；已建立 1 个本地客户端连接（pid 2447，`openclaw` CLI 自身）。\n- 能力标注 `connected-no-operator-scope`（与上面 `operator.read` 缺失一致）。\n\n**3. `openclaw doctor --lint`** — 退出码 1（发现项，属预期，非执行失败）\n\n- ⚠️ `node-onboarding-url`：网关仅绑定 loopback，缺少可供边缘节点接入的公开 URL（`publicOrigin` / `gateway.bind=lan` 等未配置）。对纯本地使用影响低。\n- ⚠️ `config.plaintext_secrets`：`openclaw.json` 中存在明文敏感字段 —— 报告指出的路径为 `gateway.auth.token`（令牌值未打印）。建议迁移到 SecretRef（`openclaw secrets configure/apply`），否则能读配置的 agent/工具可能看到该 token。\n\n### 与健康检查基线相关的风险小结\n\n- **明文 secret（重要）**：`gateway.auth.token` 以明文存在 `openclaw.json`，按 Balanced 姿态值得迁移到 SecretRef。\n- **`tools.elevated` 启用**：已开启提升工具权限，在单操作者本机场合尚可，但若暴露面扩大需再评估。\n- **反代信任与公开 origin 缺失**：当前 loopback-only 下风险低；一旦对外暴露需先配置 `trustedProxies` 与 `publicOrigin`。\n- **插件版本未锁定**：建议固定 `@openclaw/deepseek-provider` 精确版本。\n\n### 缺口（未能检查的部分）\n\n- **operator 权限缺失**导致 `security audit --deep` 的深度探测、`gateway status` 的完整 scope 均未能全量展开 —— 本会话是独立受限会话，无 operator 读/写权限。这是阻断深度项的根本原因（`missing scope: operator.read`），非命令本身失败。\n- 按本次授权范围，**未做任何 OS 层检查**（SSH/防火墙/磁盘加密/更新/备份等均未涉及），因此这些维度暂记「未知」。\n- 未读取任何凭证文件、未打印任何 token/密码。\n\n如需补齐深层的 `operator.read` 相关项，需在有 operator 权限的会话（经授权的管理员或 Control UI 管理员通道）重跑 `--deep` 项；修复动作（secret 迁移、插件锁版本、配置 publicOrigin 等）需你明确授权后再执行。",
+        "mediaUrl": null
+      }
+    ],
+    "meta": {
+      "durationMs": 150557,
+      "agentMeta": {
+        "sessionId": "e4-healthcheck-20261031-baseline-01",
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "terminalReceipt": {
+          "runId": "1f597f6b-7bf9-40d7-a942-e783a7c471e9",
+          "sessionId": "e4-healthcheck-20261031-baseline-01",
+          "turnId": "1f597f6b-7bf9-40d7-a942-e783a7c471e9",
+          "requested": {
+            "provider": "deepseek",
+            "model": "deepseek-v4-pro"
+          },
+          "effective": {
+            "provider": "deepseek",
+            "model": "deepseek-v4-pro",
+            "responseModel": "deepseek-v4-pro"
+          },
+          "successfulToolNames": [
+            "read",
+            "exec",
+            "terminal",
+            "wait",
+            "process"
+          ],
+          "rerouted": false,
+          "terminalDisposition": "visible"
+        },
+        "costUsd": 0.011694163
+      }
+    }
+  }
+}

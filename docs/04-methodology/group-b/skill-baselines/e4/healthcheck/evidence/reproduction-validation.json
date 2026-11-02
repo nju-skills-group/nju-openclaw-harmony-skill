@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "case": "prepare-1",
+      "exit_code": 0,
+      "output_dir": "<PROJECT_ROOT>/E4-baseline/healthcheck/runs/20261031T093413Z-3ce1c363387b499192566db3554c1027",
+      "session_id": "e4-healthcheck-20261031t093413z-3ce1c363387b499192566db3554c1027",
+      "prepare_only": true,
+      "verification_exit_code": null
+    },
+    {
+      "case": "prepare-2",
+      "exit_code": 0,
+      "output_dir": "<PROJECT_ROOT>/E4-baseline/healthcheck/runs/20261031T093419Z-7f10d2d6e83f4835abf5f65c8700511b",
+      "session_id": "e4-healthcheck-20261031t093419z-7f10d2d6e83f4835abf5f65c8700511b",
+      "prepare_only": true,
+      "verification_exit_code": null
+    },
+    {
+      "case": "live-rerun",
+      "exit_code": 0,
+      "output_dir": "<PROJECT_ROOT>/E4-baseline/healthcheck/runs/20261031T093425Z-fdce7bc7dbd446f2bb87b4c60034930e",
+      "session_id": "e4-healthcheck-20261031t093425z-fdce7bc7dbd446f2bb87b4c60034930e",
+      "prepare_only": false,
+      "verification_exit_code": 0
+    }
+  ],
+  "unique_sessions": true,
+  "unique_output_dirs": true,
+  "historical_evidence_unchanged": true,
+  "historical_hashes": {
+    "evidence/agent-result.json": "d6196309d46b6bd935d8a11331959ad8beea5fe0dabe10e6719a7fe30fa4efb0",
+    "evidence/run-metadata.json": "4256ea4200d825c001b9fbeeda3c6a6f60f1061204b51320c4fcf99ddfd72ec7",
+    ".openclaw/trajectory-exports/e4-healthcheck-baseline-01-final/events.jsonl": "9d3e6dee7fcfe6e1d69b8a7e44219394a6ba9fad4bf8db372854300ef24eb492"
+  },
+  "passed": true
+}

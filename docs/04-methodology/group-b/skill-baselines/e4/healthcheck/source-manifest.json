@@ -1,0 +1,16 @@
+{
+  "collected_utc": "2026-10-31T09:33:43.580647+00:00",
+  "skill": "healthcheck",
+  "origin": "openclaw-bundled",
+  "package_version": "2026.10.2",
+  "package_git_head": null,
+  "installed_path": "<USER_HOME>/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+  "sha256": "b41044aeb25afe95daa5c8ef6f2d6b8d197f6a0b113b0888deaa4dd69e42b59b",
+  "git_blob_sha1": "699d1a6aa35d266bc69e5716a032165b0c5dd037",
+  "repository": "https://github.com/openclaw/openclaw",
+  "survey_commit": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+  "survey_blob_sha1": "699d1a6aa35d266bc69e5716a032165b0c5dd037",
+  "matches_survey_file": true,
+  "fixed_source_url": "https://github.com/openclaw/openclaw/blob/d79ab6195d8d0566b285008bcc30c01a6ce368e2/skills/healthcheck/SKILL.md",
+  "comparison": "offline Git blob hash against S4 tree; no live GitHub fetch"
+}

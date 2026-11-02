@@ -1,0 +1,67 @@
+{
+  "case": "plugins",
+  "skill_read_confirmed": true,
+  "correct_discovery_route_observed": true,
+  "read_events": [
+    {
+      "call_seq": 11,
+      "tool_call_id": "call_00_C1cqUoQTGki3DP0NojoW7911"
+    },
+    {
+      "call_seq": 18,
+      "tool_call_id": "tool_call:call_00_DjzE1j2Yj38RshgWpWNI1923:read:1"
+    }
+  ],
+  "route_calls": [
+    {
+      "seq": 33,
+      "name": "plugins",
+      "args": {
+        "action": "search",
+        "query": "notion"
+      }
+    }
+  ],
+  "native_calls": [
+    {
+      "seq": 11,
+      "name": "read",
+      "args": {
+        "path": "~/.npm-global/lib/node_modules/openclaw/skills/clawhub/SKILL.md"
+      }
+    },
+    {
+      "seq": 18,
+      "name": "read",
+      "args": {
+        "path": "~/.npm-global/lib/node_modules/openclaw/skills/clawhub/SKILL.md"
+      }
+    },
+    {
+      "seq": 33,
+      "name": "plugins",
+      "args": {
+        "action": "search",
+        "query": "notion"
+      }
+    }
+  ],
+  "completed_process_outputs": [],
+  "native_search_result_events": [
+    {
+      "seq": 34,
+      "tool": "plugins",
+      "success": true
+    }
+  ],
+  "forbidden_calls_observed": [],
+  "failed_tools": [
+    {
+      "seq": 12,
+      "name": "read"
+    }
+  ],
+  "agent_status": "ok",
+  "scope": "call evidence only; inspect returned search data separately",
+  "call_chain_verified": true
+}

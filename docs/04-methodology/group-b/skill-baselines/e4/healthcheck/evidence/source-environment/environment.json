@@ -1,0 +1,32 @@
+{
+  "collected_utc": "2026-10-31T09:33:43.580647+00:00",
+  "os_release": {
+    "NAME": "Ubuntu",
+    "ID": "ubuntu",
+    "PRETTY_NAME": "Ubuntu 24.04.5 LTS",
+    "VERSION_ID": "24.04",
+    "VERSION": "24.04.5 LTS (Noble Numbat)",
+    "VERSION_CODENAME": "noble",
+    "ID_LIKE": "debian",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "UBUNTU_CODENAME": "noble",
+    "LOGO": "ubuntu-logo"
+  },
+  "kernel": "6.6.114.1-microsoft-standard-WSL2",
+  "wsl_distro": "Ubuntu-24.04",
+  "node": {
+    "exit_code": 0,
+    "stdout": "v24.21.0"
+  },
+  "openclaw": {
+    "exit_code": 0,
+    "stdout": "OpenClaw 2026.10.2 (b8952d4)"
+  },
+  "package_version": "2026.10.2",
+  "package_git_head": null,
+  "skill_info_exit_code": 0,
+  "scope": "environment collection after historical baseline; not a new model run"
+}

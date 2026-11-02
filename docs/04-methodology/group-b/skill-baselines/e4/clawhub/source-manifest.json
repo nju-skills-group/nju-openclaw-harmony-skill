@@ -1,0 +1,12 @@
+{
+  "skill": "clawhub",
+  "source": "openclaw-bundled",
+  "installed_openclaw": "OpenClaw 2026.10.2 (b8952d4)",
+  "source_url": "https://github.com/openclaw/openclaw/blob/d79ab6195d8d0566b285008bcc30c01a6ce368e2/skills/clawhub/SKILL.md",
+  "survey_commit": "d79ab6195d8d0566b285008bcc30c01a6ce368e2",
+  "survey_git_blob_sha1": "f0718143162f5f30389279b93cc296ee2bc4e07e",
+  "installed_git_blob_sha1": "f0718143162f5f30389279b93cc296ee2bc4e07e",
+  "sha256": "667007fa578dc292690ab7fbb9ddda80427fd6cb474ec6dc830edc670e3c41e1",
+  "matches_survey_file": true,
+  "comparison": "offline Git blob comparison against S4 tree; single file only"
+}
