@@ -15,7 +15,12 @@ docs/04-methodology/group-b/
 ├── README.md                          # 本组总入口
 ├── maintenance.md                     # 本维护说明
 ├── plans/
-│   └── 2026-11-02-two-week-plan.md     # 本轮工作方案
+│   ├── 2026-10-29/
+│   │   ├── 2026-10-29-two-week-plan.md
+│   │   └── 2026-10-29-two-week-plan.pdf
+│   └── 2026-11-01/                    # 本轮工作方案
+│       ├── 2026-11-01-two-week-plan.md
+│       └── 2026-11-01-two-week-plan.pdf
 ├── rounds/
 │   ├── 2026-10-31.md                   # 上一轮成果索引
 │   └── 2026-11-15.md                   # 本轮结束后整理
@@ -30,13 +35,13 @@ docs/04-methodology/group-b/
 │   ├── bundled/
 │   │   └── 2026-10-31/                 # S1阶段归档
 │   │       ├── README.md
-│   │       ├── survey.csv
-│   │       └── survey.xlsx
+│   │       ├── bundled-skill-survey-v0.1.csv
+│   │       └── bundled-skill-survey-v0.1.xlsx
 │   └── clawhub/
 │       └── 2026-10-31/                 # S2阶段归档
 │           ├── README.md
-│           ├── survey.csv
-│           ├── survey.xlsx
+│           ├── ClawHub-Skill-Survey-v0.1.csv
+│           ├── ClawHub-Skill-Survey-v0.1.xlsx
 │           ├── focus-review.md
 │           ├── changes.csv
 │           └── scope-and-limitations.md
