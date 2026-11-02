@@ -7,6 +7,7 @@
 code/
 ├── ports/       # 方向A：已移植/迁移中的 Skills（每个 Skill 一个目录）
 │   └── README.md    # Skill 清单表
+├── experiments/ # 工程形态、编译器与运行时实验副本
 └── skill-vm/    # 方向B：Skill VM 原型（IR schema、runtime、adapters）
     └── README.md    # 架构说明 + 运行说明
 ```
