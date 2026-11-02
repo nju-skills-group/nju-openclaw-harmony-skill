@@ -1,0 +1,76 @@
+{
+  "case": "skills",
+  "skill_read_confirmed": true,
+  "correct_discovery_route_observed": true,
+  "read_events": [
+    {
+      "call_seq": 11,
+      "tool_call_id": "call_00_qarT9tAgFlvYcqKGR95c8942"
+    },
+    {
+      "call_seq": 18,
+      "tool_call_id": "tool_call:call_00_rXsGS6QZMJvXCrYIUyNa0732:read:1"
+    }
+  ],
+  "route_calls": [
+    {
+      "seq": 84,
+      "name": "exec",
+      "args": {
+        "command": "openclaw skills search weather",
+        "host": "gateway",
+        "awaitResults": true
+      }
+    }
+  ],
+  "native_calls": [
+    {
+      "seq": 11,
+      "name": "read",
+      "args": {
+        "path": "~/.npm-global/lib/node_modules/openclaw/skills/clawhub/SKILL.md"
+      }
+    },
+    {
+      "seq": 18,
+      "name": "read",
+      "args": {
+        "path": "~/.npm-global/lib/node_modules/openclaw/skills/clawhub/SKILL.md"
+      }
+    },
+    {
+      "seq": 75,
+      "name": "skills_read",
+      "args": {
+        "name": "code-mode-shell-exec"
+      }
+    },
+    {
+      "seq": 84,
+      "name": "exec",
+      "args": {
+        "command": "openclaw skills search weather",
+        "host": "gateway",
+        "awaitResults": true
+      }
+    }
+  ],
+  "completed_process_outputs": [
+    {
+      "seq": 85,
+      "tool": "exec",
+      "exit_code": 0
+    }
+  ],
+  "native_search_result_events": [],
+  "forbidden_calls_observed": [],
+  "failed_tools": [
+    {
+      "seq": 12,
+      "name": "read"
+    }
+  ],
+  "agent_status": "ok",
+  "scope": "call evidence only; inspect returned search data separately",
+  "call_chain_verified": true
+}

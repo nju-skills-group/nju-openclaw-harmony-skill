@@ -1,0 +1,93 @@
+{
+  "skill_read_calls": [
+    {
+      "seq": 12,
+      "args": {
+        "path": "~/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md"
+      }
+    }
+  ],
+  "skill_read_confirmed": true,
+  "actual_shell_commands": [
+    {
+      "seq": 50,
+      "args": {
+        "command": "openclaw security audit --deep",
+        "yieldMs": 9472
+      }
+    },
+    {
+      "seq": 89,
+      "args": {
+        "command": "openclaw gateway status --deep",
+        "awaitResults": true
+      }
+    },
+    {
+      "seq": 98,
+      "args": {
+        "command": "openclaw doctor --lint",
+        "awaitResults": true
+      }
+    }
+  ],
+  "process_calls": [
+    {
+      "seq": 65,
+      "args": {
+        "action": "poll",
+        "sessionId": "crisp-cloud"
+      }
+    },
+    {
+      "seq": 80,
+      "args": {
+        "action": "poll",
+        "sessionId": "crisp-cloud"
+      }
+    }
+  ],
+  "check_results": [
+    {
+      "label": "security-audit",
+      "exit_code": 0,
+      "call_seq": 80,
+      "result_seq": 81,
+      "timestamp_utc": "2026-10-31T09:13:53.848Z",
+      "tool": "process",
+      "args": {
+        "action": "poll",
+        "sessionId": "crisp-cloud"
+      },
+      "output_file": "security-audit-tool-output.txt"
+    },
+    {
+      "label": "gateway-status",
+      "exit_code": 0,
+      "call_seq": 89,
+      "result_seq": 90,
+      "timestamp_utc": "2026-10-31T09:14:20.799Z",
+      "tool": "exec",
+      "args": {
+        "command": "openclaw gateway status --deep",
+        "awaitResults": true
+      },
+      "output_file": "gateway-status-tool-output.txt"
+    },
+    {
+      "label": "doctor-lint",
+      "exit_code": 1,
+      "call_seq": 98,
+      "result_seq": 99,
+      "timestamp_utc": "2026-10-31T09:15:19.182Z",
+      "tool": "exec",
+      "args": {
+        "command": "openclaw doctor --lint",
+        "awaitResults": true
+      },
+      "output_file": "doctor-lint-tool-output.txt"
+    }
+  ],
+  "failed_runtime_tool_results": [],
+  "trace_event_count": 107
+}

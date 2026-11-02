@@ -1,0 +1,32 @@
+Service: systemd user (enabled)
+Systemd transport: session-bus (unix:path=/run/user/1000/bus)
+File logs: /tmp/openclaw/openclaw-2026-10-31.log
+Command: /usr/bin/node --max-old-space-size=3433 ~/.npm-global/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+Service file: ~/.config/systemd/user/openclaw-gateway.service
+Working dir: ~
+Service env: OPENCLAW_GATEWAY_PORT=18789
+Gateway heap: service argv: --max-old-space-size=3433; installer recommendation: 3433 MiB old space (6867 MiB physical capacity; adaptive cap 8192 MiB; native headroom cap 5150 MiB); runtime V8 ceiling: not measured
+Host desktop: disabled
+
+Config (cli): ~/.openclaw/openclaw.json
+Config (service): ~/.openclaw/openclaw.json
+
+Gateway: bind=loopback (127.0.0.1), port=18789 (service args)
+Probe target: ws://127.0.0.1:18789
+Dashboard: http://127.0.0.1:18789/
+Probe note: Loopback-only gateway; only local clients can connect.
+
+CLI version: 2026.10.2 (~/.npm-global/lib/node_modules/openclaw/dist/index.js)
+Gateway version: 2026.10.2
+
+Runtime: running (pid 1449, state active, sub running, last exit 0, reason 0)
+Connectivity probe: ok
+Capability: connected-no-operator-scope
+
+Established clients: 1
+  pid=2447 ppid=2438 client openclaw 127.0.0.1:54944->127.0.0.1:18789 cmd=openclaw
+If logs show protocol mismatch after rollback, stop stale OpenClaw client processes listed here and re-run gateway status.
+
+Listening: 127.0.0.1:18789
+Troubles: run openclaw status
+Troubleshooting: https://docs.openclaw.ai/troubleshooting

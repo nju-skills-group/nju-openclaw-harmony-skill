@@ -1,0 +1,45 @@
+{
+  "collected_utc": "2026-10-31T11:10:23.852837+00:00",
+  "os": "Ubuntu 24.04.5 LTS",
+  "kernel": "6.6.114.1-microsoft-standard-WSL2",
+  "openclaw": {
+    "exit_code": 0,
+    "output": "OpenClaw 2026.10.2 (b8952d4)"
+  },
+  "node": "v24.21.0",
+  "skill_info": {
+    "name": "clawhub",
+    "description": "Search ClawHub for plugins by default, or skills when explicitly requested; install, verify, update, uninstall, publish, or sync skills.",
+    "source": "openclaw-bundled",
+    "bundled": true,
+    "filePath": "<USER_HOME>/.npm-global/lib/node_modules/openclaw/skills/clawhub/SKILL.md",
+    "baseDir": "<USER_HOME>/.npm-global/lib/node_modules/openclaw/skills/clawhub",
+    "skillKey": "clawhub",
+    "always": false,
+    "disabled": false,
+    "blockedByAllowlist": false,
+    "eligible": true,
+    "missing": {
+      "bins": [],
+      "anyBins": [],
+      "env": [],
+      "config": [],
+      "os": []
+    },
+    "configChecks": [],
+    "blockedByAgentFilter": false,
+    "platformIncompatible": false,
+    "modelVisible": true,
+    "userInvocable": true,
+    "commandVisible": true,
+    "requirements": {
+      "bins": [],
+      "anyBins": [],
+      "env": [],
+      "config": [],
+      "os": []
+    },
+    "install": []
+  },
+  "skill_info_exit_code": 0
+}

@@ -1,0 +1,24 @@
+OpenClaw security audit
+Summary: 0 critical · 3 warn · 1 info
+Run deeper: openclaw security audit --deep
+
+WARN
+gateway.trusted_proxies_missing Reverse proxy headers are not trusted
+  gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client checks cannot be spoofed.
+  Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.
+plugins.installs_unpinned_npm_specs Plugin index includes unpinned npm specs
+  Unpinned plugin index install records:
+- deepseek (@openclaw/deepseek-provider)
+  Fix: Pin install specs to exact versions (for example, `@scope/pkg@1.2.3`) for higher supply-chain stability.
+gateway.probe_failed Gateway probe failed (deep)
+  missing scope: operator.read
+  Fix: Run "openclaw status --all" to debug connectivity/auth, then re-run "openclaw security audit --deep".
+
+INFO
+summary.attack_surface Attack surface summary
+  groups: open=0, allowlist=0
+tools.elevated: enabled
+hooks.webhooks: disabled
+hooks.internal: disabled
+browser control: enabled
+trust model: personal assistant (one trusted operator boundary), not hostile multi-tenant on one shared gateway. For multiple users or organizations, run one isolated Gateway cell per tenant: https://docs.openclaw.ai/gateway/multi-tenant-hosting

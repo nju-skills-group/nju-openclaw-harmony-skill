@@ -1,0 +1,42 @@
+{
+  "runId": "538330cd-0a9f-48f5-84d8-4ab5709a0bed",
+  "status": "ok",
+  "summary": "completed",
+  "result": {
+    "payloads": [
+      {
+        "text": "搜索完成。按照 ClawHub Skill 的默认插件发现路径，我用了原生 `plugins` 工具执行 `action: \"search\"`、`query: \"notion\"`，返回 **2 个**真实候选（不足 3 个，仅此两个命中）：\n\n| 标识符 (name) | 类型 / 渠道 | 版本 | 官方? |\n|---|---|---|---|\n| `@openclaw/notion` | bundle-plugin / official | `1.0.1` | 是（官方） |\n| `notion-workspace-plugin` | code-plugin / community | `1.0.0` | 否（社区） |\n\n**说明（供参考，未做任何安装/验证）：**\n- `@openclaw/notion`（Notion）：官方捆绑插件，摘要为「从你的 Notion 工作区读取页与数据库」，验证层级 `structural`，下载量 1416。\n- `notion-workspace-plugin`（Notion Workspace）：社区代码插件，需 `AISA_API_KEY`，通过 AISA 网关访问 Notion 工作区（搜索页/数据库、读 markdown、建页、插行、触发器、MCP），验证层级 `source-linked`，下载量 153。\n\n本次仅做只读发现，未安装、未验证、未改动任何配置。结果只代表目录中存在这些候选，不代表已安装或可用。",
+        "mediaUrl": null
+      }
+    ],
+    "meta": {
+      "durationMs": 24332,
+      "agentMeta": {
+        "sessionId": "e4-clawhub-plugins-20261031t111024z-ab18f5bb83ef427dbd35810e3013efac",
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "terminalReceipt": {
+          "runId": "538330cd-0a9f-48f5-84d8-4ab5709a0bed",
+          "sessionId": "e4-clawhub-plugins-20261031t111024z-ab18f5bb83ef427dbd35810e3013efac",
+          "turnId": "538330cd-0a9f-48f5-84d8-4ab5709a0bed",
+          "requested": {
+            "provider": "deepseek",
+            "model": "deepseek-v4-pro"
+          },
+          "effective": {
+            "provider": "deepseek",
+            "model": "deepseek-v4-pro",
+            "responseModel": "deepseek-v4-pro"
+          },
+          "successfulToolNames": [
+            "read",
+            "exec",
+            "plugins"
+          ],
+          "rerouted": false,
+          "terminalDisposition": "visible"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "adaptive-socratic-questioning",
+  "description": "自适应苏格拉底式追问技能 / Adaptive Socratic Questioning - Use adaptive follow-up questioning to deepen student reasoning and uncover misconceptions. Use when the user needs to guide students through deeper thinking, wants to develop critical thinking skills, asks about questioning techniques, needs to scaffold complex topics, wants to identify student misconceptions, mentions Socratic method, or needs to build reasoning chains.",
+  "source": "openclaw-workspace",
+  "bundled": false,
+  "filePath": "<USER_HOME>/.openclaw/workspace/skills/adaptive-socratic-questioning/SKILL.md",
+  "baseDir": "<USER_HOME>/.openclaw/workspace/skills/adaptive-socratic-questioning",
+  "skillKey": "adaptive-socratic-questioning",
+  "always": false,
+  "disabled": false,
+  "blockedByAllowlist": false,
+  "eligible": true,
+  "emoji": "🎓",
+  "homepage": "https://github.com/perpetualhui/adaptive-socratic-questioning",
+  "missing": {
+    "bins": [],
+    "anyBins": [],
+    "env": [],
+    "config": [],
+    "os": []
+  },
+  "configChecks": [],
+  "blockedByAgentFilter": false,
+  "platformIncompatible": false,
+  "modelVisible": true,
+  "userInvocable": true,
+  "commandVisible": true,
+  "requirements": {
+    "bins": [],
+    "anyBins": [],
+    "env": [],
+    "config": [],
+    "os": []
+  },
+  "install": [],
+  "clawhub": {
+    "status": "linked",
+    "valid": true,
+    "registry": "https://clawhub.ai",
+    "slug": "adaptive-socratic-questioning",
+    "ownerHandle": "perpetualhui",
+    "installedVersion": "1.1.0",
+    "installedAt": 1793370853935,
+    "originPath": "<USER_HOME>/.openclaw/workspace/skills/adaptive-socratic-questioning/.clawhub/origin.json",
+    "lockPath": "<USER_HOME>/.openclaw/workspace/.clawhub/lock.json",
+    "artifact": {
+      "kind": "archive",
+      "sha256": "0d9c421c73cdf817e1b6be47ed2414b4c5e1c9cd2567d6075fa8ebdf8a673a55",
+      "integrity": "sha256-DZxCHHPN+Bfhtr5H7SQUtMXhyc0lZ9YHX6jr34pnOlU="
+    },
+    "skillFile": {
+      "path": "SKILL.md",
+      "sha256": "61b6f2219b52b76b9266f9c435b2a355228ba4a86753e96c88e12c51f05f01aa"
+    },
+    "fileTreeSha256": "sha256:173c581b72dd6ed9fd8032c2f42e9f5a2280fb65d6ee84dec695a588d74bd12f"
+  },
+  "skillCard": {
+    "present": true,
+    "path": "<USER_HOME>/.openclaw/workspace/skills/adaptive-socratic-questioning/skill-card.md",
+    "sizeBytes": 2266
+  }
+}

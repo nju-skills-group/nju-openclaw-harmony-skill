@@ -1,0 +1,43 @@
+{
+  "followup_questions": [
+    {
+      "type": "explanation",
+      "question": "为什么你认为短视频内容更短就能让所有学生学得更好？请解释其中的具体机制或逻辑。",
+      "purpose": "Probe understanding of the causal mechanism behind the claim that shorter content improves learning",
+      "level_adaptation": "Undergraduate level - requires explanation of learning mechanisms"
+    },
+    {
+      "type": "evidence",
+      "question": "有什么证据或研究支持‘短视频自动提高学习效率’这一结论？你能提供具体的研究或数据吗？",
+      "purpose": "Teach claim justification and evidence requirement",
+      "level_adaptation": "Undergraduate level - expects research literacy"
+    },
+    {
+      "type": "counterexample",
+      "question": "是否存在短视频可能不利于学习的情况？请考虑注意力持续时间、内容深度或复杂主题等因素。",
+      "purpose": "Explore boundaries and exceptions to the principle",
+      "level_adaptation": "Undergraduate level - critical thinking about edge cases"
+    },
+    {
+      "type": "causality",
+      "question": "短视频的‘短’这一特性究竟如何影响学习效率？这背后的因果链条是怎样的？",
+      "purpose": "Connect structural feature to functional outcome",
+      "level_adaptation": "Undergraduate level - requires understanding of educational psychology"
+    },
+    {
+      "type": "generalization",
+      "question": "除了短视频，还有哪些教学格式可能同样或更有效？这种方法什么情境下适用，什么情境下不适用？",
+      "purpose": "Encourage creative problem-solving and broader context",
+      "level_adaptation": "Undergraduate level - comparative analysis"
+    }
+  ],
+  "reasoning_path": "Initial claim about short videos → Mechanism of content length → Evidence requirement → Boundary conditions (counterexamples) → Causal analysis → Comparative generalization",
+  "misconception_flags": [
+    {
+      "misconception": "Students often assume ‘shorter content’ automatically translates to ‘better learning outcomes’ without considering attention limits, content depth, subject matter complexity, or individual learning differences",
+      "severity": "high",
+      "addressed_by_questions": [1, 2, 4]
+    }
+  ],
+  "teacher_guidance": "Start with Q1 to probe the assumed mechanism. If the student struggles to articulate why shorter content helps, pause and provide a concrete example about attention vs. depth trade-offs before proceeding to Q2 on evidence. Question Q3 should be used to surface hidden assumptions about universal effectiveness."
+}

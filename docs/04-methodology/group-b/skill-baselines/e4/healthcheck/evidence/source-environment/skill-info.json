@@ -1,0 +1,34 @@
+{
+  "name": "healthcheck",
+  "description": "Audit/harden OpenClaw hosts: SSH, firewall, updates, exposure, backups, disk encryption, gateway security.",
+  "source": "openclaw-bundled",
+  "bundled": true,
+  "filePath": "<USER_HOME>/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+  "baseDir": "<USER_HOME>/.npm-global/lib/node_modules/openclaw/skills/healthcheck",
+  "skillKey": "healthcheck",
+  "always": false,
+  "disabled": false,
+  "blockedByAllowlist": false,
+  "eligible": true,
+  "missing": {
+    "bins": [],
+    "anyBins": [],
+    "env": [],
+    "config": [],
+    "os": []
+  },
+  "configChecks": [],
+  "blockedByAgentFilter": false,
+  "platformIncompatible": false,
+  "modelVisible": true,
+  "userInvocable": true,
+  "commandVisible": true,
+  "requirements": {
+    "bins": [],
+    "anyBins": [],
+    "env": [],
+    "config": [],
+    "os": []
+  },
+  "install": []
+}

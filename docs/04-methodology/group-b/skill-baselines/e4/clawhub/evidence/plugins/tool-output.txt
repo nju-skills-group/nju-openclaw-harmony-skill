@@ -1,0 +1,35 @@
+seq=34 native_tool=plugins success=True
+{
+  "results": [
+    {
+      "score": 495,
+      "package": {
+        "name": "@openclaw/notion",
+        "displayName": "Notion",
+        "family": "bundle-plugin",
+        "channel": "official",
+        "isOfficial": true,
+        "summary": "Pages and databases from your Notion workspace.",
+        "latestVersion": "1.0.1",
+        "runtimeId": "notion",
+        "downloads": 1416,
+        "verificationTier": "structural"
+      }
+    },
+    {
+      "score": 365,
+      "package": {
+        "name": "notion-workspace-plugin",
+        "displayName": "Notion Workspace",
+        "family": "code-plugin",
+        "channel": "community",
+        "isOfficial": false,
+        "summary": "Requires AISA_API_KEY. Uses the supplied AISA_API_KEY to send requests to https://api.aisa.one. Native-first ClawHub plugin for `notion-workspace`. Ships the packaged AIsa skill with an `openclaw.plugin.json` manifest and a Claude-compatible bundle fallback. Manage Notion workspace: search pages and databases, read markdown, create pages, insert rows, triggers, MCP. Powered by AISA gateway (Notion toolkit). Requires AISA_API_KEY and curl. Keywords: notion, workspace, page, database, block, markdown, wiki, task board, insert row, OAuth. Use when: the user needs web search, research, source discovery, or content extraction.",
+        "latestVersion": "1.0.0",
+        "runtimeId": "notion-workspace-plugin",
+        "downloads": 153,
+        "verificationTier": "source-linked"
+      }
+    }
+  ]
+}

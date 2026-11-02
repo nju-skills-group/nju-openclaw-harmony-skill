@@ -1,0 +1,21 @@
+{
+  "session_id": "e4-healthcheck-20261031-baseline-01",
+  "elapsed_seconds": 171.74,
+  "cli_exit_code": 0,
+  "config_sha256_before": "066955950368d5d9523fa2d9d2960460c74cfc51c89d6fb40bee5dbf3a1cda8b",
+  "config_sha256_after": "066955950368d5d9523fa2d9d2960460c74cfc51c89d6fb40bee5dbf3a1cda8b",
+  "command": [
+    "<USER_HOME>/.npm-global/bin/openclaw",
+    "agent",
+    "--session-id",
+    "e4-healthcheck-20261031-baseline-01",
+    "--message-file",
+    "<PROJECT_ROOT>/E4-baseline/healthcheck/baseline-prompt.txt",
+    "--thinking",
+    "off",
+    "--timeout",
+    "240",
+    "--json"
+  ],
+  "config_unchanged": true
+}

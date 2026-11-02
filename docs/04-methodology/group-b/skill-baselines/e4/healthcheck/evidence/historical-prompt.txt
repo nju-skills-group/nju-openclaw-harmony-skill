@@ -1,0 +1,7 @@
+Run a restricted healthcheck baseline in this independent session. I explicitly authorize the following read-only checks now; do not ask for permission again.
+First actually read <USER_HOME>/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md using the available file-reading tool or bridge. Then use the real execution tool to run each of these exact commands separately, recording stdout, stderr and exit status and continuing after findings:
+1. openclaw security audit --deep
+2. openclaw gateway status --deep
+3. openclaw doctor --lint
+The help for these options has been checked. doctor --lint may exit 1 for findings. Do not substitute ordinary doctor or add fix/repair/migration flags. No installs, configuration changes, chmod, service restarts, cron, external messages, or credential-file reads. Do not print tokens/passwords. Limit this run to these three checks; no additional OS checks. Known context: WSL Ubuntu 24.04, personal local workstation; assess provisionally using Balanced posture and mark other context unknown.
+If using code-mode tool discovery, discover only the file-read and command-execution tools required here. Never treat shell command text as JavaScript code. Do not retry a failed check repeatedly. Finally report in Chinese the actual checks, findings and gaps, citing tool outputs. A risk finding is not an execution failure. If blocked, identify the exact step. Do not simulate results.
