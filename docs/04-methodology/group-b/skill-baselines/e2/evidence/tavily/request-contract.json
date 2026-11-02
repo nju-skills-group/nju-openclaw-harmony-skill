@@ -1,0 +1,22 @@
+{
+  "provenance": "Verified unchanged source plus offline request capture; not a live packet trace",
+  "method": "POST",
+  "url": "https://api.tavily.com/search",
+  "headers": {
+    "Authorization": "Bearer [REDACTED]",
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "query": "Python official documentation urllib request urlopen timeout",
+    "max_results": 3,
+    "search_depth": "basic",
+    "topic": "general",
+    "include_domains": [
+      "docs.python.org"
+    ],
+    "include_answer": false,
+    "include_images": false,
+    "include_raw_content": false
+  }
+}

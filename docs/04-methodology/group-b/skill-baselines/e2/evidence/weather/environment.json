@@ -1,0 +1,17 @@
+{
+  "OS": "Microsoft Windows NT 10.0.26200.0",
+  "PowerShell": "7.6.5",
+  "Node": "v24.16.0",
+  "Curl": "curl 8.21.0 (Windows) libcurl/8.21.0 Schannel zlib/1.3.2 WinIDN WinLDAP",
+  "OpenClaw": "2026.10.3 (59cb447)",
+  "ExecutionMode": "embedded agent --local",
+  "NormalTools": [
+    "read",
+    "exec",
+    "web_fetch"
+  ],
+  "FallbackTools": [
+    "read",
+    "exec"
+  ]
+}

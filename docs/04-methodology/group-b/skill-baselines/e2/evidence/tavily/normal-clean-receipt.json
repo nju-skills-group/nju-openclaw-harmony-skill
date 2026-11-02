@@ -1,0 +1,51 @@
+{
+  "sessionId": "c5a01502-f0b7-4540-bbc3-53fc4fa99a1f",
+  "startedUtc": "2026-10-29T16:59:46.7863290Z",
+  "finishedUtc": "2026-10-29T17:00:12.9979490Z",
+  "cliExitCode": 0,
+  "mode": "OpenClaw embedded agent --local",
+  "terminalReceipt": {
+    "runId": "c1c122f1-1c4a-4a34-84ba-c1a11b97e63b",
+    "sessionId": "c5a01502-f0b7-4540-bbc3-53fc4fa99a1f",
+    "turnId": "c1c122f1-1c4a-4a34-84ba-c1a11b97e63b",
+    "requested": {
+      "provider": "a1-deepseek",
+      "model": "deepseek-flash"
+    },
+    "effective": {
+      "provider": "a1-deepseek",
+      "model": "deepseek-flash",
+      "responseModel": "deepseek-flash"
+    },
+    "successfulToolNames": [
+      "read",
+      "exec",
+      "web_fetch",
+      "tool_call"
+    ],
+    "rerouted": false,
+    "terminalDisposition": "visible"
+  },
+  "toolSummary": {
+    "calls": 4,
+    "tools": [
+      "read",
+      "exec",
+      "web_fetch",
+      "tool_call"
+    ],
+    "failures": 0
+  },
+  "agentDurationMs": 11639,
+  "usage": {
+    "input": 6865,
+    "output": 566,
+    "cacheRead": 29312,
+    "cacheWrite": 0,
+    "total": 36743,
+    "cost": {
+      "total": 0
+    }
+  },
+  "costNotice": "Reported zero is not proof of zero provider billing."
+}

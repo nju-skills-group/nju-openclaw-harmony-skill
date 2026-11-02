@@ -1,0 +1,3 @@
+{
+  "text": "已按要求只运行一次，认证失败，现已停止，未使用其他工具、账号或渠道搜索，也未补造结果。\n\n- 命令：`python3 .../skills/tavily-search/scripts/tavily_search.py --query \"Python official documentation urllib request\" --max-results 3 --search-depth basic --format brave --timeout 20`\n- 真实退出码：`1`\n- stderr 原文：`tavily-search: Tavily authentication failed; check TAVILY_API_KEY`\n- stdout：无结果输出\n\n凭据未被检查或打印。这是预期的无效凭据异常路径，需宿主提供有效的 `TAVILY_API_KEY` 才能继续。"
+}

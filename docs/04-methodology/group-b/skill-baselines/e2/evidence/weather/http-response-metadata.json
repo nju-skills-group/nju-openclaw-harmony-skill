@@ -1,0 +1,18 @@
+{
+  "url": "https://wttr.in/Shanghai?format=j2",
+  "finalUrl": "https://wttr.in/Shanghai?format=j2",
+  "contentType": "text/plain",
+  "status": 200,
+  "extractMode": "text",
+  "extractor": "raw",
+  "externalContent": {
+    "untrusted": true,
+    "source": "web_fetch",
+    "wrapped": true
+  },
+  "truncated": false,
+  "length": 3280,
+  "rawLength": 2967,
+  "fetchedAt": "2026-10-29T16:13:16.226Z",
+  "tookMs": 3086
+}

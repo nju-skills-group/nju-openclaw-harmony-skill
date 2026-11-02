@@ -1,0 +1,25 @@
+{
+  "case": "missing",
+  "level": "script subprocess; not OpenClaw skill invocation",
+  "startedUtc": "2026-10-29T16:53:11.752855+00:00",
+  "command": [
+    "<USER_HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "<TAVILY_RUN_ROOT>\\source\\scripts\\tavily_search.py",
+    "--query",
+    "Python official documentation urllib request",
+    "--max-results",
+    "3",
+    "--include-domain",
+    "docs.python.org",
+    "--search-depth",
+    "basic",
+    "--format",
+    "brave",
+    "--timeout",
+    "20"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "tavily-search: Missing TAVILY_API_KEY environment variable\n",
+  "credential": "absent"
+}

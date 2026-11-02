@@ -1,0 +1,17 @@
+{
+  "source_hashes_match": true,
+  "installed_source_unchanged": true,
+  "script_missing_rejected": true,
+  "script_invalid_rejected": true,
+  "script_valid_succeeded": true,
+  "openclaw_target_skill_read": true,
+  "openclaw_single_search_exec": true,
+  "search_result_count": 3,
+  "result_domains_valid": true,
+  "source_page_http_status": 200,
+  "source_page_contains_timeout_explanation": true,
+  "openclaw_invalid_rejected_without_other_search": true,
+  "model_not_rerouted": true,
+  "offline_cases_passed": 12,
+  "limits": "Workflow verification, not full accuracy grading of every sentence; see report output-quality caveat."
+}

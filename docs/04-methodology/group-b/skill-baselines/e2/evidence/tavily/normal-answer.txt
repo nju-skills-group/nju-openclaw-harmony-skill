@@ -1,0 +1,21 @@
+搜索已经完成，脚本退出码为 0；原始 JSON 已保存在 `skills/tavily-search/tavily_result.json`。
+
+**搜索结果**（Tavily，basic 深度，3 条结果，域名均限定为 `docs.python.org`）：
+
+1. `https://docs.python.org/es/3/library/urllib.request.html` — 西班牙语版，score 0.875
+2. `https://docs.python.org/3/library/urllib.request.html` — 英文主站，score 0.861
+3. `https://docs.python.org/3/howto/urllib2.html` — 英文 HOWTO，score 0.844
+
+**已验证来源**：我获取了第 2 条提到的英文页面（HTTP 获取成功，返回 218 KB 的 HTML），并直接阅读了其中 `urllib.request.urlopen()` 的定义段，而不只是依赖搜索片段。
+
+**`timeout` 的含义**（引自该页 `urllib.request.urlopen(url, data=None, [timeout, ]*, context=None)` 的说明）：
+
+> “The optional *timeout* parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This actually only works for HTTP, HTTPS and FTP connections.”
+
+也就是说，`timeout` 以秒为单位，规定连接尝试等阻塞操作最多等待多久；如果省略该参数，就使用全局默认超时；该设置在 HTTP、HTTPS、FTP 连接上有效。同页的 `OpenerDirector.open` 说明也表达了相同意思，并补充说明：这个超时是指每次套接字操作的超时，并不会限制整个下载总时长。
+
+来源：
+- https://docs.python.org/3/library/urllib.request.html
+- 补充阅读：https://docs.python.org/3/howto/urllib2.html（该页说明，默认情况下 socket 没有超时，可能会一直挂起，所以可以用 `socket.setdefaulttimeout()` 设置全局默认值）
+
+备注：整个检索只执行了一次。第一次调用之所以失败，是因为工作目录指错了，导致找不到脚本；脚本本身没有报错，退出码为 2。之后在 skill 根目录下重新运行成功。临时文件已清理，未查看或打印任何环境变量。

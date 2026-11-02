@@ -1,0 +1,136 @@
+{
+  "current_condition": [
+    {
+      "FeelsLikeC": "19",
+      "FeelsLikeF": "65",
+      "cloudcover": "87",
+      "humidity": "82",
+      "observation_time": "03:12 PM",
+      "precipInches": "0.0",
+      "precipMM": "0.0",
+      "pressure": "1021",
+      "pressureInches": "30",
+      "temp_C": "18",
+      "temp_F": "64",
+      "uvIndex": "0",
+      "visibility": "2",
+      "visibilityMiles": "1",
+      "weatherCode": "149",
+      "weatherDesc": [
+        {
+          "value": "Smoky haze"
+        }
+      ],
+      "weatherIconUrl": [
+        {
+          "value": "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0006_mist.png"
+        }
+      ],
+      "winddir16Point": "WNW",
+      "winddirDegree": "283",
+      "windspeedKmph": "5",
+      "windspeedMiles": "3"
+    }
+  ],
+  "nearest_area": [
+    {
+      "areaName": [
+        {
+          "value": "Pootung"
+        }
+      ],
+      "country": [
+        {
+          "value": "China"
+        }
+      ],
+      "latitude": "31.239",
+      "longitude": "121.504",
+      "population": "0",
+      "region": [
+        {
+          "value": "Shanghai"
+        }
+      ],
+      "weatherUrl": [
+        {
+          "value": "https://www.worldweatheronline.com/v2/weather.aspx?q=31.239,121.504"
+        }
+      ]
+    }
+  ],
+  "request": [
+    {
+      "query": "Lat 31.23 and Lon 121.49",
+      "type": "LatLon"
+    }
+  ],
+  "weather": [
+    {
+      "astronomy": [
+        {
+          "moon_illumination": "89",
+          "moon_phase": "Waning Gibbous",
+          "moonrise": "07:29 PM",
+          "moonset": "09:29 AM",
+          "sunrise": "06:07 AM",
+          "sunset": "05:08 PM"
+        }
+      ],
+      "avgtempC": "19",
+      "avgtempF": "67",
+      "date": "2026-10-29",
+      "maxtempC": "24",
+      "maxtempF": "75",
+      "mintempC": "16",
+      "mintempF": "61",
+      "sunHour": "3.0",
+      "totalSnow_cm": "0.0",
+      "uvIndex": "4"
+    },
+    {
+      "astronomy": [
+        {
+          "moon_illumination": "81",
+          "moon_phase": "Waning Gibbous",
+          "moonrise": "08:35 PM",
+          "moonset": "10:35 AM",
+          "sunrise": "06:08 AM",
+          "sunset": "05:07 PM"
+        }
+      ],
+      "avgtempC": "19",
+      "avgtempF": "67",
+      "date": "2026-10-30",
+      "maxtempC": "24",
+      "maxtempF": "75",
+      "mintempC": "15",
+      "mintempF": "60",
+      "sunHour": "10.0",
+      "totalSnow_cm": "0.0",
+      "uvIndex": "5"
+    },
+    {
+      "astronomy": [
+        {
+          "moon_illumination": "71",
+          "moon_phase": "Waning Gibbous",
+          "moonrise": "09:45 PM",
+          "moonset": "11:33 AM",
+          "sunrise": "06:08 AM",
+          "sunset": "05:06 PM"
+        }
+      ],
+      "avgtempC": "20",
+      "avgtempF": "67",
+      "date": "2026-10-31",
+      "maxtempC": "24",
+      "maxtempF": "76",
+      "mintempC": "14",
+      "mintempF": "58",
+      "sunHour": "11.0",
+      "totalSnow_cm": "0.0",
+      "uvIndex": "5"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+这是 E2 Tavily 无效凭据异常实验，宿主为此会话注入明确无效的测试凭据，不要检查或打印它。先读取 skills/tavily-search/SKILL.md，再用 python3 执行其原始 scripts/tavily_search.py，query="Python official documentation urllib request"，max-results=3，search-depth=basic，format=brave，timeout=20。只运行一次，打印脚本真实退出码，保留错误信息。认证失败后报告并停止，不用其他工具、账号或渠道搜索，不补造结果。不读取工作区外文件。

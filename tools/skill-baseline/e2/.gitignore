@@ -1,0 +1,6 @@
+.local/
+private/
+__pycache__/
+*.clixml
+*.sqlite*
+config.local.json

@@ -1,0 +1,8 @@
+{
+  "kind": "offline simulated transport/unit boundary tests, not live Tavily responses",
+  "testsRun": 12,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "log": "test_401 (__main__.Boundaries.test_401) ... ok\ntest_429 (__main__.Boundaries.test_429) ... ok\ntest_500 (__main__.Boundaries.test_500) ... ok\ntest_country_topic (__main__.Boundaries.test_country_topic) ... ok\ntest_domain_limit (__main__.Boundaries.test_domain_limit) ... ok\ntest_empty_query (__main__.Boundaries.test_empty_query) ... ok\ntest_invalid_json (__main__.Boundaries.test_invalid_json) ... ok\ntest_network_error (__main__.Boundaries.test_network_error) ... ok\ntest_nonobject_json (__main__.Boundaries.test_nonobject_json) ... ok\ntest_request_contract (__main__.Boundaries.test_request_contract) ... ok\ntest_response_size (__main__.Boundaries.test_response_size) ... ok\ntest_tls_error (__main__.Boundaries.test_tls_error) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.178s\n\nOK\n"
+}

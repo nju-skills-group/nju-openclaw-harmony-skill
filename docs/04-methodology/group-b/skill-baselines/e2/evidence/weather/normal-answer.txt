@@ -1,0 +1,18 @@
+已在首次请求中就从主域名获取到结果，因此没有启用备用域名 `wttr.is`。
+
+**Shanghai 当前天气**（数据源 wttr.in → WorldWeatherOnline）
+
+- **温度**：18 °C（体感 19 °C；64 °F / 65 °F）
+- **天气描述**：Smoky haze（烟霾）
+- **湿度**：82%
+- 其他：降水 0.0 mm，能见度 2 km，云量 87%，风 WNW 5 km/h，气压 1021 hPa
+- **观测时间**：03:12 PM（源数据未标明时区；抓取时刻为 2026-10-29T16:13Z，即本地 10-30 00:13 GMT+8）
+
+**数据地点**：`nearest_area` 显示 **Pootung（上海浦东）**，region 为 Shanghai，country 为 China，坐标 31.239, 121.504。注意 `request.query` 写的是 "Lat 31.23 and Lon 121.49"，即这是上海范围内的坐标定位，而非整个城市的平均值。
+
+**使用的工具与 URL**
+- Skill：`skills/weather/SKILL.md`（本工作区）
+- 工具：`web_fetch`（未使用 curl）
+- URL：`https://wttr.in/Shanghai?format=j2` → HTTP 200，无重定向，内容未截断
+
+未读取工作区以外的文件。JSON 里 `weather[]` 的预报日期从 2026-10-29 起（今日最高 24 °C / 最低 16 °C），说明源数据的一天边界可能按另一时区划分，引用跨日预报时需留意。

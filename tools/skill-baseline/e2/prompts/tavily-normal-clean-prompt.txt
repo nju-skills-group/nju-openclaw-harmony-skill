@@ -1,0 +1,5 @@
+这是 E2 Tavily 正常基线的路径修正复测。最多执行以下三个步骤后结束：
+1. read 本工作区 skills/tavily-search/SKILL.md。
+2. 用 exec 执行一次以下完整命令（不要改变路径，不重试，不重定向到文件）：python3 "<TAVILY_RUN_ROOT>/workspace/skills/tavily-search/scripts/tavily_search.py" --query "Python official documentation urllib request urlopen timeout" --max-results 3 --include-domain docs.python.org --search-depth basic --format brave --timeout 20; Write-Output "SCRIPT_EXITCODE=$LASTEXITCODE"
+3. 如果成功，用 web_fetch 工具打开返回结果中 https://docs.python.org/3/library/urllib.request.html 页面，extractMode=text，maxChars=24000。若需要，通过 tool_search/tool_call 获取 web_fetch。不允许用 exec 或 curl 替代读取来源，不要写临时脚本、安装依赖、检查环境变量或凭据。来源只获取一次；若工具失败或正文不包含 timeout 的解释，明确标记“检索成功、来源核验未完成”并停止，不能用常识补齐。
+最终回答用自己的话简要解释 timeout（仅在原始页面已支持时）并给出来源链接，列出搜索结果数量和真实脚本退出码。整个实验只执行一次搜索，失败直接停止。

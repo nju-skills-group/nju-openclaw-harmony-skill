@@ -1,0 +1,42 @@
+{
+  "case": "tavily-normal",
+  "sessionId": "cc1a5d31-7afa-4d57-a19f-d7925bf8b57c",
+  "startedUtc": "2026-10-30T06:49:02.8905697Z",
+  "finishedUtc": "2026-10-30T06:50:55.2930461Z",
+  "cliExitCode": 0,
+  "mode": "OpenClaw embedded agent --local",
+  "model": "a1-deepseek/deepseek-flash",
+  "terminalReceipt": {
+    "runId": "a14f505c-ccc3-4a84-9e0e-cc57bb17bdea",
+    "sessionId": "cc1a5d31-7afa-4d57-a19f-d7925bf8b57c",
+    "turnId": "a14f505c-ccc3-4a84-9e0e-cc57bb17bdea",
+    "requested": {
+      "provider": "a1-deepseek",
+      "model": "deepseek-flash"
+    },
+    "effective": {
+      "provider": "a1-deepseek",
+      "model": "deepseek-flash",
+      "responseModel": "deepseek-flash"
+    },
+    "successfulToolNames": [
+      "read",
+      "exec",
+      "web_fetch",
+      "tool_call"
+    ],
+    "rerouted": false,
+    "terminalDisposition": "visible"
+  },
+  "toolSummary": {
+    "calls": 4,
+    "tools": [
+      "read",
+      "exec",
+      "web_fetch",
+      "tool_call"
+    ],
+    "failures": 0
+  },
+  "agentDurationMs": 23199
+}

@@ -1,0 +1,20 @@
+{
+  "normal": {
+    "sessionId": "cc1a5d31-7afa-4d57-a19f-d7925bf8b57c",
+    "startedUtc": "2026-10-30T06:49:02.8905697Z",
+    "cliExitCode": 0,
+    "scriptExitCode": 0,
+    "singleSearchExecution": true,
+    "modelRerouted": false
+  },
+  "invalid": {
+    "sessionId": "1c38819d-9214-4190-95da-edbbafbb5ba0",
+    "startedUtc": "2026-10-30T06:51:58.6145640Z",
+    "cliExitCode": 0,
+    "scriptExitCode": 1,
+    "singleSearchExecution": true,
+    "modelRerouted": false
+  },
+  "environmentRestoration": "PowerShell checked that caller config path and synthetic Tavily environment value were restored after invalid run.",
+  "normalSourceStatus": 200
+}
