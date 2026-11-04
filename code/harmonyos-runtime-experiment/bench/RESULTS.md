@@ -81,11 +81,22 @@ D1 的离散度始终 ≤3 ms，D0 在两轮之间抖动更大（P95 80 → 94�
 
 ## 系统链路总延迟（Agent/用户发起 → 结果返回）
 
-**未测**，且当前环境不具备测量条件：
+**未测**，但已把链路推进到最后一环，失败点有明确日志：
 
-- 设备无 `ohos-arkTSScript` CLI（桥接 shell 与 `/usr/bin` 均无；`/system/bin` 权限拒绝），无法在本地发起 Skill 调用。
-- 从小艺触发：真机小艺已按引导启用并正常应答（`hello` → 有回复），但两次明确询问「调用 echo 技能」「调用 harmonyos-skill-echo 技能」均答复 **「我这边没有名为 … 的技能」**，未产生任何 Skill 侧 hilog。
-- 结论：自装应用的 `skillProfiles` 在当前真机上未被小艺索引。这与模拟器上的既往结论一致（可见调用入口缺失），本次在真机上复现。
+| 环节 | 状态 | 证据 |
+| --- | --- | --- |
+| 设备本地发起 Skill 调用 | ✗ 无入口 | 设备无 `ohos-arkTSScript` CLI（桥接 shell、`/usr/bin` 均无；`/system/bin` 权限拒绝） |
+| 小艺意图识别 | ✓ | 提问「调用回声测试技能执行hello」后，会话标题变为「技能调用失败」，说明命中技能意图，不再答复「没有名为…的技能」 |
+| 平台侧发布 | ✓ | 小艺开放平台导入 Skill（源码 zip，分类 教育/翻译）→ 安全检查 gate passed → 建真机测试用户组 `bench` → 补齐 Skill 配置（包名 personal、API 26、中文名「回声测试」）→ 「发布真机测试」toast「发布成功」 |
+| 端侧执行 | ✗ | 每次触发后 hilog：`E A00F00/om.huawei.hmos.vassistant:free/HwVA_SkillListenerStub: remote is null`；应用侧无任何 `SAMPLE\|SKILL\|invoke` 日志 |
+
+补充观察：
+
+- 首轮上传 DevEco debug HAP 时，hilog 有 `decompressAndVerifySkill, signature verification failed, will not install`，随后同样 `remote is null` —— 说明客户端要求华为侧签名的包，sideload 的 debug HAP 无效。
+- 第二轮改传源码 zip（平台自己打包），签名错误消失，但仍 `remote is null`，即客户端连 Skill 执行服务都未能绑定。
+- 真机测试面板自带前提：「为体验真机测试功能，需要设备完成 HarmonyOS 7 系统版本升级报名并成功升级系统」。本机为 7.0.0.111(SP12C00E103R12P2)，未做升级报名，判定这是 `remote is null` 的成因。
+
+因此系统链路延迟写「未测」，不估算。
 
 ## 结论
 

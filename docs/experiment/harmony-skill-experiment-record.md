@@ -71,7 +71,7 @@
 - **内存 5 时点**（PSS）：基线 40.2 MB → WebView 创建中 61.5 MB → 页面加载后 96.7 MB → 300 次调用峰值 97.1 MB（+0.34 MB）→ 空闲 10 s 后 96.5 MB（不回落）。固定成本约 56 MB，与调用次数无关。
 - **WebView 冷加载 362 ms**（组件创建→页面 `onPageEnd`）。先前记录的 9–10 ms 只是页面自身 `onPageBegin→onPageEnd`，已更正。
 - **B3 六种异常路径**：未加载页面时调用 → reject（handled）；调用不存在的函数、页面内 `throw` → **`runJavaScript` 仍 resolve（unhandled）**；返回格式错误 → 靠返回值校验拦截；页面忙等 3 s 而调用方 1 s 放弃 → `Promise.race` 生效。结论：桥接异常不能只靠 `try/catch`，必须校验返回值并自设超时。
-- **系统链路总延迟：未测**。设备无 `ohos-arkTSScript` CLI；从小艺触发时，真机小艺正常应答但对「调用 echo 技能」「调用 harmonyos-skill-echo 技能」均答复「我这边没有名为 … 的技能」，未产生任何 Skill 侧 hilog。自装应用的 `skillProfiles` 在该真机上未被小艺索引。
+- **系统链路总延迟：未测**。设备无 `ohos-arkTSScript` CLI。改走小艺开放平台真机测试：源码 zip 导入成功（分类 教育/翻译，安全检查 gate passed）→ 建用户组 `bench` → 补齐 Skill 配置（包名 personal、API 26、中文技能名「回声测试」）→ 发布真机测试成功。触发后小艺会话标题变为「技能调用失败」（说明意图识别命中了 Skill），但 hilog 每次都是 `HwVA_SkillListenerStub: remote is null`，应用侧无任何 `SAMPLE|SKILL|invoke`。首轮上传 DevEco debug HAP 时另有 `decompressAndVerifySkill, signature verification failed`（客户端要求华为侧签名）。真机测试面板自带前提「设备需完成 HarmonyOS 7 系统版本升级报名」，本机 7.0.0.111 未报名，判定为 `remote is null` 的成因。结论：意图识别与平台下发已通，端侧执行未通，延迟不估算。
 
 ## E. 本次状态（首次建档）
 
