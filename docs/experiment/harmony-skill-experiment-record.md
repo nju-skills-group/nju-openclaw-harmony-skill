@@ -1,4 +1,4 @@
-# HarmonyOS Skill 调用与运行时形态实验记录
+﻿# HarmonyOS Skill 调用与运行时形态实验记录
 
 > 用于记录小艺调用、非 ArkTS 业务形态与性能实验。请填真实观察，不要把计划/推测填成结果。
 
@@ -57,12 +57,21 @@
 - 记录内存工具/采样方式和采样时点；若当前环境无法稳定读取，标记“未测”，不要估值。
 - 结果只代表该模拟器环境；真机性能结论待设备到位复测。
 
+下表已填入 2026-11-04 真机两轮完整运行的实测值（原始日志 `raw-2026-11-04.txt` / `raw-2026-11-04b.txt`，工程见 `code/harmonyos-runtime-experiment/bench/`）。模拟器基线仍为空，未测：本机 DevEco 4.0.0.600 只带 API 9 SDK，无法构建 targetSdkVersion 26 的工程。
+
 | 运行形态 | 冷/热 | 样本数 | 成功率 | 延迟中位数 | P95 | 峰值/采样内存 | 测量工具及备注 |
-|---|---|---:|---:|---:|---:|---:|---|
-| ArkTS 基线 | 冷 |  |  |  |  |  |  |
-| ArkTS 基线 | 热 |  |  |  |  |  |  |
-| ArkTS→WebView/JS | 冷 |  |  |  |  |  |  |
-| ArkTS→WebView/JS | 热 |  |  |  |  |  |  |
+|---|---|---|---:|---:|---:|---|
+| ArkTS 基线 | 冷 | 2（两轮） | 2/2 | 85 / 97 ms | — | 40.2 MB（基线） | 首次调用，JIT 预热未完成 |
+| ArkTS 基线 | 热 | 30 / 轮 | 30/30 | 78 / 79 ms | 80 / 94 ms | — | 区间 78–86 / 78–99 ms；第二轮抖动更大 |
+| ArkTS→WebView/JS | 冷 | 2（两轮） | 2/2 | 38 / 37 ms（biz 34 / 33 + bridge 4） | — | 96.7 MB（加载后） | Web 组件冷加载另计 362 ms；从点击起算 |
+| ArkTS→WebView/JS | 热 | 30 / 轮 | 30/30 | 22 ms（biz 21 + bridge 1） | 23 ms | 97.1 MB（峰值） | 区间 21–24 ms，checksum 全一致 |
+
+补充测量（第二轮）：
+
+- **内存 5 时点**（PSS）：基线 40.2 MB → WebView 创建中 61.5 MB → 页面加载后 96.7 MB → 300 次调用峰值 97.1 MB（+0.34 MB）→ 空闲 10 s 后 96.5 MB（不回落）。固定成本约 56 MB，与调用次数无关。
+- **WebView 冷加载 362 ms**（组件创建→页面 `onPageEnd`）。先前记录的 9–10 ms 只是页面自身 `onPageBegin→onPageEnd`，已更正。
+- **B3 六种异常路径**：未加载页面时调用 → reject（handled）；调用不存在的函数、页面内 `throw` → **`runJavaScript` 仍 resolve（unhandled）**；返回格式错误 → 靠返回值校验拦截；页面忙等 3 s 而调用方 1 s 放弃 → `Promise.race` 生效。结论：桥接异常不能只靠 `try/catch`，必须校验返回值并自设超时。
+- **系统链路总延迟：未测**。设备无 `ohos-arkTSScript` CLI。改走小艺开放平台真机测试：源码 zip 导入成功（分类 教育/翻译，安全检查 gate passed）→ 建用户组 `bench` → 补齐 Skill 配置（包名 personal、API 26、中文技能名「回声测试」）→ 发布真机测试成功。触发后小艺会话标题变为「技能调用失败」（说明意图识别命中了 Skill），但 hilog 每次都是 `HwVA_SkillListenerStub: remote is null`，应用侧无任何 `SAMPLE|SKILL|invoke`。首轮上传 DevEco debug HAP 时另有 `decompressAndVerifySkill, signature verification failed`（客户端要求华为侧签名）。真机测试面板自带前提「设备需完成 HarmonyOS 7 系统版本升级报名」，本机 7.0.0.111 未报名，判定为 `remote is null` 的成因。结论：意图识别与平台下发已通，端侧执行未通，延迟不估算。
 
 ## E. 本次状态（首次建档）
 
@@ -77,6 +86,15 @@
 - 性能：尚未测量。
 
 实验副本位于研究仓库 `code/harmonyos-runtime-experiment/`，原始 `D:\desk\HarmonyOS_skills` 工程未修改。
+
+### 2026-11-04 真机复测（D0 vs D1）
+
+- 环境：HarmonyOS PC 真机 MNTXM-24B，系统 `MNT-W72C 7.0.0.111(SP12C00E103R12P2)`；DevEco Studio 26.0.0.201 运行在设备本机，hvigor modelVersion 26.0.0，SDK/API 26.0.0（`const.ohos.fullname` = OpenHarmony-7.0.0.109）；HAP 已签名（`default1`）并 `hdc install -r` 安装。
+- 业务负载：`benchWork(50000)`（LCG 填充 → 升序排序 → 取模累加），ArkTS 与页面内 JS 逐行等价，checksum 均为 `33762218`。
+- 观测方法：应用内 `Date.now()` 打点写入 hilog（tag `BenchD`），外部用 `uitest uiInput click` 触发，`hilog -x` 导出原始样本。
+- 结论：热路径 WebView 内 JS 比 ArkTS 快约 3.5x（78 → 22 ms；剔除桥接后 biz 78 → 21 ms）；桥接 1–2 ms 不是瓶颈；冷启动额外成本主要落在页面加载 9 ms 与首次调用 +16 ms。
+- 未测：系统链路总延迟（需从小艺触发）、内存 5 点中的基线/峰值两点（外部采样抓不到 WebView 创建前窗口）、模拟器对照组。
+- 完整报告：`code/harmonyos-runtime-experiment/bench/RESULTS.md`。
 
 ### 本次产物与日志摘录
 
