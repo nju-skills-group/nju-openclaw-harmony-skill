@@ -57,14 +57,21 @@
 - 记录内存工具/采样方式和采样时点；若当前环境无法稳定读取，标记“未测”，不要估值。
 - 结果只代表该模拟器环境；真机性能结论待设备到位复测。
 
-下表已填入 2026-11-04 真机一次完整运行的实测值（原始日志与工程见 `code/harmonyos-runtime-experiment/bench/`）。模拟器基线仍为空，未测。
+下表已填入 2026-11-04 真机两轮完整运行的实测值（原始日志 `raw-2026-11-04.txt` / `raw-2026-11-04b.txt`，工程见 `code/harmonyos-runtime-experiment/bench/`）。模拟器基线仍为空，未测：本机 DevEco 4.0.0.600 只带 API 9 SDK，无法构建 targetSdkVersion 26 的工程。
 
 | 运行形态 | 冷/热 | 样本数 | 成功率 | 延迟中位数 | P95 | 峰值/采样内存 | 测量工具及备注 |
-|---|---|---|---|---:|---:|---:|---|
-| ArkTS 基线 | 冷 | 1 | 1/1 | 85 ms | — | 未测 | 首次调用，JIT 预热未完成 |
-| ArkTS 基线 | 热 | 30 | 30/30 | 78 ms | 80 ms | 未测 | 区间 78–86 ms，稳定 |
-| ArkTS→WebView/JS | 冷 | 1 | 1/1 | 38 ms（biz 34 + bridge 4） | — | 未测 | 页面加载另计 9 ms；从点击起算 |
-| ArkTS→WebView/JS | 热 | 30 | 30/30 | 22 ms（biz 21 + bridge 1） | 23 ms | 90 MB（PSS，页面加载后空闲） | 区间 21–23 ms，checksum 全一致 |
+|---|---|---|---:|---:|---:|---|
+| ArkTS 基线 | 冷 | 2（两轮） | 2/2 | 85 / 97 ms | — | 40.2 MB（基线） | 首次调用，JIT 预热未完成 |
+| ArkTS 基线 | 热 | 30 / 轮 | 30/30 | 78 / 79 ms | 80 / 94 ms | — | 区间 78–86 / 78–99 ms；第二轮抖动更大 |
+| ArkTS→WebView/JS | 冷 | 2（两轮） | 2/2 | 38 / 37 ms（biz 34 / 33 + bridge 4） | — | 96.7 MB（加载后） | Web 组件冷加载另计 362 ms；从点击起算 |
+| ArkTS→WebView/JS | 热 | 30 / 轮 | 30/30 | 22 ms（biz 21 + bridge 1） | 23 ms | 97.1 MB（峰值） | 区间 21–24 ms，checksum 全一致 |
+
+补充测量（第二轮）：
+
+- **内存 5 时点**（PSS）：基线 40.2 MB → WebView 创建中 61.5 MB → 页面加载后 96.7 MB → 300 次调用峰值 97.1 MB（+0.34 MB）→ 空闲 10 s 后 96.5 MB（不回落）。固定成本约 56 MB，与调用次数无关。
+- **WebView 冷加载 362 ms**（组件创建→页面 `onPageEnd`）。先前记录的 9–10 ms 只是页面自身 `onPageBegin→onPageEnd`，已更正。
+- **B3 六种异常路径**：未加载页面时调用 → reject（handled）；调用不存在的函数、页面内 `throw` → **`runJavaScript` 仍 resolve（unhandled）**；返回格式错误 → 靠返回值校验拦截；页面忙等 3 s 而调用方 1 s 放弃 → `Promise.race` 生效。结论：桥接异常不能只靠 `try/catch`，必须校验返回值并自设超时。
+- **系统链路总延迟：未测**。设备无 `ohos-arkTSScript` CLI；从小艺触发时，真机小艺正常应答但对「调用 echo 技能」「调用 harmonyos-skill-echo 技能」均答复「我这边没有名为 … 的技能」，未产生任何 Skill 侧 hilog。自装应用的 `skillProfiles` 在该真机上未被小艺索引。
 
 ## E. 本次状态（首次建档）
 
