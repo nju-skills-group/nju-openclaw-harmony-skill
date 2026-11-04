@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bench</title>
+</head>
+<body>
+<div id="out">ready</div>
+<script>
+  // Must stay identical to entry/src/main/ets/bench/BenchWork.ets
+  function benchWork(n) {
+    var seed = 12345;
+    var arr = new Array(n);
+    for (var i = 0; i < n; i++) {
+      seed = (seed * 1103515245 + 12345) % 2147483648;
+      arr[i] = seed;
+    }
+    arr.sort(function (a, b) { return a - b; });
+    var sum = 0;
+    for (var i = 0; i < n; i++) {
+      sum = (sum + arr[i]) % 1000000007;
+    }
+    return sum;
+  }
+
+  // Returns "checksum,bizMs" so ArkTS can read the in-page business duration.
+  function benchRun(n) {
+    var t0 = Date.now();
+    var checksum = benchWork(n);
+    var t1 = Date.now();
+    var out = document.getElementById('out');
+    if (out) {
+      out.textContent = checksum + ':' + (t1 - t0);
+    }
+    return checksum + ',' + (t1 - t0);
+  }
+
+  window.benchRun = benchRun;
+</script>
+</body>
+</html>
