@@ -2,20 +2,22 @@
 
 > 范围：SkillVM 机制比较与覆盖能力评估、SkillIR 规范草案、已验证移植 Skill 的公开发布。**评估与原型验证，不从零实现 VM；不代替甲乙组完成其任务。** 本指南补充丙组协作细节，不修改仓库级约定；冲突时以 [`docs/05-protocols/git-workflow.md`](../../05-protocols/git-workflow.md) 为准。
 
+> **2026-11-10 收口约定：** C-1/C-2/C-3 已有合并阶段成果，由组长组织统一最终审阅；C-2 **V2** 是唯一正式静态评估口径。旧 V1 的实验要求不再作为当前验收条件，未完成的目标端调用仍如实记为未验证。
+
 ## 1. 入组先读与可用资料
 
 1. 先读本指南，再读 [`plan.md`](plan.md) 的四项最终成果、六个**参考**工作包和验收条件，最后看 [`README.md`](README.md) 的成果状态。
 2. 阅读 [原仓库 Git 工作流](../../05-protocols/git-workflow.md)：从最新 `main` 建独立功能分支、以 `main` 为 PR base、至少一名 Reviewer、禁止直接 push `main` 和覆盖他人的提交。
 3. 选读与认领事项相关的 [OpenClaw Skill 生命周期源码地图](../../02-research/openclaw-skill-lifecycle-source-map.md)、[鸿蒙 Skill 接入契约](../Group_C2/harmony-skill-contract.md)、[已有论文笔记](../../02-research/papers/2026-chen-skillvm.md)。
-4. 乙组候选与 L3 缺口在 [普查 PR #13](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/13) 中，未合并期间引用固定提交 `126d80d5507293af800e7fafe538a772b16e4f21`；静态分类不代表运行成功。
+4. 乙组候选与 L3 缺口已由 [普查 PR #13](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/13) 合并；可按固定提交 `126d80d5507293af800e7fafe538a772b16e4f21` 追溯原始阶段材料；静态分类不代表运行成功。
 
 ## 2. 成果与工作包的关系（最重要）
 
-- **正式交付只有四项**：C-1 技术机制对比表、C-2 覆盖率评估报告 v1、C-3 SkillIR 草案、C-4 发布仓库与首批 Skill。
+- **正式交付只有四项**：C-1 技术机制对比表、C-2 路线覆盖能力评估 V2（静态）、C-3 SkillIR 草案、C-4 发布仓库与首批 Skill。
 - [`plan.md`](plan.md) 提供 **六个参考工作包**。这是帮助认领和减少重叠的建议，不按七个人硬拆；可以一人多包、多人同包，也可以讨论调整拆分方式。不要未经讨论改变四项最终交付范围。
 - 每项最终成果由参与者协商确定**成果协调人**；工作包可设执行负责人。协调人负责把成果整合到统一入口，不代表他一人承担所有内容。
 - **认领一个工作包，也必须和同一最终成果的其他参与者协调，并参与整体结论、交叉审阅及最终验收。** 个人提交的中间文件、部分 PR 或工具实验即使已合并，也不能单独作为该成果“完成”的依据。
-- 例如 C-2A 负责样本和评价方法、C-2B 负责工具链实验与结果；双方须统一指标与证据等级，最终共同交付**同一份** [`coverage-evaluation-v1.md`](evaluation/coverage-evaluation-v1.md)。若只有方法没有实验，或只有输出没有可检查的评估方法，C-2 不应标为完整验收。
+- C-2A 负责固定样本和评价方法，C-2B 提供 SkVM 机制的固定源码核查和九项静态结果。双方共同保证 [`V2 报告`](evaluation/coverage-evaluation-v2.md)、[方法](evaluation/evaluation-method-and-samples-v2.md)与[逐样本结果](evaluation/evaluation-results-v2.md)一致。**C-2 不以执行工具链、端侧运行或量化覆盖率为完成条件。**
 - C-1 与 C-3 默认不拆包：允许内部按论文/字段分头查阅和起草，但应共同完成一份自洽的最终文档，而不是提交互不衔接的多份报告。
 
 ## 3. 怎么认领与开始协作
@@ -23,7 +25,7 @@
 1. 看清四项成果和对应验收；在组内讨论**自己想参与的最终成果**以及希望承担的参考工作包，主动和同成果参与者沟通。原论文研究经历可作参考，不预设个人姓名。
 2. 与参与者确认：成果协调人、工作包负责人或共同负责人、Reviewer、共享术语/接口、文件修改顺序、需要哪些甲乙组输入。填入 [`plan.md`](plan.md) 的成果层及工作包层两张认领表。
 3. 在原研究仓库为需要推进的工作建立 Issue（可以一个成果 Issue，必要时为真正独立的包另开 Issue；不要仅为凑数量创建 Issue）；注明**最终成果 ID**、阶段目标、验收条件、依赖和参与者。
-4. 在组长的基线 PR **合并到 `main` 后**，从最新 `main` 创建功能分支；分支遵守原仓库命名形式 `feature/<方向>/<短描述>`，例如 `feature/B/group-c-evaluation`。
+4. 从最新 `main` 创建功能分支；分支遵守原仓库命名形式 `feature/<方向>/<短描述>`，例如 `feature/B/group-c-evaluation`。
 5. 早开 Draft PR 展示进度，注明对应最终成果、阶段成果或最终成果、待完成项与验证结果；完成自测后请求至少 1 位其他成员 Review。PR 可以逐步合并，不等全组完成再统一提一个大 PR。
 6. 工作包 PR 合并后，继续参与同成果最终整合、复核和收口。由成果协调人与参与者共同决定是否已达到 [`plan.md`](plan.md) 中的**最终验收条件**；没有证据时标注未测/阻断，不把合并动作写成验收完成。
 
@@ -38,8 +40,8 @@ git switch -c feature/B/group-c-evaluation
 
 ## 4. 文档修改和合并冲突如何处理
 
-- **只有四份最终成果需要长期保持一致**：[`research/mechanism-comparison.md`](research/mechanism-comparison.md)、[`evaluation/coverage-evaluation-v1.md`](evaluation/coverage-evaluation-v1.md)、[`ir/skill-ir-v0.md`](ir/skill-ir-v0.md)、以及[发布仓库](https://github.com/nju-skills-group/openclaw-skills-for-harmony)的实际成品和指南。
-- 对 C-2 等分包成果，先商议共同结构和字段。建议 C-2A 的评估方法先通过 PR 合并，C-2B 再在同一文件补工具链实测；若须并行改同一文件，限定负责章节并在合并前同步最新 `main`，由参与者统一复核结论。
+- **只有四项最终成果需要长期保持一致**：[`research/mechanism-comparison.md`](research/mechanism-comparison.md)、[`evaluation/coverage-evaluation-v2.md`](evaluation/coverage-evaluation-v2.md)、[`ir/skill-ir-v0.md`](ir/skill-ir-v0.md)、以及[发布仓库](https://github.com/nju-skills-group/openclaw-skills-for-harmony)的实际成品和指南。
+- 对 C-2 等分包成果，依据已经合并的 **V2 总报告、评价方法和逐样本结果**交叉核对版本、结论与静态证据等级；不要求 C-2B 增加工具链实测。若须并行改同一文件，限定章节并同步最新 `main`。
 - 中间成果可以用原文档不同章节、必要的可复现实验记录或小 PR 呈现；**不要求每个参考包新建一个独立报告**，避免最后只收获碎片化材料。
 - 成果协调人与参与者在完整交付前进行一次共同审查：术语与版本是否一致、数据/结论是否匹配、缺项是否写明、链接/证据是否可访问。审查通过后才更新最终状态。
 - 根 README 与仓库级流程规范属于全组共享文件，不因丙组任务私自大改；有必要仅在授权且审查通过后新增小范围入口。
@@ -49,7 +51,7 @@ git switch -c feature/B/group-c-evaluation
 | 内容 | 工作/交付位置 |
 | --- | --- |
 | C-1 机制对比表 | **本研究仓库** [`research/mechanism-comparison.md`](research/mechanism-comparison.md) |
-| C-2 评估报告及工具链结果 | **本研究仓库** [`evaluation/coverage-evaluation-v1.md`](evaluation/coverage-evaluation-v1.md)；只有产生真实可复用实验代码时才使用既有规划中的 `code/skill-vm/`，不必为占位先建目录 |
+| C-2 评估报告及工具链结果 | **本研究仓库** [`evaluation/coverage-evaluation-v2.md`](evaluation/coverage-evaluation-v2.md)；只有产生真实可复用实验代码时才使用既有规划中的 `code/skill-vm/`，不必为占位先建目录 |
 | C-3 SkillIR 草案 | **本研究仓库** [`ir/skill-ir-v0.md`](ir/skill-ir-v0.md) |
 | C-4 Skill 包、发布说明与导入工具 | **【发布仓库】** [`openclaw-skills-for-harmony`](https://github.com/nju-skills-group/openclaw-skills-for-harmony)；研究过程及验收结论仍在本仓库引用关联 PR/版本 |
 
@@ -74,3 +76,12 @@ git switch -c feature/B/group-c-evaluation
 - **甲 → 丙**：鸿蒙侧已验证的实际调用契约、运行条件与性能测量结果。
 - **丙 → 乙**：有来源与证据的技术适用性、障碍分类和可选适配路线结论。
 - 不必等全部跨组资料到齐再启动 C-1、C-2 静态评估、C-3 草案和 C-4A 骨架；等待跨组输入的环节明确标阻断，不能以占位文件冒充交付。
+
+
+## 9. C-1/C-2/C-3 统一收口（2026-11-10）
+
+1. 权威文档位置以 [丙组总入口](README.md)为准；C-1 根目录旧链接仅重定向，C-2 仅采用 V2，C-3 是规范草案而不是运行过的生成器。
+2. 由丙组组长提出统一收口 PR，至少邀请一名其他成员复核；Review 前不将成果状态标为“已验收”。
+3. C-1 核查九维与固定出处；C-2 核查六维静态方法及九个案例；C-3 核查核心层/绑定层、九项示例及 Q1–Q7 待验证边界。
+4. C-4 的乙组 Skill 工程接收、许可证和真实调用验收另行推进；不将它们强加为 C-1/C-2/C-3 的完成门槛。
+5. [收口记录与审阅清单](closeout-2026-11-10.md)是本次 Review 的统一依据。
