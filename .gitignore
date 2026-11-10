@@ -44,6 +44,9 @@ logs/
 tmp/
 temp/
 
+# ---- 工具运行产物 ----
+.playwright-mcp/
+
 # ---- OpenClaw 运行产物 ----
 .openclaw/
 .clawhub/
