@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JSON Toolkit Web Runtime</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 16px;
+      color: #1f2328;
+      background: #f6f8fa;
+      font-family: sans-serif;
+    }
+    strong { color: #147a42; }
+  </style>
+</head>
+<body>
+  <strong>ArkWeb JavaScript runtime ready</strong>
+  <script>
+    function ToolkitError(errorCode, message, suggestion) {
+      this.errorCode = errorCode;
+      this.message = message;
+      this.suggestion = suggestion;
+    }
+
+    function getUtf8Size(content) {
+      let size = 0;
+      for (let index = 0; index < content.length; index++) {
+        const code = content.charCodeAt(index);
+        if (code < 0x80) {
+          size += 1;
+        } else if (code < 0x800) {
+          size += 2;
+        } else if (code >= 0xD800 && code <= 0xDBFF &&
+          index + 1 < content.length) {
+          const next = content.charCodeAt(index + 1);
+          if (next >= 0xDC00 && next <= 0xDFFF) {
+            size += 4;
+            index += 1;
+          } else {
+            size += 3;
+          }
+        } else {
+          size += 3;
+        }
+      }
+      return size;
+    }
+
+    function sortValue(value) {
+      if (Array.isArray(value)) {
+        return value.map(sortValue);
+      }
+      if (value !== null && typeof value === 'object') {
+        const sorted = {};
+        Object.keys(value).sort().forEach(function (key) {
+          sorted[key] = sortValue(value[key]);
+        });
+        return sorted;
+      }
+      return value;
+    }
+
+    function queryJson(value, path) {
+      const segments = path.split('.');
+      let current = value;
+      for (const segment of segments) {
+        if (Array.isArray(current)) {
+          const index = Number(segment);
+          if (!Number.isInteger(index) || index < 0 ||
+            index >= current.length) {
+            throw new ToolkitError(
+              'ERR_QUERY_PATH',
+              'Invalid array index: ' + segment,
+              '请检查数组下标是否存在'
+            );
+          }
+          current = current[index];
+        } else if (current !== null && typeof current === 'object' &&
+          Object.prototype.hasOwnProperty.call(current, segment)) {
+          current = current[segment];
+        } else {
+          throw new ToolkitError(
+            'ERR_QUERY_PATH',
+            'Key not found: ' + segment,
+            '请检查查询路径是否与 JSON 结构一致'
+          );
+        }
+      }
+      return current;
+    }
+
+    function execute(request) {
+      const operations = ['format', 'minify', 'validate', 'query', 'sort'];
+      if (!operations.includes(request.operation)) {
+        throw new ToolkitError(
+          'ERR_INVALID_PARAMS',
+          'Unsupported operation: ' + request.operation,
+          '请选择 format、minify、validate、query 或 sort'
+        );
+      }
+      if (request.content.trim().length === 0) {
+        throw new ToolkitError(
+          'ERR_INVALID_PARAMS',
+          'JSON content is empty',
+          '请提供需要处理的 JSON 字符串'
+        );
+      }
+      if (!Number.isInteger(request.indent) || request.indent < 0 ||
+        request.indent > 8) {
+        throw new ToolkitError(
+          'ERR_INVALID_PARAMS',
+          'Invalid indentation: ' + request.indent,
+          '缩进数必须是 0 到 8 之间的整数'
+        );
+      }
+      if (request.operation === 'query' &&
+        request.path.trim().length === 0) {
+        throw new ToolkitError(
+          'ERR_INVALID_PARAMS',
+          'Query path is empty',
+          'query 操作必须提供点号路径'
+        );
+      }
+
+      let parsed;
+      try {
+        parsed = JSON.parse(request.content);
+      } catch (error) {
+        throw new ToolkitError(
+          'ERR_INVALID_JSON',
+          'JSON parse failed',
+          '请检查 JSON 的引号、逗号和括号是否正确'
+        );
+      }
+
+      if (request.operation === 'validate') {
+        const type = parsed === null ? 'null' :
+          (Array.isArray(parsed) ? 'array' : typeof parsed);
+        const result = {
+          operation: 'validate',
+          valid: true,
+          jsonType: type,
+          size: getUtf8Size(request.content)
+        };
+        if (Array.isArray(parsed)) {
+          result.itemCount = parsed.length;
+        } else if (parsed !== null && typeof parsed === 'object') {
+          result.itemCount = Object.keys(parsed).length;
+        }
+        return result;
+      }
+
+      if (request.operation === 'query') {
+        return {
+          operation: request.operation,
+          valid: true,
+          result: JSON.stringify(queryJson(parsed, request.path))
+        };
+      }
+
+      const value = request.operation === 'sort' || request.sortKeys ?
+        sortValue(parsed) : parsed;
+      const output = request.operation === 'minify' ?
+        JSON.stringify(value) :
+        JSON.stringify(value, null, request.indent);
+      return {
+        operation: request.operation,
+        valid: true,
+        result: output
+      };
+    }
+
+    window.JsonToolkit = {
+      execute: function (requestText) {
+        try {
+          const request = JSON.parse(requestText);
+          return JSON.stringify({ ok: true, data: execute(request) });
+        } catch (error) {
+          return JSON.stringify({
+            ok: false,
+            errorCode: error.errorCode || 'ERR_WEB_EXECUTION',
+            message: error.message || String(error),
+            suggestion: error.suggestion || '请检查页面 JavaScript 日志'
+          });
+        }
+      }
+    };
+  </script>
+</body>
+</html>

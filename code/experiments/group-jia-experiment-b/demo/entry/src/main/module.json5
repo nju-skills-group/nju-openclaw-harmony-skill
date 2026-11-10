@@ -1,0 +1,70 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "skillProfiles": [
+      {
+        "name": "a2-empty-skill",
+        "abilityName": "EntryAbility",
+        "srcEntries": [
+          "../../skills/a2-empty-skill/scripts/EmptySkill.ets"
+        ],
+        "permissions": [],
+        "version": "1.0.0"
+      },
+      {
+        "name": "json-toolkit",
+        "abilityName": "EntryAbility",
+        "srcEntries": [
+          "../../skills/json-toolkit/scripts/JsonToolkitSkill.ets"
+        ],
+        "permissions": [],
+        "version": "1.1.0"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "ohos.want.action.home"
+            ]
+          }
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "EntryBackupAbility",
+        "srcEntry": "./ets/entrybackupability/EntryBackupAbility.ets",
+        "type": "backup",
+        "exported": false,
+        "metadata": [
+          {
+            "name": "ohos.extension.backup",
+            "resource": "$profile:backup_config"
+          }
+        ]
+      }
+    ]
+  }
+}
