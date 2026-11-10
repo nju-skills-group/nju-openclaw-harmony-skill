@@ -185,6 +185,31 @@
             suggestion: error.suggestion || '请检查页面 JavaScript 日志'
           });
         }
+      },
+      probe: function (mode) {
+        if (mode === 'throw') {
+          throw new Error('Intentional JavaScript probe error');
+        }
+
+        if (mode === 'malformed') {
+          return 'not-json';
+        }
+
+        if (mode === 'slow') {
+          const startedAt = Date.now();
+          while (Date.now() - startedAt < 3000) {
+            // Intentional busy wait for timeout verification.
+          }
+        }
+
+        return JSON.stringify({
+          ok: true,
+          data: {
+            operation: 'probe',
+            valid: true,
+            result: mode
+          }
+        });
       }
     };
   </script>

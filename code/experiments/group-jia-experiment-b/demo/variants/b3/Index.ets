@@ -10,11 +10,16 @@ import {
 struct Index {
   private controller: webview.WebviewController =
     new webview.WebviewController();
+  private pageLoadStartedAt: number = 0;
 
   @State pageReady: boolean = false;
   @State testStatus: string = '等待 ArkWeb 页面加载';
   @State testDetails: string = '';
   @State allPassed: boolean = false;
+  @State pageLoadMs: number = 0;
+  @State timingDetails: string = '等待测试数据';
+  @State diagnosticStatus: string = '尚未执行异常路径测试';
+  @State diagnosticDetails: string = '';
 
   private recordResult(
     lines: string[],
@@ -28,6 +33,7 @@ struct Index {
   private async runSelfTest(): Promise<void> {
     const lines: string[] = [];
     let passed: number = 0;
+    jsonToolkitWebRuntime.resetMetrics();
 
     try {
       const formatResult: JsonToolkitResult =
@@ -124,6 +130,133 @@ struct Index {
     this.allPassed = passed === 6;
     this.testStatus = `${passed}/6 tests passed`;
     this.testDetails = lines.join('\n');
+    this.timingDetails =
+      `页面加载: ${this.pageLoadMs} ms\n` +
+      `桥接调用: ${jsonToolkitWebRuntime.getBridgeCount()} 次\n` +
+      `平均桥接: ${jsonToolkitWebRuntime.getAverageBridgeMs().toFixed(2)} ms\n` +
+      `最后一次桥接: ${jsonToolkitWebRuntime.getLastBridgeMs()} ms`;
+  }
+
+  private diagnosticLine(
+    lines: string[],
+    name: string,
+    passed: boolean,
+    detail: string
+  ): number {
+    lines.push(
+      `${passed ? 'PASS' : 'FAIL'} - ${name}: ${detail}`
+    );
+    return passed ? 1 : 0;
+  }
+
+  private async runFailurePathTests(): Promise<void> {
+    const lines: string[] = [];
+    let passed: number = 0;
+
+    jsonToolkitWebRuntime.markNotReady();
+    try {
+      await jsonToolkitWebRuntime.execute('validate', '{}');
+      passed += this.diagnosticLine(
+        lines,
+        'page not loaded',
+        false,
+        'unexpectedly resolved'
+      );
+    } catch (error) {
+      const toolkitError: JsonToolkitError =
+        error as JsonToolkitError;
+      passed += this.diagnosticLine(
+        lines,
+        'page not loaded',
+        toolkitError.errorCode === 'ERR_WEB_NOT_READY',
+        toolkitError.errorCode
+      );
+    } finally {
+      jsonToolkitWebRuntime.bind(this.controller);
+    }
+
+    try {
+      await jsonToolkitWebRuntime.probeUnboundController();
+      passed += this.diagnosticLine(
+        lines,
+        'bridge error',
+        false,
+        'unexpectedly resolved'
+      );
+    } catch (error) {
+      const toolkitError: JsonToolkitError =
+        error as JsonToolkitError;
+      passed += this.diagnosticLine(
+        lines,
+        'bridge error',
+        toolkitError.errorCode === 'ERR_WEB_BRIDGE',
+        toolkitError.errorCode
+      );
+    }
+
+    try {
+      await jsonToolkitWebRuntime.runProbe('throw');
+      passed += this.diagnosticLine(
+        lines,
+        'JavaScript throw',
+        false,
+        'unexpectedly resolved'
+      );
+    } catch (error) {
+      const toolkitError: JsonToolkitError =
+        error as JsonToolkitError;
+      const handled: boolean =
+        toolkitError.errorCode === 'ERR_WEB_BRIDGE' ||
+          toolkitError.errorCode === 'ERR_WEB_RESPONSE';
+      passed += this.diagnosticLine(
+        lines,
+        'JavaScript throw',
+        handled,
+        toolkitError.errorCode
+      );
+    }
+
+    try {
+      await jsonToolkitWebRuntime.runProbe('malformed');
+      passed += this.diagnosticLine(
+        lines,
+        'malformed return',
+        false,
+        'unexpectedly resolved'
+      );
+    } catch (error) {
+      const toolkitError: JsonToolkitError =
+        error as JsonToolkitError;
+      passed += this.diagnosticLine(
+        lines,
+        'malformed return',
+        toolkitError.errorCode === 'ERR_WEB_RESPONSE',
+        toolkitError.errorCode
+      );
+    }
+
+    const timeoutStartedAt: number = Date.now();
+    try {
+      await jsonToolkitWebRuntime.runProbe('slow', 1000);
+      passed += this.diagnosticLine(
+        lines,
+        'timeout',
+        false,
+        `${Date.now() - timeoutStartedAt} ms`
+      );
+    } catch (error) {
+      const toolkitError: JsonToolkitError =
+        error as JsonToolkitError;
+      passed += this.diagnosticLine(
+        lines,
+        'timeout',
+        toolkitError.errorCode === 'ERR_WEB_TIMEOUT',
+        `${toolkitError.errorCode}, ${Date.now() - timeoutStartedAt} ms`
+      );
+    }
+
+    this.diagnosticStatus = `${passed}/5 failure paths handled`;
+    this.diagnosticDetails = lines.join('\n');
   }
 
   build() {
@@ -144,11 +277,18 @@ struct Index {
           controller: this.controller
         })
           .javaScriptAccess(true)
+          .onAppear(() => {
+            this.pageLoadStartedAt = Date.now();
+          })
           .onPageBegin(() => {
+            if (this.pageLoadStartedAt === 0) {
+              this.pageLoadStartedAt = Date.now();
+            }
             this.pageReady = false;
             jsonToolkitWebRuntime.markNotReady();
           })
           .onPageEnd(() => {
+            this.pageLoadMs = Date.now() - this.pageLoadStartedAt;
             jsonToolkitWebRuntime.bind(this.controller);
             this.pageReady = true;
             this.testStatus = 'ArkWeb runtime ready';
@@ -164,6 +304,14 @@ struct Index {
             await this.runSelfTest();
           })
 
+        Button('Run failure-path tests')
+          .width('100%')
+          .height(48)
+          .enabled(this.pageReady)
+          .onClick(async () => {
+            await this.runFailurePathTests();
+          })
+
         Text(this.testStatus)
           .fontSize(24)
           .fontWeight(FontWeight.Bold)
@@ -174,6 +322,31 @@ struct Index {
           .fontSize(16)
           .fontFamily('monospace')
           .lineHeight(28)
+          .width('100%')
+          .padding(16)
+          .backgroundColor('#F4F5F7')
+          .borderRadius(6)
+
+        Text('Timing')
+          .fontSize(20)
+          .fontWeight(FontWeight.Bold)
+          .width('100%')
+
+        Text(this.timingDetails)
+          .fontSize(16)
+          .fontFamily('monospace')
+          .lineHeight(26)
+          .width('100%')
+
+        Text(this.diagnosticStatus)
+          .fontSize(20)
+          .fontWeight(FontWeight.Bold)
+          .width('100%')
+
+        Text(this.diagnosticDetails)
+          .fontSize(16)
+          .fontFamily('monospace')
+          .lineHeight(26)
           .width('100%')
           .padding(16)
           .backgroundColor('#F4F5F7')

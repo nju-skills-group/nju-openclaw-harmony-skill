@@ -9,7 +9,7 @@
 | B0 | `JsonToolkitSkill.ets` | `JsonToolkitService.ets` | 6/6 通过 |
 | B1 | `JsonToolkitSkill.ets` | `JsonToolkitServiceTs.ts` | 6/6 通过 |
 | B2 | `JsonToolkitSkill.ets` | `JsonToolkitServiceJs.js` | 6/6 通过 |
-| B3 | `JsonToolkitSkill.ets` | 本地 ArkWeb 页面 JavaScript | 6/6 通过 |
+| B3 | `JsonToolkitSkill.ets` | 本地 ArkWeb 页面 JavaScript | 6/6；异常路径 5/5 通过 |
 
 公共测试覆盖 format、minify、validate、query、sort 和非法 JSON 六条路径。`module.json5` 始终注册 `.ets` Skill 入口，`SKILL.md`、输入和预期输出保持不变。
 
@@ -22,7 +22,12 @@
 
 ## 运行当前 B3
 
-用 DevEco Studio 打开本目录，等待同步完成后编译并运行。页面显示 `ArkWeb JavaScript runtime ready` 后，点击 `Run self-test`，预期得到 `6/6 tests passed`。
+用 DevEco Studio 打开本目录，等待同步完成后编译并运行。页面显示 `ArkWeb runtime ready` 后：
+
+1. 点击 `Run self-test`，预期得到 `6/6 tests passed`。
+2. 点击 `Run failure-path tests`，预期得到 `5/5 failure paths handled`。
+
+异常路径覆盖页面未加载、控制器未绑定、页面 JavaScript 抛错、返回值损坏和执行超时。页面同时显示页面加载时间及桥接调用统计。
 
 ## 切换实验变体
 
