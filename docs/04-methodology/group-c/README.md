@@ -1,36 +1,25 @@
-# 第二阶段 · 丙组 SkillVM 评估与开源成果入口
+# 第二阶段 · 丙组成果总入口
 
-> **状态：工作基线 / 待认领。** 这是丙组研究与交付的持续导航，不是已经完成的研究报告。当前的成果文件为待填写框架，乙组静态样本不等于已成功移植的 Skill。
+> **状态（2026-11-10）：C-1/C-2/C-3 已有合并的阶段成果，正在由丙组组长组织统一收口、等待成员交叉 Review；目前不预先标记为“已验收”。**
+> C-2 仅以 **V2 静态适用性与能力边界评估** 为最终研究口径。V1 已归档，不继承其工具链/端侧运行验收要求。
 
-## 从这里开始
+## 成果状态与唯一入口
 
-1. **[协作与使用指南](GUIDE.md)**：必须先读，了解如何参与同一最终成果、认领工作包、提 PR 及共同验收。
-2. **[计划、参考工作包与认领表](plan.md)**：正式交付范围、6 个可调整工作包、成果协调人/包负责人空栏、里程碑、完整验收要求。
-3. [全仓库 Git 工作流](../../05-protocols/git-workflow.md) · [乙组普查 PR #13](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/13) · [【Skill 发布仓库】openclaw-skills-for-harmony](https://github.com/nju-skills-group/openclaw-skills-for-harmony)
+| 成果 | 权威成果文件 | 当前状态与证据 | 正式验收边界 |
+| --- | --- | --- | --- |
+| **C-1** SkVM / SkCC / SkillSmith 技术机制对比 | [统一九维机制对比](research/mechanism-comparison.md) | 整合稿已合并：[PR #21](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/21)；本次修复旧模板与入口冲突；**待最终 Review** | 固定论文与源码依据可追溯，区分设计、实现与鸿蒙推断；未运行工具链须明确 |
+| **C-2** SkillVM 路线覆盖能力评估 **V2** | [唯一 V2 报告](evaluation/coverage-evaluation-v2.md)；[方法/样本](evaluation/evaluation-method-and-samples-v2.md)；[九项结果](evaluation/evaluation-results-v2.md) | 已合并：[PR #19](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/19)；九个固定样本，L1/L2/L3 各 3 项；**待最终 Review** | 六维静态评估、来源与结论边界清楚；不要求运行实验、迁移成功率或性能数值 |
+| **C-3** SkillIR 规范草案 | [规范及开放问题](ir/skill-ir-v0.md)；[九个 JSON 示例](ir/examples/skill-ir-examples-v0.json)；[一致性检查](ir/examples/verify-examples.py) | 阶段草案已合并：[PR #18](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/18)，当时已获阶段审阅；本次补登记甲组新证据；**待最终 Review** | 完成“可评审草案”，核心 IR 与 HarmonyOS 投影分离；未验证绑定保持未验证，不宣称生成器/端侧调用成功 |
+| **C-4** 正式 Skill 发布 | [对外发布仓库](https://github.com/nju-skills-group/openclaw-skills-for-harmony) | C-4A 仓库基础设施已有；**正式 Skill 仍为 0 个**，C-4B 等待乙组真实移植工程与甲组端到端调用证据 | 逐个核查来源许可、构建、功能、实际调用及三步导入；不以静态样本或模拟器自测冒充发布 |
 
-## 四项正式成果（完成状态以完整交付为准）
+## 本轮收口与 Review
 
-| 最终成果 | 唯一成果入口 | 当前状态 | 已合并内容 / 验收证据 | 下一步/依赖 |
-| --- | --- | --- | --- | --- |
-| **C-1** 技术机制对比表 | [SkVM / SkCC / SkillSmith 机制比较](research/mechanism-comparison.md) | 未完成；框架待认领 | 待 PR/证据 | 共同完成对比表并经审查；向乙组反馈结论 |
-| **C-2** 《SkillVM 覆盖率评估报告 v1.0》 | [统一评估报告](evaluation/coverage-evaluation-v1.md) | 未完成；框架待认领 | 待 PR/证据 | C-2A 评估方法与 C-2B 实验结果需合并；待甲乙组运行证据 |
-| **C-3** SkillIR 规范草案 | [统一 SkillIR 草案](ir/skill-ir-v0.md) | 未完成；框架待认领 | 待 PR/证据 | 核定语义、目标绑定及代表示例 |
-| **C-4** 开源仓库与首批 5 个 Skill | [【发布仓库】openclaw-skills-for-harmony](https://github.com/nju-skills-group/openclaw-skills-for-harmony) | **尚未验收**；创建基线时仓库空白 | 待发布仓库 PR/调用证据 | C-4A 骨架/导入工具可先做；C-4B 等乙组 Skill 与甲组目标环境 |
+- [统一收口核对清单](closeout-2026-11-10.md)说明修订范围、证据等级、开放项以及成员审阅要点。
+- [工作计划与原任务书边界](plan.md)已更新 V2 口径；[协作指南](GUIDE.md)不再将旧 V1 工具链实验作为 C-2 必要条件。
+- 完成成员交叉审阅、检查链接/一致性，并附 PR 与验证证据后，才能把 C-1/C-2/C-3 状态逐项更新为“已验收”。
 
+## 范围和来源约定
 
-## 进度与使用方式
+本仓库保存 C-1/C-2/C-3 研究依据与 C-4 交接证据。静态类别和可表示的 IR **不代表 Skill 已迁移、构建或可由小艺调用**。研究成果可独立于真实移植交付进行收口；C-4 发布仍遵循更高的端到端验收标准。
 
-- 认领前先和**同一最终成果**的其他组员确定范围、协作方式和成果协调人，并填写 [`plan.md`](plan.md) 中的两层认领表。
-- 成员可以在工作包 PR 中合并阶段性结果，但更新本页时应注明“阶段性已合并 / 未完成最终验收”，附 PR 或实验记录。
-- 所有参与者共同确认最终文档或发布结果满足 [`plan.md`](plan.md) 的完整验收标准后，成果协调人再将本表改为“已验收”，并附能核实的 PR、版本与证据。
-- 如果因甲乙组依赖而未达标，准确写“未测/阻断”和需要的输入，不采用猜测性的通过状态。
-
-## 可以直接利用的第一阶段成果
-
-- [OpenClaw Skill 生命周期源码地图](../../02-research/openclaw-skill-lifecycle-source-map.md)；[鸿蒙 Skill 接入契约 v1.0](../Group_C2/harmony-skill-contract.md)（目标调用细节仍需甲组实测确认）。
-- [Skill VM 论文笔记](../../02-research/papers/2026-chen-skillvm.md)、[SkillOpt](../../02-research/papers/2026-yang-skillopt.md)、[SkillAdaptor](../../02-research/papers/2026-yu-skilladaptor.md)、[SkillGuard](../../02-research/papers/2026-pan-skillguard-permission.md)、[Harnessing Agent Skills](../../02-research/papers/2026-xia-skill-harnessing.md)、[Gorilla](../../02-research/papers/2024-patil-gorilla-api-calling.md)。SkCC / SkillSmith 参考原论文或官方实现并固定所用版本。
-- [乙组普查 PR #13](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/13)：引用固定提交 `126d80d5507293af800e7fafe538a772b16e4f21`，包含源码静态分类候选和 L3 卡点，不是已完成移植样例。
-
-## 双仓库界限
-
-**研究仓库（本仓库）** 保存 C-1/C-2/C-3 正式成果及实验依据；仅在实际需要复现脚本时使用 `code/skill-vm/`，不要求单独自研 VM。**【发布仓库】** 仅提供经审核的 Skill、必要导入工具和面向用户的指南。C-4 验收目标是外部开发者依照 README 三步以内完成导入与实际调用；乙组真实样例和甲组运行证据不到位时，不得把占位 Skill 宣布为通过。
+相关资料：[OpenClaw 生命周期源码地图](../../02-research/openclaw-skill-lifecycle-source-map.md) · [鸿蒙接入契约草案](../Group_C2/harmony-skill-contract.md) · [乙组 PR #13](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/13)（已合并） · [全仓库 Git 工作流](../../05-protocols/git-workflow.md)

@@ -309,3 +309,24 @@ A 于 2026-10-31 完成九个示例的字段交叉验证：可表达性成立，
 | 2026-10-31 | 成员 A 主笔 §3.1–3.5 正式字段定义并交叉验证九个示例：`source.invocation_policy` 与 `effects` 词汇表为新增定义，`required` 占位值统一为 `"pending-contract"` | id/source/scope、task/invocation、dependencies（门控 vs 推荐）、effects/authorization、assessment/gaps/test_plan/evidence | 九个示例重跑 verify-examples.py 通过；仅静态核对，仍无运行证据 |
 
 最终验收仍需：成员 A 合并平台无关定义；A/B 共同复核全文及示例；标明甲组未验证范围和解除证据；协调人确认统一术语、来源和限制。至少一名其他成员 Review，通过后按研究仓库流程合并。当前只能提交**阶段性 Draft PR**，不能将 C-3 或 C-4 状态更新为已验收。
+
+## 6. 收口时新增的目标平台旁证（2026-11-10，待成员复核）
+
+本节只更新证据状态的**解释范围**，不回写 2026-10-31 固定普查快照，不改变九个候选 IR 的核心 Schema 或其 `pending-verification` 状态。原 §2 的“原平台和鸿蒙均未运行”指**本草案九个 IR 样例在其固定调查窗口内的运行状态**，不代表项目后来没有开展独立的 OpenClaw 基线或 HarmonyOS 实验。
+
+### 6.1 已取得的结构/工程旁证（并非九个 IR 实例的目标验证）
+
+- 甲组此前已合并的 [API 26 运行实验 PR #25](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/pull/25) 含实际构建和真机测试数据，并报告 `.ets` 作为注册入口的约束，以及运行后续 JS helper 的工程方向。这不能独立证明本稿 `srcEntries` 具体路径或 Q1–Q7 的全部字段均正确。
+- 甲组 [2026-11-10 实验 B（尚未合并的分支）](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/blob/feature/group-jia-experiment-b/code/experiments/group-jia-experiment-b/reports/summary.md) 使用统一 `.ets` Skill 入口，在 HarmonyOS 7/API 26 **模拟器应用内**分别执行 ETS、TypeScript、JavaScript 和 ArkWeb 页面 JavaScript 业务代码，报告 B0–B3 各 `6/6` 正常用例通过、B3 `5/5` 异常用例通过。
+- [实验 B Demo](https://github.com/nju-skills-group/nju-openclaw-harmony-skill/blob/feature/group-jia-experiment-b/code/experiments/group-jia-experiment-b/demo/README.md) 说明 B2 普通 JS 需要 `.d.ts` 类型声明；B3 依赖页面已创建和加载完成。**应用内自测不是系统小艺/Agent 的端到端 Skill 调度**，也不证明 L1 的提示执行器、资源及多轮模型推理已经接通。
+
+### 6.2 Q1–Q7 的审查边界
+
+| 问题 | 本次可更新的认知 | 仍待验证事项 |
+| --- | --- | --- |
+| Q1 入口与相对路径 | API 26 的目标案例使用 `.ets` 注册入口，后置 TS/JS 业务模块有模拟器应用内证据 | 对本草案每个投影的 `srcEntries` 相对基准、真实系统注册及回调仍需单独核查 |
+| Q2 注册生效范围 | 有应用工程和模拟器自测旁证 | 第三方设备、系统分发、预置/签名及实际触发条件 |
+| Q3 L1 执行器 | 未取得目标 L1 真实闭环证据 | 模型/Agent 消费 SKILL.md、上下文、资源、追问和真实结构化结果 |
+| Q4–Q7 参数、回包、权限与业务工具 | 实验 B 可作为具体 JSON 业务和桥接错误处理设计参考 | 本稿九个 IR 投影对应的系统调用参数、返回、权限、HTTP/文件/凭据语义，均不可由实验 B 一次性宣告通过 |
+
+因此，`examples/skill-ir-examples-v0.json` 的 `binding.status`、`srcEntries` 和验证状态仍**保持候选/未验证**。C-3 的交付目标是**可评审的规范草案**，并不要求生成器或九份鸿蒙 Skill 成功运行。待成员确认修订和对应证据等级后，方可标记 C-3 文档成果已验收；这与逐个目标绑定是否运行通过是两种不同的状态。
