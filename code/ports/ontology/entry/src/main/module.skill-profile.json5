@@ -1,0 +1,9 @@
+{
+  "name": "nju-ontology",
+  "abilityName": "EntryAbility",
+  "srcEntries": [
+    "../../skills/nju-ontology/scripts/OntologySkill.ets"
+  ],
+  "version": "0.1.0"
+}
+

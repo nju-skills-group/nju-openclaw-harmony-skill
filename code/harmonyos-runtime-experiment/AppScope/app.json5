@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.example.myapplication",
+    "bundleName": "com.nju.openclaw.e3ontology",
     "vendor": "example",
     "versionCode": 1000000,
     "versionName": "1.0.0",

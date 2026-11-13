@@ -2,4 +2,5 @@
 local.properties
 entry/build/
 entry/oh_modules/
+oh_modules/
 *.hap
