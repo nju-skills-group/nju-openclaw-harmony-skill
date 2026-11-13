@@ -1,0 +1,210 @@
+[
+  {
+    "path": "code/ports/weather/.gitignore",
+    "sha256": "e20570c9c986bddc9669cfd9bba862209baf7693f78c0c4f7b86759c4650c2ec"
+  },
+  {
+    "path": "code/ports/weather/AppScope/app.json5",
+    "sha256": "d9b1ed2f1de7c3133f17ee8dcbfffa08d4cae70c22588b7facf004a2ac75922a"
+  },
+  {
+    "path": "code/ports/weather/AppScope/resources/base/element/string.json",
+    "sha256": "e32d8e780924441088c88dbf3e66820f684a7aba9519ace5ab613880abe958f7"
+  },
+  {
+    "path": "code/ports/weather/AppScope/resources/base/media/background.png",
+    "sha256": "497edeafc51af043c73e72ee8c4fbac4663357ef1ba275c0289f31a366b26239"
+  },
+  {
+    "path": "code/ports/weather/AppScope/resources/base/media/foreground.png",
+    "sha256": "61a796d5a9fc5853e9cd0f1e3e730896a6bcb94a34a37765c4d1959bf64dfa43"
+  },
+  {
+    "path": "code/ports/weather/AppScope/resources/base/media/layered_image.json",
+    "sha256": "3d18dcd7ed9e7d3d2c54c20cb80a44eb4877c661131c68a46e20b6e19d0bb476"
+  },
+  {
+    "path": "code/ports/weather/build-profile.example.json5",
+    "sha256": "cb961c05f7b6a3dc4744d91983e5806f820fd812da3444e7b764c05876d618d8"
+  },
+  {
+    "path": "code/ports/weather/build.ps1",
+    "sha256": "e60f55287d325cdcf756e7bf4a11b2d3791ba899bc372c80b52227d07a8d700a"
+  },
+  {
+    "path": "code/ports/weather/code-linter.json5",
+    "sha256": "f557c3bcdb40c64c986bffed9628310cc7a79fb7d2642c1c8b8d265fd92e25ad"
+  },
+  {
+    "path": "code/ports/weather/entry/build-profile.json5",
+    "sha256": "7727b3a9bf7e522930cb1ec259c0bd26c948d09d37d0d724aab23f5f499a4004"
+  },
+  {
+    "path": "code/ports/weather/entry/hvigorfile.ts",
+    "sha256": "67cc02aa9ccf2f3a2c58e7fee4b6e3a00ffb6128c11f76b7fec5f00ad2d63581"
+  },
+  {
+    "path": "code/ports/weather/entry/obfuscation-rules.txt",
+    "sha256": "1c127360e10209c7fe0a43e3edf9504c34ad33a75882904254d4acc2b33b6cc5"
+  },
+  {
+    "path": "code/ports/weather/entry/oh-package.json5",
+    "sha256": "c3ab4a8122311d19a890ceb7d6717fd06e1e2f6ab496aa1fc61e98a95a50a7cc"
+  },
+  {
+    "path": "code/ports/weather/entry/skills/harmonyos-weather/scripts/WeatherService.ets",
+    "sha256": "62db0e30a73e5cbeccacc59b59430e525e45df5da13d12e2172a9fe0685513d4"
+  },
+  {
+    "path": "code/ports/weather/entry/skills/harmonyos-weather/scripts/WeatherSkill.ets",
+    "sha256": "50df0d52566f10b416781b4f3139f1b497e061e270b72b3f8aba5bd8242aaace"
+  },
+  {
+    "path": "code/ports/weather/entry/skills/harmonyos-weather/SKILL.md",
+    "sha256": "e6670b31fcb8353dcc32224cfe40b42ede5a11dca3a08417e9e7829d1b12b2dc"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/ets/entryability/EntryAbility.ets",
+    "sha256": "31bb83f4657df2ce23c49e484eadb62322304e62cd8a6943635af504108cda86"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/ets/entrybackupability/EntryBackupAbility.ets",
+    "sha256": "e005230e90b4751995be7cfbbaca8efe9c353ab3ced3f6584d9ab19894cd0906"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/ets/pages/Index.ets",
+    "sha256": "9b02855c79f0e48f8f48e153db8b06c92dcd51d2498d0b90fb2014518f05b6f7"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/module.json5",
+    "sha256": "3bc2cd6c84d11bf972b687dc1eae8820da94b626b7b653bbc9da91402c0cef94"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/element/color.json",
+    "sha256": "4e028f6e8a847f8a98cfee6d37309def0e7e2e7290041d89e22ba3ac38a802b8"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/element/float.json",
+    "sha256": "8db02f7a08f7b7b73d6eb95b09a6643463d10258b757901e70f255de0a2c83ef"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/element/string.json",
+    "sha256": "b725d01c371eb2326a8e57b141effdc54c2e175579dcaafb14c2e4417dc740c1"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/media/background.png",
+    "sha256": "497edeafc51af043c73e72ee8c4fbac4663357ef1ba275c0289f31a366b26239"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/media/foreground.png",
+    "sha256": "57e549283f255505a649042f36a1d6793c307a69a94c9fa7e27a38af38ddbe8c"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/media/layered_image.json",
+    "sha256": "3d18dcd7ed9e7d3d2c54c20cb80a44eb4877c661131c68a46e20b6e19d0bb476"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/media/startIcon.png",
+    "sha256": "a314ff05afe8a62028424f29ef2cfd888c13dfab136af7ec53de585848671cbb"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/profile/backup_config.json",
+    "sha256": "467a97321341fba6872a6c79a25d89b16eded554c94dae3d4a2faa0d99e59358"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/base/profile/main_pages.json",
+    "sha256": "f21984fb1d5096f0db41314da0bb94c573e7ad018e5afae3044f8d5ff71b0bfc"
+  },
+  {
+    "path": "code/ports/weather/entry/src/main/resources/dark/element/color.json",
+    "sha256": "f26f3f1e47165ae79ebe6f295a3e12593f01e90079d03fc7ff61e47ce0b366a6"
+  },
+  {
+    "path": "code/ports/weather/entry/src/mock/mock-config.json5",
+    "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+  },
+  {
+    "path": "code/ports/weather/evidence/build-summary.json",
+    "sha256": "0e0dd47a942d1800be40370e0c03c9a99144e1ef7c6ea74fe4720bc7211919aa"
+  },
+  {
+    "path": "code/ports/weather/evidence/current-status.json",
+    "sha256": "cc793aa323473fda4613393562c010e7b5c3e4fbcf2d2c88a4d88ef7c7d3181c"
+  },
+  {
+    "path": "code/ports/weather/evidence/README.md",
+    "sha256": "303d17bd49ed826138b5ccb94589d504b8a9a8d076467cc517a6aff2df3e2d42"
+  },
+  {
+    "path": "code/ports/weather/evidence/runtime-summary.json",
+    "sha256": "b2ba9bc9a7f337b3091237f46d0f6112f802e936beb07c8defeba0806d9429a2"
+  },
+  {
+    "path": "code/ports/weather/evidence/signing-new-identity.txt",
+    "sha256": "23948d94bbdac3aec997bcced85ff20fa556a0ad3eb25f9493f55e571971baab"
+  },
+  {
+    "path": "code/ports/weather/evidence/ui-current.json",
+    "sha256": "224ad8cfe8af7e05f633782b95bea94a06be3b3d1afbe14bb73f1c626e743cad"
+  },
+  {
+    "path": "code/ports/weather/evidence/ui-empty-city.json",
+    "sha256": "ac5faacf2f3c1f5cfc63b21a8cb3c6f485e5f12f83e42c159f157ffcb246af5b"
+  },
+  {
+    "path": "code/ports/weather/evidence/ui-first-live-query.json",
+    "sha256": "390de7af7b8d5d430834f77bf86745341b5e6e55734454318d0a45b8a6d47684"
+  },
+  {
+    "path": "code/ports/weather/evidence/work-install-blocker.md",
+    "sha256": "57d77abeb5997b1d963e5e2722eaed5efd3d25bc646d11b6850b1a208c6eaa19"
+  },
+  {
+    "path": "code/ports/weather/hvigor/hvigor-config.json5",
+    "sha256": "e9c6675d4c479e3ac3cd3d36060892e93d53acb2252e3936ce145024bcd04ac2"
+  },
+  {
+    "path": "code/ports/weather/hvigorfile.ts",
+    "sha256": "383227660c07fa9335caf3e65b8975c65fcbcc8b910ba84d0bc67b22afcd56cd"
+  },
+  {
+    "path": "code/ports/weather/LICENSE",
+    "sha256": "f0fe1eb72ae737d1629a01c65fec6386f2f934be894c0470996b42c02cbfdd3c"
+  },
+  {
+    "path": "code/ports/weather/oh-package-lock.json5",
+    "sha256": "46e17b4ecdbfa588730dbe6ba96bef10b8e28e7b9c4d3c772b1f28092970ba67"
+  },
+  {
+    "path": "code/ports/weather/oh-package.json5",
+    "sha256": "150f97faac4a58c9a2b9dea8ebfcc88da1638f40eb533c61a8f23808cc9556d7"
+  },
+  {
+    "path": "code/ports/weather/port-record.md",
+    "sha256": "177bbda734ca35e0ffc164c7f548a9266dbeab8ae6417cc913f3287bd2ffd476"
+  },
+  {
+    "path": "code/ports/weather/README.md",
+    "sha256": "91254aa82c0c35493b2f7c06ae0b6aaff21af0dafdd126cdc17dc0a348dd26a6"
+  },
+  {
+    "path": "code/ports/weather/source/weather/LICENSE",
+    "sha256": "9efd316ecf1c4c60f6fd5d26433142fff2b6794d7d328e9bc6179b29bf9c82a4"
+  },
+  {
+    "path": "code/ports/weather/source/weather/SKILL.md",
+    "sha256": "62ab4821aa873949d1c1091836be1659a42b32caadce4bd145f5505a1ceaeec1"
+  },
+  {
+    "path": "docs/04-methodology/group-b/harness/weather-call-chain.md",
+    "sha256": "369807d589885a112b5eb7209dc98a84fa121dca7ce738890b6452cd9780f93c"
+  },
+  {
+    "path": "docs/04-methodology/group-b/harness/weather-delivery-report.md",
+    "sha256": "83ff9059242ee3b84414d6da7a7693cd6dbfbe4ba402724f65f3775dd1a031b3"
+  },
+  {
+    "path": "docs/04-methodology/group-b/harness/weather-summary.md",
+    "sha256": "43fb281ebc6caece729ee2b96a8698fef358409a3c8eb923fa3f4ba69b79c131"
+  }
+]

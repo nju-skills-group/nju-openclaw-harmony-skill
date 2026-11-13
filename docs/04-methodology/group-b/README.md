@@ -84,3 +84,15 @@ E组提交涉及6个实际测试样本，覆盖提示执行、网络服务、脚
 7. 上传前检查密钥、账号及个人信息，保留必要的脱敏说明；文件改名后同步修复引用。
 
 本入口随成果合并情况更新。标注“已完成”的内容应提供对应文件或证据入口。
+
+## Weather 移植阶段交付（2026-11-13）
+
+执行者 ue-fn（E2）。端到端验收未通过，保留应用侧部分成果；目标客户端接入及 Harness 源码级分析尚未完成。具体实现、证据来源和客户端辨识修正分别列明。
+
+- [移植工程与当前状态](../../../code/ports/weather/README.md)
+- [移植对照记录](../../../code/ports/weather/port-record.md)
+- [一页汇报摘要](harness/weather-summary.md)
+- [交付报告](harness/weather-delivery-report.md)
+- [调用链与证据边界](harness/weather-call-chain.md)
+
+以上材料随本 PR 待审阅，不将旧宿主业务结果或静态扫描通过计作完整鸿蒙 Skill 成功。

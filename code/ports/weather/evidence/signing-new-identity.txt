@@ -1,0 +1,4 @@
+2026-11-13: build.ps1 completed successfully; SignHap executed successfully.
+Signed HAP module.json bundleName verified: io.github.uefn.weatherport
+SHA256: 97fe0dc176609b47837216a6eb2bbbbd3db6ef3a46270c2120d93329357eb2d7
+Device deployment pending: hdc list targets returned no connected targets.

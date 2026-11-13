@@ -1,0 +1,42 @@
+[
+  {
+    "type": "Text",
+    "text": "天气查询",
+    "bounds": "[566,275][679,308]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  },
+  {
+    "type": "Text",
+    "text": "天气查询",
+    "bounds": "[1335,394][1546,456]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  },
+  {
+    "type": "TextInput",
+    "text": "",
+    "bounds": "[545,491][2335,561]",
+    "focused": "true",
+    "enabled": "true",
+    "visible": "true"
+  },
+  {
+    "type": "Button",
+    "text": "查询天气",
+    "bounds": "[1356,596][1525,666]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  },
+  {
+    "type": "Text",
+    "text": "请输入查询地点。",
+    "bounds": "[545,1068][2335,1109]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  }
+]
