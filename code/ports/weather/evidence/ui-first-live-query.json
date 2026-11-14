@@ -1,0 +1,42 @@
+[
+  {
+    "type": "Text",
+    "text": "天气查询",
+    "bounds": "[566,275][679,308]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  },
+  {
+    "type": "Text",
+    "text": "天气查询",
+    "bounds": "[1335,394][1546,456]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  },
+  {
+    "type": "TextInput",
+    "text": "Shanghai",
+    "bounds": "[545,491][2335,561]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  },
+  {
+    "type": "Button",
+    "text": "查询天气",
+    "bounds": "[1356,596][1525,666]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  },
+  {
+    "type": "Text",
+    "text": "Yangpu, Shanghai, China\nPatchy rain nearby  19°C\n体感 20°C  湿度 93%\n风速 4 km/h  降水 0.0 mm\n\n2026-11-13  15–19°C\n2026-11-14  16–18°C\n2026-11-15  14–19°C\n\n查询时间：2026-11-13T09:59:42.323Z\n来源：https://wttr.in/Shanghai?format=j2",
+    "bounds": "[545,863][2335,1314]",
+    "focused": "false",
+    "enabled": "true",
+    "visible": "true"
+  }
+]

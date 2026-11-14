@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-13",
+  "bundleName": "io.github.uefn.weatherport",
+  "skillProfiles": [
+    {
+      "abilityName": "EntryAbility",
+      "name": "harmonyos-weather",
+      "srcEntries": [
+        "@normalized:N&&&entry/skills/harmonyos-weather/scripts/WeatherSkill&"
+      ],
+      "version": "1.0.0"
+    }
+  ],
+  "signedHapSha256": "97fe0dc176609b47837216a6eb2bbbbd3db6ef3a46270c2120d93329357eb2d7",
+  "metadataVerification": "agent inspected signed HAP",
+  "buildAndSignature": "passed; SignHap executed",
+  "formalInstallAndLaunch": {
+    "status": "user-reported success",
+    "rawCommandOutputCaptured": false
+  },
+  "formalLiveWeather": "pending evidence",
+  "historicalRuntimeBundle": "org.example.echosmoke",
+  "xiaoyiDispatch": "not demonstrated; test entry absent in user environment",
+  "workZipInstallation": "attempts occurred in user-described Xiaoyi work mode; paid target Work not available; no installation succeeded",
+  "schemaRootCause": "unproven",
+  "platformExportMatchesHap": "not independently verified",
+  "finalAcceptance": "not passed; delivered as unsuccessful end-to-end integration case",
+  "clientIdentityCorrection": "Previous assumptions that the attempted client was target Xiaoyi Work are withdrawn.",
+  "stopReason": "user decided to stop integration attempts and prepare delivery"
+}

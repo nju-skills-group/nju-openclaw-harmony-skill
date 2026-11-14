@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-13",
+  "environment": {
+    "device": "MNTXM-24B",
+    "api": 26,
+    "execution": "physical HarmonyOS PC"
+  },
+  "install": "install bundle successfully",
+  "launch": "start ability successfully",
+  "realServiceCase": {
+    "input": "Shanghai",
+    "actualOutput": "Yangpu, Shanghai, China\nPatchy rain nearby  19°C\n体感 20°C  湿度 93%\n风速 4 km/h  降水 0.0 mm\n\n2026-11-13  15–19°C\n2026-11-14  16–18°C\n2026-11-15  14–19°C\n\n查询时间：2026-11-13T09:59:42.323Z\n来源：https://wttr.in/Shanghai?format=j2",
+    "source": "https://wttr.in/Shanghai?format=j2",
+    "status": "passed",
+    "evidence": "ui-first-live-query.json"
+  },
+  "emptyCityCase": {
+    "input": "",
+    "actual": "请输入查询地点。",
+    "status": "passed",
+    "evidence": "ui-empty-city.json"
+  },
+  "notVerified": [
+    "fallback-domain runtime",
+    "network-failure runtime",
+    "system Skill dispatch and callback"
+  ]
+}
