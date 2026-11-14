@@ -1,0 +1,15 @@
+CST 2026-11-14 04:26:40.677 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_skill_loaded id=5f6490ab-348a-4679-a69c-d81e1ce1de96 weather-current
+CST 2026-11-14 04:26:40.677 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_skill_matched id=5f6490ab-348a-4679-a69c-d81e1ce1de96 get_current_weather
+CST 2026-11-14 04:26:40.678 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_tool_start id=5f6490ab-348a-4679-a69c-d81e1ce1de96 city=Nanjing timeout_ms=10000
+CST 2026-11-14 04:26:42.583 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_tool_http id=5f6490ab-348a-4679-a69c-d81e1ce1de96 200
+CST 2026-11-14 04:26:42.588 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_agent_result id=5f6490ab-348a-4679-a69c-d81e1ce1de96 {"status":"success","location":"Nanjing","temperatureC":14,"condition":"Light drizzle","observationTime":"08:10 PM"}
+CST 2026-11-14 04:27:52.048 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_skill_loaded id=580a3ff1-675a-4aa0-a643-8b6ad24804f2 weather-current
+CST 2026-11-14 04:27:52.048 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_skill_matched id=580a3ff1-675a-4aa0-a643-8b6ad24804f2 get_current_weather
+CST 2026-11-14 04:27:52.048 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_tool_start id=580a3ff1-675a-4aa0-a643-8b6ad24804f2 city=Nanjing timeout_ms=1
+CST 2026-11-14 04:27:52.058 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_tool_error id=580a3ff1-675a-4aa0-a643-8b6ad24804f2 2300028
+CST 2026-11-14 04:27:52.059 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_agent_result id=580a3ff1-675a-4aa0-a643-8b6ad24804f2 {"status":"failed","reason":"查询超时。"}
+CST 2026-11-14 04:27:57.686 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_skill_disabled id=36d03864-1e06-4cea-99ec-3ef3c6044b52
+CST 2026-11-14 04:27:57.686 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_agent_result id=36d03864-1e06-4cea-99ec-3ef3c6044b52 {"status":"disabled","reason":"天气 Skill 已禁用。"}
+CST 2026-11-14 04:28:39.953 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_skill_loaded id=8a0985a7-f186-4300-bfb8-0dd3193b0aff weather-current
+CST 2026-11-14 04:28:39.953 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_skill_matched id=8a0985a7-f186-4300-bfb8-0dd3193b0aff get_current_weather
+CST 2026-11-14 04:28:39.953 45910 45910 I A0C304/com.skilllab.c34agent089e5768/C34OwnAgent: weather_agent_result id=8a0985a7-f186-4300-bfb8-0dd3193b0aff {"status":"clarification","reason":"请提供要查询的城市。"}
