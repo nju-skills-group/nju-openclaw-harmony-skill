@@ -62,6 +62,13 @@ cd openclaw-harmony-skill
 
 - [乙组 Skill 普查 v1：内置全量、生态代表样本与公开目录初筛](docs/04-methodology/group-b/skill-survey/README.md)
 
+## 甲组阶段成果
+
+- [甲组成果报告：鸿蒙智能体与 Skill 机制](docs/experiment/group-a-results-report-2026-11-14.md)
+- [G1-M1：自建 Agent 框架交付总结](docs/experiment/g1-m1-delivery-summary-2026-11-08.md)
+- [实验 C：调用路径个人复测](docs/experiment/experiment-c-independent-report-2026-11-14.md)
+- [OpenClaw Skill 迁移到鸿蒙：格式、选型与验收](docs/05-protocols/openclaw-to-harmonyos-skill-porting-guide.md)
+
 ## 五、协作与沟通
 
 - **代码与文档**：全部沉淀在本仓库（GitHub）。
