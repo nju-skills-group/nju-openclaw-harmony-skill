@@ -11,3 +11,5 @@ code/
 └── skill-vm/    # 方向B：Skill VM 原型（IR schema、runtime、adapters）
     └── README.md    # 架构说明 + 运行说明
 ```
+
+实验记录：[应用 Skill 入口文件格式 A0/A1/A2](experiments/harmonyos-skill-entry-format/README.md)。
