@@ -1,0 +1,6 @@
+2026-11-12 13:44:27.834 31539 31539 I A00F00/om.huawei.hmos.vassistant:free/HwVA_AppOperationGroup: queryOpenPackageName: {"packageName":"com.huawei.hmos.calculator","appName":"计算器","archType":"TaiChuArch","platform":""}
+2026-11-12 13:44:27.965 31539 31539 I A00F00/om.huawei.hmos.vassistant:free/HwVA_[ToolUtils]: openAppHomePage bundleName=com.huawei.hmos.calculator installSourcePackageName=
+2026-11-12 13:44:27.967 31539 31700 I C01336/om.huawei.hmos.vassistant:free/AMS: [AMC181]StartAbility ability:com.huawei.hmos.calculator/com.huawei.hmos.calculator.CalculatorAbility, userId:-1, appCloneIndex:0, requestCode:-1, specifiedFullTokenId:0
+2026-11-12 13:44:27.992  1941  3055 I C01336/foundation/AMS: [a92aba523bec22b 2274f9d 6a852c][ABR319]LoadLifecycle: abilityName:com.huawei.hmos.calculator.CalculatorAbility
+2026-11-12 13:44:28.109  1941 30027 I C01336/foundation/AMS: [ABR428]ForegroundLifecycle com.huawei.hmos.calculator.CalculatorAbility
+2026-11-12 13:44:28.133  6755  7193 I C04207/com.ohos.sceneboard/WMSFocus: NotifyFocusStatus: name: com.huawei.hmos.calculator/com.huawei.hmos.calculator.CalculatorAbility/calculator0, id: 105, isFocused: 1

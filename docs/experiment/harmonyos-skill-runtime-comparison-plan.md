@@ -98,14 +98,14 @@
 |---|---|---|
 | C1 | 小艺 → 官方原生 Skill | 录屏、设备/系统信息、匹配证据、入口日志、结果 |
 | C2 | 小艺 → 自定义 Skill | 同一设备和版本下的用户输入、匹配、执行及返回证据 |
-| C3 | 自建 Agent → 意图匹配 → Skill/Ability | `AgentExtensionAbility` 回调日志、意图结果、Skill 调用点、Ability 调用点和回传结果 |
+| C3a | 自建 Agent → 应用内处理器／Ability | 本地匹配、函数执行或 Ability 回传、界面结果及未匹配负例 |
+| C3b | 自建 Agent → 独立 Skill 包 → 注册工具 | 技能加载、匹配、参数映射、真实工具执行、回包、禁用技能后的对照 |
 | C4 | 端侧 A2A | Agent 间连接、认证、消息往返、设备和组网信息 |
 | C5 | 云侧 A2A | 服务地址、认证、请求/响应、网络和服务端条件 |
 
-自建 Agent 需分别记录两种验证：
+自建 Agent 的应用内匹配及技能加载归 C3。端侧 `AgentExtensionAbility` 的连接、认证及消息回调归 C4。第三方 App 主动调度鸿蒙注册 Skill 的公开执行接口仍待确认，作为平台能力调研项。
 
-- **组件验证：**`AgentExtensionAbility` 能否在目标工程构建、启动和接收连接/数据回调。
-- **调度验证：**意图由哪个组件匹配，匹配结果如何选择 Skill，Skill 如何调用 Ability，以及结果通过何种方式返回。
+C3b 的天气技能同时用于[三路线移植对照](weather-three-route-comparison.md)。原版、平台 Skill、鸿蒙应用 Skill 和自建 Agent 分别记录实际执行结果。
 
 不能因为组件构建通过就得出“系统已经完成意图匹配和 Skill 调度”。端侧 A2A 与云侧 A2A 需要分别记录，不能合并性能数据或机制结论。云 A2A 的服务地址和鉴权配置可参考[小艺开放平台 A2A 基础配置](https://developer.huawei.com/consumer/cn/doc/doccenter-celia/a2a-basic-configuration-0000002746111014)；两类 A2A 的方向见[Harmony Intelligence 开放能力介绍](https://developer.huawei.com/consumer/cn/harmonyos-ai)。
 

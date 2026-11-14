@@ -1,0 +1,218 @@
+{
+  "date": "2026-11-12",
+  "device": "MateBook 14 MNTXM-24B",
+  "api": 26,
+  "softwareVersion": "MNT-W72C 7.0.0.111(SP12C00E103R12P2)",
+  "sourceCommit": "c2cbc3aa3019b241cc81eec15ca7e26d97383735",
+  "hap": {
+    "bundle": "com.yaorz26.g1m1.skillagent.c3test1112",
+    "version": "1.0.0",
+    "bytes": 162311,
+    "sha256": "4A9843F967BCA099F527623040BE155D39C65BD50CB8F8B2CE3A54BA2A5ABA8F",
+    "agentExtension": "AgentExtensionAbility"
+  },
+  "deployment": {
+    "install": "install bundle successfully",
+    "entryAbility": "start ability successfully"
+  },
+  "cases": [
+    {
+      "case": "echo",
+      "input": "回显 你好，鸿蒙",
+      "passed": true,
+      "result": {
+        "requestId": "ui-1794464430029-1",
+        "skillId": "g1-echo",
+        "status": "success",
+        "data": {
+          "text": "你好，鸿蒙"
+        },
+        "errCode": "",
+        "errMsg": "",
+        "executionPath": "in-app"
+      },
+      "trace": [
+        {
+          "requestId": "ui-1794464430029-1",
+          "stage": "request_received",
+          "skillId": "",
+          "executionPath": "in-app",
+          "timestampMs": 1794464430029,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464430029-1",
+          "stage": "intent_matched",
+          "skillId": "g1-echo",
+          "executionPath": "in-app",
+          "timestampMs": 1794464430029,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464430029-1",
+          "stage": "skill_started",
+          "skillId": "g1-echo",
+          "executionPath": "in-app",
+          "timestampMs": 1794464430029,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464430029-1",
+          "stage": "skill_finished",
+          "skillId": "g1-echo",
+          "executionPath": "in-app",
+          "timestampMs": 1794464430030,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464430029-1",
+          "stage": "response_returned",
+          "skillId": "g1-echo",
+          "executionPath": "in-app",
+          "timestampMs": 1794464430030,
+          "errCode": ""
+        }
+      ]
+    },
+    {
+      "case": "length",
+      "input": "长度 你好ABC",
+      "passed": true,
+      "result": {
+        "requestId": "ui-1794464435553-2",
+        "skillId": "g1-text-length",
+        "status": "success",
+        "data": {
+          "text": "你好ABC",
+          "length": 5,
+          "unit": "utf16-code-unit"
+        },
+        "errCode": "",
+        "errMsg": "",
+        "executionPath": "in-app"
+      },
+      "trace": [
+        {
+          "requestId": "ui-1794464435553-2",
+          "stage": "request_received",
+          "skillId": "",
+          "executionPath": "in-app",
+          "timestampMs": 1794464435553,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464435553-2",
+          "stage": "intent_matched",
+          "skillId": "g1-text-length",
+          "executionPath": "in-app",
+          "timestampMs": 1794464435553,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464435553-2",
+          "stage": "skill_started",
+          "skillId": "g1-text-length",
+          "executionPath": "in-app",
+          "timestampMs": 1794464435553,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464435553-2",
+          "stage": "skill_finished",
+          "skillId": "g1-text-length",
+          "executionPath": "in-app",
+          "timestampMs": 1794464435554,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464435553-2",
+          "stage": "response_returned",
+          "skillId": "g1-text-length",
+          "executionPath": "in-app",
+          "timestampMs": 1794464435554,
+          "errCode": ""
+        }
+      ]
+    },
+    {
+      "case": "unmatched",
+      "input": "查天气",
+      "passed": true,
+      "result": {
+        "requestId": "ui-1794464440732-3",
+        "skillId": "",
+        "status": "failed",
+        "data": {},
+        "errCode": "ERR_NO_SKILL",
+        "errMsg": "支持：回显 文本；长度 文本",
+        "executionPath": "in-app"
+      },
+      "trace": [
+        {
+          "requestId": "ui-1794464440732-3",
+          "stage": "request_received",
+          "skillId": "",
+          "executionPath": "in-app",
+          "timestampMs": 1794464440732,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464440732-3",
+          "stage": "intent_matched",
+          "skillId": "",
+          "executionPath": "in-app",
+          "timestampMs": 1794464440732,
+          "errCode": "ERR_NO_SKILL"
+        },
+        {
+          "requestId": "ui-1794464440732-3",
+          "stage": "response_returned",
+          "skillId": "",
+          "executionPath": "in-app",
+          "timestampMs": 1794464440732,
+          "errCode": "ERR_NO_SKILL"
+        }
+      ]
+    },
+    {
+      "case": "missing-argument",
+      "input": "回显",
+      "passed": true,
+      "result": {
+        "requestId": "ui-1794464447904-4",
+        "skillId": "g1-echo",
+        "status": "failed",
+        "data": {},
+        "errCode": "ERR_INVALID_PARAMS",
+        "errMsg": "文本长度应为 1–1024 个 UTF-16 码元",
+        "executionPath": "in-app"
+      },
+      "trace": [
+        {
+          "requestId": "ui-1794464447904-4",
+          "stage": "request_received",
+          "skillId": "",
+          "executionPath": "in-app",
+          "timestampMs": 1794464447904,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464447904-4",
+          "stage": "intent_matched",
+          "skillId": "g1-echo",
+          "executionPath": "in-app",
+          "timestampMs": 1794464447904,
+          "errCode": ""
+        },
+        {
+          "requestId": "ui-1794464447904-4",
+          "stage": "response_returned",
+          "skillId": "g1-echo",
+          "executionPath": "in-app",
+          "timestampMs": 1794464447904,
+          "errCode": "ERR_INVALID_PARAMS"
+        }
+      ]
+    }
+  ]
+}

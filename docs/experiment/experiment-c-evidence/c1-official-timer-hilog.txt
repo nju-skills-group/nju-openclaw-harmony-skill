@@ -1,0 +1,6 @@
+2026-11-12 14:33:07.639  6930  6930 I A06666/.huawei.hmos.aidispatchservice/AIDispatch_66006300: DefaultIntentExecutor:executeIntent called::bundleName=com.huawei.hmos.clock, executeMode=foreground, intentName=CreateTimer
+2026-11-12 14:33:07.684  6930  6930 I A06666/.huawei.hmos.aidispatchservice/AIDispatch_66006300: IntentProfileUtil:getProfileIntentParam::UiAbility Type moduleName=pc, abilityName=com.huawei.hmos.clock.phone
+2026-11-12 14:33:07.686  1941  2694 I C01323/foundation/Intent: [ABMS15026]execute insight intent, bundleName: com.huawei.hmos.clock, moduleName: pc, intentName: CreateTimer, intentId:2, openLinkExecuteFlag: 0, executeMode: 0, userId: -1, isDistributed: 0
+2026-11-12 14:33:07.926  1941  2691 I C01336/foundation/AMS: [ABMS8585]Lifecycle: ability:/com.huawei.hmos.clock/pc/com.huawei.hmos.clock.phone
+2026-11-12 14:33:07.927  6930  6930 I A06666/.huawei.hmos.aidispatchservice/AIDispatch_66006300: DefaultIntentExecutor:callAms success, com.huawei.hmos.clock code: 0
+2026-11-12 14:33:08.412 60241 60241 W A066EE/com.huawei.hmos.clock/[Clock]: tag: TimerService --> onRequest, want is: {"parameters":{"alarmAlertTime":22999,"serviceType":"Start"}} [selected fields]

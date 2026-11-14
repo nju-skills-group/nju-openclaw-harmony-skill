@@ -1,0 +1,40 @@
+{
+  "agentCards": [
+    {
+      "agentId": "c34-receipt-089e5768",
+      "name": "个人回执智能体",
+      "description": "为实验测试码生成随机回执",
+      "version": "1.0.0",
+      "defaultInputModes": [
+        "text/plain"
+      ],
+      "defaultOutputModes": [
+        "text/plain"
+      ],
+      "skills": [
+        {
+          "id": "issue-lab-receipt",
+          "name": "生成回执",
+          "description": "返回测试码和随机回执",
+          "tags": [
+            "回执"
+          ],
+          "examples": [
+            "生成回执 C4-DEMO-01"
+          ]
+        }
+      ],
+      "category": "productivity",
+      "iconUrl": "$media:app_icon",
+      "appInfo": {
+        "bundleName": "com.skilllab.c34agent089e5768",
+        "moduleName": "entry",
+        "abilityName": "LabAgentExtension",
+        "deviceTypes": [
+          "phone",
+          "tablet"
+        ]
+      }
+    }
+  ]
+}

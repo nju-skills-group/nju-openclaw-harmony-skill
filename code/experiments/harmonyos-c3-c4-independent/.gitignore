@@ -1,0 +1,6 @@
+.hvigor/
+.idea/
+oh_modules/
+local.properties
+# DevEco writes personal signing material references and passwords here.
+/build-profile.json5
