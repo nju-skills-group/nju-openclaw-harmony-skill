@@ -18,12 +18,15 @@ docs/04-methodology/group-b/
 │   ├── 2026-10-29/
 │   │   ├── 2026-10-29-two-week-plan.md
 │   │   └── 2026-10-29-two-week-plan.pdf
-│   └── 2026-11-01/                    # 本轮工作方案
-│       ├── 2026-11-01-two-week-plan.md
-│       └── 2026-11-01-two-week-plan.pdf
+│   ├── 2026-11-01/                    # 前一轮工作方案
+│   │   ├── 2026-11-01-two-week-plan.md
+│   │   └── 2026-11-01-two-week-plan.pdf
+│   └── 2026-11-17/                    # Work 云电脑自主认领
+│       ├── 2026-11-17-xiaoyi-work-porting-plan.md
+│       └── skill-claim-template.xlsx
 ├── rounds/
 │   ├── 2026-10-31.md                   # 上一轮成果索引
-│   └── 2026-11-15.md                   # 本轮结束后整理
+│   └── 2026-11-17.md                   # 本轮阶段索引和 GitHub 提交清单
 ├── skill-survey/
 │   ├── README.md
 │   ├── methodology.md
@@ -168,7 +171,7 @@ Harness说明放在 `harness/`，记录OpenClaw版本、关键文件与函数、
 ## 入口与阶段索引怎样更新
 
 - `README.md`：维护本组任务、主要入口和成果使用边界。
-- `plans/`：保存各轮工作方案与交付要求。
+- `plans/`：保存各轮工作方案与交付要求。本轮的空白认领模板随计划保存，组员实填表由组长在群内汇总。
 - `rounds/`：按阶段汇总新增成果、文件入口、结果限制和待补事项。
 - 各成果目录的 `README.md`：说明该目录有哪些文件、怎样阅读、适用范围是什么。
 
