@@ -1,0 +1,17 @@
+"D:\software\DevEco Studio\tools\node\node.exe" "D:\software\DevEco Studio\tools\hvigor\bin\hvigorw.js" --mode module -p product=default assembleHap --analyze=normal --parallel --incremental --daemon
+> hvigor ERROR: Failed :entry:default@PreBuild...
+> hvigor ERROR: 00303304 Configuration Error
+Error Message: The suffix of srcEntry value ../../skills/harmonyos-skill-echo/scripts/EchoSkill.ts is invalid in skillProfiles[name='harmonyos-skill-echo']. Only .ets source code files are supported. At file: D:\MYfile\3-1\Skill-Moving\Task2\experiment-a\a1-ts\entry\src\main\module.json5
+
+* Try the following:
+  > Change srcEntry value ../../skills/harmonyos-skill-echo/scripts/EchoSkill.ts to a file ending with .ets (files ending with .d.ets are not supported).
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+
+> hvigor ERROR: BUILD FAILED in 72 ms
+
+0 task in total: 0 executed, 0 up-to-date.
+
+进程已结束，退出代码为 -1
