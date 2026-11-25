@@ -1,0 +1,25 @@
+{
+  "skill_probe": "GB-ADR-228DD4E8CF3B704A",
+  "decisions": [
+    {
+      "title": "本轮统一使用小艺 Work 云电脑进行验收",
+      "problem": "本轮在哪个入口验收？备选是小艺 Work 云电脑和鸿蒙应用 Skill。",
+      "chosen_option": "小艺 Work 云电脑",
+      "source_context": "09:05 甲：[ADR] 本轮统一用小艺 Work 云电脑验收，因为它目前能安装并调用独立包。09:07 乙：确认一下，大家这一轮都在 Work 云电脑验收。",
+      "alternatives_discussed": [
+        "鸿蒙应用 Skill"
+      ],
+      "drivers": [
+        "Work 云电脑目前可以安装并调用独立包",
+        "应用侧测试入口尚未就绪"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "open_items": [
+    {
+      "topic": "下轮是否改用鸿蒙应用 Skill 作为验收入口",
+      "source_context": "09:10 甲：下轮是否改用鸿蒙应用 Skill，等测试入口确认后再决定。"
+    }
+  ]
+}
